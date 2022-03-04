@@ -15,6 +15,7 @@ export default function App() {
             <Route path='/' exact />
         </Routes>
         </Router>
+      <Main />
     </>
   )
 }
