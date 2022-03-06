@@ -28,12 +28,12 @@
     transition: all 0.3s ease-out;
 }
 
-.btn--medium {
+.btn--small {
     padding: 8px 20px;
     font-size: 20px;
 }
 
-.btn--small {
+.btn--medium {
     padding: 12px 26px;
     font-size: 20px;
 }

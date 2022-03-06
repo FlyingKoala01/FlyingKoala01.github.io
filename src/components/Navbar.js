@@ -26,8 +26,8 @@ export default function Navbar() {
                     </Link>
                 </li>
                 <li className='nav-item'>
-                    <Link to='/InProgress' className='nav-links'>
-                        Work In Progress
+                    <Link to='/ContactMe' className='nav-links'>
+                        Contact Me
                     </Link>
                 </li>
             </ul>

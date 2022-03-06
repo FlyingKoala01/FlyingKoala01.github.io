@@ -5,9 +5,11 @@
     max-width: auto;
     justify-content: center;
     align-items: center;
-    font-size: 1.2rem;
-    position: sticky;
-    top: 0;
+    font-size: 1.4rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
     z-index: 999;
   }
   
@@ -19,11 +21,10 @@
     text-align: center;
     width: auto;
     justify-content: center;
-    margin-right: 2rem;
   }
   
   .nav-item {
-    height: 80px;
+    height: 50px;
   }
   
   .nav-links {
@@ -71,7 +72,6 @@
   
     .nav-menu.active {
       background: #242222;
-      left: 0;
       opacity: 1;
       transition: all 0.5s ease;
       z-index: 1;
@@ -88,13 +88,6 @@
       background-color: #fff;
       color: #242424;
       border-radius: 0;
-    }
-  
-    .navbar-logo {
-      position: absolute;
-      top: 0;
-      left: 0;
-      transform: translate(25%, 50%);
     }
   
     .menu-icon {

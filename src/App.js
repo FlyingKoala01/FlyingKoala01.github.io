@@ -6,7 +6,7 @@ import Navbar from "./components/Navbar"
 import Aboutme from './components/pages/Aboutme';
 import Projects from './components/pages/Projects';
 import WorkInProgress from './components/pages/WorkInProgress';
-
+import ContactMe from './components/pages/ContactMe';
 import './App.css';
 
 
@@ -21,7 +21,9 @@ export default function App() {
             <Route path='/AboutMe' element={<Aboutme />}/>
             <Route path='/Projects' element={<Projects />}/>
             <Route path='/InProgress' element={<WorkInProgress />}/>
+            <Route path='/ContactMe' element={<ContactMe />}/>
         </Routes>
+        
       </Router>
     </>
   )

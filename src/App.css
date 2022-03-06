@@ -1,16 +1,27 @@
-* {
+  html {
+    height: 100%;
+    background: radial-gradient(ellipse at top,#1b538f 0%, #021d3a 30%, #000000 70%);
+    overflow-y: scroll; 
+    /* overflow: hidden;*/
+    background-repeat: no-repeat;
+    background-color: #000000;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: 'Ropa Sans', sans-serif;
   }
   
+  .main {
+      overflow-y: hidden;
+  }
+
+  
   .myName {
     color: white;
     text-align: center;
     font-size: 120px;
     font-weight: 100;
-    margin-top: 2cm;
+    margin-top: 4cm;
     letter-spacing: 0.5cm;
     font-variant: small-caps;
     font-family: 'Raleway', sans-serif;
@@ -22,7 +33,7 @@
     font-size: 40px;
     font-weight: 100;
     font-family: 'Raleway', sans-serif;
-    margin-top: 3.5cm;
+    margin-top: 4.5cm;
 }
 
 
@@ -34,4 +45,10 @@
     font-family: 'Raleway', sans-serif;
     margin-top: 5cm;
 
+}
+
+.contactMeButton {
+    position: flex;
+    top: 4cm;
+    left: 5cm;
 }
