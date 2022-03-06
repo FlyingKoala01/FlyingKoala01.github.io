@@ -15,7 +15,12 @@ export default function Main() {
             <div className='animate-flicker' id='stars33'></div>
             <div className='animate-flicker' id='stars333'></div>
             
-            <h1 className='myName'>Isaac Iglesias Vila</h1>
+            <div className='home_star'></div>
+
+            
+            <h1 className='myName'>isaac iglesias vila</h1>
+            <h2 className='subtitle'>Portoflio Exposition</h2>
+            <p className='introductoryParagraph'>An aspiring ICT engineer, interested in the many diverse fields concerning technology.</p>
         </main>
     )
 }
