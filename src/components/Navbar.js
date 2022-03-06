@@ -5,55 +5,32 @@ import { Button } from './Button';
 import './Navbar.css';
 
 export default function Navbar() {
-    const [click, setClick] = useState(false);
-    const [button, setButton] = useState(true);
-
-    const handleClick = () => setClick(!click);
-    const closeMobileMenu = () => setClick(false);
-
-    const showButton = () => {
-        if(window.innerWidth <= 960) {
-            setButton(false)
-        } else {
-            setButton(true)
-        }
-    };
-
-    /*To Fix Sign Up Bug*/ 
-    
-    useEffect(() => {
-        showButton()
-    }, []); 
-
-    window.addEventListener('resize', showButton);
-
 
     return (
         <>
         <nav className='navbar'>
-            <ul className={click ? 'nav-menu active' : 'nav-menu'}>
+            <ul className={'nav-menu'}>
                 <li className='.nav-item'>
-                    <Link to='/' className='nav-links' onClick={closeMobileMenu}>
+                    <Link to='/' className='nav-links'>
                         Home
                     </Link>
                 </li>
                 <li className='nav-item'>
-                    <Link to='/' className='nav-links' onClick={closeMobileMenu}>
+                    <Link to='/AboutMe' className='nav-links'>
                         About Me
                     </Link>
                 </li>
                 <li className='nav-item'>
-                    <Link to='/' className='nav-links' onClick={closeMobileMenu}>
+                    <Link to='/Projects' className='nav-links'>
                         Projects
                     </Link>
                 </li>
                 <li className='nav-item'>
-                    <Link to='/' className='nav-links' onClick={closeMobileMenu}>
+                    <Link to='/InProgress' className='nav-links'>
                         Work In Progress
                     </Link>
                 </li>
             </ul>
-            {/*{button && <Button buttonStyle='btn--outline'>SIGN UP</Button>}*/}
         </nav>
     </>
     )
