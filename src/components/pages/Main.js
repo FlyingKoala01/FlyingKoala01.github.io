@@ -1,12 +1,13 @@
 import React from 'react';
 import '../../App.css';
 import '../Stars.css';
+{/*
 import { Button } from '../Button.js';
 import { useNavigate } from 'react-router-dom';
-
+*/}
 export default function Main() {
 
-    let navigate = useNavigate();
+    {/* let navigate = useNavigate(); */}
 
     return (
         <main className='main'>

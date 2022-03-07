@@ -1,7 +1,7 @@
 .navbar {
     background: linear-gradient(90deg, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 100%);
-    background-color: transparent;
-    height: 80px;
+    background-color: transparent !important;
+    height: 100px;
     max-width: auto;
     justify-content: center;
     align-items: center;
@@ -15,15 +15,18 @@
   
   .nav-menu {
     display: grid;
+    background-color: transparent !important;
     grid-template-columns: repeat(4, auto);
     grid-gap: 10px;
     list-style: none;
     text-align: center;
     width: auto;
     justify-content: center;
+    z-index: 998;
   }
   
   .nav-item {
+    background-color: transparent !important;
     height: 40px;
   }
   
@@ -46,10 +49,6 @@
   }
   
   .nav-links-mobile {
-    display: none;
-  }
-  
-  .menu-icon {
     display: none;
   }
   
