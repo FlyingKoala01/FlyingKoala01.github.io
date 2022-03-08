@@ -53,8 +53,19 @@
     font-family: 'Raleway', sans-serif;
 }
 
-.contactMeButton {
-    position: flex;
-    top: 4cm;
-    left: 5cm;
+.githubButton {
+  font-family: 'Ropa Sans', sans-serif;
+
+}
+
+.twitterButton {
+  font-family: 'Ropa Sans', sans-serif;
+}
+
+.linkedinButton {
+  font-family: 'Ropa Sans', sans-serif;
+}
+
+.anchorContact {
+  display: none;
 }
