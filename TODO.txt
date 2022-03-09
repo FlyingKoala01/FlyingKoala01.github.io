@@ -1,0 +1,22 @@
+Page: ContactMe
+	* Contact Form
+	* Readjust buttons layout
+	* Change Background decoration
+
+Page: AboutMe
+	* Write text
+	* Make Roadmap
+	* Make background layout
+
+Page: Projects
+	* Make three.JS shape to show proglang
+		Python - JS - HTML - CSS - React - C - Assembly (?)  - else
+	* cards to my Github repos
+	* Work In Progress
+		# Certifications in CS
+		# Master
+		# Future Ideas
+README.MD
+
+Three.JS ideas -> Roadmap // Geometrical Shape for proglang
+
