@@ -10,7 +10,7 @@ Page: AboutMe
 
 Page: Projects
 	* Make three.JS shape to show proglang
-		Python - JS - HTML - CSS - React - C - Assembly (?)  - else
+		Python - JS - HTML - CSS - React - C - Assembly (?)  - Git else
 	* cards to my Github repos
 	* Work In Progress
 		# Certifications in CS
