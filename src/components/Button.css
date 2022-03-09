@@ -40,7 +40,8 @@
 
 .glowButton--size {
     padding: 12px 50px;
-    width: 100%;
+    margin: 0.4cm;
+    width: 10%;
 }
 
 .glowButton {
@@ -57,10 +58,14 @@
   }
   
   .glowButton:hover {
-    background: #ff96ad;
-    box-shadow: 0 0 5px #ff96ad, 0 0 25px #ff96ad, 0 0 50px #ff96ad, 0 0 200px #ff96ad;
+    background: #5c5858;
+    color:rgb(255, 255, 255);
+    box-shadow: 0 0 5px #000000, 0 0 25px #5c5858;
   }
 
   .glowButton--primary {
     border: none;
+    font-size: 20px;
+    font-weight: 900;
+    font-family: 'Raleway', sans-serif;
   }

@@ -1,7 +1,7 @@
 .navbar {
     background: linear-gradient(90deg, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 100%);
     background-color: transparent !important;
-    height: 100px;
+    height: 80px;
     max-width: auto;
     justify-content: center;
     align-items: center;
@@ -27,7 +27,7 @@
   
   .nav-item {
     background-color: transparent !important;
-    height: 40px;
+    height: 20px;
   }
   
   .nav-links {
