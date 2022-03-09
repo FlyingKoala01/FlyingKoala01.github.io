@@ -12,7 +12,7 @@ export default function Aboutme() {
         <main>
             <div className='Childhood'>
                 {showHideChildHood && <p className='trial'>Childhood Section</p>}
-                <Button buttonType="glowButton" onClick={() => {setShowHideChildHood(!showHideChildHood); 
+                <Button buttonType="glowButton" buttonSize="glowButton--size" buttonStyle="glowButton--primary" onClick={() => {setShowHideChildHood(!showHideChildHood); 
                     setShowHideTravelling(showHideTravelling = false); 
                     setShowHideUniversity(showHideUniversity = false);
                     setShowHideFuture(showHideFuture = false)
@@ -20,7 +20,7 @@ export default function Aboutme() {
             </div>
             <div className='Travelling'>
                 {showHideTravelling && <p className='trial'>Travelling Section</p>}
-                <Button buttonType="glowButton" onClick={() => {setShowHideChildHood(showHideChildHood = false); 
+                <Button buttonType="glowButton" buttonSize="glowButton--size" buttonStyle="glowButton--primary" onClick={() => {setShowHideChildHood(showHideChildHood = false); 
                     setShowHideTravelling(!showHideTravelling); 
                     setShowHideUniversity(showHideUniversity = false);
                     setShowHideFuture(showHideFuture = false)
@@ -28,7 +28,7 @@ export default function Aboutme() {
             </div>
             <div className='University'>
                 {showHideUniversity && <p className='trial'>University Section</p>}
-                <Button buttonType="glowButton" onClick={() => {setShowHideChildHood(showHideChildHood = false); 
+                <Button buttonType="glowButton" buttonSize="glowButton--size" buttonStyle="glowButton--primary" onClick={() => {setShowHideChildHood(showHideChildHood = false); 
                     setShowHideTravelling(showHideTravelling = false);
                     setShowHideUniversity(!showHideUniversity);
                     setShowHideFuture(showHideFuture = false)
@@ -36,7 +36,7 @@ export default function Aboutme() {
             </div>
             <div className='Future'>
                 {showHideFuture && <p className='trial'>Future Section</p>}
-                <Button buttonType="glowButton" onClick={() => {setShowHideChildHood(showHideChildHood = false); 
+                <Button buttonType="glowButton" buttonSize="glowButton--size" buttonStyle="glowButton--primary" onClick={() => {setShowHideChildHood(showHideChildHood = false); 
                     setShowHideTravelling(showHideTravelling = false);
                     setShowHideUniversity(showHideUniversity = false);
                     setShowHideFuture(!showHideFuture) 

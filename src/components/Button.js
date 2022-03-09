@@ -14,7 +14,8 @@ const STYLE = [
 
 const SIZE = [
     "btn--medium",
-    "btn--small"
+    "btn--small",
+    "glowButton--size"
 ]
 
 export const Button = ({children, type, onClick, buttonType,buttonStyle, buttonSize}) => {

@@ -38,6 +38,11 @@
     font-size: 20px;
 }
 
+.glowButton--size {
+    padding: 12px 50px;
+    width: 100%;
+}
+
 .glowButton {
     position: relative;
     transition: 0.5s ease-in;
