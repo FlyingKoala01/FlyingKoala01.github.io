@@ -51,7 +51,7 @@ export default function Main() {
                         duration: 0.4,
                         },
                         connect: {
-                            distance: 80, 
+                            distance: 100, 
                             links : {
                                 opacity: 0.5
                             },
@@ -74,19 +74,19 @@ export default function Main() {
                         enable: true,
                     },
                     move: {
-                        direction: "none",
+                        direction: "top",
                         enable: true,
-                        outMode: "bounce",
+                        outMode: "out",
                         random: false,
-                        speed: 3,
+                        speed: 2,
                         straight: false,
                     },
                     number: {
                         density: {
                         enable: true,
-                        area: 800,
+                        area: 600,
                         },
-                        value: 80,
+                        value: 60,
                     },
                     opacity: {
                         value: 0.5,
@@ -95,7 +95,7 @@ export default function Main() {
                         type: "circle",
                     },
                     size: {
-                        value: 3,
+                        value: 2,
                     },
                     },
                     detectRetina: true,
