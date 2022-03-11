@@ -1,12 +1,11 @@
 import React, {useState} from 'react'
 import { Button } from '../Button.js';
-import {motion, useMotionValue} from 'framer-motion/dist/es/index'
+import { motion } from 'framer-motion/dist/es/index'
 
 
 import '../../App.css';
 
 import me from '../me.png';
-import { useVelocity } from 'framer-motion';
 
 const AboutMe_line1 = "Who am I, who am I, who am I."
 const AboutMe_line2 = "I dont know, I dont know."
@@ -24,13 +23,11 @@ export default function Aboutme() {
     let [showHideUniversity, setShowHideUniversity] = useState(false);
     let [showHideFuture, setShowHideFuture] = useState(false);
     
-    const vel = useMotionValue(80)
-    const velMotion = useVelocity(vel)
     return (
         
         <main className='aboutMeBackground'>
             <div className='Childhood'>
-                {showHideChildHood && <motion.p drag = "vel" style={{vel, velMotion}} className="textChildhood" variants={sentence} initial="hidden" animate="visible"> 
+                {showHideChildHood && <motion.p className="textChildhood" variants={sentence} initial="hidden" animate="visible"> 
                                         {AboutMe_line1.split("").map((char, index) => {
                                             return (
                                                 <motion.span key = {char + "-" + index} variants = {letter}>

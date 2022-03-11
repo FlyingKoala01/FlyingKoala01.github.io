@@ -32,6 +32,7 @@
     letter-spacing: 0.5cm;
     font-variant: small-caps;
     font-family: 'Raleway', sans-serif;
+    user-select: none;
 }
 
 .subtitle {
@@ -42,6 +43,7 @@
     font-weight: 100;
     font-family: 'Raleway', sans-serif;
     margin-top: 4.5cm;
+    user-select: none;
 }
 
 
@@ -92,4 +94,11 @@
 .aboutMeBackground {
   height: 100vh;
   background: radial-gradient(circle at 0%,#ffffff 0%, #676768 60% ,#000000 80%);
+}
+
+#tsparticles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;;
 }

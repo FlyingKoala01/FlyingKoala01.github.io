@@ -15,6 +15,7 @@
     "react-scripts": "^2.1.8",
     "react-scroll": "^1.8.6",
     "react-spinners": "^0.11.0",
+    "react-tsparticles": "^1.42.1",
     "sass": "^1.49.9",
     "three": "^0.138.3",
     "web-vitals": "^2.1.4"
