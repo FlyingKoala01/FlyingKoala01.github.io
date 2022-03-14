@@ -5,7 +5,7 @@ import { motion } from 'framer-motion/dist/es/index'
 
 import '../../App.css';
 
-import me from '../me.png';
+import me from '../../Images/me.png';
 
 const AboutMe_line1 = "Who am I, who am I, who am I."
 const AboutMe_line2 = "I dont know, I dont know."
