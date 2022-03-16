@@ -1,6 +1,6 @@
 Page: ContactMe
 	* Contact Form
-	* Readjust buttons layout
+	* Re-adjust buttons layout
 	* Change Background decoration
 
 Page: AboutMe
