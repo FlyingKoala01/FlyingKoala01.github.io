@@ -100,14 +100,14 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: transparent;;
+  background-color: transparent;
 }
-
 
 .europe {
   width: auto;
-  float:left;
-  height: 92vh;
+  height: 100vh;
+  margin-top: 0;
+  margin-bottom: 0;
   background-color: transparent;
 }
 
@@ -115,9 +115,11 @@
   background-color: #1A1A1A;
   height: 100vh;
 }
+
 .europeMap {
   z-index: -998
 }
+
 .contactMe {
   z-index: 1
 }
