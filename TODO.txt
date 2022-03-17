@@ -1,7 +1,7 @@
 Page: ContactMe
-	* Contact Form
+	* NO Contact Form -- keep frontend only
 	* Re-adjust buttons layout
-	* Change Background decoration
+	* Change Background decoration -- black n' white map?
 
 Page: AboutMe
 	* Write text

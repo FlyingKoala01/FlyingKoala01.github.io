@@ -102,3 +102,22 @@
   height: 100%;
   background-color: transparent;;
 }
+
+
+.europe {
+  width: auto;
+  float:left;
+  height: 92vh;
+  background-color: transparent;
+}
+
+.backgroundContactMe {
+  background-color: #1A1A1A;
+  height: 100vh;
+}
+.europeMap {
+  z-index: -998
+}
+.contactMe {
+  z-index: 1
+}

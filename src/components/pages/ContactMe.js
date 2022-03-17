@@ -1,54 +1,99 @@
-import React, {useState} from 'react'
-import { Send } from 'emailjs'
+import React from 'react'
+import Particles from "react-tsparticles";
 
 import SocialFollow from "../SocialFollow"
-import { Button } from '../Button.js';
 
 import '../../App.css';
-
+import europe from '../../Images/europe.png';
 
 export default function ContactMe() {
-    
-    const [sender_name, set_sender_name] = useState('');
-    const [sender_email, set_sender_email] = useState('');
-    const [message, set_message] = useState('');
+    const particlesInit = (main) => {
+        console.log(main);
+      };
+    const particlesLoaded = (container) => {
+        console.log(container);
+      };
 
-    const handleName = (e) => {
-        set_sender_name(e.target.value)
-    }
-    const handleEmail = (e) => {
-        set_sender_email(e.target.value)
-    }
-    const handleMessage = (e) => {
-        set_message(e.target.value)
-    }
-
-    const sendMail = (e) => {
-        e.preventDefault();
-        Send(
-            '',
-            '',
-            {sender_name, sender_email, message},
-            ''
-        )
-        .then((response) =>{
-            console.log('Email send successfully', response.status, response.text)
-        })
-        .catch((err) => {
-            console.log('failed', err)
-        })
-    }
     return (
-        <div>
-            <SocialFollow />
-            <h1>Contact Me</h1>
-            <form onSubmit={sendMail}>
-                <input type = "text" name = "sender_name" value = {sender_name} onChange = {handleName} required placeholder = "Your Name"/>
-                <input type="email" name = "sender_email" value = {sender_email} onChange = {handleEmail} required placeholder = "Your Email" />
-                <textarea type="message" value = {message} onChange = {handleMessage} required placeholder = "Your Message" />
-                <Button>Send Email</Button>
-            </form>
+        <div className='backgroundContactMe'>
+            <div className='contactMe'>
+                <SocialFollow />
+                <h1>Contact Me</h1>
+                <Particles
+                        id="tsparticles"
+                        init={particlesInit}
+                        loaded={particlesLoaded}
+                        options={{
+                            background: {
+                            opacity: 0
+                            },
+                            fpsLimit: 120,
+                            interactivity: {
+                            modes: {
+                                push: {
+                                quantity: 2,
+                                },
+                                repulse: {
+                                distance: 200,
+                                duration: 0.4,
+                                },
+                                connect: {
+                                    distance: 200, 
+                                    links : {
+                                        opacity: 0.5
+                                    },
+                                    radius: 180
+                                }
+                            },
+                            },
+                            particles: {
+                            color: {
+                                value: "#D3D3D3",
+                            },
+                            links: {
+                                color: "#D3D3D3",
+                                distance: 120,
+                                enable: true,
+                                opacity: 0.5,
+                                width: 0.5,
+                            },
+                            collisions: {
+                                enable: true,
+                            },
+                            move: {
+                                direction: "none",
+                                enable: true,
+                                outMode: "out",
+                                random: false,
+                                speed: 1,
+                                straight: false,
+                            },
+                            number: {
+                                density: {
+                                enable: true,
+                                area: 600,
+                                },
+                                value: 20,
+                            },
+                            opacity: {
+                                value: 0.5,
+                            },
+                            shape: {
+                                type: "circle",
+                            },
+                            size: {
+                                value: 2,
+                            },
+                            },
+                            detectRetina: true,
+                        }}
+                        />
+            </div>
+            <div className='europeMap'>
+                <img src={europe} className='europe' alt=""/>
+            </div>
         </div>
+        
     )
 }
 
