@@ -1,5 +1,7 @@
 import React from "react";
 
+import '../App.css';
+
 import {
   FaTwitter,
   FaLinkedin,
@@ -11,16 +13,16 @@ export default function SocialFollow() {
   return (
     <div className="social-container">
       <a href="https://twitter.com/FlyingKoala01" className="twitterSocial">
-        <FaTwitter size="40px" pulse color="#00acee"/>
+        <FaTwitter size="40px" pulse color="#00acee" />
       </a>
       <a href="https://github.com/FlyingKoala01" className="githubSocial">
-        <FaGithub size="40px" pulse color="white"/>
+        <FaGithub size="40px" pulse color="white" />
       </a>
       <a href="https://www.linkedin.com/in/isaac-iglesias-vila-0b6074234/" className="linkedinSocial">
-        <FaLinkedin size="40px" pulse color="#00a0dc"/>
+        <FaLinkedin size="40px" pulse color="#00a0dc" />
       </a>
       <a href="https://discordapp.com/users/FlyingKoala#1509/" className="discordSocial">
-        <FaDiscord size="40px" pulse color="#5865f2"/>
+        <FaDiscord size="40px" pulse color="#5865f2" />
       </a>
     </div>
   );

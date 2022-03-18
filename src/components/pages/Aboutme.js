@@ -1,11 +1,9 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import { Button } from '../Button.js';
 import { motion } from 'framer-motion/dist/es/index'
 
-
 import '../../App.css';
 
-import me from '../../Images/me.png';
 
 const AboutMe_line1 = "Who am I, who am I, who am I."
 const AboutMe_line2 = "I dont know, I dont know."
@@ -22,116 +20,120 @@ export default function Aboutme() {
     let [showHideTravelling, setShowHideTravelling] = useState(false);
     let [showHideUniversity, setShowHideUniversity] = useState(false);
     let [showHideFuture, setShowHideFuture] = useState(false);
-    
+
     return (
-        
+
         <main className='aboutMeBackground'>
             <div className='Childhood'>
-                {showHideChildHood && <motion.p className="textChildhood" variants={sentence} initial="hidden" animate="visible"> 
-                                        {AboutMe_line1.split("").map((char, index) => {
-                                            return (
-                                                <motion.span key = {char + "-" + index} variants = {letter}>
-                                                    {char}    
-                                                </motion.span>
-                                            )
-                                        })}
-                                        <br />
-                                        {AboutMe_line2.split("").map((char, index) => {
-                                            return (
-                                                <motion.span key = {char + "-" + index} variants = {letter}>
-                                                    {char}    
-                                                </motion.span>
-                                            )
-                                        })}
-                                      </motion.p>}
-                <Button buttonType="glowButton" buttonSize="glowButton--size" buttonStyle="glowButton--primary" onClick={() => {setShowHideChildHood(!showHideChildHood); 
-                    setShowHideTravelling(showHideTravelling = false); 
+                {showHideChildHood && <motion.p className="textChildhood" variants={sentence} initial="hidden" animate="visible">
+                    {AboutMe_line1.split("").map((char, index) => {
+                        return (
+                            <motion.span key={char + "-" + index} variants={letter}>
+                                {char}
+                            </motion.span>
+                        )
+                    })}
+                    <br />
+                    {AboutMe_line2.split("").map((char, index) => {
+                        return (
+                            <motion.span key={char + "-" + index} variants={letter}>
+                                {char}
+                            </motion.span>
+                        )
+                    })}
+                </motion.p>}
+                <Button buttonType="glowButton" buttonSize="glowButton--size" buttonStyle="glowButton--primary" onClick={() => {
+                    setShowHideChildHood(!showHideChildHood);
+                    setShowHideTravelling(showHideTravelling = false);
                     setShowHideUniversity(showHideUniversity = false);
                     setShowHideFuture(showHideFuture = false)
-                    }}>Childhood</Button> 
+                }}>Childhood</Button>
             </div>
             <div className='Travelling'>
-                {showHideTravelling && <motion.p className="textTravelling" variants={sentence} initial="hidden" animate="visible"> 
-                                        {Travelling_line1.split("").map((char, index) => {
-                                            return (
-                                                <motion.span key = {char + "-" + index} variants = {letter}>
-                                                    {char}    
-                                                </motion.span>
-                                            )
-                                        })}
-                                        <br />
-                                        {Travelling_line2.split("").map((char, index) => {
-                                            return (
-                                                <motion.span key = {char + "-" + index} variants = {letter}>
-                                                    {char}    
-                                                </motion.span>
-                                            )
-                                        })}
-                                      </motion.p>}
-                <Button buttonType="glowButton" buttonSize="glowButton--size" buttonStyle="glowButton--primary" onClick={() => {setShowHideChildHood(showHideChildHood = false); 
-                    setShowHideTravelling(!showHideTravelling); 
+                {showHideTravelling && <motion.p className="textTravelling" variants={sentence} initial="hidden" animate="visible">
+                    {Travelling_line1.split("").map((char, index) => {
+                        return (
+                            <motion.span key={char + "-" + index} variants={letter}>
+                                {char}
+                            </motion.span>
+                        )
+                    })}
+                    <br />
+                    {Travelling_line2.split("").map((char, index) => {
+                        return (
+                            <motion.span key={char + "-" + index} variants={letter}>
+                                {char}
+                            </motion.span>
+                        )
+                    })}
+                </motion.p>}
+                <Button buttonType="glowButton" buttonSize="glowButton--size" buttonStyle="glowButton--primary" onClick={() => {
+                    setShowHideChildHood(showHideChildHood = false);
+                    setShowHideTravelling(!showHideTravelling);
                     setShowHideUniversity(showHideUniversity = false);
                     setShowHideFuture(showHideFuture = false)
-                    }}>Travelling</Button> 
+                }}>Travelling</Button>
             </div>
             <div className='University'>
-                {showHideUniversity && <motion.p className="textUniversity" variants={sentence} initial="hidden" animate="visible"> 
-                                        {University_line1.split("").map((char, index) => {
-                                            return (
-                                                <motion.span key = {char + "-" + index} variants = {letter}>
-                                                    {char}    
-                                                </motion.span>
-                                            )
-                                        })}
-                                        <br />
-                                        {University_line2.split("").map((char, index) => {
-                                            return (
-                                                <motion.span key = {char + "-" + index} variants = {letter}>
-                                                    {char}    
-                                                </motion.span>
-                                            )
-                                        })}
-                                      </motion.p>}
-                <Button buttonType="glowButton" buttonSize="glowButton--size" buttonStyle="glowButton--primary" onClick={() => {setShowHideChildHood(showHideChildHood = false); 
+                {showHideUniversity && <motion.p className="textUniversity" variants={sentence} initial="hidden" animate="visible">
+                    {University_line1.split("").map((char, index) => {
+                        return (
+                            <motion.span key={char + "-" + index} variants={letter}>
+                                {char}
+                            </motion.span>
+                        )
+                    })}
+                    <br />
+                    {University_line2.split("").map((char, index) => {
+                        return (
+                            <motion.span key={char + "-" + index} variants={letter}>
+                                {char}
+                            </motion.span>
+                        )
+                    })}
+                </motion.p>}
+                <Button buttonType="glowButton" buttonSize="glowButton--size" buttonStyle="glowButton--primary" onClick={() => {
+                    setShowHideChildHood(showHideChildHood = false);
                     setShowHideTravelling(showHideTravelling = false);
                     setShowHideUniversity(!showHideUniversity);
                     setShowHideFuture(showHideFuture = false)
-                    }}>University</Button> 
+                }}>University</Button>
             </div>
             <div className='Future'>
-                {showHideFuture && <motion.p className="textFuture" variants={sentence} initial="hidden" animate="visible"> 
-                                        {Future_line1.split("").map((char, index) => {
-                                            return (
-                                                <motion.span key = {char + "-" + index} variants = {letter}>
-                                                    {char}    
-                                                </motion.span>
-                                            )
-                                        })}
-                                        <br />
-                                        {Future_line2.split("").map((char, index) => {
-                                            return (
-                                                <motion.span key = {char + "-" + index} variants = {letter}>
-                                                    {char}    
-                                                </motion.span>
-                                            )
-                                        })}
-                                      </motion.p>}
-                <Button buttonType="glowButton" buttonSize="glowButton--size" buttonStyle="glowButton--primary" onClick={() => {setShowHideChildHood(showHideChildHood = false); 
+                {showHideFuture && <motion.p className="textFuture" variants={sentence} initial="hidden" animate="visible">
+                    {Future_line1.split("").map((char, index) => {
+                        return (
+                            <motion.span key={char + "-" + index} variants={letter}>
+                                {char}
+                            </motion.span>
+                        )
+                    })}
+                    <br />
+                    {Future_line2.split("").map((char, index) => {
+                        return (
+                            <motion.span key={char + "-" + index} variants={letter}>
+                                {char}
+                            </motion.span>
+                        )
+                    })}
+                </motion.p>}
+                <Button buttonType="glowButton" buttonSize="glowButton--size" buttonStyle="glowButton--primary" onClick={() => {
+                    setShowHideChildHood(showHideChildHood = false);
                     setShowHideTravelling(showHideTravelling = false);
                     setShowHideUniversity(showHideUniversity = false);
-                    setShowHideFuture(!showHideFuture) 
-                    }}>Future</Button> 
+                    setShowHideFuture(!showHideFuture)
+                }}>Future</Button>
             </div>
 
             <div>
-                <img src={me} className='myFace' alt=""/>
+                <img src={'../../Images/me.png'} className='myFace' alt="" />
             </div>
         </main>
     )
 }
 
 const sentence = {
-    hidden: { opacity: 1},
+    hidden: { opacity: 1 },
     visible: {
         opacity: 1,
         transition: {
@@ -142,8 +144,8 @@ const sentence = {
 }
 
 const letter = {
-    hidden: {opacity: 0, y: 50},
-    visible : {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
         opacity: 1,
         y: 0
     },

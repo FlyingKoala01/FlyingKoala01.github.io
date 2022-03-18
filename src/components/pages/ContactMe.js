@@ -9,44 +9,47 @@ import europe from '../../Images/europe.png';
 export default function ContactMe() {
     const particlesInit = (main) => {
         console.log(main);
-      };
+    };
     const particlesLoaded = (container) => {
         console.log(container);
-      };
+    };
 
     return (
         <div className='backgroundContactMe'>
+            <div className='europeMap'>
+                <img src={europe} className='europe' alt="" />
+            </div>
             <div className='contactMe'>
                 <SocialFollow />
                 <h1>Contact Me</h1>
                 <Particles
-                        id="tsparticles"
-                        init={particlesInit}
-                        loaded={particlesLoaded}
-                        options={{
-                            background: {
+                    id="tsparticles"
+                    init={particlesInit}
+                    loaded={particlesLoaded}
+                    options={{
+                        background: {
                             opacity: 0
-                            },
-                            fpsLimit: 120,
-                            interactivity: {
+                        },
+                        fpsLimit: 120,
+                        interactivity: {
                             modes: {
                                 push: {
-                                quantity: 2,
+                                    quantity: 2,
                                 },
                                 repulse: {
-                                distance: 200,
-                                duration: 0.4,
+                                    distance: 200,
+                                    duration: 0.4,
                                 },
                                 connect: {
-                                    distance: 200, 
-                                    links : {
+                                    distance: 200,
+                                    links: {
                                         opacity: 0.5
                                     },
                                     radius: 180
                                 }
                             },
-                            },
-                            particles: {
+                        },
+                        particles: {
                             color: {
                                 value: "#D3D3D3",
                             },
@@ -70,8 +73,8 @@ export default function ContactMe() {
                             },
                             number: {
                                 density: {
-                                enable: true,
-                                area: 600,
+                                    enable: true,
+                                    area: 600,
                                 },
                                 value: 20,
                             },
@@ -84,16 +87,14 @@ export default function ContactMe() {
                             size: {
                                 value: 2,
                             },
-                            },
-                            detectRetina: true,
-                        }}
-                        />
+                        },
+                        detectRetina: true,
+                    }}
+                />
             </div>
-            <div className='europeMap'>
-                <img src={europe} className='europe' alt=""/>
-            </div>
+
         </div>
-        
+
     )
 }
 

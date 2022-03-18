@@ -1,21 +1,25 @@
 Page: ContactMe
-	* NO Contact Form -- keep frontend only
-	* Re-adjust buttons layout
-	* Change Background decoration -- black n' white map?
+	* Add text and think of consistent h1 title per page
+	* Re-adjust buttons layout // Maybe make a single button where hover shows 4 social netowrks with pop out animation
 
 Page: AboutMe
 	* Write text
 	* Make Roadmap
 	* Make background layout
 
-Page: Projects
+Page: Projects // Change name to portfolio
+{Divide section in projects w/ blog page per project, future ideas and programming lang}
 	* Make three.JS shape to show proglang
 		Python - JS - HTML - CSS - React - C - Assembly (?)  - Git else
-	* cards to my Github repos
+		
+	* cards to my Github repos->> Blog to describe how it was
+
 	* Work In Progress
 		# Certifications in CS
 		# Master
 		# Future Ideas
+	
+	** ADD MULTILINGUAL TRANSLATION **
 
 README.MD
 
