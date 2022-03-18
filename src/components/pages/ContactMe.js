@@ -1,9 +1,8 @@
 import React from 'react'
 import Particles from "react-tsparticles";
 
-import SocialFollow from "../SocialFollow"
-
 import '../../App.css';
+import '../wrapIcon.css';
 import europe from '../../Images/europe.png';
 
 export default function ContactMe() {
@@ -20,18 +19,17 @@ export default function ContactMe() {
                 <img src={europe} className='europe' alt="" />
             </div>
             <div className='contactMe'>
-                <SocialFollow />
                 <div className="wrap">
                     <div className="circle">
-                    <i className="icon i1 icon-terminal"></i>
-                    <i className="icon i2 icon-code-fork"></i>
-                    <i className="icon i3 icon-keyboard"></i>
-                    <i className="icon i4 icon-code"></i>
+                        <div className='ion-twitter'><ion-icon name="logo-twitter"></ion-icon></div>
+                        <div className='ion-github'><ion-icon name="logo-github"></ion-icon></div>
+                        <div className='ion-linkedin'><ion-icon name="logo-linkedin"></ion-icon></div>
+                        <div className='ion-discord'><ion-icon name="logo-discord"></ion-icon></div>
                     <div className="line1"></div>
                     <div className="line2"></div>
                     <span className="text">hover on me</span>
                     </div>
-                    </div>
+                </div>
                 <h1>Contact Me</h1>
                 <Particles
                     id="tsparticles"
