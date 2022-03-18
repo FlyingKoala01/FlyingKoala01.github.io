@@ -42,7 +42,7 @@ export default function Aboutme() {
                         )
                     })}
                 </motion.p>}
-                <Button buttonType="glowButton" buttonSize="glowButton--size" buttonStyle="glowButton--primary" onClick={() => {
+                <Button buttonType="glowButton" onClick={() => {
                     setShowHideChildHood(!showHideChildHood);
                     setShowHideTravelling(showHideTravelling = false);
                     setShowHideUniversity(showHideUniversity = false);
@@ -67,7 +67,7 @@ export default function Aboutme() {
                         )
                     })}
                 </motion.p>}
-                <Button buttonType="glowButton" buttonSize="glowButton--size" buttonStyle="glowButton--primary" onClick={() => {
+                <Button buttonType="glowButton" onClick={() => {
                     setShowHideChildHood(showHideChildHood = false);
                     setShowHideTravelling(!showHideTravelling);
                     setShowHideUniversity(showHideUniversity = false);
@@ -92,7 +92,7 @@ export default function Aboutme() {
                         )
                     })}
                 </motion.p>}
-                <Button buttonType="glowButton" buttonSize="glowButton--size" buttonStyle="glowButton--primary" onClick={() => {
+                <Button buttonType="glowButton" onClick={() => {
                     setShowHideChildHood(showHideChildHood = false);
                     setShowHideTravelling(showHideTravelling = false);
                     setShowHideUniversity(!showHideUniversity);
@@ -117,7 +117,7 @@ export default function Aboutme() {
                         )
                     })}
                 </motion.p>}
-                <Button buttonType="glowButton" buttonSize="glowButton--size" buttonStyle="glowButton--primary" onClick={() => {
+                <Button buttonType="glowButton" onClick={() => {
                     setShowHideChildHood(showHideChildHood = false);
                     setShowHideTravelling(showHideTravelling = false);
                     setShowHideUniversity(showHideUniversity = false);

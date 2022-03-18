@@ -21,6 +21,17 @@ export default function ContactMe() {
             </div>
             <div className='contactMe'>
                 <SocialFollow />
+                <div className="wrap">
+                    <div className="circle">
+                    <i className="icon i1 icon-terminal"></i>
+                    <i className="icon i2 icon-code-fork"></i>
+                    <i className="icon i3 icon-keyboard"></i>
+                    <i className="icon i4 icon-code"></i>
+                    <div className="line1"></div>
+                    <div className="line2"></div>
+                    <span className="text">hover on me</span>
+                    </div>
+                    </div>
                 <h1>Contact Me</h1>
                 <Particles
                     id="tsparticles"

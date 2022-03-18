@@ -20,8 +20,8 @@ export default function Navbar() {
                     </Link>
                 </li>
                 <li className='nav-item'>
-                    <Link to='/Projects' className='nav-links'>
-                        Projects
+                    <Link to='/Portfolio' className='nav-links'>
+                        Portfolio
                     </Link>
                 </li>
                 <li className='nav-item'>

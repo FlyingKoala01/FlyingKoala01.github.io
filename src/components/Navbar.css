@@ -13,6 +13,20 @@
     z-index: 999;
   }
   
+  .bannerTop {
+    background: linear-gradient(90deg, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 100%);
+    background-color: transparent !important;
+    height: 80px;
+    max-width: auto;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 998;
+  }
+
   .nav-menu {
     display: grid;
     background-color: transparent !important;
