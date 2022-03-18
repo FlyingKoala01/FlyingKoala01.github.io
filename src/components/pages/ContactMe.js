@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Particles from "react-tsparticles";
 
 import '../../App.css';
@@ -6,6 +6,15 @@ import '../wrapIcon.css';
 import europe from '../../Images/europe.png';
 
 export default function ContactMe() {
+
+    let [showHideNotification, setShowHideNotification] = useState(false);
+
+    const animate = () => {
+        setShowHideNotification(true);
+
+        setTimeout(() => setShowHideNotification(false), 4500);
+    }
+
     const particlesInit = (main) => {
         console.log(main);
     };
@@ -18,10 +27,19 @@ export default function ContactMe() {
             <h1 className="titlePage">Would you like to get in touch?</h1>
             <h2 className='contactMeText'>Follow me on my social media!</h2>
             <h2 className='contactMeEmail'>You can also send me an email to </h2>
-            <button className="btn-clipboard" onClick={() =>  navigator.clipboard.writeText('isaac.iglesias.vila19@gmail.com')}> isaac.iglesias.vila19@gmail.com </button>
+            <div className= {showHideNotification ? `popUpNotification` : null}>
+                {showHideNotification &&<div className='textPopup'>Email copied to clipboard!</div>}
+            </div>
+            
+            <button className="btn-clipboard" onClick={() =>  
+                {navigator.clipboard.writeText('isaac.iglesias.vila19@gmail.com'); 
+                animate()}}> isaac.iglesias.vila19@gmail.com 
+            </button>
+
             <div className='europeMap'>
                 <img src={europe} className='europe' alt="" />
             </div>
+
             <div className='contactMe'>
                 <div className="wrap">
                     <div className="circle">
@@ -34,7 +52,6 @@ export default function ContactMe() {
                     <span className="text">hover on me</span>
                     </div>
                 </div>
-
                 <Particles
                     id="tsparticles"
                     init={particlesInit}

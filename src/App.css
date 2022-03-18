@@ -166,3 +166,31 @@
   border: none;
   cursor: pointer;
 }
+
+.popUpNotification {
+  position: absolute;
+  height: 50px;
+  width: 300px;
+  background-color: #46cc99;
+  border-radius: 20%;
+  border-color: #000000;
+  border-style: solid;
+  bottom: 188px;
+  left: 40%;
+  z-index: 999;
+  animation: popUp 4.5s ease infinite;
+}
+
+@keyframes popUp {
+  0%   { bottom: 0px;opacity:0;}
+  25%  { bottom: 180px; opacity:1;}
+  75%  { bottom: 180px; opacity:1;} 
+  100% { opacity: 0;}
+}
+
+.textPopup {
+  position:absolute;
+  left:20%;
+  top:25%;
+  font-size: larger;
+}
