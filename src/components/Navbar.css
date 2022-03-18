@@ -57,6 +57,7 @@
     border-bottom: 4px solid #fff;
     transition: all 0.2s ease-out;
   }
+
   
   .fa-bars {
     color: #fff;
@@ -102,6 +103,13 @@
       color: #242424;
       border-radius: 0;
     }
+
+    .nav-links:active {
+      background-color: #fff;
+      color: #242424;
+      border-radius: 0;
+    }
+    
   
     .menu-icon {
       display: block;

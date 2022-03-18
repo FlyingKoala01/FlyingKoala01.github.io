@@ -33,7 +33,7 @@ export default function ContactMe() {
             
             <button className="btn-clipboard" onClick={() =>  
                 {navigator.clipboard.writeText('isaac.iglesias.vila19@gmail.com'); 
-                animate()}}> isaac.iglesias.vila19@gmail.com 
+                animate()}}> isaac.iglesias.vila19@gmail.com <ion-icon name="clipboard-outline" size="small"></ion-icon>
             </button>
 
             <div className='europeMap'>
@@ -43,13 +43,13 @@ export default function ContactMe() {
             <div className='contactMe'>
                 <div className="wrap">
                     <div className="circle">
-                        <div className='ion-twitter'><ion-icon name="logo-twitter"></ion-icon></div>
-                        <div className='ion-github'><ion-icon name="logo-github"></ion-icon></div>
-                        <div className='ion-linkedin'><ion-icon name="logo-linkedin"></ion-icon></div>
-                        <div className='ion-discord'><ion-icon name="logo-discord"></ion-icon></div>
+                        <div className='ion-twitter'><a href="https://twitter.com/FlyingKoala01"><ion-icon name="logo-twitter"></ion-icon></a></div>
+                        <div className='ion-github'><a href="https://github.com/FlyingKoala01"><ion-icon name="logo-github"></ion-icon></a></div>
+                        <div className='ion-linkedin'><a href="https://www.linkedin.com/in/isaac-iglesias-vila-0b6074234/"><ion-icon name="logo-linkedin"></ion-icon></a></div>
+                        <div className='ion-discord'><a href="https://discordapp.com/users/FlyingKoala#1509/"><ion-icon name="logo-discord"></ion-icon></a></div>
                     <div className="line1"></div>
                     <div className="line2"></div>
-                    <span className="text">hover on me</span>
+                    <span className="socialIcon"><ion-icon name="share-social-outline" font-size="200px"></ion-icon></span>
                     </div>
                 </div>
                 <Particles

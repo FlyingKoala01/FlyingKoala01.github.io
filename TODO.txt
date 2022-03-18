@@ -1,7 +1,6 @@
 Page: ContactMe
-	* Add text and think of consistent h1 title per page
-	* Re-adjust buttons layout // Maybe make a single button where hover shows 4 social netowrks with pop out animation
-	* Add alert Copy to clipboard!
+	* Work on fonts
+	* Place button correctly
 	* Add hyperlinks to social media icons
 
 Page: AboutMe
