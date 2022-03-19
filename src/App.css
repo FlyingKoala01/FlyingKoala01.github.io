@@ -41,8 +41,11 @@
     text-align: center;
     font-size: 40px;
     font-weight: 100;
+    width: 800px;
+    position:absolute;
+    left: 600px;
     font-family: 'Raleway', sans-serif;
-    margin-top: 4.5cm;
+    margin-top: 4cm;
     user-select: none;
 }
 
@@ -250,7 +253,7 @@
   bottom: 30px;
   height: 10px;
   width: 150px;
-  background-color: rgb(216, 14, 14);
+  background-color: rgba(7, 0, 0, 0);
   z-index: 999;
 }
 
@@ -267,4 +270,34 @@
   bottom: -16px;
   color: white;
   font-size: 32px;
+}
+
+.langIcons {
+  position: absolute;
+  bottom: -5px;
+  left: 135px;
+  height: 150px;
+  width: 10px;
+  background-color: rgba(216, 14, 14, 0);
+  z-index: 999;
+}
+
+.settingsLang {
+  position:absolute;
+  background-color: transparent;
+  background: transparent;
+  border-style: none;
+}
+
+.settingsLang ion-icon {
+  position: absolute;
+  display: block;
+  left: -6px;
+  bottom: -150px;
+  color: white;
+  font-size: 32px;
+}
+
+.langList {
+
 }
