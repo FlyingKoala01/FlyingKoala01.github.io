@@ -11,8 +11,26 @@ import ContactMe from './components/pages/ContactMe';
 
 import './App.css';
 
-
 export default function App() {
+
+  const [languages, setLanguage] = useState(false);
+
+  const expandLanguages = () => {
+    setLanguage(!languages);
+  }
+
+  const [settings, setSettings] = useState(false);
+
+  const expandSettings = () => {
+    setSettings(!settings);
+  }
+
+  const [sound, setSound] = useState(false);
+
+  const turnOnOff = () => {
+    setSound(!sound);
+  }
+
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
@@ -35,6 +53,15 @@ export default function App() {
             <Route path='/ContactMe' element={<ContactMe />}/>
         </Routes>
         <Navbar />
+        <div className='settingsPage'>
+          <button className="settingsGear" onClick={expandSettings}><ion-icon name="settings-outline"></ion-icon></button>
+          {settings && <div className='settingsExpanded'>
+            <button className='settingsSound' onClick={turnOnOff}>{sound ? <ion-icon name="play-outline"></ion-icon>: <ion-icon name="pause-outline"></ion-icon>} </button>
+            <div className='langIcons'>
+              <button className='settingsLang'><ion-icon name="language-outline"></ion-icon></button>
+            </div>
+          </div>}
+        </div>
       </Router>
       )}
     </div>

@@ -11,22 +11,22 @@ export default function Navbar() {
             <ul className={'nav-menu'}>
                 <li className='nav-item'>
                     <Link to='/' className='nav-links'>
-                        Home
+                        home
                     </Link>
                 </li>
                 <li className='nav-item'>
                     <Link to='/AboutMe' className='nav-links'>
-                        About Me
+                        about
                     </Link>
                 </li>
                 <li className='nav-item'>
                     <Link to='/Portfolio' className='nav-links'>
-                        Portfolio
+                        portfolio
                     </Link>
                 </li>
                 <li className='nav-item'>
                     <Link to='/ContactMe' className='nav-links'>
-                        Contact Me
+                        contact
                     </Link>
                 </li>
             </ul>

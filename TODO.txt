@@ -1,7 +1,10 @@
 Page: ContactMe
-	* Work on fonts
-	* Place button correctly
-	* Add hyperlinks to social media icons
+	* Revise after few days
+
+App: Settings
+	* Finish buttons and functionality
+	* Add music
+	* Make page MULTILINGUAL
 
 Page: AboutMe
 	* Write text

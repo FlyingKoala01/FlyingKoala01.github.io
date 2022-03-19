@@ -11,7 +11,29 @@
     border-radius: 50%;
     background: #1A1A1A;
     box-shadow: 100px -100px 0 2px #1A1A1A, -100px -100px 0 2px #1A1A1A, -100px 100px 0 2px #1A1A1A, 100px 100px 0 2px #1A1A1A, 0 0 0 2px #1A1A1A;
+    animation: borderOff .4s ease 1 forwards;
+    cursor: default;
   }
+
+  @keyframes borderOff{
+    0% {
+      box-shadow: 0 -230px 70px 2px #1A1A1A, -230px 0px 70px 2px #1A1A1A, 0px 230px 70px 2px #1A1A1A, 230px 70px 0 2px #1A1A1A, 0 0 0 2px #fff;
+    }
+    25% {
+      box-shadow: 0 -230px 0 2px #1A1A1A, -230px 0px 0 2px #1A1A1A, -0 230px 0 2px #1A1A1A, 100px 100px 0 2px #1A1A1A, 0 0 0 2px #fff;
+    }
+    50% {
+      box-shadow: 0 -230px 0 2px #1A1A1A, -230px 0px 0 2px #1A1A1A, -100px 100px 0 2px #1A1A1A, 100px 100px 0 2px #1A1A1A, 0 0 0 2px #fff;
+    }
+    75% {
+      box-shadow: 0 -100px 0 2px #1A1A1A, -100px -100px 0 2px #1A1A1A, -100px 100px 0 2px #1A1A1A, 100px 100px 0 2px #1A1A1A, 0 0 0 2px #fff;
+    }
+    100% {
+      box-shadow: 100px -100px 0 2px #1A1A1A, -100px -100px 0 2px #1A1A1A, -100px 100px 0 2px #1A1A1A, 100px 100px 0 2px #1A1A1A, 0 0 0 2px #1A1A1A;
+    } 
+  }
+
+
 
   .socialIcon {
     position: absolute;
@@ -56,8 +78,10 @@
       font-size: 62px;
       top: 72px;
     }
+
     
-    .circle .line1, .circle .line2{
+    .circle .line1, 
+    .circle .line2{
       position: absolute;
       top: 100px;
       left: 100px;
@@ -70,6 +94,7 @@
       transform: rotate(-45deg);
     }
     
+
     .text{
       position: absolute;
       top: 60px;
@@ -81,16 +106,20 @@
       font: 18px sans-serif;
       transition: opacity .2s ease;
     }
+
+
     
     .circle:hover{
       animation: border .4s ease 1 forwards;
       cursor: default;
     }
     .circle:hover .socialIcon{
+        display:none;
         opacity: 0;
       }
       
-      .circle:hover .line1, .circle:hover .line2{
+      .circle:hover .line1, 
+      .circle:hover .line2{
         animation: line .4s ease .45s forwards;
       }
       

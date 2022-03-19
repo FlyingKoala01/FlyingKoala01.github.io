@@ -1,22 +1,38 @@
 import React from 'react';
 import Particles from "react-tsparticles";
 
+
 import '../../App.css';
 
-export default function Main() {
 
+
+export default function Main() {
+    {/*
+    let content = {
+        en: {
+            subtitle_text: "An aspiring ICT engineer interested in the<br></br> many diverse fields concerning technology."
+        },
+        it:{
+            subtitle_text: "Futuro ingegnere TIC interessato nei<br></br> tanti diversi campi legati alla tecnologia."
+        }
+    }
+
+    props.language === "it"
+    ? (content = content.it)
+    : (content = content.en);
+
+    */}
     const particlesInit = (main) => {
         console.log(main);
       };
     const particlesLoaded = (container) => {
         console.log(container);
       };
-
     return (
         <main className='main'>
              <div className="TextHome">
                 <h1 className='myName'>isaac iglesias vila</h1>
-                <h2 className='subtitle'>An aspiring ICT engineer interested in the<br></br> many diverse fields concerning technology.</h2>
+                <h2 className='subtitle'>"An aspiring ICT engineer interested in the<br></br> many diverse fields concerning technology."</h2>
             </div>
             <Particles
                 id="tsparticles"
