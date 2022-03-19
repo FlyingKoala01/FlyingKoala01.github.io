@@ -2,9 +2,9 @@ Page: ContactMe
 	* Revise after few days
 
 App: Settings
-	* Finish buttons and functionality
+	* Finish buttons CSS
 	* Add music
-	* Make page MULTILINGUAL
+	* Make page MULTILINGUAL //  Fix layout for different languages
 
 Page: AboutMe
 	* Write text
