@@ -15,25 +15,25 @@ export default function App() {
 
   const [lang, setLang] = useState('');
   
-  const changeLang = button_lang => {
+  const changeLang = (button_lang, event) => {
     setLang(`${button_lang}`);
   };
 
   const [languagesMenu, setLanguage] = useState(false);
 
-  const expandLanguages = () => {
+  const expandLanguages = (event) => {
     setLanguage(!languagesMenu);
   }
 
   const [settings, setSettings] = useState(false);
 
-  const expandSettings = () => {
+  const expandSettings = (event) => {
     setSettings(!settings);
   }
 
   const [sound, setSound] = useState(false);
 
-  const turnOnOff = () => {
+  const turnOnOff = (event) => {
     setSound(!sound);
   }
 

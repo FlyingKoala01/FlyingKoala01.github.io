@@ -55,8 +55,8 @@
   }
   
   .nav-links:hover {
-    border-bottom: 4px solid #fff;
-    transition: all 0.2s ease-out;
+    border-bottom: 4px solid #fff !important;
+    transition: all 0.2s ease-out !important; 
   }
 
   

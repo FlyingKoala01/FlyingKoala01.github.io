@@ -2,27 +2,19 @@ Page: ContactMe
 	* Revise after few days
 
 App: Settings
-	* Finish buttons CSS
+	* Finish buttons CSS //  Fix rendering 
 	* Add music
-	* Make page MULTILINGUAL
 
 Page: AboutMe
 	* Think of something smart to put in the background
+	* 		Python - JS - HTML - CSS - React - C - Assembly (?)  - Git else
 
 Page: Projects // Change name to portfolio
 {Divide section in projects w/ blog page per project, future ideas and programming lang}
-	* Make three.JS shape to show proglang
-		Python - JS - HTML - CSS - React - C - Assembly (?)  - Git else
-		
-	* cards to my Github repos->> Blog to describe how it was
-
+	* Make three.JS shape to show proglang	
+	* cards to my Github repos
 	* Work In Progress
 		# Certifications in CS
 		# Master
 		# Future Ideas
 	
-	** ADD MULTILINGUAL TRANSLATION **
-
-README.MD
-
-Three.JS ideas -> Roadmap // Geometrical Shape for proglang
