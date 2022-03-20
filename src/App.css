@@ -111,6 +111,7 @@
   height: fit-content;
   right: -400px;
   bottom: -50px;
+  user-select: none;
 }
 
 .backgroundContactMe {

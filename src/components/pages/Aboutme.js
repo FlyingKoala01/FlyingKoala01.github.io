@@ -24,7 +24,6 @@ export default function Aboutme(props) {
         }
     };
 
-console.log(props.value);
     switch (props.value) {
         case 'it':
             content = content.it;
