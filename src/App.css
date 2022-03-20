@@ -45,7 +45,7 @@
     position:absolute;
     left: 600px;
     font-family: 'Raleway', sans-serif;
-    margin-top: 4cm;
+    margin-top: 3cm;
     user-select: none;
 }
 
@@ -60,18 +60,7 @@
     font-family: 'Raleway', sans-serif;
 }
 
-.Childhood,
-.Travelling,
-.University
-.Future {
-
-  opacity: 1;
-}
-
-.textUniversity,
-.textFuture,
-.textTravelling,
-.textChildhood {
+.textAboutMe {
   color: rgb(0, 0, 0);
   text-align: center !important;
   position: relative;
@@ -82,6 +71,15 @@
   font-weight: 600;
   font-family: 'Raleway', sans-serif;
 
+}
+
+.glassmorphism {
+  background: rgba( 255, 255, 255, 0.4 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 6px );
+  -webkit-backdrop-filter: blur( 6px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 
 .myFace {

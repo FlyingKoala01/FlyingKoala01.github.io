@@ -4,12 +4,10 @@ Page: ContactMe
 App: Settings
 	* Finish buttons CSS
 	* Add music
-	* Make page MULTILINGUAL //  Fix layout for different languages
+	* Make page MULTILINGUAL
 
 Page: AboutMe
-	* Write text
-	* Make Roadmap
-	* Make background layout
+	* Think of something smart to put in the background
 
 Page: Projects // Change name to portfolio
 {Divide section in projects w/ blog page per project, future ideas and programming lang}

@@ -15,7 +15,7 @@ export default function Main(props)  {
             subtitle_text: "Futuro ingegnere TIC interessato nei tanti diversi campi legati alla tecnologia."
         },
         es:{
-            subtitle_text: "Futuro ingegner"
+            subtitle_text: "Futuro Ingeniero de TIC interesado en los diversos campos relacionados con la tecnología."
         }
     };
 console.log(props.value);
