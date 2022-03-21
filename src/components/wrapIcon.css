@@ -12,7 +12,7 @@
     background: #1A1A1A;
     box-shadow: 100px -100px 0 2px #1A1A1A, -100px -100px 0 2px #1A1A1A, -100px 100px 0 2px #1A1A1A, 100px 100px 0 2px #1A1A1A, 0 0 0 2px #1A1A1A;
     animation: borderOff .4s ease 1 forwards;
-    cursor: default;
+    cursor: none;
   }
 
   @keyframes borderOff{

@@ -18,7 +18,9 @@ Page: Projects // Change name to portfolio
 		# Master
 		# Future Ideas
 
-
+Page: Home
+	** Use CSS hide/show child properties
+	
 
 ** Before proceeding make it responsive ** 
 	
