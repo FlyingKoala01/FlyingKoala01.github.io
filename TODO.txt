@@ -17,4 +17,8 @@ Page: Projects // Change name to portfolio
 		# Certifications in CS
 		# Master
 		# Future Ideas
+
+
+
+** Before proceeding make it responsive ** 
 	
