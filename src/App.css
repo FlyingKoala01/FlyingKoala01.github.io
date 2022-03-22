@@ -380,3 +380,38 @@
   top:25%;
   font-size: larger;
 }
+
+
+/* =============================== ABOUT ME ====================================*/
+
+.aboutMeBackground{
+  height:100vh;
+  width:50%;
+  margin-left: 25%;
+  background: rgba(0, 0, 0, 0);
+}
+
+.glassmorphism {
+  background: rgba(255, 255, 255, 0.158);
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.158 );
+  backdrop-filter: blur( 6px );
+  -webkit-backdrop-filter: blur( 6px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.158 );
+  position:absolute;
+  top: 80px;
+  width: 800px;
+  margin-top: 2.5cm;
+}
+
+.textAboutMe {
+  color: rgb(0, 0, 0);
+  text-align: center !important;
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 1cm;
+  line-height: 2;
+  font-family: 'Raleway', sans-serif;
+
+}
+

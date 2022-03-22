@@ -5,27 +5,20 @@ import '../../App.css';
 
 export default function Aboutme() {
 
-    // Set loading state to true initially
     const [loading, setLoading] = useState(true);
     
     useEffect(() => {
-        // Loading function to load data or 
-        // fake it using setTimeout;
+
         const loadData = async () => {
-    
-        // Wait for two second
+
         await new Promise((r) => setTimeout(r, 3500));
-    
-        // Toggle loading state
+
         setLoading((loading) => !loading);
         };
         
         loadData();
     }, [])
-          
-    // If page is in loading state, display 
-    // loading message. Modify it as per your 
-    // requirement.
+
     if (loading) {
         return <Loader />}
     
@@ -33,10 +26,11 @@ export default function Aboutme() {
     return (
         <main className='aboutMeBackground'>
             <div className='glassmorphism'>
-                <p className='textAboutMe'>{}</p>
-                <p className='textAboutMe'>{}</p>
-                <p className='textAboutMe'>{}</p>
-                <p className='textAboutMe'>{}</p>
+                <p className='textAboutMe'>Hi, I'm Isaac. I was born in Milan, Italy in the year 2000. Raised in a bilingual family and spent most of my childhood travelling in between countries.</p>
+                <p className='textAboutMe'>Specifically in Italy, Spain, Russia and Mexico. This has lead me in learning 4 languages at a proficient level, increased my ability to adapt to change.</p>
+                <p className='textAboutMe'>I am currently studying an <a href='https://www.upc.edu/en/bachelors/ict-systems-engineering-manresa-epsem' alt="UPC EPSEM">ICT Engineering degree</a> in Spain.</p>
+                <p className='textAboutMe'>However, although I am deeply interested in many fields around technology, I am mostly interested in computer science and software.</p>
+                <p className='textAboutMe'>Currently, I intend to persue a carreer in either web development or cybersecurity.</p>
             </div>
             <div>
                 <img src={'../../Images/me.png'} className='myFace' alt="" />

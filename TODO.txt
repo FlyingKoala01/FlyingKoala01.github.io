@@ -2,7 +2,6 @@ Page: ContactMe
 	* Revise after few days
 
 App: Settings
-	* Finish buttons CSS //  Fix rendering 
 	* Add music
 
 Page: AboutMe
@@ -16,11 +15,7 @@ Page: Projects // Change name to portfolio
 	* Work In Progress
 		# Certifications in CS
 		# Master
-		# Future Ideas
-
-Page: Home
-	** Use CSS hide/show child properties
-	
+		# Future Ideas	
 
 ** Before proceeding make it responsive ** 
 	
