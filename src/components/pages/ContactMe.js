@@ -3,6 +3,7 @@ import Loader from '../Loader'
 
 import '../../App.css';
 import '../wrapIcon.css';
+
 import europe from '../../Images/europe.png';
 
 export default function ContactMe() {
