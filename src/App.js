@@ -1,6 +1,6 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState} from 'react'
 import { BrowserRouter as Router, Routes , Route } from 'react-router-dom';
-import RingLoader from "react-spinners/RingLoader";
+
 
 import Main from "./components/pages/Main"
 import Banner from "./components/Banner"
@@ -20,19 +20,8 @@ export default function App() {
     setSound(!sound);
   }
 
-  const [loading, setLoading] = useState(false);
-
-  useEffect(() => {
-    setLoading(true)
-    setTimeout(() => {
-      setLoading(false)
-    }, 3000)
-  }, [])
   return (
     <div className='App'>
-      
-      {loading ? (<div className='Loader'><RingLoader size = {150} color = {"#FFFFFF"} loading = {loading}/> </div>
-      ) : (
       <Router>
         <Banner />
         <MemoizedLayout />
@@ -42,10 +31,10 @@ export default function App() {
             <Route path='/Portfolio' element={<Portfolio />}/>
             <Route path='/ContactMe' element={<ContactMe />}/>
         </Routes>
-        <button className='settingsSound' onClick={turnOnOff}>{sound ? <ion-icon name="play-outline"></ion-icon>: <ion-icon name="pause-outline"></ion-icon>}Sound</button>
-        <Navbar />
+              <button className='settingsSound' onClick={turnOnOff}>{sound ? <ion-icon name="play-outline"></ion-icon>: <ion-icon name="pause-outline"></ion-icon>}Sound</button>
+      <Navbar />
       </Router>
-      )}
+
     </div>
   )
 }

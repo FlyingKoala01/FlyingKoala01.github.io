@@ -1,11 +1,12 @@
-import React, { useState } from 'react'
+import React, {useState, useEffect} from 'react'
+import BarLoader from "react-spinners/BarLoader";
 
 import '../../App.css';
 import '../wrapIcon.css';
 import europe from '../../Images/europe.png';
 
-export default function ContactMe(props) {
-
+export default function ContactMe() {
+    
     let [showHideNotification, setShowHideNotification] = useState(false);
 
     const animate = () => {
@@ -13,7 +14,32 @@ export default function ContactMe(props) {
 
         setTimeout(() => setShowHideNotification(false), 4000);
     }
-
+    
+    // Set loading state to true initially
+    const [loading, setLoading] = useState(true);
+    
+    useEffect(() => {
+        // Loading function to load data or 
+        // fake it using setTimeout;
+        const loadData = async () => {
+    
+        // Wait for two second
+        await new Promise((r) => setTimeout(r, 2000));
+    
+        // Toggle loading state
+        setLoading((loading) => !loading);
+        };
+        
+        loadData();
+    }, [])
+          
+    // If page is in loading state, display 
+    // loading message. Modify it as per your 
+    // requirement.
+    if (loading) {
+        return <div className='Loader'><BarLoader size = {150} color = {"#FFFFFF"} loading = {loading}/>Im Loading </div>
+    }
+    else {
     return (
         <div className='backgroundContactMe'>
             <h1 className="titlePage">do you have any questions?</h1>
@@ -47,7 +73,6 @@ export default function ContactMe(props) {
             </div>
 
         </div>
-
-    )
+        )
+    }
 }
-
