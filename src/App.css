@@ -22,10 +22,53 @@
     align-items: center;
     width: 100%;
     height: 100vh;
+  }
+  .loaderLayout{
+    position:absolute;
+    background-color: transparent;
     color: #ffffff;
     font-size: 20px;
+    top:0;
+    right: 55%;
   }
 
+  .loaderText{
+    background-color: transparent;
+    color: #ffffff;
+    font-size: 20px;
+    text-align: center;
+    width: 200px;
+    position:absolute;
+    top:54vh;
+  }
+  .meLoader128 {
+    background-color: transparent;
+    text-align: center;
+    position:absolute;
+    top:20vh;
+    width: 230px;
+  }
+  .meLoader64{
+    background-color: transparent;
+    text-align: center;
+    position:absolute;
+    top:20vh;
+    width: 230px;
+  }
+  .meLoader48 {
+    background-color: transparent;
+    text-align: center;
+    position:absolute;
+    top:20vh;
+    width: 230px;
+  }
+  .meLoader32{
+    background-color: transparent;
+    text-align: center;
+    position:absolute;
+    top:20vh;
+    width: 230px;
+  }
   #tsparticles {
     position: absolute;
     width: 100%;

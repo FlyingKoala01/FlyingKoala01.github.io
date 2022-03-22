@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import BarLoader from "react-spinners/BarLoader";
+import Loader from '../Loader'
 
 import '../../App.css';
 import '../wrapIcon.css';
@@ -24,7 +24,7 @@ export default function ContactMe() {
         const loadData = async () => {
     
         // Wait for two second
-        await new Promise((r) => setTimeout(r, 2000));
+        await new Promise((r) => setTimeout(r, 1500));
     
         // Toggle loading state
         setLoading((loading) => !loading);
@@ -37,7 +37,7 @@ export default function ContactMe() {
     // loading message. Modify it as per your 
     // requirement.
     if (loading) {
-        return <div className='Loader'><BarLoader size = {150} color = {"#FFFFFF"} loading = {loading}/>Im Loading </div>
+        return <Loader />
     }
     else {
     return (

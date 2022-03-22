@@ -1,8 +1,8 @@
 import React, {useState, useEffect} from 'react'
-import BarLoader from "react-spinners/BarLoader";
 
 import '../Cards.css';
 import CardItem from '../Projects_card';
+import Loader from '../Loader'
 
 export default function Projects() {
   
@@ -15,7 +15,7 @@ export default function Projects() {
         const loadData = async () => {
     
         // Wait for two second
-        await new Promise((r) => setTimeout(r, 2000));
+        await new Promise((r) => setTimeout(r, 1500));
     
         // Toggle loading state
         setLoading((loading) => !loading);
@@ -28,7 +28,7 @@ export default function Projects() {
     // loading message. Modify it as per your 
     // requirement.
     if (loading) {
-        return <div className='Loader'><BarLoader size = {150} color = {"#FFFFFF"} loading = {loading}/>Im Loading </div>
+        return <Loader />
     }
     else {
       return (
