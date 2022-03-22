@@ -12,6 +12,8 @@
     font-family: 'Raleway', sans-serif;
   }
   
+  /* ================================= OTHERS ==========================================*/
+
   .Loader {
     text-align: center;
     display: flex;
@@ -22,13 +24,23 @@
     height: 100vh;
   }
 
+  #tsparticles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+  }
+
+
+  /* ===================================== MAIN ======================================= */
+
   .myName {
     color: rgb(0, 0, 0);
     background-color: transparent;
     text-align: center;
     font-size: 120px;
     font-weight: 550;
-    margin-top: 4cm;
+    margin-top: 4.5cm;
     letter-spacing: 0.5cm;
     font-variant: small-caps;
     font-family: 'Raleway', sans-serif;
@@ -41,23 +53,78 @@
     text-align: center;
     font-size: 40px;
     font-weight: 100;
-    width: 800px;
-    position:absolute;
-    left: 50vh;
+    margin-top: 4.5cm;
     font-family: 'Raleway', sans-serif;
-    margin-top: 3cm;
     user-select: none;
 }
 
-.trial {
-    color: white;
-    text-align: center !important;
-    position: relative;
-    margin-top: 0;
-    font-size: 20px;
-    font-weight: 100;
-    font-family: 'Raleway', sans-serif;
+.settingsSound {
+  position:absolute;
+  background-color: transparent;
+  background: transparent;
+  border-style: none;
+  bottom: 35px;
+  height: 10px;
+  width: 100px;
+  color: #ffffff;
+  font-size: 20px;
+  font-family: 'Raleway', sans-serif;
+  z-index: 10000;
 }
+
+.settingsSound ion-icon {
+  position: absolute;
+  display: block;
+  left: 80px;
+  color: white;
+  font-size: 25px;
+}
+
+@media only screen and (max-height: 845px) {
+  .myName {
+    color: rgb(0, 0, 0);
+    background-color: transparent;
+    text-align: center;
+    font-size: 75px;
+    font-weight: 550;
+    margin-top: 4.5cm;
+    letter-spacing: 0.5cm;
+    font-variant: small-caps;
+    font-family: 'Raleway', sans-serif;
+    user-select: none;
+  }
+  .subtitle {
+    color: rgb(0, 0, 0);
+    background-color: transparent;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 100;
+    margin-top: 2cm;
+    font-family: 'Raleway', sans-serif;
+    user-select: none;
+  }
+  .settingsSound {
+    position:absolute;
+    background-color: transparent;
+    background: transparent;
+    border-style: none;
+    top: 35px;
+    height: 10px;
+    right: 50px;
+    color: #ffffff00;
+    z-index: 10000;
+    }
+    
+  .settingsSound ion-icon {
+    position: absolute;
+    display: block;
+    right: -10px;
+    color: white;
+    font-size: 25px;
+  }
+}
+
+/* ============================ ABOUT ME ===================================== */
 
 .textAboutMe {
   color: rgb(0, 0, 0);
@@ -96,12 +163,7 @@
   background: radial-gradient(circle at 0%,#ffffff 0%, #676768 60% ,#000000 80%);
 }
 
-#tsparticles {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: transparent;
-}
+/* ====================================== CONTACT ME ====================================== */
 
 .europe {
   background-color: transparent;
@@ -209,93 +271,4 @@
   left:20%;
   top:25%;
   font-size: larger;
-}
-
-.settingsPage {
-  position: absolute;
-  bottom: 0;
-  left: 20px;
-  z-index: 1000;
-  height: 55px;
-}
-
-.settingsGear {
-  position:absolute;
-  background-color: transparent;
-  background: transparent;
-  border-style: none;
-}
-
-.settingsGear ion-icon {
-  position: absolute;
-  display: block;
-  color: white;
-  font-size: 32px;
-}
-
-.settingsGear ion-icon:hover {
-  animation: spin 1s linear;
-}
-
-@keyframes spin {
-  from {
-      transform:rotate(0deg);
-  }
-  to {
-      transform:rotate(180deg);
-  }
-}
-
-.settingsExpanded {
-  position: absolute;
-  bottom: 30px;
-  height: 10px;
-  width: 150px;
-  background-color: rgba(7, 0, 0, 0);
-  z-index: 999;
-}
-
-.settingsSound {
-  position:absolute;
-  background-color: transparent;
-  background: transparent;
-  border-style: none;
-}
-.settingsSound ion-icon {
-  position: absolute;
-  display: block;
-  left: 65px;
-  bottom: -16px;
-  color: white;
-  font-size: 32px;
-}
-
-.langIcons {
-  position: absolute;
-  bottom: -5px;
-  left: 135px;
-  height: 150px;
-  width: 10px;
-  background-color: rgba(216, 14, 14, 0);
-  z-index: 999;
-}
-
-.settingsLang {
-  position:absolute;
-  background-color: transparent;
-  background: transparent;
-  border-style: none;
-}
-
-.settingsLang ion-icon {
-  position: absolute;
-  display: block;
-  left: -6px;
-  bottom: -150px;
-  color: white;
-  font-size: 32px;
-}
-
-.langList {
-
 }

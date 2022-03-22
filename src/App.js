@@ -14,25 +14,6 @@ import './App.css';
 
 export default function App() {
 
-  const [lang, setLang] = useState('');
-  
-  const changeLang = (button_lang) => {
-    setLang(`${button_lang}`);
-  };
-
-  const [languagesMenu, setLanguage] = useState(false);
-
-  const expandLanguages = () => {
-    setLanguage(!languagesMenu);
-  }
-
-  
-  const [settings, setSettings] = useState(false);
-
-  const expandSettings = () => {
-    setSettings(!settings);
-  }
-
   const [sound, setSound] = useState(false);
 
   const turnOnOff = () => {
@@ -56,31 +37,15 @@ export default function App() {
         <Banner />
         <MemoizedLayout />
         <Routes>
-            <Route path='/' element={<Main value={lang}/>}/>
-            <Route path='/AboutMe' element={<Aboutme value={lang}/>}/>
-            <Route path='/Portfolio' element={<Portfolio value={lang}/>}/>
-            <Route path='/ContactMe' element={<ContactMe value={lang}/>}/>
+            <Route path='/' element={<Main/>}/>
+            <Route path='/AboutMe' element={<Aboutme />}/>
+            <Route path='/Portfolio' element={<Portfolio />}/>
+            <Route path='/ContactMe' element={<ContactMe />}/>
         </Routes>
+        <button className='settingsSound' onClick={turnOnOff}>{sound ? <ion-icon name="play-outline"></ion-icon>: <ion-icon name="pause-outline"></ion-icon>}Sound</button>
         <Navbar />
       </Router>
       )}
-      <div className='settingsPage'>
-          <button className="settingsGear" onClick={expandSettings}><ion-icon name="settings-outline"></ion-icon></button>
-          {settings && <div className='settingsExpanded'>
-            <button className='settingsSound' onClick={turnOnOff}>{sound ? <ion-icon name="play-outline"></ion-icon>: <ion-icon name="pause-outline"></ion-icon>} </button>
-            <div className='langIcons'>
-              <button className='settingsLang' onClick={expandLanguages}><ion-icon name="language-outline"></ion-icon></button>
-              {languagesMenu && <div className='langList'>
-                <button className='en' value = "en" onClick={e => changeLang(e.target.value)}>English</button>
-                <button className='es' value = "es" onClick={e => changeLang(e.target.value)}>Español</button>
-                <button className='it' value = "it" onClick={e => changeLang(e.target.value)}>Italiano</button>
-              </div>}
-            </div>
-          </div>}
-        </div>
     </div>
   )
 }
-
-
-/*props={lang.chosenLang}*/ 

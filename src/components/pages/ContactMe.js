@@ -6,42 +6,6 @@ import europe from '../../Images/europe.png';
 
 export default function ContactMe(props) {
 
-    let content = {
-        en: {
-            titlePage: "do you have any questions?",
-            contactMeText: "Follow me on my social media! I'm available 24/7",
-            contactMeEmail: "You can also send me an email to ",
-            textPopup: "Email copied to clipboard!"
-        },
-        it:{
-            titlePage: "hai qualche domanda?",
-            contactMeText: "Seguimi sui social! Disponibilità 24/7",
-            contactMeEmail: "Se vuoi mandami una mail a ",
-            textPopup: "Email copiata negli appunti "
-        },
-        es:{
-            titlePage: "¿tienes alguna pregunta?",
-            contactMeText: "¡Sígueme en mis redes sociales! Estoy disponible 24/7",
-            contactMeEmail: "Puedes enviarme un correo a ",
-            textPopup: "Correo copiado en el portapapeles "
-        }
-    };
-console.log(props.value);
-    switch (props.value) {
-        case 'it':
-            content = content.it;
-            break;
-        case 'es':
-            content = content.es;
-            break;
-        case 'en':
-            content = content.en;
-            break;
-        default:
-            content = content.en;
-            break;
-    };
-
     let [showHideNotification, setShowHideNotification] = useState(false);
 
     const animate = () => {
@@ -52,11 +16,11 @@ console.log(props.value);
 
     return (
         <div className='backgroundContactMe'>
-            <h1 className="titlePage">{content.titlePage}</h1>
-            <h2 className='contactMeText'>{content.contactMeText}</h2>
-            <h2 className='contactMeEmail'>{content.contactMeEmail}</h2>
+            <h1 className="titlePage">do you have any questions?</h1>
+            <h2 className='contactMeText'>Follow me on my social media! I'm available 24/7</h2>
+            <h2 className='contactMeEmail'>You can also send me an email to</h2>
             <div className= {showHideNotification ? `popUpNotification` : null}>
-                {showHideNotification &&<div className='textPopup'>{content.textPopup}</div>}
+                {showHideNotification &&<div className='textPopup'>Email copied to clipboard!"</div>}
             </div>
             
             <button className="btn-clipboard" onClick={() =>  
