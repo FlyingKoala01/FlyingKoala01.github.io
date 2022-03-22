@@ -54,6 +54,8 @@
     position:absolute;
     top:20vh;
     width: 230px;
+    animation: fading 1s forwards;
+    animation-delay: 2s;
   }
   .meLoader48 {
     background-color: transparent;
@@ -61,6 +63,8 @@
     position:absolute;
     top:20vh;
     width: 230px;
+    animation: fading 1.1s forwards;
+    animation-delay: 1s;
   }
   .meLoader32{
     background-color: transparent;
@@ -68,7 +72,14 @@
     position:absolute;
     top:20vh;
     width: 230px;
+    animation: fading 1.1s forwards;
   }
+
+@keyframes fading {
+  0%   { opacity: 1;}
+  100% { opacity: 0;}
+}
+  
   #tsparticles {
     position: absolute;
     width: 100%;
