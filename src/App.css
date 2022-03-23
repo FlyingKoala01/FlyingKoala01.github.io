@@ -412,6 +412,6 @@
   margin-top: 1cm;
   line-height: 2;
   font-family: 'Raleway', sans-serif;
-
+  user-select: none;
 }
 

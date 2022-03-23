@@ -17,6 +17,6 @@ Page: Portfolio
 		# Certifications in CS
 		# Master
 		# Future Ideas	
-
+	* Programming quiz app // trivia // player chooses language // maybe with MERN?
 ** Before proceeding make it responsive ** 
 	
