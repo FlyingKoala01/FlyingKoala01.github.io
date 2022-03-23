@@ -6,8 +6,7 @@ App:
 	* Add music
 
 Page: AboutMe
-	* Think of something smart to put in the background
-	* 		Python - JS - HTML - CSS - React - C - Assembly (?)  - Git else
+	* Python - JS - HTML - CSS - React - C - Assembly (?)  - Git else POSARHO AMB ICONS??
 
 Page: Portfolio
 {Divide section in projects w/ blog page per project, future ideas and programming lang}
@@ -20,3 +19,4 @@ Page: Portfolio
 	* Programming quiz app // trivia // player chooses language // maybe with MERN?
 ** Before proceeding make it responsive ** 
 	
+** FER SI QUE CADA FRASE DEL LOADER ESTIGUI LLIGADA AMB LA PAGINA A LA QUE ESTEM ANANT ** 
