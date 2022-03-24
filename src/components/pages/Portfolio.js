@@ -28,7 +28,7 @@ export default function Projects() {
     // loading message. Modify it as per your 
     // requirement.
     if (loading) {
-        return <Loader />
+        return <Loader value={"Take a look to what I've been doing!"}/>
     }
     else {
       return (

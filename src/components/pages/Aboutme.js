@@ -20,7 +20,7 @@ export default function Aboutme() {
     }, [])
 
     if (loading) {
-        return <Loader />
+        return <Loader value={"Who is Isaac?"}/>
     }
 
     else {
@@ -29,10 +29,9 @@ export default function Aboutme() {
                 <h1 className='titlePage' style={{fontSize: "55px", left:"5%", letterSpacing: "0.199cm" }}>what should you know about me</h1>
                 <div className='personDiv'>
                     <h2 className='subtitlePage'>as a person</h2>
-                    <p className='textAboutMe'>Raised in a <b>bilingual</b> family, spending most of my childhood travelling in between countries, Specifically in Italy, Spain, Russia and Mexico. As a result, I've learnt <b>4</b> languages at a <b>proficient</b> level (English, Italian, Spanish and Catalan)</p>
-                    <p className='textAboutMe'> Nevertheless, not only I learnt languages by my expatriate experience. I sincerely believe it has taught me the ability to <b>adapt</b> to change and to work in any workspace and culture.</p>
-                    <p className='textAboutMe'></p>
-                    <p className='textAboutMe'></p>
+                    <p className='textAboutMe'>Raised in a <b>bilingual</b> family, spending most of my childhood travelling in between countries, Specifically in Italy, Spain, Russia and Mexico. As a result, I've learnt <b>4</b> languages at a <b>proficient</b> level (English, Italian, Spanish and Catalan).</p>
+                    <p className='textAboutMe'> Nevertheless, not only I learnt languages by my expatriate experience. I sincerely believe it has taught me the ability to <b>adapt</b> to change and to work in any given workspace and culture.</p>
+                    <p className='textAboutMe'>Other stuff about me??</p>
                     <p className='textAboutMe'></p>
                 </div>
                 <div className='engineerDiv'>
@@ -54,7 +53,7 @@ export default function Aboutme() {
                         <div class="one">Matlab/Octave</div>
                         <div class="two">NI Multisim</div>
                         <div class="three">Intel Quartus (ModelSim)</div>
-                        <div class="four">LaTex</div>
+                        <div class="four">LaTeX</div>
                         <div class="five">Arduino</div>
                         <div class="six">Git/SVN</div>
                     </div>

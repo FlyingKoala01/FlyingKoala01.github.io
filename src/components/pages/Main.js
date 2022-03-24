@@ -28,7 +28,7 @@ export default function Main() {
     // loading message. Modify it as per your 
     // requirement.
     if (loading) {
-        return <Loader />
+        return <Loader value={"Isaac is rendering..."} />
     }
     else {
 

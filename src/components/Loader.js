@@ -7,13 +7,13 @@ import mepx64 from '../Images/mepx/mepx64.png';
 import mepx48 from '../Images/mepx/mepx48.png';
 import mepx32 from '../Images/mepx/mepx32.png';
 
-export default function Loader() {
+export default function Loader(props) {
     return (
         <div className='Loader'>
             <BarLoader width = {220} color = {"#FFFFFF"} />
             <div className='loaderLayout'>
                 <div className='loaderText'>
-                    Isaac is rendering...
+                    {props.value}
                 </div>
                 <img
                     className='meLoader128'

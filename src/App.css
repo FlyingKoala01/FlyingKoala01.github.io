@@ -291,7 +291,7 @@
 
 .contactMe{
   position: absolute;
-  top: 300px;
+  top: 350px;
   left: 250px;
 }
 
@@ -312,7 +312,7 @@
 
 .contactMeText {
   position: absolute;
-  top: 190px;
+  top: 260px;
   left: 50px;
   z-index: 1000;
   color: #ffffff;
@@ -337,6 +337,7 @@
   font-family: 'Raleway', sans-serif;
   user-select: none;
   font-weight: 100;
+  
 }
 
 .btn-clipboard {
@@ -350,6 +351,7 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
+  text-decoration: underline;
 }
 
 .popUpNotification {
@@ -449,45 +451,48 @@
 }
 
 .wrapper {
-
   display: grid;
-  grid-template-columns: min-content repeat(3, 1fr) 300px;
+  grid-template-columns: min-content repeat(3, 1fr) 200px;
   grid-auto-rows: minmax(50px, auto);
+
 
   color: rgb(255, 255, 255);
   font-family: 'Raleway', sans-serif;
   user-select: none;
   text-align: center;
+  justify-content: center;
+  align-content: center;
+
 }
 .one {
-  grid-column: 1;
+  grid-column: 2;
   grid-row: 1;
 }
 .two {
-  grid-column: 2;
+  grid-column: 3;
   grid-row: 1;
 }
 .three {
-  grid-column: 3;
+  grid-column: 4;
   grid-row: 1;
 }
 .four {
-  grid-column: 4;
+  grid-column: 5;
   grid-row: 1;
 }
 .five {
-  grid-column: 1;
-  grid-row: 2;
-}
-.six {
   grid-column: 2;
   grid-row: 2;
 }
-.seven {
+.six {
   grid-column: 3;
   grid-row: 2;
 }
-.eight{
+.seven {
   grid-column: 4;
+  grid-row: 2;
+}
+.eight{
+  grid-column: 5;
   grid-row: 2;
 }
