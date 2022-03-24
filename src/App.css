@@ -413,7 +413,7 @@
   top: 160px;
   width: 800px;
   margin-left: 5%;
-  margin-top: 2.5cm;
+  margin-top: 2cm;
 }
 
 .engineerDiv {
@@ -427,7 +427,7 @@
    top: 160px;
    width: 800px;
    margin-left: 55%;
-   margin-top: 2.5cm;
+   margin-top: 2cm;
  }
 
  
@@ -446,4 +446,48 @@
   color: rgb(255, 255, 255);
   cursor: pointer;
   text-decoration: underline;
+}
+
+.wrapper {
+
+  display: grid;
+  grid-template-columns: min-content repeat(3, 1fr) 300px;
+  grid-auto-rows: minmax(50px, auto);
+
+  color: rgb(255, 255, 255);
+  font-family: 'Raleway', sans-serif;
+  user-select: none;
+  text-align: center;
+}
+.one {
+  grid-column: 1;
+  grid-row: 1;
+}
+.two {
+  grid-column: 2;
+  grid-row: 1;
+}
+.three {
+  grid-column: 3;
+  grid-row: 1;
+}
+.four {
+  grid-column: 4;
+  grid-row: 1;
+}
+.five {
+  grid-column: 1;
+  grid-row: 2;
+}
+.six {
+  grid-column: 2;
+  grid-row: 2;
+}
+.seven {
+  grid-column: 3;
+  grid-row: 2;
+}
+.eight{
+  grid-column: 4;
+  grid-row: 2;
 }
