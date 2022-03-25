@@ -10,6 +10,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Raleway', sans-serif;
+    font-size:100%;
   }
   
   /* ================================= OTHERS ==========================================*/
@@ -41,6 +42,7 @@
     position:absolute;
     top:54vh;
   }
+
   .meLoader128 {
     background-color: transparent;
     text-align: center;
@@ -55,7 +57,7 @@
     top:20vh;
     width: 230px;
     animation: fading 1s forwards;
-    animation-delay: 2s;
+    animation-delay: 1s;
   }
   .meLoader48 {
     background-color: transparent;
@@ -63,7 +65,7 @@
     position:absolute;
     top:20vh;
     width: 230px;
-    animation: fading 1.1s forwards;
+    animation: fading 1s forwards;
     animation-delay: 1s;
   }
   .meLoader32{
@@ -72,14 +74,59 @@
     position:absolute;
     top:20vh;
     width: 230px;
-    animation: fading 1.1s forwards;
+    animation: fading 1s forwards;
   }
 
+@media (min-width: 1100px){
+  .meLoader128 {
+    background-color: transparent;
+    text-align: center;
+    position:absolute;
+    left: 0;
+    right: 0;
+    height: auto;
+    width: 12.0rem;
+  }
+  .meLoader64{
+    background-color: transparent;
+    text-align: center;
+    position:absolute;
+    left: 0;
+    right: 0;
+    animation: fading 1s forwards;
+    animation-delay: 2s;
+    height: auto;
+    width: 12.0rem;
+  }
+  .meLoader48 {
+    background-color: transparent;
+    text-align: center;
+    position:absolute;
+    height: auto;
+    width: 12.0rem;
+    left: 0;
+    right: 0;
+    animation: fading 1s forwards;
+    animation-delay: 1s;
+  }
+  .meLoader32{
+    background-color: transparent;
+    text-align: center;
+    position:absolute;
+    height: auto;
+    width: 12.0rem;
+    left: 0;
+    right: 0;
+    animation: fading 1s forwards;
+  }
+
+}
+  
 @keyframes fading {
   0%   { opacity: 1;}
   100% { opacity: 0;}
 }
-  
+
   #tsparticles {
     position: absolute;
     width: 100%;
@@ -89,60 +136,13 @@
 
 
   /* ===================================== MAIN ======================================= */
-
+/*MOBILE */
+@media (min-width: 640px) {
   .myName {
     color: rgb(0, 0, 0);
     background-color: transparent;
     text-align: center;
-    font-size: 120px;
-    font-weight: 550;
-    margin-top: 4.5cm;
-    letter-spacing: 0.5cm;
-    font-variant: small-caps;
-    font-family: 'Raleway', sans-serif;
-    user-select: none;
-}
-
-.subtitle {
-    color: rgb(0, 0, 0);
-    background-color: transparent;
-    text-align: center;
-    font-size: 40px;
-    font-weight: 100;
-    margin-top: 4.5cm;
-    font-family: 'Raleway', sans-serif;
-    user-select: none;
-}
-
-.settingsSound {
-  position:absolute;
-  background-color: transparent;
-  background: transparent;
-  border-style: none;
-  bottom: 35px;
-  height: 10px;
-  width: 100px;
-  color: #ffffff;
-  font-size: 20px;
-  font-family: 'Raleway', sans-serif;
-  z-index: 10000;
-}
-
-.settingsSound ion-icon {
-  position: absolute;
-  display: block;
-  left: 80px;
-  color: white;
-  font-size: 25px;
-}
-
-/* LARGE MOBILE */
-@media only screen and (max-device-width: 720px) {
-  .myName {
-    color: rgb(0, 0, 0);
-    background-color: transparent;
-    text-align: center;
-    font-size: 100px;
+    font-size: 200px;
     font-weight: 550;
     margin-top: 4.5cm;
     letter-spacing: 0.5cm;
@@ -181,8 +181,8 @@
   }
 }
 
-/* AVERAGE MOBILE */
-@media only screen and (max-device-height: 667px) and (max-device-width: 375px) {
+/* Large MOBILE */
+@media (min-width: 960px) {
   .myName {
     color: rgb(0, 0, 0);
     background-color: transparent;
@@ -226,51 +226,53 @@
   }
 }
 
- /* AVERAGE DESKTOP */
- @media only screen and (max-device-height: 1440px) and (max-device-width: 900px) {
+@media (min-width: 1100px){
   .myName {
     color: rgb(0, 0, 0);
     background-color: transparent;
     text-align: center;
-    font-size: 75px;
+    font-size: 6.0rem;
     font-weight: 550;
     margin-top: 4.5cm;
     letter-spacing: 0.5cm;
     font-variant: small-caps;
     font-family: 'Raleway', sans-serif;
     user-select: none;
-  }
-  .subtitle {
+}
+
+.subtitle {
     color: rgb(0, 0, 0);
     background-color: transparent;
     text-align: center;
-    font-size: 30px;
+    font-size: 2.0rem;
     font-weight: 100;
-    margin-top: 2cm;
+    margin-top: 4.5cm;
     font-family: 'Raleway', sans-serif;
     user-select: none;
-  }
-  .settingsSound {
-    position:absolute;
-    background-color: transparent;
-    background: transparent;
-    border-style: none;
-    top: 35px;
-    height: 10px;
-    right: 50px;
-    color: #ffffff00;
-    z-index: 10000;
-    }
-    
-  .settingsSound ion-icon {
-    position: absolute;
-    display: block;
-    right: -10px;
-    color: white;
-    font-size: 25px;
-  }
 }
 
+.settingsSound {
+  position:absolute;
+  background-color: transparent;
+  background: transparent;
+  border-style: none;
+  bottom: 35px;
+  height: 10px;
+  width: 100px;
+  color: #ffffff;
+  font-size: 20px;
+  font-family: 'Raleway', sans-serif;
+  z-index: 10000;
+}
+
+.settingsSound ion-icon {
+  position: absolute;
+  display: block;
+  left: 80px;
+  color: white;
+  font-size: 25px;
+  }
+}
 /* ====================================== CONTACT ME ====================================== */
 
 .europe {
@@ -495,4 +497,343 @@
 .eight{
   grid-column: 5;
   grid-row: 2;
+}
+@media (min-width: 640px) {
+  .aboutMeBackground{
+    height:100vh;
+    width:100%;
+    background-color: #1A1A1A;
+  }
+  
+  .subtitlePage{
+    color: rgb(255, 255, 255);
+    background-color: transparent;
+    text-align: left;
+    font-size: 45px;
+    font-weight: 550;
+    letter-spacing: 0.3cm;
+    font-variant: small-caps;
+    font-family: 'Raleway', sans-serif;
+    user-select: none;
+  }
+  
+  .personDiv {
+   /* background: rgba(255, 255, 255, 0.158);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.158 );
+    backdrop-filter: blur( 6px );
+    -webkit-backdrop-filter: blur( 6px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.158 ); */
+    position:absolute;
+    top: 160px;
+    width: 800px;
+    margin-left: 5%;
+    margin-top: 2cm;
+  }
+  
+  .engineerDiv {
+    /* background: rgba(255, 255, 255, 0.158);
+     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.158 );
+     backdrop-filter: blur( 6px );
+     -webkit-backdrop-filter: blur( 6px );
+     border-radius: 10px;
+     border: 1px solid rgba( 255, 255, 255, 0.158 ); */
+     position:absolute;
+     top: 160px;
+     width: 800px;
+     margin-left: 55%;
+     margin-top: 2cm;
+   }
+  
+   
+  .textAboutMe {
+    color: rgb(255, 255, 255);
+    text-align: left !important;
+    font-size: 20px;
+    font-weight: 0;
+    margin-top: 0.5cm;
+    line-height: 2;
+    font-family: 'Raleway', sans-serif;
+    user-select: none;
+  }
+  
+  .textAboutMe a:-webkit-any-link {
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  
+  .wrapper {
+    display: grid;
+    grid-template-columns: min-content repeat(3, 1fr) 200px;
+    grid-auto-rows: minmax(50px, auto);
+  
+  
+    color: rgb(255, 255, 255);
+    font-family: 'Raleway', sans-serif;
+    user-select: none;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+  
+  }
+  .one {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .two {
+    grid-column: 3;
+    grid-row: 1;
+  }
+  .three {
+    grid-column: 4;
+    grid-row: 1;
+  }
+  .four {
+    grid-column: 5;
+    grid-row: 1;
+  }
+  .five {
+    grid-column: 2;
+    grid-row: 2;
+  }
+  .six {
+    grid-column: 3;
+    grid-row: 2;
+  }
+  .seven {
+    grid-column: 4;
+    grid-row: 2;
+  }
+  .eight{
+    grid-column: 5;
+    grid-row: 2;
+  }
+}
+@media (min-width: 960px) {
+  .aboutMeBackground{
+    height:100vh;
+    width:100%;
+    background-color: #1A1A1A;
+  }
+  
+  .subtitlePage{
+    color: rgb(255, 255, 255);
+    background-color: transparent;
+    text-align: left;
+    font-size: 45px;
+    font-weight: 550;
+    letter-spacing: 0.3cm;
+    font-variant: small-caps;
+    font-family: 'Raleway', sans-serif;
+    user-select: none;
+  }
+  
+  .personDiv {
+   /* background: rgba(255, 255, 255, 0.158);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.158 );
+    backdrop-filter: blur( 6px );
+    -webkit-backdrop-filter: blur( 6px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.158 ); */
+    position:absolute;
+    top: 160px;
+    width: 800px;
+    margin-left: 5%;
+    margin-top: 2cm;
+  }
+  
+  .engineerDiv {
+    /* background: rgba(255, 255, 255, 0.158);
+     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.158 );
+     backdrop-filter: blur( 6px );
+     -webkit-backdrop-filter: blur( 6px );
+     border-radius: 10px;
+     border: 1px solid rgba( 255, 255, 255, 0.158 ); */
+     position:absolute;
+     top: 160px;
+     width: 800px;
+     margin-left: 55%;
+     margin-top: 2cm;
+   }
+  
+   
+  .textAboutMe {
+    color: rgb(255, 255, 255);
+    text-align: left !important;
+    font-size: 20px;
+    font-weight: 0;
+    margin-top: 0.5cm;
+    line-height: 2;
+    font-family: 'Raleway', sans-serif;
+    user-select: none;
+  }
+  
+  .textAboutMe a:-webkit-any-link {
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  
+  .wrapper {
+    display: grid;
+    grid-template-columns: min-content repeat(3, 1fr) 200px;
+    grid-auto-rows: minmax(50px, auto);
+  
+  
+    color: rgb(255, 255, 255);
+    font-family: 'Raleway', sans-serif;
+    user-select: none;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+  
+  }
+  .one {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .two {
+    grid-column: 3;
+    grid-row: 1;
+  }
+  .three {
+    grid-column: 4;
+    grid-row: 1;
+  }
+  .four {
+    grid-column: 5;
+    grid-row: 1;
+  }
+  .five {
+    grid-column: 2;
+    grid-row: 2;
+  }
+  .six {
+    grid-column: 3;
+    grid-row: 2;
+  }
+  .seven {
+    grid-column: 4;
+    grid-row: 2;
+  }
+  .eight{
+    grid-column: 5;
+    grid-row: 2;
+  }
+}
+@media (min-width: 1100px) {
+  .aboutMeBackground{
+    height:100vh;
+    width:100%;
+    background-color: #1A1A1A;
+  }
+  
+  .titlePage {
+    position: absolute;
+    top: 100px;
+    left: 5%;
+    z-index: 1000;
+    font-weight: 200;
+    font-variant: small-caps;
+    color: #ffffff;
+    background-color: transparent;
+    font-family: 'Raleway', sans-serif;
+    font-size: 60px;
+    user-select: none;
+    letter-spacing: 0.2cm;
+    font-size: 2.6rem
+  }
+  
+  .subtitlePage{
+    color: rgb(255, 255, 255);
+    background-color: transparent;
+    text-align: left;
+    font-size: 2.2rem;
+    font-weight: 550;
+    letter-spacing: 0.2cm;
+    font-variant: small-caps;
+    font-family: 'Raleway', sans-serif;
+    user-select: none;
+  }
+  
+  .personDiv {
+   position:absolute;
+    top: 20%;
+    width: 45%;
+    margin-left: 5%;
+    margin-top: 3%;
+  }
+  
+  .engineerDiv {
+     position:absolute;
+     top: 20%;
+     width: 45%;
+     margin-left: 53%;
+     margin-top: 3%;
+   }
+
+  .textAboutMe {
+    color: rgb(255, 255, 255);
+    text-align: left !important;
+    font-size: 1.1rem;
+    font-weight: 0;
+    margin-top: 0.5cm;
+    line-height: 2;
+    font-family: 'Raleway', sans-serif;
+    user-select: none;
+  }
+  
+  .textAboutMe a:-webkit-any-link {
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  
+  .wrapper {
+    display: grid;
+    grid-template-columns: min-content repeat(3, 1fr) 200px;
+    grid-auto-rows: minmax(50px, auto);
+  
+  
+    color: rgb(255, 255, 255);
+    font-family: 'Raleway', sans-serif;
+    user-select: none;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+  
+  }
+  .one {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .two {
+    grid-column: 3;
+    grid-row: 1;
+  }
+  .three {
+    grid-column: 4;
+    grid-row: 1;
+  }
+  .four {
+    grid-column: 5;
+    grid-row: 1;
+  }
+  .five {
+    grid-column: 2;
+    grid-row: 2;
+  }
+  .six {
+    grid-column: 3;
+    grid-row: 2;
+  }
+  .seven {
+    grid-column: 4;
+    grid-row: 2;
+  }
+  .eight{
+    grid-column: 5;
+    grid-row: 2;
+  }
 }

@@ -16,35 +16,28 @@ export default function ContactMe() {
         setTimeout(() => setShowHideNotification(false), 4000);
     }
 
-    // Set loading state to true initially
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        // Loading function to load data or 
-        // fake it using setTimeout;
+
         const loadData = async () => {
 
-            // Wait for two second
-            await new Promise((r) => setTimeout(r, 3500));
+            await new Promise((r) => setTimeout(r, 3000));
 
-            // Toggle loading state
             setLoading((loading) => !loading);
         };
 
         loadData();
     }, [])
 
-    // If page is in loading state, display 
-    // loading message. Modify it as per your 
-    // requirement.
     if (loading) {
-        return <Loader value={"Let's get in touch with Isaac!"}/>
+        return <Loader value={"Let's get in touch with Isaac!"} />
     }
     else {
         return (
             <div className='backgroundContactMe'>
                 <h1 className="titlePage">do you have any questions?</h1>
-                <h2 className='contactMeText' style= {{top: "170px"}}>Nowadays you can find me flying between Milan and Barcelona!</h2>
+                <h2 className='contactMeText' style={{ top: "170px" }}>Nowadays you can find me flying between Milan and Barcelona!</h2>
                 <h2 className='contactMeText'>Follow me on my social media! I'm available 24/7</h2>
                 <h2 className='contactMeEmail'>You can also send me an email to</h2>
                 <div className={showHideNotification ? `popUpNotification` : null}>

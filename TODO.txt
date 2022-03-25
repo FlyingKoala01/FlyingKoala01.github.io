@@ -6,6 +6,7 @@ App:
 	* Add music
 
 Page: AboutMe
+	** Add scroll for text and get rid of title when scroll ** 
 	* ** If you hover lang, lang logo shows? **
 
 Page: Portfolio

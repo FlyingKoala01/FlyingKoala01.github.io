@@ -11,7 +11,7 @@ export default function Aboutme() {
 
         const loadData = async () => {
 
-            await new Promise((r) => setTimeout(r, 3500));
+            await new Promise((r) => setTimeout(r, 3000));
 
             setLoading((loading) => !loading);
         };
@@ -20,13 +20,13 @@ export default function Aboutme() {
     }, [])
 
     if (loading) {
-        return <Loader value={"Who is Isaac?"}/>
+        return <Loader value={"Who is Isaac?"} />
     }
 
     else {
         return (
             <main className='aboutMeBackground'>
-                <h1 className='titlePage' style={{fontSize: "55px", left:"5%", letterSpacing: "0.199cm" }}>what should you know about me</h1>
+                <h1 className='titlePage' >what should you know about me</h1>
                 <div className='personDiv'>
                     <h2 className='subtitlePage'>as a person</h2>
                     <p className='textAboutMe'>Raised in a <b>bilingual</b> family, spending most of my childhood travelling in between countries, Specifically in Italy, Spain, Russia and Mexico. As a result, I've learnt <b>4</b> languages at a <b>proficient</b> level (English, Italian, Spanish and Catalan).</p>

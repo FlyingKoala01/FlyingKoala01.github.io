@@ -10,7 +10,7 @@ import mepx32 from '../Images/mepx/mepx32.png';
 export default function Loader(props) {
     return (
         <div className='Loader'>
-            <BarLoader width = {220} color = {"#FFFFFF"} />
+            <BarLoader width={220} color={"#FFFFFF"} />
             <div className='loaderLayout'>
                 <div className='loaderText'>
                     {props.value}
@@ -19,22 +19,22 @@ export default function Loader(props) {
                     className='meLoader128'
                     alt={"PixelMe"}
                     src={mepx128}
-                /> 
+                />
                 <img
                     className='meLoader64'
                     alt={"PixelMe"}
                     src={mepx64}
-                /> 
+                />
                 <img
                     className='meLoader48'
                     alt={"PixelMe"}
                     src={mepx48}
-                /> 
+                />
                 <img
                     className='meLoader32'
                     alt={"PixelMe"}
                     src={mepx32}
-                /> 
+                />
             </div>
         </div>
     )

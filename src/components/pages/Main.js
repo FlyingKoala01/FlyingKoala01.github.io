@@ -15,7 +15,7 @@ export default function Main() {
         const loadData = async () => {
 
             // Wait for two second
-            await new Promise((r) => setTimeout(r, 3500));
+            await new Promise((r) => setTimeout(r, 3000));
 
             // Toggle loading state
             setLoading((loading) => !loading);
