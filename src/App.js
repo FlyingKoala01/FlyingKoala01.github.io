@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Main from "./components/pages/Main"
@@ -11,11 +11,7 @@ import './App.css';
 
 export default function App() {
 
-  const [sound, setSound] = useState(false);
 
-  const turnOnOff = () => {
-    setSound(!sound);
-  }
 
   return (
     <div className='App'>
@@ -26,10 +22,8 @@ export default function App() {
           <Route path='/Portfolio' element={<Portfolio />} />
           <Route path='/ContactMe' element={<ContactMe />} />
         </Routes>
-        <button className='settingsSound' onClick={turnOnOff}>{sound ? <ion-icon name="play-outline"></ion-icon> : <ion-icon name="pause-outline"></ion-icon>}Sound</button>
         <Navbar />
       </Router>
-
     </div>
   )
 }

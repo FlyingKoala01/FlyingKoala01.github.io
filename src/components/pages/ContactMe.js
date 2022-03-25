@@ -50,9 +50,7 @@ export default function ContactMe() {
                 }}> isaac.iglesias.vila19@gmail.com <ion-icon name="clipboard-outline" size="small"></ion-icon>
                 </button>
 
-                <div className='europeMap'>
-                    <img src={europe} className='europe' alt="" />
-                </div>
+                <img src={europe} className='europe' alt="" />
 
                 <div className='contactMe'>
                     <div className="wrap">
