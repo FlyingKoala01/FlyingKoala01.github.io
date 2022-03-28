@@ -20,6 +20,6 @@ Page: Portfolio
 	* Programming quiz app // trivia // player chooses language // maybe with MERN?
 
 ** FER SI QUE CADA FRASE DEL LOADER ESTIGUI LLIGADA AMB LA PAGINA A LA QUE ESTEM ANANT ** 
-
+** ADD ANIMATIONS ** 
 *Responsive at the end* 
 
