@@ -670,6 +670,7 @@
      position:absolute;
      top: 20%;
      width: 45%;
+     height: 300px;
      margin-left: 53%;
      margin-top: 3%;
    }
@@ -784,9 +785,11 @@
      position:absolute;
      top: 20%;
      width: 45%;
+     height: 500px;
      margin-left: 53%;
      margin-top: 3%;
    }
+
 
   .textAboutMe {
     color: rgb(255, 255, 255);
