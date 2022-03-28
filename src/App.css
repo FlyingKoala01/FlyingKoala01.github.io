@@ -16,8 +16,239 @@
     font-family: 'Raleway', sans-serif;
     font-size:100%;
   }
-  
+
+/* MOBILE */
+@media (min-width: 0px) and (max-width: 639px) {
+  html {
+    height: 100vh;
+    background: radial-gradient(circle at 120%,#000000 -4%,#676768 12%, #7d7d7e 16%,#a0a0a1 25%,#ffffff 50%,#000000 100%);
+    overflow-y: hidden; 
+    overflow-x: hidden;
+    /* overflow: hidden;*/
+    background-repeat: no-repeat;
+    background-color: #000000;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+    font-size:100%;
+  }  
+}
   /* ================================= OTHERS ==========================================*/
+/* MOBILE */
+@media (min-width: 0px) and (max-width: 639px){
+  .Loader {
+    text-align: center;
+    display: flex;
+    background-color: #000000;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+  }
+  .loaderLayout{
+    position:absolute;
+    background-color: transparent;
+    color: #ffffff;
+    font-size: 20px;
+    top:0;
+    right: 55%;
+  }
+  .loaderText{
+    background-color: transparent;
+    color: #ffffff;
+    font-size: 20px;
+    text-align: center;
+    width: 200px;
+    position:absolute;
+    top:54vh;
+  }
+  .meLoader128 {
+    background-color: transparent;
+    text-align: center;
+    position:absolute;
+    left: 0;
+    right: 0;
+    height: auto;
+    width: 12.0rem;
+  }
+  .meLoader64{
+    background-color: transparent;
+    text-align: center;
+    position:absolute;
+    left: 0;
+    right: 0;
+    animation: fading 1s forwards;
+    animation-delay: 2s;
+    height: auto;
+    width: 12.0rem;
+  }
+  .meLoader48 {
+    background-color: transparent;
+    text-align: center;
+    position:absolute;
+    height: auto;
+    width: 12.0rem;
+    left: 0;
+    right: 0;
+    animation: fading 1s forwards;
+    animation-delay: 1s;
+  }
+  .meLoader32{
+    background-color: transparent;
+    text-align: center;
+    position:absolute;
+    height: auto;
+    width: 12.0rem;
+    left: 0;
+    right: 0;
+    animation: fading 1s forwards;
+  }
+
+}
+/* Larger Mobile */
+@media (min-width: 640px) and (max-width: 959px){
+  .Loader {
+    text-align: center;
+    display: flex;
+    background-color: #000000;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+  }
+  .loaderLayout{
+    position:absolute;
+    background-color: transparent;
+    color: #ffffff;
+    font-size: 20px;
+    top:0;
+    right: 55%;
+  }
+  .loaderText{
+    background-color: transparent;
+    color: #ffffff;
+    font-size: 20px;
+    text-align: center;
+    width: 200px;
+    position:absolute;
+    top:54vh;
+  }
+  .meLoader128 {
+    background-color: transparent;
+    text-align: center;
+    position:absolute;
+    left: 0;
+    right: 0;
+    height: auto;
+    width: 12.0rem;
+  }
+  .meLoader64{
+    background-color: transparent;
+    text-align: center;
+    position:absolute;
+    left: 0;
+    right: 0;
+    animation: fading 1s forwards;
+    animation-delay: 2s;
+    height: auto;
+    width: 12.0rem;
+  }
+  .meLoader48 {
+    background-color: transparent;
+    text-align: center;
+    position:absolute;
+    height: auto;
+    width: 12.0rem;
+    left: 0;
+    right: 0;
+    animation: fading 1s forwards;
+    animation-delay: 1s;
+  }
+  .meLoader32{
+    background-color: transparent;
+    text-align: center;
+    position:absolute;
+    height: auto;
+    width: 12.0rem;
+    left: 0;
+    right: 0;
+    animation: fading 1s forwards;
+  }
+
+}
+/* Large MOBILE */
+@media (min-width: 960px) and (max-width: 1099px){
+  .Loader {
+    text-align: center;
+    display: flex;
+    background-color: #000000;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+  }
+  .loaderLayout{
+    position:absolute;
+    background-color: transparent;
+    color: #ffffff;
+    font-size: 20px;
+    top:0;
+    right: 55%;
+  }
+  .loaderText{
+    background-color: transparent;
+    color: #ffffff;
+    font-size: 20px;
+    text-align: center;
+    width: 200px;
+    position:absolute;
+    top:54vh;
+  }
+  .meLoader128 {
+    background-color: transparent;
+    text-align: center;
+    position:absolute;
+    left: 0;
+    right: 0;
+    height: auto;
+    width: 12.0rem;
+  }
+  .meLoader64{
+    background-color: transparent;
+    text-align: center;
+    position:absolute;
+    left: 0;
+    right: 0;
+    animation: fading 1s forwards;
+    animation-delay: 2s;
+    height: auto;
+    width: 12.0rem;
+  }
+  .meLoader48 {
+    background-color: transparent;
+    text-align: center;
+    position:absolute;
+    height: auto;
+    width: 12.0rem;
+    left: 0;
+    right: 0;
+    animation: fading 1s forwards;
+    animation-delay: 1s;
+  }
+  .meLoader32{
+    background-color: transparent;
+    text-align: center;
+    position:absolute;
+    height: auto;
+    width: 12.0rem;
+    left: 0;
+    right: 0;
+    animation: fading 1s forwards;
+  }
+
+}
+/* Medium */
 @media (min-width: 1100px) and (max-width: 1399px){
   .Loader {
     text-align: center;
@@ -88,6 +319,7 @@
   }
 
 }
+/* LAPTOP */
 @media (min-width: 1400px) and (max-width: 1919px){
   .Loader {
     text-align: center;
@@ -153,6 +385,7 @@
 
 
 }
+/* MONITOR */
 @media (min-width: 1920px) {
   .Loader {
     text-align: center;
@@ -232,12 +465,46 @@
 
   /* ===================================== MAIN ======================================= */
 /*MOBILE */
+@media (min-width: 0px) and (max-width: 639px){
+  .myName {
+    color: rgb(0, 0, 0);
+    background-color: transparent;
+    text-align: center;
+    font-size: 4.0rem;
+    font-weight: 650;
+    margin-top: 2.5cm;
+    margin-left: 0.5cm;
+    margin-right: 0.5cm;
+    letter-spacing: 0.5cm;
+    font-variant: small-caps;
+    font-family: 'Raleway', sans-serif;
+    user-select: none;
+  }
+  .subtitle {
+    color: rgb(0, 0, 0);
+    background-color: transparent;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 100;
+    margin-top: 3cm;
+    font-family: 'Raleway', sans-serif;
+    user-select: none;
+  }
+.main {
+  background-color: transparent;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  animation: bluring 4s forwards;
+  }
+}
+/*Larger Mobile*/
 @media (min-width: 640px) and (max-width: 959px) {
   .myName {
     color: rgb(0, 0, 0);
     background-color: transparent;
     text-align: center;
-    font-size: 200px;
+    font-size: 5.6rem;
     font-weight: 550;
     margin-top: 4.5cm;
     letter-spacing: 0.5cm;
@@ -249,9 +516,9 @@
     color: rgb(0, 0, 0);
     background-color: transparent;
     text-align: center;
-    font-size: 60px;
+    font-size: 2.2rem;
     font-weight: 100;
-    margin-top: 2cm;
+    margin-top: 3cm;
     font-family: 'Raleway', sans-serif;
     user-select: none;
   }
@@ -369,7 +636,7 @@
     color: rgb(0, 0, 0);
     background-color: transparent;
     text-align: center;
-    font-size: 7.5rem;
+    font-size: 8.5rem;
     font-weight: 550;
     margin-top: 4.5cm;
     letter-spacing: 0.5cm;
@@ -382,7 +649,7 @@
     color: rgb(0, 0, 0);
     background-color: transparent;
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     font-weight: 100;
     margin-top: 4.5cm;
     font-family: 'Raleway', sans-serif;

@@ -1,9 +1,269 @@
-@media (min-width: 640px) and (max-width: 959px) {
+@media (min-width: 0px) and (max-width: 639px) {
+  .navbar {
+    background: linear-gradient(90deg, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 100%);
+    background-color: transparent !important;
+    height: 8%;
+    max-width: auto;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    animation: up 4s forwards; 
+  }
+  
+  .bannerTop {
+    background: linear-gradient(90deg, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 100%);
+    background-color: transparent !important;
+    max-width: auto;
+    height: 8%;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 998;
+    animation: down 4s forwards;
+  }
 
+  .nav-menu {
+    display: grid;
+    background-color: transparent !important;
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 0.5%;
+    list-style: none;
+    text-align: center;
+    width: auto;
+    padding-inline-start: 15px;
+    justify-content: center;
+    z-index: 998;
+  }
+  
+  .nav-item {
+    background-color: transparent !important;
+    height: 10%;
+    text-align: center;
+  }
+  
+  .nav-links {
+    color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    height: 50%;
+    font-variant: small-caps;
+  }
+  
+  .nav-links:hover {
+    border-bottom: 4px solid #fff !important;
+    transition: all 0.2s ease-out !important; 
+  }
+
+  
+.settingsSound {
+  position:absolute;
+  background-color: transparent;
+  background: transparent;
+  border-style: none;
+  top: -1120%;
+  height: 10px;
+  width: 100px;
+  color: #ffffff;
+  font-size: 17px;
+  font-family: 'Raleway', sans-serif;
+  z-index: 100;
+}
+
+.settingsSound ion-icon {
+  position: absolute;
+  display: block;
+  left: 75px;
+  color: white;
+  font-size: 20px;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 959px) {
+  .navbar {
+    background: linear-gradient(90deg, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 100%);
+    background-color: transparent !important;
+    height: 7%;
+    max-width: auto;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    animation: up 4s forwards; 
+  }
+  
+  .bannerTop {
+    background: linear-gradient(90deg, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 100%);
+    background-color: transparent !important;
+    max-width: auto;
+    height: 8%;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 998;
+    animation: down 4s forwards;
+  }
+
+  .nav-menu {
+    display: grid;
+    background-color: transparent !important;
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 3%;
+    list-style: none;
+    text-align: center;
+    width: auto;
+    justify-content: center;
+    z-index: 998;
+  }
+  
+  .nav-item {
+    background-color: transparent !important;
+    height: 35%;
+    text-align: center;
+  }
+  
+  .nav-links {
+    color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    height: 50%;
+    font-variant: small-caps;
+  }
+  
+  .nav-links:hover {
+    border-bottom: 4px solid #fff !important;
+    transition: all 0.2s ease-out !important; 
+  }
+
+  
+.settingsSound {
+  position:absolute;
+  background-color: transparent;
+  background: transparent;
+  border-style: none;
+  top: -1110%;
+  height: 10px;
+  width: 100px;
+  color: #ffffff;
+  font-size: 20px;
+  font-family: 'Raleway', sans-serif;
+  z-index: 100;
+}
+
+.settingsSound ion-icon {
+  position: absolute;
+  display: block;
+  left: 80px;
+  color: white;
+  font-size: 25px;
+  }
 }
 
 @media (min-width: 960px) and (max-width: 1099px) {
+  .navbar {
+    background: linear-gradient(90deg, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 100%);
+    background-color: transparent !important;
+    height: 8%;
+    max-width: auto;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    animation: up 4s forwards; 
+  }
   
+  .bannerTop {
+    background: linear-gradient(90deg, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 100%);
+    background-color: transparent !important;
+    max-width: auto;
+    height: 8%;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 998;
+    animation: down 4s forwards;
+  }
+
+  .nav-menu {
+    display: grid;
+    background-color: transparent !important;
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 2%;
+    list-style: none;
+    text-align: center;
+    width: auto;
+    justify-content: center;
+    z-index: 998;
+  }
+  
+  .nav-item {
+    background-color: transparent !important;
+    height: 0%;
+    text-align: center;
+  }
+  
+  .nav-links {
+    color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    height: 50%;
+    font-variant: small-caps;
+  }
+  
+  .nav-links:hover {
+    border-bottom: 4px solid #fff !important;
+    transition: all 0.2s ease-out !important; 
+  }
+
+  
+.settingsSound {
+  position:absolute;
+  background-color: transparent;
+  background: transparent;
+  border-style: none;
+  bottom: 35px;
+  height: 10px;
+  width: 100px;
+  color: #ffffff;
+  font-size: 20px;
+  font-family: 'Raleway', sans-serif;
+  z-index: 100;
+}
+
+.settingsSound ion-icon {
+  position: absolute;
+  display: block;
+  left: 80px;
+  color: white;
+  font-size: 25px;
+  }
 }
 
 @media (min-width: 1100px) and (max-width: 1919px) {
