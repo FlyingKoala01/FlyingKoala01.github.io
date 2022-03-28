@@ -20,13 +20,14 @@
     left: 0;
     right: 0;
     z-index: 999;
+    animation: up 4s forwards; 
   }
   
   .bannerTop {
     background: linear-gradient(90deg, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 100%);
     background-color: transparent !important;
-    height: 8%;
     max-width: auto;
+    height: 8%;
     justify-content: center;
     align-items: center;
     position: fixed;
@@ -34,6 +35,7 @@
     left: 0;
     right: 0;
     z-index: 998;
+    animation: down 4s forwards;
   }
 
   .nav-menu {
@@ -107,8 +109,10 @@
     left: 0;
     right: 0;
     z-index: 999;
+    animation: up 4s forwards;  
   }
-  
+
+
   .bannerTop {
     background: linear-gradient(90deg, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 100%);
     background-color: transparent !important;
@@ -121,6 +125,7 @@
     left: 0;
     right: 0;
     z-index: 998;
+    animation: down 4s forwards;
   }
 
   .nav-menu {
@@ -179,4 +184,20 @@
   font-size: 25px;
   }
 
+@keyframes up {
+
+}  
 }
+
+@keyframes down {
+  0% { height: 0%;}
+  80% { height: 0%;}
+  100% {height: 8%;}
+}
+
+@keyframes up {
+  0% { height: 0%;}
+  80% { height: 0%;}
+  100% {height: 8%;}
+}
+
