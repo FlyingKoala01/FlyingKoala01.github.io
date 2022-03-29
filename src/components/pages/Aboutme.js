@@ -25,7 +25,7 @@ export default function Aboutme() {
 
     else {
         return (
-            <main className='aboutMeBackground' style={{ overflowY: 'auto' }}>
+            <main className='aboutMeBackground'>
                 <h1 className='titlePage' >what should you know about me</h1>
                 <div className='personDiv'>
                     <h2 className='subtitlePage'>as a person</h2>
@@ -34,7 +34,7 @@ export default function Aboutme() {
                     <p className='textAboutMe'>Other stuff about me??</p>
                     <p className='textAboutMe'></p>
                 </div>
-                <div className='engineerDiv' style={{ overflowY: 'hidden' }}>
+                <div className='engineerDiv'>
                     <h2 className='subtitlePage'>as an engineer</h2>
                     <p className='textAboutMe'>I am currently studying an <a classname="degref" href='https://www.upc.edu/en/bachelors/ict-systems-engineering-manresa-epsem' alt="UPC EPSEM">ICT Engineering degree</a> in Spain. And, although I am deeply interested in the whole technology spectrum, I intend to persue a carreer in either <b>web development</b> or <b>cybersecurity</b>.</p>
                     <p className='textAboutMe'>Throughout these years, I had been studying the following programming languages:</p>
