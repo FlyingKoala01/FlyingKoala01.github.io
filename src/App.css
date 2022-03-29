@@ -22,8 +22,7 @@
   html {
     height: 100vh;
     background: radial-gradient(circle at 120%,#000000 -4%,#676768 12%, #7d7d7e 16%,#a0a0a1 25%,#ffffff 50%,#000000 100%);
-    overflow-y: hidden; 
-    overflow-x: hidden;
+    scroll-behavior: smooth;
     /* overflow: hidden;*/
     background-repeat: no-repeat;
     background-color: #000000;
@@ -44,14 +43,14 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 100vh;
+    height: 105vh;
   }
   .loaderLayout{
     position:absolute;
     background-color: transparent;
     color: #ffffff;
     font-size: 20px;
-    top:20%;
+    top:23%;
     right: 75%;
   }
   .loaderText{
@@ -61,7 +60,7 @@
     text-align: center;
     width: 180px;
     position:absolute;
-    top:35vh;
+    top:33vh;
   }
   .meLoader128 {
     background-color: transparent;
@@ -472,9 +471,8 @@
     text-align: center;
     font-size: 4.0rem;
     font-weight: 650;
-    margin-top: 2.5cm;
-    margin-left: 0.5cm;
-    margin-right: 0.5cm;
+    margin-top: 35%;
+    margin-left: 6%;
     letter-spacing: 0.5cm;
     font-variant: small-caps;
     font-family: 'Raleway', sans-serif;
@@ -697,14 +695,14 @@
     height:100vh;
     width:100%;
     background-color: #1A1A1A;
-    overflow-y: scroll;
+
   }
   
   .subtitlePage{
     color: rgb(255, 255, 255);
     background-color: transparent;
     text-align: center;
-    font-size: 2.2rem;
+    font-size: 1.8rem;
     font-weight: 550;
     letter-spacing: 0.3cm;
     margin-top: 1cm;
@@ -715,25 +713,28 @@
   
   .personDiv {
     position:absolute;
-    top: 860px;
-    height: auto;
+    top: 50%;
+    height: 50%;
     width: 300px;
     margin-left: 5%;
     margin-top: 2cm;
+    overflow: scroll;
   }
   
   .engineerDiv {
      position:absolute;
-     top: 20%;
+     top: 15%;
      width: 95%;
+     height: 50%;
      margin-left: 5%;
      margin-top: 2cm;
+     overflow: scroll;
    }
    
   .textAboutMe {
     color: rgb(255, 255, 255);
     text-align: left !important;
-    font-size: 20px;
+    font-size: 1.0rem;
     font-weight: 0;
     margin-top: 0.5cm;
     line-height: 2;
@@ -1369,7 +1370,7 @@
   
   .titlePage {
     position: absolute;
-    top: 3.0rem;
+    top: 2.0rem;
     left: 5%;
     z-index: 1000;
     font-weight: 200;
@@ -1377,7 +1378,7 @@
     color: #ffffff;
     background-color: transparent;
     font-family: 'Raleway', sans-serif;
-    font-size: 2.7rem;
+    font-size: 2.2rem;
     user-select: none;
   }
   

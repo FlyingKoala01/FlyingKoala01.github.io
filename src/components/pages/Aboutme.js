@@ -59,11 +59,6 @@ export default function Aboutme() {
                         <div class="seven">Kali Linux</div>
                         <div class="eight">Ubuntu</div>
                     </div>
-                    <p className='textAboutMe'>Additionally, I had been introduced to several technologies, software and other tools:</p>
-                    <p className='textAboutMe'>Additionally, I had been introduced to several technologies, software and other tools:</p>
-                    <p className='textAboutMe'>Additionally, I had been introduced to several technologies, software and other tools:</p>
-                    <p className='textAboutMe'>Additionally, I had been introduced to several technologies, software and other tools:</p>
-                    <p className='textAboutMe'>Additionally, I had been introduced to several technologies, software and other tools:</p>
                 </div>
                 <div>
                     <img src={'../../Images/me.png'} className='myFace' alt="" />
