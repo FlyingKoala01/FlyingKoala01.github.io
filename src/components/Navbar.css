@@ -91,22 +91,21 @@
   .navbar {
     background: linear-gradient(90deg, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 100%);
     background-color: transparent !important;
-    height: 7%;
+    height: 8%;
     max-width: auto;
     justify-content: center;
     align-items: center;
     font-size: 1.3rem;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
-    z-index: 999;
+    z-index: 1001;
     animation: up 4s forwards; 
   }
   
   .bannerTop {
     background: linear-gradient(90deg, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 100%);
-    background-color: transparent !important;
     max-width: auto;
     height: 8%;
     justify-content: center;
@@ -115,7 +114,7 @@
     top: 0;
     left: 0;
     right: 0;
-    z-index: 998;
+    z-index: 1001;
     animation: down 4s forwards;
   }
 
@@ -123,17 +122,18 @@
     display: grid;
     background-color: transparent !important;
     grid-template-columns: repeat(4, auto);
-    grid-gap: 3%;
+    grid-gap: 0.5%;
     list-style: none;
     text-align: center;
     width: auto;
+    padding-inline-start: 15px;
     justify-content: center;
     z-index: 998;
   }
   
   .nav-item {
     background-color: transparent !important;
-    height: 35%;
+    height: 10%;
     text-align: center;
   }
   
@@ -158,21 +158,22 @@
   background-color: transparent;
   background: transparent;
   border-style: none;
-  top: -1110%;
+  top: -1120%;
   height: 10px;
   width: 100px;
   color: #ffffff;
-  font-size: 20px;
+  font-size: 17px;
   font-family: 'Raleway', sans-serif;
   z-index: 100;
+  animation: down 4s forwards;
 }
 
 .settingsSound ion-icon {
   position: absolute;
   display: block;
-  left: 80px;
+  left: 75px;
   color: white;
-  font-size: 25px;
+  font-size: 20px;
   }
 }
 @media (min-width: 960px) and (max-width: 1099px) {

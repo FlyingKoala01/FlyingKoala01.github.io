@@ -18,9 +18,6 @@ Page: Portfolio
 		# Future Ideas	
 	* Programming quiz app // trivia // player chooses language // maybe with MERN?
 
-** FER SI QUE CADA FRASE DEL LOADER ESTIGUI LLIGADA AMB LA PAGINA A LA QUE ESTEM ANANT ** 
-** ADD ANIMATIONS ** 
-** Fix wrapper ** 
-** Scroll bar about me on hover ** 
+** MAKE CELLPHONE RESPONSIVENESS PROPERLY ** 
 *Responsive at the end* 
 
