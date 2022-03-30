@@ -455,7 +455,6 @@
   0%   { opacity: 1;}
   100% { opacity: 0;}
 }
-
   #tsparticles {
     position: absolute;
     width: 100%;
@@ -693,7 +692,7 @@
 /*MOBILE */
 @media (min-width: 0px) and (max-width: 639px){
   .aboutMeBackground{
-    height:200vh;
+    height:300vh;
     width:100%;
     background-color: #1A1A1A;
   }
@@ -711,19 +710,18 @@
   }
   .personDiv {
     position:absolute;
-    top: 15%;
+    top: 25%;
     height: 50%;
     margin-left: 10%;
     margin-right: 10%;
-    margin-top: 2cm;
+
   }
   .engineerDiv {
      position:absolute;
-     top: 85%;
+     top: 105%;
      height: 50%;
      margin-left: 10%;
      margin-right: 10%;
-     margin-top: 2cm;
    }
   .textAboutMe {
     color: rgb(255, 255, 255);
@@ -740,21 +738,10 @@
     cursor: pointer;
     text-decoration: underline;
   }
-  .textGrid{
-    color: rgb(255, 255, 255);
-    text-align: center !important;
-    font-size: 1.0rem;
-    font-weight: 0;
-    margin-top: 0.5cm;
-    line-height: 2;
-    font-family: 'Raleway', sans-serif;
-    user-select: none;
-  }
   .wrapper {
     display: grid;
-    grid-template-columns: min-content repeat(3, 1fr) 200px;
-    grid-auto-rows: minmax(50px, auto);
-  
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-auto-rows: minmax(80px, auto);
   
     color: rgb(255, 255, 255);
     font-family: 'Raleway', sans-serif;
@@ -1940,14 +1927,12 @@
     animation: popUp 4s ease infinite;
     }
   }
-
   @keyframes popUp {
     0%   { bottom: 0px;opacity:0;}
     25%  { bottom: 180px; opacity:1;}
     75%  { bottom: 180px; opacity:1;} 
     100% { opacity: 0;}
   }
-
   @keyframes fadingText {
     0%   { opacity: 0;}
     100% { opacity: 1;}
