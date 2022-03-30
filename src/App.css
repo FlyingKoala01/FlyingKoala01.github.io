@@ -1248,14 +1248,14 @@
   .titlePage {
     position: absolute;
     top: 5.0rem;
-    left: 5%;
+    left: 2.6%;
     z-index: 1000;
     font-weight: 200;
     font-variant: small-caps;
     color: #ffffff;
     background-color: transparent;
     font-family: 'Raleway', sans-serif;
-    font-size: 3.5rem;
+    font-size: 3.8rem;
     user-select: none;
     letter-spacing: 0.2cm;
   }
@@ -1272,21 +1272,30 @@
   }
   .personDiv {
     position:absolute;
-    top: 160px;
-    width: 800px;
-    margin-left: 5%;
-    margin-top: 2cm;
+    top: 25%;
+    width: 43%;
+    margin-left: 3%;
   }
   .engineerDiv {
      position:absolute;
-     top: 160px;
-     width: 800px;
-     margin-left: 55%;
-     margin-top: 2cm;
+     top: 25%;
+     width: 45%;
+     height: 65%;
+     margin-left: 53%;
+     overflow: auto;
    }
+  ::-webkit-scrollbar{
+    width: 12px;
+    background-color: #f5f5f500;
+   }
+   ::-webkit-scrollbar-thumb {
+    background: linear-gradient(transparent, #06e299);
+    border-radius: 6px;
+  }
+
   .textAboutMe {
     color: rgb(255, 255, 255);
-    text-align: left !important;
+    text-align: justify !important;
     font-size: 20px;
     font-weight: 0;
     margin-top: 0.5cm;
@@ -1312,7 +1321,7 @@
   .wrapper {
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
-    grid-auto-rows: minmax(50px, auto);
+    grid-auto-rows: minmax(80px, auto);
   
   
     color: rgb(255, 255, 255);
@@ -1955,3 +1964,5 @@
     0%   { opacity: 0;}
     100% { opacity: 1;}
   }
+
+
