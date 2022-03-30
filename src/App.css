@@ -697,7 +697,6 @@
     background-color: #1A1A1A;
 
   }
-  
   .subtitlePage{
     color: rgb(255, 255, 255);
     background-color: transparent;
@@ -710,7 +709,6 @@
     font-family: 'Raleway', sans-serif;
     user-select: none;
   }
-  
   .personDiv {
     position:absolute;
     top: 50%;
@@ -720,7 +718,6 @@
     margin-top: 2cm;
     overflow: scroll;
   }
-  
   .engineerDiv {
      position:absolute;
      top: 15%;
@@ -730,7 +727,6 @@
      margin-top: 2cm;
      overflow: scroll;
    }
-   
   .textAboutMe {
     color: rgb(255, 255, 255);
     text-align: left !important;
@@ -741,13 +737,21 @@
     font-family: 'Raleway', sans-serif;
     user-select: none;
   }
-  
   .textAboutMe a:-webkit-any-link {
     color: rgb(255, 255, 255);
     cursor: pointer;
     text-decoration: underline;
   }
-  
+  .textGrid{
+    color: rgb(255, 255, 255);
+    text-align: center !important;
+    font-size: 1.0rem;
+    font-weight: 0;
+    margin-top: 0.5cm;
+    line-height: 2;
+    font-family: 'Raleway', sans-serif;
+    user-select: none;
+  }
   .wrapper {
     display: grid;
     grid-template-columns: min-content repeat(3, 1fr) 200px;
@@ -801,7 +805,6 @@
     width:100%;
     background-color: #1A1A1A;
   }
-  
   .subtitlePage{
     color: rgb(255, 255, 255);
     background-color: transparent;
@@ -813,7 +816,6 @@
     font-family: 'Raleway', sans-serif;
     user-select: none;
   }
-  
   .personDiv {
     position:absolute;
     top: 160px;
@@ -821,7 +823,6 @@
     margin-left: 5%;
     margin-top: 2cm;
   }
-  
   .engineerDiv {
      position:absolute;
      top: 160px;
@@ -829,8 +830,6 @@
      margin-left: 55%;
      margin-top: 2cm;
    }
-  
-   
   .textAboutMe {
     color: rgb(255, 255, 255);
     text-align: left !important;
@@ -841,13 +840,11 @@
     font-family: 'Raleway', sans-serif;
     user-select: none;
   }
-  
   .textAboutMe a:-webkit-any-link {
     color: rgb(255, 255, 255);
     cursor: pointer;
     text-decoration: underline;
   }
-  
   .wrapper {
     display: grid;
     grid-template-columns: min-content repeat(3, 1fr) 200px;
@@ -861,6 +858,16 @@
     justify-content: center;
     align-content: center;
   
+  }
+  .textGrid{
+    color: rgb(255, 255, 255);
+    text-align: center !important;
+    font-size: 1.0rem;
+    font-weight: 0;
+    margin-top: 0.5cm;
+    line-height: 2;
+    font-family: 'Raleway', sans-serif;
+    user-select: none;
   }
   .one {
     grid-column: 2;
@@ -901,7 +908,6 @@
     width:100%;
     background-color: #1A1A1A;
   }
-  
   .subtitlePage{
     color: rgb(255, 255, 255);
     background-color: transparent;
@@ -913,7 +919,6 @@
     font-family: 'Raleway', sans-serif;
     user-select: none;
   }
-  
   .personDiv {
     position:absolute;
     top: 160px;
@@ -921,7 +926,6 @@
     margin-left: 5%;
     margin-top: 2cm;
   }
-  
   .engineerDiv {
      position:absolute;
      top: 160px;
@@ -929,8 +933,6 @@
      margin-left: 55%;
      margin-top: 2cm;
    }
-  
-   
   .textAboutMe {
     color: rgb(255, 255, 255);
     text-align: left !important;
@@ -941,13 +943,11 @@
     font-family: 'Raleway', sans-serif;
     user-select: none;
   }
-  
   .textAboutMe a:-webkit-any-link {
     color: rgb(255, 255, 255);
     cursor: pointer;
     text-decoration: underline;
   }
-  
   .wrapper {
     display: grid;
     grid-template-columns: min-content repeat(3, 1fr) 200px;
@@ -961,6 +961,16 @@
     justify-content: center;
     align-content: center;
   
+  }
+  .textGrid{
+    color: rgb(255, 255, 255);
+    text-align: center !important;
+    font-size: 1.0rem;
+    font-weight: 0;
+    margin-top: 0.5cm;
+    line-height: 2;
+    font-family: 'Raleway', sans-serif;
+    user-select: none;
   }
   .one {
     grid-column: 2;
@@ -1001,7 +1011,6 @@
     width:100%;
     background-color: #1A1A1A;
   }
-  
   .titlePage {
     position: absolute;
     top: 5.5rem;
@@ -1016,7 +1025,6 @@
     user-select: none;
     letter-spacing: 0.2cm;
   }
-  
   .subtitlePage{
     color: rgb(255, 255, 255);
     background-color: transparent;
@@ -1028,7 +1036,6 @@
     font-family: 'Raleway', sans-serif;
     user-select: none;
   }
-  
   .personDiv {
    position:absolute;
     top: 20%;
@@ -1036,7 +1043,6 @@
     margin-left: 5%;
     margin-top: 3%;
   }
-  
   .engineerDiv {
      position:absolute;
      top: 20%;
@@ -1045,7 +1051,6 @@
      margin-left: 53%;
      margin-top: 3%;
    }
-
   .textAboutMe {
     color: rgb(255, 255, 255);
     text-align: left !important;
@@ -1056,13 +1061,21 @@
     font-family: 'Raleway', sans-serif;
     user-select: none;
   }
-  
   .textAboutMe a:-webkit-any-link {
     color: rgb(255, 255, 255);
     cursor: pointer;
     text-decoration: underline;
   }
-  
+  .textGrid{
+    color: rgb(255, 255, 255);
+    text-align: center !important;
+    font-size: 1.0rem;
+    font-weight: 0;
+    margin-top: 0.5cm;
+    line-height: 2;
+    font-family: 'Raleway', sans-serif;
+    user-select: none;
+  }
   .wrapper {
     display: grid;
     grid-template-columns: min-content repeat(3, 1fr) 200px;
@@ -1171,6 +1184,16 @@
     cursor: pointer;
     text-decoration: underline;
   }
+  .textGrid{
+    color: rgb(255, 255, 255);
+    text-align: center !important;
+    font-size: 1.0rem;
+    font-weight: 0;
+    margin-top: 0.5cm;
+    line-height: 2;
+    font-family: 'Raleway', sans-serif;
+    user-select: none;
+  }
   .wrapper {
     display: grid;
     grid-template-columns: min-content repeat(3, 1fr) 200px;
@@ -1184,11 +1207,6 @@
     justify-content: center;
     align-content: center;
   
-  }
-  .imgLogo {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
   }
   .one {
     grid-column: 2;
@@ -1223,14 +1241,12 @@
     grid-row: 2;
   }
 }
-
 @media (min-width: 1920px) {
   .aboutMeBackground{
     height:100vh;
     width:100%;
     background-color: #1A1A1A;
   }
-
   .titlePage {
     position: absolute;
     top: 5.5rem;
@@ -1245,7 +1261,6 @@
     user-select: none;
     letter-spacing: 0.2cm;
   }
-  
   .subtitlePage{
     color: rgb(255, 255, 255);
     background-color: transparent;
@@ -1257,7 +1272,6 @@
     font-family: 'Raleway', sans-serif;
     user-select: none;
   }
-  
   .personDiv {
     position:absolute;
     top: 160px;
@@ -1265,7 +1279,6 @@
     margin-left: 5%;
     margin-top: 2cm;
   }
-  
   .engineerDiv {
      position:absolute;
      top: 160px;
@@ -1273,8 +1286,6 @@
      margin-left: 55%;
      margin-top: 2cm;
    }
-  
-   
   .textAboutMe {
     color: rgb(255, 255, 255);
     text-align: left !important;
@@ -1285,13 +1296,21 @@
     font-family: 'Raleway', sans-serif;
     user-select: none;
   }
-  
   .textAboutMe a:-webkit-any-link {
     color: rgb(255, 255, 255);
     cursor: pointer;
     text-decoration: underline;
   }
-  
+  .textGrid{
+    color: rgb(255, 255, 255);
+    text-align: center !important;
+    font-size: 1.0rem;
+    font-weight: 0;
+    margin-top: 0.5cm;
+    line-height: 2;
+    font-family: 'Raleway', sans-serif;
+    user-select: none;
+  }
   .wrapper {
     display: grid;
     grid-template-columns: min-content repeat(3, 1fr) 200px;
