@@ -20,6 +20,7 @@ Page: Portfolio
 
 ** FER SI QUE CADA FRASE DEL LOADER ESTIGUI LLIGADA AMB LA PAGINA A LA QUE ESTEM ANANT ** 
 ** ADD ANIMATIONS ** 
+** Fix wrapper ** 
 ** Scroll bar about me on hover ** 
 *Responsive at the end* 
 

@@ -68,7 +68,7 @@ export default function Aboutme() {
                 </div>
                 <div className='engineerDiv'>
                     <h2 className='subtitlePage'>as an engineer</h2>
-                    <p className='textAboutMe'>I am currently studying an <a classname="degref" href='https://www.upc.edu/en/bachelors/ict-systems-engineering-manresa-epsem' alt="UPC EPSEM">ICT Engineering degree</a> in Spain. And, although I am deeply interested in the whole technology spectrum, I intend to persue a carreer in either <b>web development</b> or <b>cybersecurity</b>.</p>
+                    <p className='textAboutMe'>I am currently studying an <a className="degref" href='https://www.upc.edu/en/bachelors/ict-systems-engineering-manresa-epsem' alt="UPC EPSEM">ICT Engineering degree</a> in Spain. And, although I am deeply interested in the whole technology spectrum, I intend to persue a carreer in either <b>web development</b> or <b>cybersecurity</b>.</p>
                     <p className='textAboutMe'>Throughout these years, I had been studying the following programming languages:</p>
                     <div class="wrapper">
                         <div class="one" onMouseOver={(e) => {showLogo(e, 'pyLogo');}} onMouseOut={(e) => {hideLogo(e, 'pyLogo');}}>
@@ -107,25 +107,29 @@ export default function Aboutme() {
                     <p className='textAboutMe'>Additionally, I had been introduced to several technologies, software and other tools:</p>
                     <div class="wrapper">
                         <div class="one" onMouseOver={(e) => {showLogo(e, 'matlabLogo');}}onMouseOut={(e) => {hideLogo(e, 'matlabLogo');}}>
-                            {!visibleLogo['matlabLogo'] && <p>Matlab/Octave</p>}
+                            {!visibleLogo['matlabLogo'] && <p className='textGrid'>Matlab/Octave</p>}
                             {visibleLogo['matlabLogo'] && <i class="devicon-matlab-plain" style={{fontSize:'48px'}}/>}
                         </div>
-                        <div class="two">NI Multisim</div>
-                        <div class="three">Intel Quartus (ModelSim)</div>
+                        <div class="two">
+                            <p className='textGrid'>NI Multisim</p>
+                        </div>
+                        <div class="three">
+                            <p className='textGrid'>Intel Quartus (ModelSim)</p>
+                        </div>
                         <div class="four" onMouseOver={(e) => {showLogo(e, 'latexLogo');}}onMouseOut={(e) => {hideLogo(e, 'latexLogo');}}>
-                            {!visibleLogo['latexLogo'] && <p>LaTeX</p>}
+                            {!visibleLogo['latexLogo'] && <p className='textGrid'>LaTeX</p>}
                             {visibleLogo['latexLogo'] && <i class="devicon-latex-original" style={{fontSize:'48px'}}/>}
                         </div>
                         <div class="five" onMouseOver={(e) => {showLogo(e, 'arduinoLogo');}}onMouseOut={(e) => {hideLogo(e, 'arduinoLogo');}}>
-                            {!visibleLogo['arduinoLogo'] && <p>Arduino</p>}
+                            {!visibleLogo['arduinoLogo'] && <p className='textGrid'>Arduino</p>}
                             {visibleLogo['arduinoLogo'] && <i class="devicon-arduino-plain" style={{fontSize:'48px'}}/>}
                         </div>
                         <div class="six" onMouseOver={(e) => {showLogo(e, 'gitLogo');}}onMouseOut={(e) => {hideLogo(e, 'gitLogo');}}>
-                            {!visibleLogo['gitLogo'] && <p>Git/SVN</p>}
+                            {!visibleLogo['gitLogo'] && <p className='textGrid'>Git/SVN</p>}
                             {visibleLogo['gitLogo'] && <i class="devicon-git-plain colored" style={{fontSize:'48px'}}/>}
                         </div>
                         <div class="seven" onMouseOver={(e) => {showLogo(e, 'linuxLogo');}}onMouseOut={(e) => {hideLogo(e, 'linuxLogo');}}>
-                            {!visibleLogo['linuxLogo'] && <p>Linux</p>}
+                            {!visibleLogo['linuxLogo'] && <p className='textGrid'>Linux</p>}
                             {visibleLogo['linuxLogo'] && <i class="devicon-linux-plain" style={{fontSize:'48px'}}/>}
                         </div>
                     </div>

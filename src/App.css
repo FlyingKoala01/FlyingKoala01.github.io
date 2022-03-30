@@ -23,7 +23,8 @@
     height: 100vh;
     background: radial-gradient(circle at 120%,#000000 -4%,#676768 12%, #7d7d7e 16%,#a0a0a1 25%,#ffffff 50%,#000000 100%);
     scroll-behavior: smooth;
-    /* overflow: hidden;*/
+    overflow-y: scroll;
+    /* overflw: hidden;*/
     background-repeat: no-repeat;
     background-color: #000000;
     box-sizing: border-box;
@@ -43,7 +44,7 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 105vh;
+    height: 100vh;
   }
   .loaderLayout{
     position:absolute;
@@ -692,10 +693,9 @@
 /*MOBILE */
 @media (min-width: 0px) and (max-width: 639px){
   .aboutMeBackground{
-    height:100vh;
+    height:200vh;
     width:100%;
     background-color: #1A1A1A;
-
   }
   .subtitlePage{
     color: rgb(255, 255, 255);
@@ -711,25 +711,23 @@
   }
   .personDiv {
     position:absolute;
-    top: 50%;
+    top: 15%;
     height: 50%;
-    width: 300px;
-    margin-left: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
     margin-top: 2cm;
-    overflow: scroll;
   }
   .engineerDiv {
      position:absolute;
-     top: 15%;
-     width: 95%;
+     top: 85%;
      height: 50%;
-     margin-left: 5%;
+     margin-left: 10%;
+     margin-right: 10%;
      margin-top: 2cm;
-     overflow: scroll;
    }
   .textAboutMe {
     color: rgb(255, 255, 255);
-    text-align: left !important;
+    text-align: justify !important;
     font-size: 1.0rem;
     font-weight: 0;
     margin-top: 0.5cm;
@@ -767,35 +765,35 @@
   
   }
   .one {
-    grid-column: 2;
+    grid-column: 1;
     grid-row: 1;
   }
   .two {
-    grid-column: 3;
+    grid-column: 2;
     grid-row: 1;
   }
   .three {
-    grid-column: 4;
+    grid-column: 3;
     grid-row: 1;
   }
   .four {
-    grid-column: 5;
+    grid-column: 4;
     grid-row: 1;
   }
   .five {
-    grid-column: 2;
+    grid-column: 1;
     grid-row: 2;
   }
   .six {
-    grid-column: 3;
+    grid-column: 2;
     grid-row: 2;
   }
   .seven {
-    grid-column: 4;
+    grid-column: 3;
     grid-row: 2;
   }
   .eight{
-    grid-column: 5;
+    grid-column: 4;
     grid-row: 2;
   }
 }
@@ -870,35 +868,35 @@
     user-select: none;
   }
   .one {
-    grid-column: 2;
+    grid-column: 1;
     grid-row: 1;
   }
   .two {
-    grid-column: 3;
+    grid-column: 2;
     grid-row: 1;
   }
   .three {
-    grid-column: 4;
+    grid-column: 3;
     grid-row: 1;
   }
   .four {
-    grid-column: 5;
+    grid-column: 4;
     grid-row: 1;
   }
   .five {
-    grid-column: 2;
+    grid-column: 1;
     grid-row: 2;
   }
   .six {
-    grid-column: 3;
+    grid-column: 2;
     grid-row: 2;
   }
   .seven {
-    grid-column: 4;
+    grid-column: 3;
     grid-row: 2;
   }
   .eight{
-    grid-column: 5;
+    grid-column: 4;
     grid-row: 2;
   }
 }
@@ -973,35 +971,35 @@
     user-select: none;
   }
   .one {
-    grid-column: 2;
+    grid-column: 1;
     grid-row: 1;
   }
   .two {
-    grid-column: 3;
+    grid-column: 2;
     grid-row: 1;
   }
   .three {
-    grid-column: 4;
+    grid-column: 3;
     grid-row: 1;
   }
   .four {
-    grid-column: 5;
+    grid-column: 4;
     grid-row: 1;
   }
   .five {
-    grid-column: 2;
+    grid-column: 1;
     grid-row: 2;
   }
   .six {
-    grid-column: 3;
+    grid-column: 2;
     grid-row: 2;
   }
   .seven {
-    grid-column: 4;
+    grid-column: 3;
     grid-row: 2;
   }
   .eight{
-    grid-column: 5;
+    grid-column: 4;
     grid-row: 2;
   }
 }
@@ -1091,35 +1089,35 @@
   
   }
   .one {
-    grid-column: 2;
+    grid-column: 1;
     grid-row: 1;
   }
   .two {
-    grid-column: 3;
+    grid-column: 2;
     grid-row: 1;
   }
   .three {
-    grid-column: 4;
+    grid-column: 3;
     grid-row: 1;
   }
   .four {
-    grid-column: 5;
+    grid-column: 4;
     grid-row: 1;
   }
   .five {
-    grid-column: 2;
+    grid-column: 1;
     grid-row: 2;
   }
   .six {
-    grid-column: 3;
+    grid-column: 2;
     grid-row: 2;
   }
   .seven {
-    grid-column: 4;
+    grid-column: 3;
     grid-row: 2;
   }
   .eight{
-    grid-column: 5;
+    grid-column: 4;
     grid-row: 2;
   }
 }
@@ -1196,7 +1194,7 @@
   }
   .wrapper {
     display: grid;
-    grid-template-columns: min-content repeat(3, 1fr) 200px;
+    grid-template-columns: 25% 25% 25% 25%;
     grid-auto-rows: minmax(50px, auto);
   
   
@@ -1209,35 +1207,35 @@
   
   }
   .one {
-    grid-column: 2;
+    grid-column: 1;
     grid-row: 1;
   }
   .two {
-    grid-column: 3;
+    grid-column: 2;
     grid-row: 1;
   }
   .three {
-    grid-column: 4;
+    grid-column: 3;
     grid-row: 1;
   }
   .four {
-    grid-column: 5;
+    grid-column: 4;
     grid-row: 1;
   }
   .five {
-    grid-column: 2;
+    grid-column: 1;
     grid-row: 2;
   }
   .six {
-    grid-column: 3;
+    grid-column: 2;
     grid-row: 2;
   }
   .seven {
-    grid-column: 4;
+    grid-column: 3;
     grid-row: 2;
   }
   .eight{
-    grid-column: 5;
+    grid-column: 4;
     grid-row: 2;
   }
 }
@@ -1249,7 +1247,7 @@
   }
   .titlePage {
     position: absolute;
-    top: 5.5rem;
+    top: 5.0rem;
     left: 5%;
     z-index: 1000;
     font-weight: 200;
@@ -1265,7 +1263,7 @@
     color: rgb(255, 255, 255);
     background-color: transparent;
     text-align: left;
-    font-size: 45px;
+    font-size: 2.3rem;
     font-weight: 550;
     letter-spacing: 0.3cm;
     font-variant: small-caps;
@@ -1313,7 +1311,7 @@
   }
   .wrapper {
     display: grid;
-    grid-template-columns: min-content repeat(3, 1fr) 200px;
+    grid-template-columns: 25% 25% 25% 25%;
     grid-auto-rows: minmax(50px, auto);
   
   
@@ -1326,35 +1324,35 @@
   
   }
   .one {
-    grid-column: 2;
+    grid-column: 1;
     grid-row: 1;
   }
   .two {
-    grid-column: 3;
+    grid-column: 2;
     grid-row: 1;
   }
   .three {
-    grid-column: 4;
+    grid-column: 3;
     grid-row: 1;
   }
   .four {
-    grid-column: 5;
+    grid-column: 4;
     grid-row: 1;
   }
   .five {
-    grid-column: 2;
+    grid-column: 1;
     grid-row: 2;
   }
   .six {
-    grid-column: 3;
+    grid-column: 2;
     grid-row: 2;
   }
   .seven {
-    grid-column: 4;
+    grid-column: 3;
     grid-row: 2;
   }
   .eight{
-    grid-column: 5;
+    grid-column: 4;
     grid-row: 2;
   }
 }
@@ -1864,7 +1862,7 @@
     width: 100%;
     height: fit-content;
     right: -20%;
-    top: 5%;
+    top: 7%;
     user-select: none;
   }
 
