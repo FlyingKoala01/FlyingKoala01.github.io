@@ -5,6 +5,32 @@ import '../../App.css';
 
 export default function Aboutme() {
 
+    const initialVisibleLogo = {
+        pyLogo: false,
+        goLogo: false,
+        cLogo: false,
+        assemblyLogo: false,
+        jsLogo: false,
+        htmlLogo: false,
+        cssLogo: false,
+        reactLogo: false
+    };
+
+    const [visibleLogo, setVisibleLogo] = useState(initialVisibleLogo);
+
+    //show logo by given key
+    const showLogo = (event, key) => {
+        event.preventDefault();
+        setVisibleLogo({ ...visibleLogo, ...{ [key]: true } });
+    };
+
+    //hide logo by given key
+    const hideLogo = (event, key) => {
+        event.preventDefault();
+        setVisibleLogo({ ...visibleLogo, ...{ [key]: false } });
+    };
+
+
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
@@ -39,7 +65,10 @@ export default function Aboutme() {
                     <p className='textAboutMe'>I am currently studying an <a classname="degref" href='https://www.upc.edu/en/bachelors/ict-systems-engineering-manresa-epsem' alt="UPC EPSEM">ICT Engineering degree</a> in Spain. And, although I am deeply interested in the whole technology spectrum, I intend to persue a carreer in either <b>web development</b> or <b>cybersecurity</b>.</p>
                     <p className='textAboutMe'>Throughout these years, I had been studying the following programming languages:</p>
                     <div class="wrapper">
-                        <div class="one">Python</div>
+                        <div class="one">
+                            <p>Python</p>
+                            <img className="imgLogo" src='../../Images/ProgLang/python.png' alt='' />
+                        </div>
                         <div class="two">Go</div>
                         <div class="three">C</div>
                         <div class="four">Assembly</div>

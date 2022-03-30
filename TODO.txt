@@ -7,7 +7,6 @@ App:
 
 Page: AboutMe
 	** Add scroll for text inside div?? ** 
-	* ** If you hover lang, lang logo shows? **
 
 Page: Portfolio
 {Divide section in projects w/ blog page per project, future ideas and programming lang}
