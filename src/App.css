@@ -709,13 +709,13 @@
 /*MOBILE */
 @media (min-width: 0px) and (max-width: 639px){
   .aboutMeBackground{
-    height:300vh;
+    height:auto;
     width:100%;
     background-color: #1A1A1A;
   }
   .titlePage {
     position: absolute;
-    top: 2.0rem;
+    margin-top: 15%;
     left: 5%;
     z-index: 1000;
     font-weight: 200;
@@ -738,17 +738,15 @@
     user-select: none;
   }
   .personDiv {
-    position:absolute;
-    top: 20%;
-    height: 50%;
+    float: left;
+    margin-top: 45%;
+    height: auto;
     margin-left: 10%;
     margin-right: 10%;
 
   }
   .engineerDiv {
-     position:absolute;
-     top: 105%;
-     height: 50%;
+     height: auto;
      margin-left: 10%;
      margin-right: 10%;
    }
