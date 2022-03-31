@@ -62,62 +62,63 @@
     width: 100%;
     height: 100vh;
   }
-  .loaderLayout{
-    position:absolute;
-    background-color: transparent;
-    color: #ffffff;
-    font-size: 20px;
-    top:23%;
-    right: 75%;
-  }
   .loaderText{
     background-color: transparent;
     color: #ffffff;
+    position: absolute;
     font-size: 20px;
-    text-align: center;
-    width: 180px;
-    position:absolute;
-    top:33vh;
+    top: 54%;
   }
   .meLoader128 {
     background-color: transparent;
-    text-align: center;
-    position:absolute;
-    left: 0;
-    right: 0;
+    position: absolute; 
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto;
     height: auto;
-    width: 12.0rem;
+    width: 25vh;
+    top: 20%;
   }
   .meLoader64{
     background-color: transparent;
-    text-align: center;
-    position:absolute;
-    left: 0;
-    right: 0;
+    position: absolute; 
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto;
+    height: auto;
+    width: 25vh;
+    top: 20%;
+
     animation: fading 1s forwards;
     animation-delay: 2s;
-    height: auto;
-    width: 12.0rem;
   }
   .meLoader48 {
     background-color: transparent;
-    text-align: center;
-    position:absolute;
+    position: absolute; 
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto;
     height: auto;
-    width: 12.0rem;
-    left: 0;
-    right: 0;
+    width: 25vh;
+    top: 20%;
+    
     animation: fading 1s forwards;
     animation-delay: 1s;
   }
   .meLoader32{
     background-color: transparent;
-    text-align: center;
-    position:absolute;
+    position: absolute; 
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto;
     height: auto;
-    width: 12.0rem;
-    left: 0;
-    right: 0;
+    width: 25vh;
+    top: 20%;
+
     animation: fading 1s forwards;
   }
 
@@ -485,7 +486,7 @@
     color: rgb(0, 0, 0);
     background-color: transparent;
     text-align: center;
-    font-size: 4.0rem;
+    font-size: 8vh;
     font-weight: 650;
     margin-top: 35%;
     margin-left: 6%;
@@ -498,13 +499,13 @@
     color: rgb(0, 0, 0);
     background-color: transparent;
     text-align: center;
-    font-size: 1.8rem;
+    font-size: 3.5vh;
     font-weight: 100;
-    margin-top: 2cm;
+    margin-top: 25%;
     font-family: 'Raleway', sans-serif;
     user-select: none;
   }
-.main {
+  .main {
   background-color: transparent;
   position: absolute;
   width: 100%;
@@ -551,9 +552,9 @@
     color: rgb(0, 0, 0);
     background-color: transparent;
     text-align: center;
-    font-size: 75px;
+    font-size: 4.5rem;
     font-weight: 550;
-    margin-top: 4.5cm;
+    margin-top: 3.0cm;
     letter-spacing: 0.5cm;
     font-variant: small-caps;
     font-family: 'Raleway', sans-serif;
@@ -563,7 +564,7 @@
     color: rgb(0, 0, 0);
     background-color: transparent;
     text-align: center;
-    font-size: 30px;
+    font-size: 1.5rem;
     font-weight: 100;
     margin-top: 2cm;
     font-family: 'Raleway', sans-serif;
@@ -583,22 +584,21 @@
     color: rgb(0, 0, 0);
     background-color: transparent;
     text-align: center;
-    font-size: 7.0rem;
+    font-size: 5.0rem;
     font-weight: 550;
-    margin-top: 4.5cm;
+    margin-top: 3.5cm;
     letter-spacing: 0.5cm;
     font-variant: small-caps;
     font-family: 'Raleway', sans-serif;
     user-select: none;
 }
-
 .subtitle {
     color: rgb(0, 0, 0);
     background-color: transparent;
     text-align: center;
-    font-size: 2.0rem;
+    font-size: 1.8rem;
     font-weight: 100;
-    margin-top: 4.5cm;
+    margin-top: 3.5cm;
     font-family: 'Raleway', sans-serif;
     user-select: none;
   }
@@ -625,7 +625,6 @@
     user-select: none;
     animation: fadingText 4.5s forwards;
 }
-
 .subtitle {
     color: rgb(0, 0, 0);
     background-color: transparent;
@@ -644,6 +643,26 @@
   height: 100vh;
   animation: bluring 4s forwards;
   }
+  .settingsSound {
+    position:absolute;
+    background-color: transparent;
+    background: transparent;
+    border-style: none;
+    bottom: 35px;
+    height: 10px;
+    width: 100px;
+    color: #ffffff;
+    font-size: 20px;
+    font-family: 'Raleway', sans-serif;
+    z-index: 10000;
+  }º
+  .settingsSound ion-icon {
+    position: absolute;
+    display: block;
+    left: 80px;
+    color: white;
+    font-size: 25px;
+    }
 }
 /* MONITOR */
 @media (min-width: 1920px){
@@ -659,7 +678,6 @@
     font-family: 'Raleway', sans-serif;
     user-select: none;
 }
-
 .subtitle {
     color: rgb(0, 0, 0);
     background-color: transparent;
@@ -670,7 +688,6 @@
     font-family: 'Raleway', sans-serif;
     user-select: none;
 }
-
 .settingsSound {
   position:absolute;
   background-color: transparent;
@@ -684,7 +701,6 @@
   font-family: 'Raleway', sans-serif;
   z-index: 10000;
 }
-
 .settingsSound ion-icon {
   position: absolute;
   display: block;
@@ -723,14 +739,14 @@
     color: #ffffff;
     background-color: transparent;
     font-family: 'Raleway', sans-serif;
-    font-size: 2.2rem;
+    font-size: 5vh;
     user-select: none;
   }
   .subtitlePage{
     color: rgb(255, 255, 255);
     background-color: transparent;
     text-align: center;
-    font-size: 1.8rem;
+    font-size: 4.5vh;
     font-weight: 550;
     letter-spacing: 0.3cm;
     font-variant: small-caps;
@@ -739,7 +755,7 @@
   }
   .personDiv {
     float: left;
-    margin-top: 45%;
+    margin-top: 55%;
     height: auto;
     margin-left: 10%;
     margin-right: 10%;
@@ -753,7 +769,7 @@
   .textAboutMe {
     color: rgb(255, 255, 255);
     text-align: justify !important;
-    font-size: 1.0rem;
+    font-size: 2.vh;
     font-weight: 0;
     margin-top: 0.5cm;
     line-height: 2;
@@ -1755,7 +1771,7 @@
     z-index: 999;
     animation: popUp 4s ease infinite;
     }
-  }
+}
 @media (min-width: 1400px) and (max-width: 1919px){
     .europe {
       background-color: transparent;
@@ -1843,7 +1859,7 @@
       z-index: 999;
       animation: popUp 4s ease infinite;
       }
-  }
+}
 @media (min-width: 1920px){
   .europe {
     background-color: transparent;
@@ -1931,16 +1947,14 @@
     z-index: 999;
     animation: popUp 4s ease infinite;
     }
-  }
+}
   @keyframes popUp {
     0%   { bottom: 0px;opacity:0;}
     25%  { bottom: 180px; opacity:1;}
     75%  { bottom: 180px; opacity:1;} 
     100% { opacity: 0;}
-  }
+}
   @keyframes fadingText {
     0%   { opacity: 0;}
     100% { opacity: 1;}
-  }
-
-
+}
