@@ -1,196 +1,196 @@
-  .wrap{
+.contactMe{
+  position: absolute;
+  top: 35%;
+  left: 30%;
+}
+.wrap{
     margin: 100px auto;
     width: 200px;
   }
-  
-  .circle{
-    position: relative;
-    overflow: hidden;
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    background: #1A1A1A;
+
+.circle{
+  position: relative;
+  overflow: hidden;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: #1A1A1A;
+  box-shadow: 100px -100px 0 2px #1A1A1A, -100px -100px 0 2px #1A1A1A, -100px 100px 0 2px #1A1A1A, 100px 100px 0 2px #1A1A1A, 0 0 0 2px #1A1A1A;
+  animation: borderOff .4s ease 1 forwards;
+  cursor: none;
+}
+
+@keyframes borderOff{
+  0% {
+    box-shadow: 0 -230px 70px 2px #1A1A1A, -230px 0px 70px 2px #1A1A1A, 0px 230px 70px 2px #1A1A1A, 230px 70px 0 2px #1A1A1A, 0 0 0 2px #fff;
+  }
+  25% {
+    box-shadow: 0 -230px 0 2px #1A1A1A, -230px 0px 0 2px #1A1A1A, -0 230px 0 2px #1A1A1A, 100px 100px 0 2px #1A1A1A, 0 0 0 2px #fff;
+  }
+  50% {
+    box-shadow: 0 -230px 0 2px #1A1A1A, -230px 0px 0 2px #1A1A1A, -100px 100px 0 2px #1A1A1A, 100px 100px 0 2px #1A1A1A, 0 0 0 2px #fff;
+  }
+  75% {
+    box-shadow: 0 -100px 0 2px #1A1A1A, -100px -100px 0 2px #1A1A1A, -100px 100px 0 2px #1A1A1A, 100px 100px 0 2px #1A1A1A, 0 0 0 2px #fff;
+  }
+  100% {
     box-shadow: 100px -100px 0 2px #1A1A1A, -100px -100px 0 2px #1A1A1A, -100px 100px 0 2px #1A1A1A, 100px 100px 0 2px #1A1A1A, 0 0 0 2px #1A1A1A;
-    animation: borderOff .4s ease 1 forwards;
-    cursor: none;
-  }
-
-  @keyframes borderOff{
-    0% {
-      box-shadow: 0 -230px 70px 2px #1A1A1A, -230px 0px 70px 2px #1A1A1A, 0px 230px 70px 2px #1A1A1A, 230px 70px 0 2px #1A1A1A, 0 0 0 2px #fff;
-    }
-    25% {
-      box-shadow: 0 -230px 0 2px #1A1A1A, -230px 0px 0 2px #1A1A1A, -0 230px 0 2px #1A1A1A, 100px 100px 0 2px #1A1A1A, 0 0 0 2px #fff;
-    }
-    50% {
-      box-shadow: 0 -230px 0 2px #1A1A1A, -230px 0px 0 2px #1A1A1A, -100px 100px 0 2px #1A1A1A, 100px 100px 0 2px #1A1A1A, 0 0 0 2px #fff;
-    }
-    75% {
-      box-shadow: 0 -100px 0 2px #1A1A1A, -100px -100px 0 2px #1A1A1A, -100px 100px 0 2px #1A1A1A, 100px 100px 0 2px #1A1A1A, 0 0 0 2px #fff;
-    }
-    100% {
-      box-shadow: 100px -100px 0 2px #1A1A1A, -100px -100px 0 2px #1A1A1A, -100px 100px 0 2px #1A1A1A, 100px 100px 0 2px #1A1A1A, 0 0 0 2px #1A1A1A;
-    } 
-  }
+  } 
+}
 
 
 
-  .socialIcon {
-    position: absolute;
-    display: block;
-    color: rgb(255, 255, 255);
-    font-size: 64px;
+.socialIcon {
+  position: absolute;
+  display: block;
+  color: rgb(255, 255, 255);
+  font-size: 64px;
 
-    top: 60px;
-    left: 60px;
-    width: 60px;
+  top: 60px;
+  left: 60px;
+  width: 60px;
 
-    transition: opacity .2s ease;
-  }
-  .ion-twitter ion-icon{
-    position: absolute;
-    display: block;
-    color: rgba(255, 255, 255, 0);
-    font-size: 64px;
-    left: 75px;
-  }
-    
-  .ion-github ion-icon{
-    position: absolute;
-    display: block;
-    color: rgba(255, 255, 255, 0);
-    font-size: 64px;
-    top: 69px;
-    }
-    
-    .ion-linkedin ion-icon{
-      position: absolute;
-      display: block;
-      color: rgba(255, 255, 255, 0);
-      font-size: 60px;
-      left: 70px;
-    }
-    
-    .ion-discord ion-icon{
-      position: absolute;
-      display: block;
-      color: rgba(255, 255, 255, 0);
-      font-size: 62px;
-      top: 72px;
-    }
-
-    
-    .circle .line1, 
-    .circle .line2{
-      position: absolute;
-      top: 100px;
-      left: 100px;
-      border-top: 2px solid #fff;
-      transform: rotate(45deg);
-      transform-origin: 50% 50%;
-    }
-    
-    .circle .line2{
-      transform: rotate(-45deg);
-    }
-    
-
-    .text{
-      position: absolute;
-      top: 60px;
-      left: 60px;
-      width: 60px;
-      color: #fff;
-      text-align: center;
-      text-transform: uppercase;
-      font: 18px sans-serif;
-      transition: opacity .2s ease;
-    }
-
-
-    
-    .circle:hover{
-      animation: border .4s ease 1 forwards;
-      cursor: default;
-    }
-    .circle:hover .socialIcon{
-        display:none;
-        opacity: 0;
-      }
-      
-      .circle:hover .line1, 
-      .circle:hover .line2{
-        animation: line .4s ease .45s forwards;
-      }
-      
-      .circle:hover .ion-twitter ion-icon{
-        cursor: pointer;
-        animation: icon1 .4s ease .8s forwards;
-      }
-      
-      .circle:hover .ion-github ion-icon{
-        cursor: pointer;
-        animation: icon2 .4s ease .9s forwards;
-      }
-      
-      .circle:hover .ion-linkedin ion-icon{
-        cursor: pointer;
-        animation: icon3 .4s ease 1.0s forwards;
-      }
-      
-      .circle:hover .ion-discord ion-icon{
-        cursor: pointer;
-        animation: icon4 .4s ease 1.1s forwards;
-      }
-      
-      @keyframes icon1{ /* Twitter */
-        0% {top: -25px; color: rgb(255, 255, 255);}
-        100% {top: 10px; color: #00acee;}
-      }
-      
-      @keyframes icon2{ /* Github */
-        0% {left: -20px; color: #fff;}
-        100% {left: 10px; color: #fff;}
-      }
-      
-      @keyframes icon3{ /* Linkedin */
-        0% {bottom: -25px; color: #fff;}
-        100% {bottom: 7px; color: #00a0dc;}
-      }
-      
-      @keyframes icon4{ /* Discord */
-        0% {right: -25px; color: #fff;}
-        100% {right: 10px; color: #5865f2;}
-      }
-      
-      @keyframes line{
-        0%{
-          left: 100px;
-          width: 0;
-        }
-        100% {
-          left: -10px;
-          width: 220px;
-        }
-      }
+  transition: opacity .2s ease;
+}
+.ion-twitter ion-icon{
+  position: absolute;
+  display: block;
+  color: rgba(255, 255, 255, 0);
+  font-size: 64px;
+  left: 75px;
+}
   
-  @keyframes border{
-    0% {
-      box-shadow: 100px -100px 0 2px #1A1A1A, -100px -100px 0 2px #1A1A1A, -100px 100px 0 2px #1A1A1A, 100px 100px 0 2px #1A1A1A, 0 0 0 2px #1A1A1A;
-    }
-    25% {
-      box-shadow: 0 -100px 0 2px #1A1A1A, -100px -100px 0 2px #1A1A1A, -100px 100px 0 2px #1A1A1A, 100px 100px 0 2px #1A1A1A, 0 0 0 2px #fff;
-    }
-    50% {
-      box-shadow: 0 -230px 0 2px #1A1A1A, -230px 0px 0 2px #1A1A1A, -100px 100px 0 2px #1A1A1A, 100px 100px 0 2px #1A1A1A, 0 0 0 2px #fff;
-    }
-    75% {
-      box-shadow: 0 -230px 0 2px #1A1A1A, -230px 0px 0 2px #1A1A1A, -0 230px 0 2px #1A1A1A, 100px 100px 0 2px #1A1A1A, 0 0 0 2px #fff;
-    }
-    100% {
-      box-shadow: 0 -230px 70px 2px #1A1A1A, -230px 0px 70px 2px #1A1A1A, 0px 230px 70px 2px #1A1A1A, 230px 70px 0 2px #1A1A1A, 0 0 0 2px #fff;
-    } 
+.ion-github ion-icon{
+  position: absolute;
+  display: block;
+  color: rgba(255, 255, 255, 0);
+  font-size: 64px;
+  top: 69px;
+}
+  
+.ion-linkedin ion-icon{
+  position: absolute;
+  display: block;
+  color: rgba(255, 255, 255, 0);
+  font-size: 60px;
+  left: 70px;
+}
+
+.ion-discord ion-icon{
+  position: absolute;
+  display: block;
+  color: rgba(255, 255, 255, 0);
+  font-size: 62px;
+  top: 72px;
+}
+.circle .line1, 
+.circle .line2{
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  border-top: 2px solid #fff;
+  transform: rotate(45deg);
+  transform-origin: 50% 50%;
+}
+
+.circle .line2{
+  transform: rotate(-45deg);
+}
+
+
+.text{
+  position: absolute;
+  top: 60px;
+  left: 60px;
+  width: 60px;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  font: 18px sans-serif;
+  transition: opacity .2s ease;
+}
+.circle:hover{
+  animation: border .4s ease 1 forwards;
+  cursor: default;
+}
+.circle:hover .socialIcon{
+    display:none;
+    opacity: 0;
+}
+      
+.circle:hover .line1, 
+.circle:hover .line2{
+  animation: line .4s ease .45s forwards;
+}
+
+.circle:hover .ion-twitter ion-icon{
+  cursor: pointer;
+  animation: icon1 .4s ease .8s forwards;
+}
+
+.circle:hover .ion-github ion-icon{
+  cursor: pointer;
+  animation: icon2 .4s ease .9s forwards;
+}
+
+.circle:hover .ion-linkedin ion-icon{
+  cursor: pointer;
+  animation: icon3 .4s ease 1.0s forwards;
+}
+
+.circle:hover .ion-discord ion-icon{
+  cursor: pointer;
+  animation: icon4 .4s ease 1.1s forwards;
+}
+
+@keyframes icon1{ /* Twitter */
+  0% {top: -25px; color: rgb(255, 255, 255);}
+  100% {top: 10px; color: #00acee;}
+}
+
+@keyframes icon2{ /* Github */
+  0% {left: -20px; color: #fff;}
+  100% {left: 10px; color: #fff;}
+}
+
+@keyframes icon3{ /* Linkedin */
+  0% {bottom: -25px; color: #fff;}
+  100% {bottom: 7px; color: #00a0dc;}
+}
+
+@keyframes icon4{ /* Discord */
+  0% {right: -25px; color: #fff;}
+  100% {right: 10px; color: #5865f2;}
+}
+
+@keyframes line{
+  0%{
+    left: 100px;
+    width: 0;
   }
+  100% {
+    left: -10px;
+    width: 220px;
+  }
+}
+
+@keyframes border{
+  0% {
+    box-shadow: 100px -100px 0 2px #1A1A1A, -100px -100px 0 2px #1A1A1A, -100px 100px 0 2px #1A1A1A, 100px 100px 0 2px #1A1A1A, 0 0 0 2px #1A1A1A;
+  }
+  25% {
+    box-shadow: 0 -100px 0 2px #1A1A1A, -100px -100px 0 2px #1A1A1A, -100px 100px 0 2px #1A1A1A, 100px 100px 0 2px #1A1A1A, 0 0 0 2px #fff;
+  }
+  50% {
+    box-shadow: 0 -230px 0 2px #1A1A1A, -230px 0px 0 2px #1A1A1A, -100px 100px 0 2px #1A1A1A, 100px 100px 0 2px #1A1A1A, 0 0 0 2px #fff;
+  }
+  75% {
+    box-shadow: 0 -230px 0 2px #1A1A1A, -230px 0px 0 2px #1A1A1A, -0 230px 0 2px #1A1A1A, 100px 100px 0 2px #1A1A1A, 0 0 0 2px #fff;
+  }
+  100% {
+    box-shadow: 0 -230px 70px 2px #1A1A1A, -230px 0px 70px 2px #1A1A1A, 0px 230px 70px 2px #1A1A1A, 230px 70px 0 2px #1A1A1A, 0 0 0 2px #fff;
+  } 
+}
   
 
 

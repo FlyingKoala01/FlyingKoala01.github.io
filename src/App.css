@@ -769,7 +769,7 @@
   .textAboutMe {
     color: rgb(255, 255, 255);
     text-align: justify !important;
-    font-size: 2.vh;
+    font-size: 2vh;
     font-weight: 0;
     margin-top: 0.5cm;
     line-height: 2;
@@ -1449,37 +1449,28 @@
 /* ====================================== CONTACT ME ====================================== */
 
 @media (min-width: 0px) and (max-width: 639px){
-  .europe {
-    background-color: transparent;
-    position: relative;
-    width: 100%;
-    height: fit-content;
-    right: -20%;
-    top: 5%;
-    user-select: none;
-  }
   .backgroundContactMe {
+    height:100%;
+    width:auto;
     background-color: #1A1A1A;
-    height: 100vh;
-    z-index: -999;
   }
-  .contactMe{
-    position: absolute;
-    top: 350px;
-    left: 250px;
+  .europe {
+    visibility: hidden;
+    
   }
   .contactMeText {
-    position: absolute;
-    top: 260px;
-    left: 50px;
-    z-index: 1000;
-    color: #ffffff;
-    font-size: 30px;
-    background-color: transparent;
+    position: relative;
+    top: 5cm;
+    margin-left: 10%;
+    margin-right: 10%;
+    color: rgb(255, 255, 255);
+    text-align: justify !important;
+    font-size: 2vh;
+    font-weight: 0;
+    line-height: 2;
     font-family: 'Raleway', sans-serif;
     user-select: none;
-    margin-top: 2cm;
-    font-weight: 100;
+    z-index: 1000;
   }
   .contactMeEmail {
     position: absolute;
@@ -1508,12 +1499,6 @@
     cursor: pointer;
     text-decoration: underline;
   }
-  .textPopup {
-    position:absolute;
-    left:20%;
-    top:25%;
-    font-size: larger;
-  }
   .popUpNotification {
     position: absolute;
     height: 50px;
@@ -1528,6 +1513,13 @@
     z-index: 999;
     animation: popUp 4s ease infinite;
   }
+  .textPopup {
+    position:absolute;
+    left:20%;
+    top:25%;
+    font-size: larger;
+  }
+
 }
 @media (min-width: 640px) and (max-width: 959px) {
   .europe {
