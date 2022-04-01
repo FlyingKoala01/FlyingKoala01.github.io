@@ -59,6 +59,7 @@
   }
 
   .nav-links:hover {
+    color: #46cc99;
     border-bottom: 4px solid #fff !important;
     transition: all 0.2s ease-out !important;
   }
@@ -458,8 +459,6 @@
     z-index: 999;
     animation: up 4s forwards;
   }
-
-
   .bannerTop {
     background: linear-gradient(90deg, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 100%);
     background-color: transparent !important;
@@ -474,7 +473,6 @@
     z-index: 998;
     animation: down 4s forwards;
   }
-
   .nav-menu {
     display: grid;
     background-color: transparent !important;
@@ -486,13 +484,11 @@
     justify-content: center;
     z-index: 998;
   }
-
   .nav-item {
     background-color: transparent !important;
     height: 25%;
     text-align: center;
   }
-
   .nav-links {
     color: rgb(255, 255, 255);
     display: flex;
@@ -502,13 +498,11 @@
     height: 100%;
     font-variant: small-caps;
   }
-
   .nav-links:hover {
-    border-bottom: 4px solid #fff !important;
+    color: #46cc99;
+    border-bottom: 4px solid #46cc99 !important;
     transition: all 0.2s ease-out !important;
   }
-
-
   .settingsSound {
     position: absolute;
     background-color: transparent;
@@ -522,7 +516,6 @@
     font-family: 'Raleway', sans-serif;
     z-index: 100;
   }
-
   .settingsSound ion-icon {
     position: absolute;
     display: block;
@@ -530,10 +523,8 @@
     color: white;
     font-size: 25px;
   }
-
   @keyframes up {}
 }
-
 @keyframes down {
   0% {
     height: 0%;
@@ -547,7 +538,6 @@
     height: 8%;
   }
 }
-
 @keyframes up {
   0% {
     height: 0%;

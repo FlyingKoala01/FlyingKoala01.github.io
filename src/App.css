@@ -16,7 +16,6 @@ html {
   font-family: 'Raleway', sans-serif;
   font-size: 100%;
 }
-
 /* MOBILE */
 @media (min-width: 0px) and (max-width: 639px) {
   html {
@@ -1556,8 +1555,12 @@ html {
     user-select: none;
   }
 
+  b{
+    color: #46cc99;
+  }
+  
   .textAboutMe a:-webkit-any-link {
-    color: rgb(255, 255, 255);
+    color: #46cc99;
     cursor: pointer;
     text-decoration: underline;
   }
@@ -2117,7 +2120,7 @@ html {
     z-index: 1000;
     font-family: 'Raleway', sans-serif;
     font-size: 1.4rem;
-    color: #ffffff;
+    color: #46cc99;
     background-color: transparent;
     border: none;
     cursor: pointer;

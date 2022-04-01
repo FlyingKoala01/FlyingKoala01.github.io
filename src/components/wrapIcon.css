@@ -464,7 +464,7 @@
     display: grid;
     height: 8%;
     width: 15%;
-    top: -40%;
+    top: -35%;
     left: 15%;
 
     background-color: rgb(0, 0, 0);
@@ -504,9 +504,12 @@
 
     background: linear-gradient(-15deg, #fefefe, #646766, #1A1A1A, #000000, #1A1A1A, #646766, #ffffff);
     background-size: 400% 400%;
-  
-    animation: gradient 9s ease infinite;
+
+    border: 2px solid #46cc99;
+    border-radius: 5px;
     z-index: 1000;
+
+    animation: gradient 9s ease infinite;
   }
   
   .wrap:hover .wrapText {
@@ -528,7 +531,7 @@
 
   .wrapLog:hover ion-icon {
     color: #46cc99;
-
+    font-size:large;
   }
 
   @keyframes disappear {
