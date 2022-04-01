@@ -19,5 +19,6 @@ Page: Portfolio
 	* Programming quiz app // trivia // player chooses language // maybe with MERN?
 
 ** MAKE CELLPHONE RESPONSIVENESS PROPERLY ** 
+** Change ContactMe Button **  Rectangular shape
 *Responsive at the end* 
 
