@@ -985,6 +985,9 @@
     justify-content: center;
     align-content: center;
     z-index: 1000;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 5px;
+
   }
 
   ion-icon,
@@ -1010,13 +1013,13 @@
     top: -40%;
     left: 15%;
 
-    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background: linear-gradient(-15deg, #fefefe, #646766, #1A1A1A, #000000, #1A1A1A, #646766, #ffffff);
     background-size: 400% 400%;
     user-select: none;
     text-align: center;
     justify-content: center;
     align-content: center;
-    animation: gradient 15s ease infinite;
+    animation: gradient 9s ease infinite;
     z-index: 1000;
   }
 
@@ -1031,14 +1034,14 @@
   .wrap:hover ion-icon {
     position: absolute;
     display: block;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     font-size: 32px;
   }
 
   .wrapLog:hover ion-icon {
     position: absolute;
     display: block;
-    color: rgb(255, 255, 255);
+    color: #46cc99;
     font-size: 32px;
   }
 
