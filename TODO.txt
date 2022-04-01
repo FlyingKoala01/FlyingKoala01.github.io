@@ -1,12 +1,5 @@
-Page: ContactMe
-	* Revise after few days **********
-	* Fix extra space
-
 App:
 	* Add music
-
-Page: AboutMe
-	** Add scroll for text inside div?? ** 
 
 Page: Portfolio
 {Divide section in projects w/ blog page per project, future ideas and programming lang}
@@ -19,6 +12,6 @@ Page: Portfolio
 	* Programming quiz app // trivia // player chooses language // maybe with MERN?
 
 ** MAKE CELLPHONE RESPONSIVENESS PROPERLY ** 
-** Change ContactMe Button **  Rectangular shape
-*Responsive at the end* 
+** Finish button contact me **
+** Make contact me responsive **
 
