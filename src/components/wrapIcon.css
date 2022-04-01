@@ -1031,7 +1031,14 @@
   .wrap:hover ion-icon {
     position: absolute;
     display: block;
-    color: rgba(0, 0, 0, 0.858);
+    color: rgb(0, 0, 0);
+    font-size: 32px;
+  }
+
+  .wrapLog:hover ion-icon {
+    position: absolute;
+    display: block;
+    color: rgb(255, 255, 255);
     font-size: 32px;
   }
 
