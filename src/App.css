@@ -2071,31 +2071,28 @@ html {
     top: 7%;
     user-select: none;
   }
-
+  
   .backgroundContactMe {
     background-color: #1A1A1A;
     height: 100vh;
     z-index: -999;
   }
 
-  .contactMe {
-    position: absolute;
-    top: 40%;
-    left: 14%;
-  }
-
   .contactMeText {
     position: absolute;
-    top: 27%;
-    left: 5%;
+    top: 20%;
+    left: 3%;
+    margin-top: 2cm;
     z-index: 1000;
+    
     color: #ffffff;
-    font-size: 1.7rem;
     background-color: transparent;
+
     font-family: 'Raleway', sans-serif;
     user-select: none;
-    margin-top: 2cm;
+    font-size: 1.7rem;
     font-weight: 100;
+    line-height: 2;
   }
 
   .contactMeEmail {
