@@ -533,14 +533,15 @@ b{
     color: rgb(0, 0, 0);
     background-color: transparent;
     text-align: center;
-    font-size: 8vh;
+    font-size: 9vh;
     font-weight: 650;
     margin-top: 35%;
     margin-left: 6%;
     letter-spacing: 0.5cm;
     font-variant: small-caps;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Rajdhani', sans-serif;
     user-select: none;
+    animation: fadingText 4.5s forwards;
   }
 
   .subtitle {
@@ -550,8 +551,9 @@ b{
     font-size: 3.5vh;
     font-weight: 100;
     margin-top: 25%;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Rajdhani', sans-serif;
     user-select: none;
+    animation: fadingText 4.5s forwards;
   }
 
   .main {
@@ -575,8 +577,9 @@ b{
     margin-top: 4.5cm;
     letter-spacing: 0.5cm;
     font-variant: small-caps;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Rajdhani', sans-serif;
     user-select: none;
+    animation: fadingText 4.5s forwards;
   }
 
   .subtitle {
@@ -586,8 +589,9 @@ b{
     font-size: 2.2rem;
     font-weight: 100;
     margin-top: 3cm;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Rajdhani', sans-serif;
     user-select: none;
+    animation: fadingText 4.5s forwards;
   }
 
   .main {
@@ -610,8 +614,9 @@ b{
     margin-top: 3.0cm;
     letter-spacing: 0.5cm;
     font-variant: small-caps;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Rajdhani', sans-serif;
     user-select: none;
+    animation: fadingText 4.5s forwards;
   }
 
   .subtitle {
@@ -621,8 +626,9 @@ b{
     font-size: 1.5rem;
     font-weight: 100;
     margin-top: 2cm;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Rajdhani', sans-serif;
     user-select: none;
+    animation: fadingText 4.5s forwards;
   }
 
   .main {
@@ -645,8 +651,9 @@ b{
     margin-top: 3.5cm;
     letter-spacing: 0.5cm;
     font-variant: small-caps;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Rajdhani', sans-serif;
     user-select: none;
+    animation: fadingText 4.5s forwards;
   }
 
   .subtitle {
@@ -656,8 +663,9 @@ b{
     font-size: 1.8rem;
     font-weight: 100;
     margin-top: 3.5cm;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Rajdhani', sans-serif;
     user-select: none;
+    animation: fadingText 4.5s forwards;
   }
 
   .main {
@@ -680,7 +688,7 @@ b{
     margin-top: 4.5cm;
     letter-spacing: 0.5cm;
     font-variant: small-caps;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Rajdhani', sans-serif;
     user-select: none;
     animation: fadingText 4.5s forwards;
   }
@@ -692,7 +700,7 @@ b{
     font-size: 2.2rem;
     font-weight: 100;
     margin-top: 3.5cm;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Rajdhani', sans-serif;
     user-select: none;
     animation: fadingText 4.5s forwards;
   }
@@ -734,12 +742,13 @@ b{
     color: rgb(0, 0, 0);
     background-color: transparent;
     text-align: center;
-    font-size: 8.5rem;
+    font-size: 9.5rem;
     font-weight: 550;
     margin-top: 4.5cm;
     letter-spacing: 0.5cm;
     font-variant: small-caps;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Rajdhani', sans-serif;
+
     user-select: none;
   }
 
@@ -747,10 +756,10 @@ b{
     color: rgb(0, 0, 0);
     background-color: transparent;
     text-align: center;
-    font-size: 2.8rem;
+    font-size: 3.1rem;
     font-weight: 100;
     margin-top: 4.5cm;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Rajdhani', sans-serif;
     user-select: none;
   }
 
@@ -807,14 +816,14 @@ b{
   .titlePage {
     position: absolute;
     margin-top: 15%;
-    left: 5%;
+    left: 10%;
     z-index: 1000;
     font-weight: 200;
     font-variant: small-caps;
     color: #ffffff;
     background-color: transparent;
     font-family: 'Raleway', sans-serif;
-    font-size: 5vh;
+    font-size: 5.5vh;
     user-select: none;
   }
 
