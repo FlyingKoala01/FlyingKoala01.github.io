@@ -60,7 +60,7 @@
 
   .nav-links:hover {
     color: #46cc99;
-    border-bottom: 4px solid #fff !important;
+    border-bottom: 4px solid #46cc99 !important;
     transition: all 0.2s ease-out !important;
   }
 
@@ -150,10 +150,10 @@
   }
 
   .nav-links:hover {
-    border-bottom: 4px solid #fff !important;
+    color: #46cc99;
+    border-bottom: 4px solid #46cc99 !important;
     transition: all 0.2s ease-out !important;
   }
-
 
   .settingsSound {
     position: absolute;
@@ -240,7 +240,8 @@
   }
 
   .nav-links:hover {
-    border-bottom: 4px solid #fff !important;
+    color: #46cc99;
+    border-bottom: 4px solid #46cc99 !important;
     transition: all 0.2s ease-out !important;
   }
 
@@ -328,7 +329,8 @@
   }
 
   .nav-links:hover {
-    border-bottom: 4px solid #fff !important;
+    color: #46cc99;
+    border-bottom: 4px solid #46cc99 !important;
     transition: all 0.2s ease-out !important;
   }
 
@@ -416,7 +418,8 @@
   }
 
   .nav-links:hover {
-    border-bottom: 4px solid #fff !important;
+    color: #46cc99;
+    border-bottom: 4px solid #46cc99 !important;
     transition: all 0.2s ease-out !important;
   }
 

@@ -11,7 +11,5 @@ Page: Portfolio
 		# Future Ideas	
 	* Programming quiz app // trivia // player chooses language // maybe with MERN?
 
-** MAKE CELLPHONE RESPONSIVENESS PROPERLY ** 
-** Finish button contact me **
 ** Make contact me responsive **
 

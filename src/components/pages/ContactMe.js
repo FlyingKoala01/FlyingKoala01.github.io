@@ -37,8 +37,8 @@ export default function ContactMe() {
         return (
             <div className='backgroundContactMe'>
                 <h1 className="titlePage">do you have any questions?</h1>
-                <h2 className='contactMeText' >Nowadays you can find me flying between <b>Milan</b> and <b>Barcelona</b>!<br></br>Follow me on my social media! I'm available 24/7</h2>
-                <h2 className='contactMeEmail'>You can also send me an email to</h2>
+                <h2 className='contactMeText' >Nowadays you can find me flying between <b>Milan</b> and <b>Barcelona</b>!<br></br>Follow me on my social media! I'm available 24/7!</h2>
+                <h2 className='contactMeEmail'>Are you interested in building something together?<br></br>Send me an email to:</h2>
                 <div className={showHideNotification ? `popUpNotification` : null}>
                     {showHideNotification && <div className='textPopup'>Email copied to clipboard!</div>}
                 </div>
@@ -46,7 +46,7 @@ export default function ContactMe() {
                 <button className="btn-clipboard" onClick={() => {
                     navigator.clipboard.writeText('isaac.iglesias.vila19@gmail.com');
                     animate()
-                }}> isaac.iglesias.vila19@gmail.com <ion-icon name="clipboard-outline" size="small"></ion-icon>
+                }}> isaac.iglesias.vila19@gmail.com
                 </button>
 
                 <img src={europe} className='europe' alt="" />

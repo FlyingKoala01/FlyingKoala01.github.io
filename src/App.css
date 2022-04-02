@@ -16,6 +16,9 @@ html {
   font-family: 'Raleway', sans-serif;
   font-size: 100%;
 }
+b{
+  color: #46cc99;
+}
 /* MOBILE */
 @media (min-width: 0px) and (max-width: 639px) {
   html {
@@ -796,8 +799,8 @@ html {
 /*MOBILE */
 @media (min-width: 0px) and (max-width: 639px) {
   .aboutMeBackground {
-    height: auto;
-    width: 100%;
+    height: 100%;
+    width: auto;
     background-color: #1A1A1A;
   }
 
@@ -829,7 +832,7 @@ html {
 
   .personDiv {
     float: left;
-    margin-top: 55%;
+    margin-top: 50%;
     height: auto;
     margin-left: 10%;
     margin-right: 10%;
@@ -1207,7 +1210,7 @@ html {
 
   .titlePage {
     position: absolute;
-    top: 2.5rem;
+    top: 3.0rem;
     left: 5%;
     z-index: 1000;
     font-weight: 200;
@@ -1215,7 +1218,7 @@ html {
     color: #ffffff;
     background-color: transparent;
     font-family: 'Raleway', sans-serif;
-    font-size: 2.7rem;
+    font-size: 2.4rem;
     user-select: none;
   }
 
@@ -1348,8 +1351,8 @@ html {
 
   .titlePage {
     position: absolute;
-    top: 6.0rem;
-    left: 5%;
+    top: 4.5rem;
+    left: 2.6%;
     z-index: 1000;
     font-weight: 200;
     font-variant: small-caps;
@@ -1554,10 +1557,6 @@ html {
     font-family: 'Raleway', sans-serif;
     user-select: none;
   }
-
-  b{
-    color: #46cc99;
-  }
   
   .textAboutMe a:-webkit-any-link {
     color: #46cc99;
@@ -1642,47 +1641,50 @@ html {
 
   .europe {
     visibility: hidden;
-
   }
 
   .contactMeText {
-    position: relative;
-    top: 5cm;
+    position: absolute;
+    top: 22%;
     margin-left: 10%;
     margin-right: 10%;
-    color: rgb(255, 255, 255);
-    text-align: justify !important;
-    font-size: 2vh;
-    font-weight: 0;
-    line-height: 2;
+    z-index: 1000;
+
+    color: #ffffff;
+    background-color: transparent;
+    
     font-family: 'Raleway', sans-serif;
     user-select: none;
-    z-index: 1000;
+    font-size: 1.1rem;
+    font-weight: 100;
+    line-height: 2;
   }
 
   .contactMeEmail {
     position: absolute;
-    bottom: 190px;
-    left: 50px;
+    top: 57%;
+    margin-left: 10%;
+    margin-right: 10%;
     z-index: 1000;
+
     color: #ffffff;
     background-color: transparent;
-    margin: 0;
-    font-size: 23px;
-    display: inline-block;
+    
     font-family: 'Raleway', sans-serif;
     user-select: none;
+    font-size: 1.1rem;
     font-weight: 100;
+    line-height: 2;
   }
 
   .btn-clipboard {
     position: absolute;
-    bottom: 188px;
-    left: 400px;
+    bottom: 22%;
+    margin-left: 8.5%;
     z-index: 1000;
     font-family: 'Raleway', sans-serif;
-    font-size: 23px;
-    color: #ffffff;
+    font-size: 1.2rem;
+    color: #46cc99;
     background-color: transparent;
     border: none;
     cursor: pointer;
@@ -1772,7 +1774,7 @@ html {
     z-index: 1000;
     font-family: 'Raleway', sans-serif;
     font-size: 23px;
-    color: #ffffff;
+    color: #46cc99;
     background-color: transparent;
     border: none;
     cursor: pointer;
@@ -1809,7 +1811,7 @@ html {
     width: 100%;
     height: fit-content;
     right: -20%;
-    top: 5%;
+    top: 7%;
     user-select: none;
   }
 
@@ -1819,49 +1821,46 @@ html {
     z-index: -999;
   }
 
-  .contactMe {
-    position: absolute;
-    top: 350px;
-    left: 250px;
-  }
-
   .contactMeText {
     position: absolute;
-    top: 260px;
-    left: 50px;
+    top: 27%;
+    left: 5%;
     z-index: 1000;
+
     color: #ffffff;
-    font-size: 30px;
     background-color: transparent;
+    
     font-family: 'Raleway', sans-serif;
     user-select: none;
-    margin-top: 2cm;
+    font-size: 1.1rem;
     font-weight: 100;
+    line-height: 2;
   }
 
   .contactMeEmail {
     position: absolute;
-    bottom: 190px;
-    left: 50px;
+    bottom: 20%;
+    left: 5%;
     z-index: 1000;
+
     color: #ffffff;
     background-color: transparent;
-    margin: 0;
-    font-size: 23px;
-    display: inline-block;
+
     font-family: 'Raleway', sans-serif;
     user-select: none;
+    font-size: 1.0rem;
     font-weight: 100;
+    line-height: 2;
   }
 
   .btn-clipboard {
     position: absolute;
-    bottom: 188px;
-    left: 400px;
+    bottom: 23.5%;
+    left: 18.5%;
     z-index: 1000;
     font-family: 'Raleway', sans-serif;
-    font-size: 23px;
-    color: #ffffff;
+    font-size: 1.0rem;
+    color: #46cc99;
     background-color: transparent;
     border: none;
     cursor: pointer;
@@ -1898,7 +1897,7 @@ html {
     width: 100%;
     height: fit-content;
     right: -20%;
-    top: 5%;
+    top: 7%;
     user-select: none;
   }
 
@@ -1908,49 +1907,46 @@ html {
     z-index: -999;
   }
 
-  .contactMe {
-    position: absolute;
-    top: 350px;
-    left: 250px;
-  }
-
   .contactMeText {
     position: absolute;
-    top: 260px;
-    left: 50px;
+    top: 27%;
+    left: 5%;
     z-index: 1000;
+
     color: #ffffff;
-    font-size: 30px;
     background-color: transparent;
+    
     font-family: 'Raleway', sans-serif;
     user-select: none;
-    margin-top: 2cm;
+    font-size: 1.3rem;
     font-weight: 100;
+    line-height: 2;
   }
 
   .contactMeEmail {
     position: absolute;
-    bottom: 190px;
-    left: 50px;
+    bottom: 20%;
+    left: 5%;
     z-index: 1000;
+
     color: #ffffff;
     background-color: transparent;
-    margin: 0;
-    font-size: 23px;
-    display: inline-block;
+
     font-family: 'Raleway', sans-serif;
     user-select: none;
+    font-size: 1.2rem;
     font-weight: 100;
+    line-height: 2;
   }
 
   .btn-clipboard {
     position: absolute;
-    bottom: 188px;
-    left: 400px;
+    bottom: 24%;
+    left: 19.5%;
     z-index: 1000;
     font-family: 'Raleway', sans-serif;
-    font-size: 23px;
-    color: #ffffff;
+    font-size: 1.2rem;
+    color: #46cc99;
     background-color: transparent;
     border: none;
     cursor: pointer;
@@ -1987,9 +1983,8 @@ html {
     width: 100%;
     height: fit-content;
     right: -20%;
-    top: 5%;
+    top: 7%;
     user-select: none;
-    z-index: 100;
   }
 
   .backgroundContactMe {
@@ -2001,40 +1996,43 @@ html {
   .contactMeText {
     position: absolute;
     top: 27%;
-    left: 5%;
+    left: 2.6%;
     z-index: 1000;
+
     color: #ffffff;
-    font-size: 1.7rem;
     background-color: transparent;
+    
     font-family: 'Raleway', sans-serif;
     user-select: none;
-    margin-top: 2cm;
+    font-size: 1.5rem;
     font-weight: 100;
+    line-height: 2;
   }
 
   .contactMeEmail {
     position: absolute;
     bottom: 20%;
-    left: 5%;
+    left: 2.6%;
     z-index: 1000;
+
     color: #ffffff;
     background-color: transparent;
-    margin: 0;
-    font-size: 1.4rem;
-    display: inline-block;
+
     font-family: 'Raleway', sans-serif;
     user-select: none;
+    font-size: 1.5rem;
     font-weight: 100;
+    line-height: 2;
   }
 
   .btn-clipboard {
     position: absolute;
-    bottom: 20%;
-    left: 22.7%;
+    bottom: 24%;
+    left: 17.0%;
     z-index: 1000;
     font-family: 'Raleway', sans-serif;
-    font-size: 1.4rem;
-    color: #ffffff;
+    font-size: 1.5rem;
+    color: #46cc99;
     background-color: transparent;
     border: none;
     cursor: pointer;
@@ -2083,9 +2081,8 @@ html {
 
   .contactMeText {
     position: absolute;
-    top: 20%;
-    left: 3%;
-    margin-top: 2cm;
+    top: 23%;
+    left: 2.6%;
     z-index: 1000;
     
     color: #ffffff;
@@ -2101,25 +2098,26 @@ html {
   .contactMeEmail {
     position: absolute;
     bottom: 20%;
-    left: 5%;
+    left: 2.6%;
     z-index: 1000;
+    
     color: #ffffff;
     background-color: transparent;
-    margin: 0;
-    font-size: 1.4rem;
-    display: inline-block;
+
     font-family: 'Raleway', sans-serif;
     user-select: none;
+    font-size: 1.7rem;
     font-weight: 100;
+    line-height: 2;
   }
 
   .btn-clipboard {
     position: absolute;
-    bottom: 20%;
-    left: 22.7%;
+    bottom: 23.7%;
+    left: 16.0%;
     z-index: 1000;
     font-family: 'Raleway', sans-serif;
-    font-size: 1.4rem;
+    font-size: 1.7rem;
     color: #46cc99;
     background-color: transparent;
     border: none;
