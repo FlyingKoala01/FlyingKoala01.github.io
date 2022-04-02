@@ -2178,3 +2178,82 @@ b{
     opacity: 1;
   }
 }
+
+
+/*================================ PORTFOLIO =======================================*/
+@media (min-width: 0px) and (max-width: 639px) {
+  
+}
+
+@media (min-width: 640px) and (max-width: 959px) {
+  
+}
+
+@media (min-width: 960px) and (max-width: 1099px) {
+  
+}
+
+@media (min-width: 1100px) and (max-width: 1399px) {
+  
+}
+
+@media (min-width: 1400px) and (max-width: 1919px) {
+  
+}
+
+@media (min-width: 1920px) {
+  .portfolioSection {
+    background-color: white;
+    height: 100vh;
+    width: 100%;
+  }
+  .cardsContainer {
+    position:absolute;
+    display: grid;
+    width: 50%;
+    height: 100%;
+    margin-left: 25%;
+    grid-template-columns: 50% 50%;
+    gap: 10px;
+    align-items: center;
+    background-color: #1A1A1A; 
+  }
+  .itemOne {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  
+  .itemTwo {
+    grid-column: 2;
+    grid-row: 1;
+ 
+  }
+  .itemThree {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .cardsItemPicWrap {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+  }
+  .cardsItemPicWrap{
+  }
+
+  .cardsItemImg {
+    width: 50%;
+    height: auto;
+    border: 2px solid rgb(255, 255, 255);
+    object-fit: cover;
+  }
+  .cardsItemInfo {
+    padding: 20px 30px 30px;
+  }
+  .cardsItemText {
+    color: #46cc99;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+}
