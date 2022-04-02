@@ -31,22 +31,22 @@ export default function Projects() {
             <CardItem
               position='itemOne'
               src={require('../../Images/React.png')}
-              text='Learnt React.JS and Node.JS by developing my personal website. The objective is, in a future, develop another website and learn the MERN stack.'
+              text='Learnt React.JS by developing my personal website. The objective is, in a future, develop another website and learn the MERN stack.'
               label='React Portfolio'
               path='/'
             />
             <CardItem
               position='itemSecond'
-              src={require('../../Images/React.png')}
-              text='Simple project to practice Python'
-              label='Python Tetris'
+              src={require('../../Images/Python.png')}
+              text='Incoming...'
+              label='Future'
               path='/'
             />
             <CardItem
-              position='itemThree'
-              src={require('../../Images/React.png')}
-              text='Studying for Security+'
-              label='Cybersecurity'
+              position='itemThird'
+              src={require('../../Images/Python.png')}
+              text='Incoming...'
+              label='Future'
               path='/'
             />
         </div>

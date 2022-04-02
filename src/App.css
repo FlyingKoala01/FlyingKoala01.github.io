@@ -20,6 +20,7 @@ b{
   color: #46cc99;
 }
 /* MOBILE */
+
 @media (min-width: 0px) and (max-width: 639px) {
   html {
     height: 100vh;
@@ -32,7 +33,7 @@ b{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 100%;
   }
 }
@@ -49,7 +50,7 @@ b{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 100%;
   }
 }
@@ -723,7 +724,7 @@ b{
     width: 100px;
     color: #ffffff;
     font-size: 20px;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     z-index: 10000;
   }
 
@@ -742,12 +743,13 @@ b{
     color: rgb(0, 0, 0);
     background-color: transparent;
     text-align: center;
-    font-size: 9.5rem;
+    font-size: 8.5rem;
     font-weight: 550;
     margin-top: 4.5cm;
     letter-spacing: 0.5cm;
     font-variant: small-caps;
-    font-family: 'Rajdhani', sans-serif;
+        font-family: 'Montserrat', sans-serif;
+
 
     user-select: none;
   }
@@ -756,10 +758,11 @@ b{
     color: rgb(0, 0, 0);
     background-color: transparent;
     text-align: center;
-    font-size: 3.1rem;
+    font-size: 2.8rem;
     font-weight: 100;
     margin-top: 4.5cm;
-    font-family: 'Rajdhani', sans-serif;
+        font-family: 'Montserrat', sans-serif;
+
     user-select: none;
   }
 
@@ -773,7 +776,7 @@ b{
     width: 100px;
     color: #ffffff;
     font-size: 20px;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     z-index: 10000;
   }
 
@@ -822,7 +825,7 @@ b{
     font-variant: small-caps;
     color: #ffffff;
     background-color: transparent;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 5.5vh;
     user-select: none;
   }
@@ -835,7 +838,7 @@ b{
     font-weight: 550;
     letter-spacing: 0.3cm;
     font-variant: small-caps;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     user-select: none;
   }
 
@@ -861,7 +864,7 @@ b{
     font-weight: 0;
     margin-top: 0.5cm;
     line-height: 2;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     user-select: none;
   }
 
@@ -877,7 +880,7 @@ b{
     grid-auto-rows: minmax(80px, auto);
 
     color: rgb(255, 255, 255);
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     user-select: none;
     text-align: center;
     justify-content: center;
@@ -942,7 +945,7 @@ b{
     font-variant: small-caps;
     color: #ffffff;
     background-color: transparent;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 2.1rem;
     user-select: none;
     letter-spacing: 0.2cm;
@@ -956,7 +959,7 @@ b{
     font-weight: 550;
     letter-spacing: 0.2cm;
     font-variant: small-caps;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     user-select: none;
   }
 
@@ -991,7 +994,7 @@ b{
     text-align: justify !important;
     font-size: 0.9rem;
     line-height: 2;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     user-select: none;
   }
 
@@ -1008,7 +1011,7 @@ b{
     font-weight: 0;
     margin-top: 0.5cm;
     line-height: 2;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     user-select: none;
   }
 
@@ -1019,7 +1022,7 @@ b{
 
 
     color: rgb(255, 255, 255);
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     user-select: none;
     text-align: center;
     justify-content: center;
@@ -1084,7 +1087,7 @@ b{
     font-variant: small-caps;
     color: #ffffff;
     background-color: transparent;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 2.0rem;
     user-select: none;
     letter-spacing: 0.2cm;
@@ -1098,7 +1101,7 @@ b{
     font-weight: 550;
     letter-spacing: 0.2cm;
     font-variant: small-caps;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     user-select: none;
   }
 
@@ -1133,7 +1136,7 @@ b{
     text-align: justify !important;
     font-size: 0.7rem;
     line-height: 2;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     user-select: none;
   }
 
@@ -1150,7 +1153,7 @@ b{
     font-weight: 0;
     margin-top: 0.5cm;
     line-height: 2;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     user-select: none;
   }
 
@@ -1161,7 +1164,7 @@ b{
 
 
     color: rgb(255, 255, 255);
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     user-select: none;
     text-align: center;
     justify-content: center;
@@ -1226,7 +1229,7 @@ b{
     font-variant: small-caps;
     color: #ffffff;
     background-color: transparent;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 2.4rem;
     user-select: none;
   }
@@ -1239,7 +1242,7 @@ b{
     font-weight: 550;
     letter-spacing: 0.2cm;
     font-variant: small-caps;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     user-select: none;
   }
 
@@ -1274,7 +1277,7 @@ b{
     text-align: justify !important;
     font-size: 0.82rem;
     line-height: 2;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     user-select: none;
   }
 
@@ -1291,7 +1294,7 @@ b{
     font-weight: 0;
     margin-top: 0.5cm;
     line-height: 2;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     user-select: none;
   }
 
@@ -1302,7 +1305,7 @@ b{
 
 
     color: rgb(255, 255, 255);
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     user-select: none;
     text-align: center;
     justify-content: center;
@@ -1367,7 +1370,7 @@ b{
     font-variant: small-caps;
     color: #ffffff;
     background-color: transparent;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 3.0rem;
     user-select: none;
     letter-spacing: 0.2cm;
@@ -1381,7 +1384,7 @@ b{
     font-weight: 550;
     letter-spacing: 0.2cm;
     font-variant: small-caps;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     user-select: none;
   }
 
@@ -1419,7 +1422,7 @@ b{
     font-weight: 0;
     margin-top: 0.5cm;
     line-height: 2;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     user-select: none;
   }
 
@@ -1436,7 +1439,7 @@ b{
     font-weight: 0;
     margin-top: 0.5cm;
     line-height: 2;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     user-select: none;
   }
 
@@ -1447,7 +1450,7 @@ b{
 
 
     color: rgb(255, 255, 255);
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     user-select: none;
     text-align: center;
     justify-content: center;
@@ -1512,7 +1515,7 @@ b{
     font-variant: small-caps;
     color: #ffffff;
     background-color: transparent;
-    font-family: 'Raleway', sans-serif;
+        font-family: 'Montserrat', sans-serif;
     font-size: 3.8rem;
     user-select: none;
     letter-spacing: 0.2cm;
@@ -1526,7 +1529,7 @@ b{
     font-weight: 550;
     letter-spacing: 0.3cm;
     font-variant: small-caps;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     user-select: none;
   }
 
@@ -1563,7 +1566,7 @@ b{
     font-weight: 0;
     margin-top: 0.5cm;
     line-height: 2;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     user-select: none;
   }
   
@@ -1580,7 +1583,7 @@ b{
     font-weight: 0;
     margin-top: 0.5cm;
     line-height: 2;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     user-select: none;
   }
 
@@ -1590,7 +1593,7 @@ b{
     grid-auto-rows: minmax(80px, auto);
 
     color: rgb(255, 255, 255);
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     user-select: none;
     text-align: center;
     justify-content: center;
@@ -1662,7 +1665,7 @@ b{
     color: #ffffff;
     background-color: transparent;
     
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     user-select: none;
     font-size: 1.1rem;
     font-weight: 100;
@@ -1679,7 +1682,7 @@ b{
     color: #ffffff;
     background-color: transparent;
     
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     user-select: none;
     font-size: 1.1rem;
     font-weight: 100;
@@ -1691,7 +1694,7 @@ b{
     bottom: 22%;
     margin-left: 8.5%;
     z-index: 1000;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 1.2rem;
     color: #46cc99;
     background-color: transparent;
@@ -1755,7 +1758,7 @@ b{
     color: #ffffff;
     font-size: 30px;
     background-color: transparent;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     user-select: none;
     margin-top: 2cm;
     font-weight: 100;
@@ -1771,7 +1774,7 @@ b{
     margin: 0;
     font-size: 23px;
     display: inline-block;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     user-select: none;
     font-weight: 100;
   }
@@ -1781,7 +1784,7 @@ b{
     bottom: 188px;
     left: 400px;
     z-index: 1000;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 23px;
     color: #46cc99;
     background-color: transparent;
@@ -1839,7 +1842,7 @@ b{
     color: #ffffff;
     background-color: transparent;
     
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     user-select: none;
     font-size: 1.1rem;
     font-weight: 100;
@@ -1855,7 +1858,7 @@ b{
     color: #ffffff;
     background-color: transparent;
 
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     user-select: none;
     font-size: 1.0rem;
     font-weight: 100;
@@ -1867,7 +1870,7 @@ b{
     bottom: 23.5%;
     left: 18.5%;
     z-index: 1000;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 1.0rem;
     color: #46cc99;
     background-color: transparent;
@@ -1925,7 +1928,7 @@ b{
     color: #ffffff;
     background-color: transparent;
     
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     user-select: none;
     font-size: 1.3rem;
     font-weight: 100;
@@ -1941,7 +1944,7 @@ b{
     color: #ffffff;
     background-color: transparent;
 
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     user-select: none;
     font-size: 1.2rem;
     font-weight: 100;
@@ -1953,7 +1956,7 @@ b{
     bottom: 24%;
     left: 19.5%;
     z-index: 1000;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 1.2rem;
     color: #46cc99;
     background-color: transparent;
@@ -2011,7 +2014,7 @@ b{
     color: #ffffff;
     background-color: transparent;
     
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     user-select: none;
     font-size: 1.5rem;
     font-weight: 100;
@@ -2027,7 +2030,7 @@ b{
     color: #ffffff;
     background-color: transparent;
 
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     user-select: none;
     font-size: 1.5rem;
     font-weight: 100;
@@ -2039,7 +2042,7 @@ b{
     bottom: 24%;
     left: 17.0%;
     z-index: 1000;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 1.5rem;
     color: #46cc99;
     background-color: transparent;
@@ -2097,7 +2100,7 @@ b{
     color: #ffffff;
     background-color: transparent;
 
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     user-select: none;
     font-size: 1.7rem;
     font-weight: 100;
@@ -2113,7 +2116,7 @@ b{
     color: #ffffff;
     background-color: transparent;
 
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     user-select: none;
     font-size: 1.7rem;
     font-weight: 100;
@@ -2123,9 +2126,9 @@ b{
   .btn-clipboard {
     position: absolute;
     bottom: 23.7%;
-    left: 16.0%;
+    left: 17.2%;
     z-index: 1000;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 1.7rem;
     color: #46cc99;
     background-color: transparent;
@@ -2214,55 +2217,59 @@ b{
   .portfolioSection {
     background-color: white;
     height: 100vh;
-    width: 100%;
   }
   .cardsContainer {
     position:absolute;
-    display: grid;
+    top: 8%;
     width: 50%;
     height: 100%;
     margin-left: 25%;
-    grid-template-columns: 50% 50%;
-    gap: 10px;
-    align-items: center;
+    overflow-y: scroll;
+    
+    display: grid;
+    grid-template-columns: 50%;
+    grid-template-rows: auto;
+    justify-content: space-evenly;
     background-color: #1A1A1A; 
   }
   .itemOne {
     grid-column: 1;
     grid-row: 1;
+    height: 80%;
+    border: 2px solid rgb(255, 255, 255);
+    background-color: #7d7d7e;
   }
-  
-  .itemTwo {
-    grid-column: 2;
-    grid-row: 1;
- 
-  }
-  .itemThree {
+  .itemSecond {
     grid-column: 1;
     grid-row: 2;
+    height: 80%;
+    border: 2px solid rgb(255, 255, 255);
+    background-color: #7d7d7e;
+  }
+  .itemThird {
+    grid-column: 1;
+    grid-row: 3;
+    height: 80%;
+    border: 2px solid rgb(255, 255, 255);
+    background-color: #7d7d7e;
   }
   .cardsItemPicWrap {
-    position: relative;
     width: 100%;
     height: auto;
     overflow: hidden;
+    margin-left: 25%;
   }
-  .cardsItemPicWrap{
-  }
-
   .cardsItemImg {
     width: 50%;
-    height: auto;
     border: 2px solid rgb(255, 255, 255);
-    object-fit: cover;
   }
   .cardsItemInfo {
+    text-align: center;
     padding: 20px 30px 30px;
   }
   .cardsItemText {
     color: #46cc99;
     font-size: 18px;
-    line-height: 24px;
   }
 
 }

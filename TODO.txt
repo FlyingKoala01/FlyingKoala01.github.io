@@ -11,5 +11,6 @@ Page: Portfolio
 		# Future Ideas	
 	* Programming quiz app // trivia // player chooses language // maybe with MERN?
 
-** Make contact me responsive **
+** Make image of project show in card, on hover disappear and show tags ** 
+
 

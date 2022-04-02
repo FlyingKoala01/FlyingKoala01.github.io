@@ -5,7 +5,7 @@ export default function CardItem(props) {
   return (
     <>
       <div className={props.position}>
-        <Link className='cardsItemLink' to={props.path}>
+        <Link to={props.path}>
           <figure className='cardsItemPicWrap' data-category={props.label}>
             <img
               className='cardsItemImg'
