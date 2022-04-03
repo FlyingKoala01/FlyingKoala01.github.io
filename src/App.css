@@ -1515,7 +1515,7 @@ b{
     font-variant: small-caps;
     color: #ffffff;
     background-color: transparent;
-        font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 3.8rem;
     user-select: none;
     letter-spacing: 0.2cm;
@@ -2236,13 +2236,16 @@ b{
     grid-column: 1;
     grid-row: 1;
     height: 80%;
+    margin-top: 10%;
     border: 2px solid rgb(255, 255, 255);
     background-color: #7d7d7e;
   }
   .itemSecond {
     grid-column: 1;
     grid-row: 2;
-    height: 80%;
+    height: 40%;
+    width: 100%;
+    margin-top: 10%;
     border: 2px solid rgb(255, 255, 255);
     background-color: #7d7d7e;
   }
@@ -2250,26 +2253,73 @@ b{
     grid-column: 1;
     grid-row: 3;
     height: 80%;
+    margin-top: 10%;
     border: 2px solid rgb(255, 255, 255);
     background-color: #7d7d7e;
   }
-  .cardsItemPicWrap {
-    width: 100%;
-    height: auto;
-    overflow: hidden;
-    margin-left: 25%;
-  }
   .cardsItemImg {
-    width: 50%;
+    width: 100%;
+    height: 100%;
     border: 2px solid rgb(255, 255, 255);
   }
   .cardsItemInfo {
-    text-align: center;
-    padding: 20px 30px 30px;
+    position: relative;
+    top: -70%;
+    left: 5%;
+    width: 90%;
+    opacity: 0;
+    text-align: justify;
+    background-color: #46cc99;
   }
   .cardsItemText {
-    color: #46cc99;
-    font-size: 18px;
+    color: #000000;
+    font-size: 16px;
+    font-weight: 600;
   }
+  .cardLinks {
+    color: #f5000000;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  .itemOne:hover .cardsItemImg{
+    animation: bluringImage 1s ease forwards;
+  }
+  .itemOne:hover .cardsItemInfo{
+    animation: visibility 1s ease forwards;
+  }
+  .itemSecond:hover .cardsItemImg{
+    animation: bluringImage 1s ease forwards;
+  }
+  .itemSecond:hover .cardsItemInfo{
+    animation: visibility 1s ease forwards;
+  }
+  .itemThird:hover .cardsItemImg{
+    animation: bluringImage 1s ease forwards;
+  }
+  .itemThird:hover .cardsItemInfo{
+    animation: visibility 1s ease forwards;
+  }
+  .cardTitle,
+  .cardDate{
+    height: 20%;
+    width: 30%;
+    position:absolute;
 
+  }
+  .cardDateText,
+  .cardTitleText{
+    font-family: 'Oswald', sans-serif;
+    color: red;
+    font-size: 9rem;
+  }
+}
+
+@keyframes bluringImage {
+  0% {filter: blur(0);}
+  100% {filter: blur(4px);}
+}
+
+@keyframes visibility {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
 }

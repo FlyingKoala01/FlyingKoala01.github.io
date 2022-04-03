@@ -30,10 +30,12 @@ export default function Projects() {
         <div className='cardsContainer'>
             <CardItem
               position='itemOne'
-              src={require('../../Images/React.png')}
+              src={require('../../Images/reactProject.PNG')}
               text='Learnt React.JS by developing my personal website. The objective is, in a future, develop another website and learn the MERN stack.'
               label='React Portfolio'
               path='/'
+              Title='REACT'
+              Date='03.22'
             />
             <CardItem
               position='itemSecond'

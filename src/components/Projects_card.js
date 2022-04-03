@@ -4,20 +4,24 @@ import { Link } from 'react-router-dom';
 export default function CardItem(props) {
   return (
     <>
+    <Link to={props.path} className="cardLinks">
       <div className={props.position}>
-        <Link to={props.path}>
-          <figure className='cardsItemPicWrap' data-category={props.label}>
             <img
               className='cardsItemImg'
               alt={props.label}
               src={props.src}
             />
-          </figure>
-          <div className='cardsItemInfo'>
-            <p className='cardsItemText'>{props.text}</p>
-          </div>
-        </Link>
+            <div className='cardsItemInfo'>
+              <p className='cardsItemText'>{props.text}</p>
+            </div>
+            <div className='cardTitle'>
+              <p className='cardTitleText'>{props.Title}</p>
+            </div>
+            <div className='cardDate'>
+              <p className='cardDateText'>{props.Date}</p>
+            </div>
       </div>
+    </Link>
     </>
   );
 }
