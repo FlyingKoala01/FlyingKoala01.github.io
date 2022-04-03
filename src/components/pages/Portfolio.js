@@ -28,29 +28,34 @@ export default function Projects() {
     return (
       <div className='portfolioSection'>
         <div className='cardsContainer'>
-            <CardItem
-              position='itemOne'
-              src={require('../../Images/reactProject.PNG')}
-              text='Learnt React.JS by developing my personal website. The objective is, in a future, develop another website and learn the MERN stack.'
-              label='React Portfolio'
-              path='/'
-              Title='REACT'
-              Date='03.22'
-            />
-            <CardItem
-              position='itemSecond'
-              src={require('../../Images/Python.png')}
-              text='Incoming...'
-              label='Future'
-              path='/'
-            />
-            <CardItem
-              position='itemThird'
-              src={require('../../Images/Python.png')}
-              text='Incoming...'
-              label='Future'
-              path='/'
-            />
+          <CardItem
+            position='itemOne'
+            src={require('../../Images/reactProject.PNG')}
+            text='Learnt React.JS by developing my personal website. The objective is, in a future, develop another website and learn the MERN stack.'
+            label='React Portfolio'
+            path='/'
+            Title='REACT'
+          />
+          <CardItem
+            position='itemSecond'
+            src={require('../../Images/Python.png')}
+            text='Incoming...'
+            label='Future'
+            path='/'
+          />
+          <CardItem
+            position='itemThird'
+            src={require('../../Images/Python.png')}
+            text='Incoming...'
+            label='Future'
+            path='/'
+          />
+        </div>
+        <div className='cardTitle'>
+          <p className='cardTitleText'>REACT</p>
+        </div>
+        <div className='cardDate'>
+          <p className='cardDateText'></p>
         </div>
       </div>
     );
