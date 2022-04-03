@@ -20,8 +20,7 @@ b{
   color: #46cc99;
 }
 /* MOBILE */
-
-@media (min-width: 0px) and (max-width: 639px) {
+@media (min-width: 0px)    and (max-width: 639px) {
   html {
     height: 100vh;
     background: radial-gradient(circle at 120%, #000000 -4%, #676768 12%, #7d7d7e 16%, #a0a0a1 25%, #ffffff 50%, #000000 100%);
@@ -37,8 +36,7 @@ b{
     font-size: 100%;
   }
 }
-
-@media (min-width: 640px) and (max-width: 959px) {
+@media (min-width: 640px)  and (max-width: 959px) {
   html {
     height: 100vh;
     background: radial-gradient(circle at 120%, #000000 -4%, #676768 12%, #7d7d7e 16%, #a0a0a1 25%, #ffffff 50%, #000000 100%);
@@ -54,10 +52,9 @@ b{
     font-size: 100%;
   }
 }
-
 /* ================================= OTHERS ==========================================*/
 /* MOBILE */
-@media (min-width: 0px) and (max-width: 639px) {
+@media (min-width: 0px)    and (max-width: 639px) {
   .Loader {
     text-align: center;
     display: flex;
@@ -133,9 +130,8 @@ b{
   }
 
 }
-
 /* Larger Mobile */
-@media (min-width: 640px) and (max-width: 959px) {
+@media (min-width: 640px)  and (max-width: 959px) {
   .Loader {
     text-align: center;
     display: flex;
@@ -211,9 +207,8 @@ b{
   }
 
 }
-
 /* Large MOBILE */
-@media (min-width: 960px) and (max-width: 1099px) {
+@media (min-width: 960px)  and (max-width: 1099px) {
   .Loader {
     text-align: center;
     display: flex;
@@ -289,7 +284,6 @@ b{
   }
 
 }
-
 /* Medium */
 @media (min-width: 1100px) and (max-width: 1399px) {
   .Loader {
@@ -367,7 +361,6 @@ b{
   }
 
 }
-
 /* LAPTOP */
 @media (min-width: 1400px) and (max-width: 1919px) {
   .Loader {
@@ -438,7 +431,6 @@ b{
 
 
 }
-
 /* MONITOR */
 @media (min-width: 1920px) {
   .Loader {
@@ -509,7 +501,6 @@ b{
 
 
 }
-
 @keyframes fading {
   0% {
     opacity: 1;
@@ -519,17 +510,15 @@ b{
     opacity: 0;
   }
 }
-
 #tsparticles {
   position: absolute;
   width: 100%;
   height: 100%;
   background-color: transparent;
 }
-
 /* ===================================== MAIN ======================================= */
 /*MOBILE */
-@media (min-width: 0px) and (max-width: 639px) {
+@media (min-width: 0px)    and (max-width: 639px) {
   .myName {
     color: rgb(0, 0, 0);
     background-color: transparent;
@@ -566,9 +555,8 @@ b{
     overflow: hidden;
   }
 }
-
 /*Larger Mobile*/
-@media (min-width: 640px) and (max-width: 959px) {
+@media (min-width: 640px)  and (max-width: 959px) {
   .myName {
     color: rgb(0, 0, 0);
     background-color: transparent;
@@ -603,9 +591,8 @@ b{
     animation: bluring 4s forwards;
   }
 }
-
 /* Large MOBILE */
-@media (min-width: 960px) and (max-width: 1099px) {
+@media (min-width: 960px)  and (max-width: 1099px) {
   .myName {
     color: rgb(0, 0, 0);
     background-color: transparent;
@@ -640,7 +627,6 @@ b{
     animation: bluring 4s forwards;
   }
 }
-
 /* Medium */
 @media (min-width: 1100px) and (max-width: 1399px) {
   .myName {
@@ -677,7 +663,6 @@ b{
     animation: bluring 4s forwards;
   }
 }
-
 /* LAPTOP */
 @media (min-width: 1400px) and (max-width: 1919px) {
   .myName {
@@ -736,7 +721,6 @@ b{
     font-size: 25px;
   }
 }
-
 /* MONITOR */
 @media (min-width: 1920px) {
   .myName {
@@ -796,7 +780,6 @@ b{
     animation: bluring 4s forwards;
   }
 }
-
 @keyframes bluring {
   0% {
     filter: blur(4px);
@@ -806,10 +789,9 @@ b{
     filter: blur(0);
   }
 }
-
 /* =============================== ABOUT ME ====================================*/
 /*MOBILE */
-@media (min-width: 0px) and (max-width: 639px) {
+@media (min-width: 0px)    and (max-width: 639px) {
   .aboutMeBackground {
     height: 100%;
     width: auto;
@@ -928,8 +910,7 @@ b{
     grid-row: 2;
   }
 }
-
-@media (min-width: 640px) and (max-width: 959px) {
+@media (min-width: 640px)  and (max-width: 959px) {
   .aboutMeBackground {
     height: 300vh;
     width: 100%;
@@ -1070,8 +1051,7 @@ b{
     grid-row: 2;
   }
 }
-
-@media (min-width: 960px) and (max-width: 1099px) {
+@media (min-width: 960px)  and (max-width: 1099px) {
   .aboutMeBackground {
     height: 100vh;
     width: 100%;
@@ -1212,7 +1192,6 @@ b{
     grid-row: 2;
   }
 }
-
 @media (min-width: 1100px) and (max-width: 1399px) {
   .aboutMeBackground {
     height: 100vh;
@@ -1353,7 +1332,6 @@ b{
     grid-row: 2;
   }
 }
-
 @media (min-width: 1400px) and (max-width: 1919px) {
   .aboutMeBackground {
     height: 100vh;
@@ -1498,7 +1476,6 @@ b{
     grid-row: 2;
   }
 }
-
 @media (min-width: 1920px) {
   .aboutMeBackground {
     height: 100vh;
@@ -1641,10 +1618,9 @@ b{
     grid-row: 2;
   }
 }
-
 /* ====================================== CONTACT ME ====================================== */
 
-@media (min-width: 0px) and (max-width: 639px) {
+@media (min-width: 0px)    and (max-width: 639px) {
   .backgroundContactMe {
     height: 100%;
     width: auto;
@@ -1727,7 +1703,7 @@ b{
 
 }
 
-@media (min-width: 640px) and (max-width: 959px) {
+@media (min-width: 640px)  and (max-width: 959px) {
   .europe {
     background-color: transparent;
     position: relative;
@@ -1816,7 +1792,7 @@ b{
   }
 }
 
-@media (min-width: 960px) and (max-width: 1099px) {
+@media (min-width: 960px)  and (max-width: 1099px) {
   .europe {
     background-color: transparent;
     position: relative;
@@ -2193,26 +2169,21 @@ b{
 
 
 /*================================ PORTFOLIO =======================================*/
-@media (min-width: 0px) and (max-width: 639px) {
+@media (min-width: 0px)    and (max-width: 639px) {
   
 }
-
-@media (min-width: 640px) and (max-width: 959px) {
+@media (min-width: 640px)  and (max-width: 959px) {
   
 }
-
-@media (min-width: 960px) and (max-width: 1099px) {
+@media (min-width: 960px)  and (max-width: 1099px) {
   
 }
-
 @media (min-width: 1100px) and (max-width: 1399px) {
   
 }
-
 @media (min-width: 1400px) and (max-width: 1919px) {
   
 }
-
 @media (min-width: 1920px) {
   .portfolioSection {
     position: absolute;
@@ -2225,38 +2196,30 @@ b{
   .cardsContainer {
     position:absolute;
     top: 8%;
-    width: 50%;
+    width: 40%;
     height: 100%;
-    margin-left: 25%;
+    margin-left: 30%;
     overflow-y: auto;
     z-index: 1100;
 
     display: grid;
     grid-template-columns: 50%;
-    grid-template-rows: auto;
+    grid-template-rows: 35%;
     justify-content: space-evenly;
     background-color: #1A1A1A; 
   }
   .itemOne {
     grid-column: 1;
     grid-row: 1;
-    height: 50%;
+    height: 40%;
     margin-top: 10%;
-    background-color: #7d7d7e;
   }
   .itemSecond {
     grid-column: 1;
     grid-row: 2;
+    height: 40%;
     margin-top: 10%;
-    background-color: #7d7d7e;
   }
-  .itemThird {
-    grid-column: 1;
-    grid-row: 3;
-    margin-top: 10%;
-    background-color: #7d7d7e;
-  }
-
   .cardsItemImg {
     width: 100%;
     height: auto;
@@ -2283,7 +2246,6 @@ b{
     cursor: pointer;
     text-decoration: underline;
   }
-
   .itemOne:hover .cardsItemImg{
     animation: bluringImage 1s ease forwards;
   }
@@ -2296,41 +2258,40 @@ b{
   .itemSecond:hover .cardsItemInfo{
     animation: visibility 1s ease forwards;
   }
-  .itemThird:hover .cardsItemImg{
-    animation: bluringImage 1s ease forwards;
-  }
-  .itemThird:hover .cardsItemInfo{
-    animation: visibility 1s ease forwards;
-  }
   .cardTitle{
     position:absolute;
-    left: 25%;
-    top: -10%;
+    left: 3%;
+    top: 0%;
+    height: 10%;
+    z-index: 1001;
+  }
+  .cardDate{
+    position:absolute;
+    left: 40%;
+    top: 0%;
     height: 10%;
     z-index: 1001;
   }
   .cardDateText,
   .cardTitleText{
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     color: rgb(0, 0, 0);
-    font-size: 9rem;
+    font-size: 6.0rem;
   }
-  .itemOne:hover .cardTitle{
-    animation: moveright 1s ease forwards;
-  } 
 }
-
 @keyframes bluringImage {
   0% {filter: blur(0);}
   100% {filter: blur(4px);}
 }
-
 @keyframes visibility {
   0% {opacity: 0;}
   100% {opacity: 1;}
 }
- 
 @keyframes moveright {
-  0% { left: 25%;}
-  100% {left: 0%;}
+  0% { left: 30%;}
+  100% {left: 3%;}
+} 
+@keyframes moveleft {
+  0% { left: 40%;}
+  100% {left: 71%;}
 } 
