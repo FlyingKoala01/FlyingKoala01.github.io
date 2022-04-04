@@ -30,8 +30,6 @@ export default function Projects() {
   const [index, setIndex] = useState(0);
   console.log(projectsInfo['projectEmpty']);
 
-
-
   const itemTitle = {
     itemOneTitle: false,
     itemTwoTitle: false,
