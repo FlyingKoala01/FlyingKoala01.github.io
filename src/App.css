@@ -16,11 +16,13 @@ html {
   font-family: 'Raleway', sans-serif;
   font-size: 100%;
 }
-b{
+
+b {
   color: #46cc99;
 }
+
 /* MOBILE */
-@media (min-width: 0px)    and (max-width: 639px) {
+@media (min-width: 0px) and (max-width: 639px) {
   html {
     height: 100vh;
     background: radial-gradient(circle at 120%, #000000 -4%, #676768 12%, #7d7d7e 16%, #a0a0a1 25%, #ffffff 50%, #000000 100%);
@@ -36,7 +38,8 @@ b{
     font-size: 100%;
   }
 }
-@media (min-width: 640px)  and (max-width: 959px) {
+
+@media (min-width: 640px) and (max-width: 959px) {
   html {
     height: 100vh;
     background: radial-gradient(circle at 120%, #000000 -4%, #676768 12%, #7d7d7e 16%, #a0a0a1 25%, #ffffff 50%, #000000 100%);
@@ -52,9 +55,10 @@ b{
     font-size: 100%;
   }
 }
+
 /* ================================= OTHERS ==========================================*/
 /* MOBILE */
-@media (min-width: 0px)    and (max-width: 639px) {
+@media (min-width: 0px) and (max-width: 639px) {
   .Loader {
     text-align: center;
     display: flex;
@@ -130,8 +134,9 @@ b{
   }
 
 }
+
 /* Larger Mobile */
-@media (min-width: 640px)  and (max-width: 959px) {
+@media (min-width: 640px) and (max-width: 959px) {
   .Loader {
     text-align: center;
     display: flex;
@@ -207,8 +212,9 @@ b{
   }
 
 }
+
 /* Large MOBILE */
-@media (min-width: 960px)  and (max-width: 1099px) {
+@media (min-width: 960px) and (max-width: 1099px) {
   .Loader {
     text-align: center;
     display: flex;
@@ -284,6 +290,7 @@ b{
   }
 
 }
+
 /* Medium */
 @media (min-width: 1100px) and (max-width: 1399px) {
   .Loader {
@@ -361,6 +368,7 @@ b{
   }
 
 }
+
 /* LAPTOP */
 @media (min-width: 1400px) and (max-width: 1919px) {
   .Loader {
@@ -431,6 +439,7 @@ b{
 
 
 }
+
 /* MONITOR */
 @media (min-width: 1920px) {
   .Loader {
@@ -501,6 +510,7 @@ b{
 
 
 }
+
 @keyframes fading {
   0% {
     opacity: 1;
@@ -510,15 +520,17 @@ b{
     opacity: 0;
   }
 }
+
 #tsparticles {
   position: absolute;
   width: 100%;
   height: 100%;
   background-color: transparent;
 }
+
 /* ===================================== MAIN ======================================= */
 /*MOBILE */
-@media (min-width: 0px)    and (max-width: 639px) {
+@media (min-width: 0px) and (max-width: 639px) {
   .myName {
     color: rgb(0, 0, 0);
     background-color: transparent;
@@ -529,7 +541,7 @@ b{
     margin-left: 6%;
     letter-spacing: 0.5cm;
     font-variant: small-caps;
-    font-family: 'Rajdhani', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     user-select: none;
     animation: fadingText 4.5s forwards;
   }
@@ -541,7 +553,7 @@ b{
     font-size: 3.5vh;
     font-weight: 100;
     margin-top: 25%;
-    font-family: 'Rajdhani', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     user-select: none;
     animation: fadingText 4.5s forwards;
   }
@@ -555,8 +567,9 @@ b{
     overflow: hidden;
   }
 }
+
 /*Larger Mobile*/
-@media (min-width: 640px)  and (max-width: 959px) {
+@media (min-width: 640px) and (max-width: 959px) {
   .myName {
     color: rgb(0, 0, 0);
     background-color: transparent;
@@ -566,7 +579,7 @@ b{
     margin-top: 4.5cm;
     letter-spacing: 0.5cm;
     font-variant: small-caps;
-    font-family: 'Rajdhani', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     user-select: none;
     animation: fadingText 4.5s forwards;
   }
@@ -578,7 +591,7 @@ b{
     font-size: 2.2rem;
     font-weight: 100;
     margin-top: 3cm;
-    font-family: 'Rajdhani', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     user-select: none;
     animation: fadingText 4.5s forwards;
   }
@@ -591,8 +604,9 @@ b{
     animation: bluring 4s forwards;
   }
 }
+
 /* Large MOBILE */
-@media (min-width: 960px)  and (max-width: 1099px) {
+@media (min-width: 960px) and (max-width: 1099px) {
   .myName {
     color: rgb(0, 0, 0);
     background-color: transparent;
@@ -602,7 +616,7 @@ b{
     margin-top: 3.0cm;
     letter-spacing: 0.5cm;
     font-variant: small-caps;
-    font-family: 'Rajdhani', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     user-select: none;
     animation: fadingText 4.5s forwards;
   }
@@ -614,7 +628,7 @@ b{
     font-size: 1.5rem;
     font-weight: 100;
     margin-top: 2cm;
-    font-family: 'Rajdhani', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     user-select: none;
     animation: fadingText 4.5s forwards;
   }
@@ -627,6 +641,7 @@ b{
     animation: bluring 4s forwards;
   }
 }
+
 /* Medium */
 @media (min-width: 1100px) and (max-width: 1399px) {
   .myName {
@@ -638,7 +653,7 @@ b{
     margin-top: 3.5cm;
     letter-spacing: 0.5cm;
     font-variant: small-caps;
-    font-family: 'Rajdhani', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     user-select: none;
     animation: fadingText 4.5s forwards;
   }
@@ -650,7 +665,7 @@ b{
     font-size: 1.8rem;
     font-weight: 100;
     margin-top: 3.5cm;
-    font-family: 'Rajdhani', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     user-select: none;
     animation: fadingText 4.5s forwards;
   }
@@ -663,6 +678,7 @@ b{
     animation: bluring 4s forwards;
   }
 }
+
 /* LAPTOP */
 @media (min-width: 1400px) and (max-width: 1919px) {
   .myName {
@@ -674,7 +690,7 @@ b{
     margin-top: 4.5cm;
     letter-spacing: 0.5cm;
     font-variant: small-caps;
-    font-family: 'Rajdhani', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     user-select: none;
     animation: fadingText 4.5s forwards;
   }
@@ -686,7 +702,7 @@ b{
     font-size: 2.2rem;
     font-weight: 100;
     margin-top: 3.5cm;
-    font-family: 'Rajdhani', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     user-select: none;
     animation: fadingText 4.5s forwards;
   }
@@ -721,6 +737,7 @@ b{
     font-size: 25px;
   }
 }
+
 /* MONITOR */
 @media (min-width: 1920px) {
   .myName {
@@ -732,7 +749,7 @@ b{
     margin-top: 4.5cm;
     letter-spacing: 0.5cm;
     font-variant: small-caps;
-        font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 
 
     user-select: none;
@@ -745,7 +762,7 @@ b{
     font-size: 2.8rem;
     font-weight: 100;
     margin-top: 4.5cm;
-        font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 
     user-select: none;
   }
@@ -780,6 +797,7 @@ b{
     animation: bluring 4s forwards;
   }
 }
+
 @keyframes bluring {
   0% {
     filter: blur(4px);
@@ -789,9 +807,10 @@ b{
     filter: blur(0);
   }
 }
+
 /* =============================== ABOUT ME ====================================*/
 /*MOBILE */
-@media (min-width: 0px)    and (max-width: 639px) {
+@media (min-width: 0px) and (max-width: 639px) {
   .aboutMeBackground {
     height: 100%;
     width: auto;
@@ -910,7 +929,8 @@ b{
     grid-row: 2;
   }
 }
-@media (min-width: 640px)  and (max-width: 959px) {
+
+@media (min-width: 640px) and (max-width: 959px) {
   .aboutMeBackground {
     height: 300vh;
     width: 100%;
@@ -1051,7 +1071,8 @@ b{
     grid-row: 2;
   }
 }
-@media (min-width: 960px)  and (max-width: 1099px) {
+
+@media (min-width: 960px) and (max-width: 1099px) {
   .aboutMeBackground {
     height: 100vh;
     width: 100%;
@@ -1192,6 +1213,7 @@ b{
     grid-row: 2;
   }
 }
+
 @media (min-width: 1100px) and (max-width: 1399px) {
   .aboutMeBackground {
     height: 100vh;
@@ -1332,6 +1354,7 @@ b{
     grid-row: 2;
   }
 }
+
 @media (min-width: 1400px) and (max-width: 1919px) {
   .aboutMeBackground {
     height: 100vh;
@@ -1476,6 +1499,7 @@ b{
     grid-row: 2;
   }
 }
+
 @media (min-width: 1920px) {
   .aboutMeBackground {
     height: 100vh;
@@ -1546,7 +1570,7 @@ b{
     font-family: 'Montserrat', sans-serif;
     user-select: none;
   }
-  
+
   .textAboutMe a:-webkit-any-link {
     color: #46cc99;
     cursor: pointer;
@@ -1618,9 +1642,10 @@ b{
     grid-row: 2;
   }
 }
+
 /* ====================================== CONTACT ME ====================================== */
 
-@media (min-width: 0px)    and (max-width: 639px) {
+@media (min-width: 0px) and (max-width: 639px) {
   .backgroundContactMe {
     height: 100%;
     width: auto;
@@ -1640,7 +1665,7 @@ b{
 
     color: #ffffff;
     background-color: transparent;
-    
+
     font-family: 'Montserrat', sans-serif;
     user-select: none;
     font-size: 1.1rem;
@@ -1657,7 +1682,7 @@ b{
 
     color: #ffffff;
     background-color: transparent;
-    
+
     font-family: 'Montserrat', sans-serif;
     user-select: none;
     font-size: 1.1rem;
@@ -1703,7 +1728,7 @@ b{
 
 }
 
-@media (min-width: 640px)  and (max-width: 959px) {
+@media (min-width: 640px) and (max-width: 959px) {
   .europe {
     background-color: transparent;
     position: relative;
@@ -1792,7 +1817,7 @@ b{
   }
 }
 
-@media (min-width: 960px)  and (max-width: 1099px) {
+@media (min-width: 960px) and (max-width: 1099px) {
   .europe {
     background-color: transparent;
     position: relative;
@@ -1817,7 +1842,7 @@ b{
 
     color: #ffffff;
     background-color: transparent;
-    
+
     font-family: 'Montserrat', sans-serif;
     user-select: none;
     font-size: 1.1rem;
@@ -1903,7 +1928,7 @@ b{
 
     color: #ffffff;
     background-color: transparent;
-    
+
     font-family: 'Montserrat', sans-serif;
     user-select: none;
     font-size: 1.3rem;
@@ -1989,7 +2014,7 @@ b{
 
     color: #ffffff;
     background-color: transparent;
-    
+
     font-family: 'Montserrat', sans-serif;
     user-select: none;
     font-size: 1.5rem;
@@ -2060,7 +2085,7 @@ b{
     top: 7%;
     user-select: none;
   }
-  
+
   .backgroundContactMe {
     background-color: #1A1A1A;
     height: 100vh;
@@ -2072,7 +2097,7 @@ b{
     top: 23%;
     left: 2.6%;
     z-index: 1000;
-    
+
     color: #ffffff;
     background-color: transparent;
 
@@ -2088,7 +2113,7 @@ b{
     bottom: 20%;
     left: 2.6%;
     z-index: 1000;
-    
+
     color: #ffffff;
     background-color: transparent;
 
@@ -2169,32 +2194,26 @@ b{
 
 
 /*================================ PORTFOLIO =======================================*/
-@media (min-width: 0px)    and (max-width: 639px) {
-  
-}
-@media (min-width: 640px)  and (max-width: 959px) {
-  
-}
-@media (min-width: 960px)  and (max-width: 1099px) {
-  
-}
-@media (min-width: 1100px) and (max-width: 1399px) {
-  
-}
+@media (min-width: 0px) and (max-width: 639px) {}
+
+@media (min-width: 640px) and (max-width: 959px) {}
+
+@media (min-width: 960px) and (max-width: 1099px) {}
+
+@media (min-width: 1100px) and (max-width: 1399px) {}
+
 @media (min-width: 1400px) and (max-width: 1919px) {
-  
-}
-@media (min-width: 1920px) {
   .portfolioSection {
     position: absolute;
-    background-color: white;
+    /*background-color: white;*/
     height: 100vh;
     width: 100%;
     z-index: -1001;
     overflow: scroll;
   }
+
   .cardsContainer {
-    position:absolute;
+    position: absolute;
     top: 8%;
     width: 40%;
     height: 100%;
@@ -2206,25 +2225,29 @@ b{
     grid-template-columns: 50%;
     grid-template-rows: 35%;
     justify-content: space-evenly;
-    background-color: #1A1A1A; 
+    background-color: #1A1A1A;
   }
+
   .itemOne {
     grid-column: 1;
     grid-row: 1;
     height: 40%;
     margin-top: 10%;
   }
+
   .itemSecond {
     grid-column: 1;
     grid-row: 2;
     height: 40%;
     margin-top: 10%;
   }
+
   .cardsItemImg {
     width: 100%;
     height: auto;
     border: 2px solid rgb(255, 255, 255);
   }
+
   .cardsItemInfo {
     position: relative;
     top: -70%;
@@ -2235,63 +2258,206 @@ b{
     background-color: #46cc99;
     z-index: 101;
   }
+
   .cardsItemText {
     color: #000000;
     font-size: 16px;
     font-weight: 600;
     z-index: 101;
   }
+
   .cardLinks {
     color: #f5000000;
     cursor: pointer;
     text-decoration: underline;
   }
-  .itemOne:hover .cardsItemImg{
+
+  .itemOne:hover .cardsItemImg {
     animation: bluringImage 1s ease forwards;
   }
-  .itemOne:hover .cardsItemInfo{
+
+  .itemOne:hover .cardsItemInfo {
     animation: visibility 1s ease forwards;
   }
-  .itemSecond:hover .cardsItemImg{
+
+  .itemSecond:hover .cardsItemImg {
     animation: bluringImage 1s ease forwards;
   }
-  .itemSecond:hover .cardsItemInfo{
+
+  .itemSecond:hover .cardsItemInfo {
     animation: visibility 1s ease forwards;
   }
-  .cardTitle{
-    position:absolute;
+
+  .cardTitle {
+    position: absolute;
     left: 3%;
     top: 0%;
     height: 10%;
     z-index: 1001;
   }
-  .cardDate{
-    position:absolute;
+
+  .cardDate {
+    position: absolute;
     left: 40%;
     top: 0%;
     height: 10%;
     z-index: 1001;
   }
+
   .cardDateText,
-  .cardTitleText{
+  .cardTitleText {
     font-family: 'Montserrat', sans-serif;
     color: rgb(0, 0, 0);
     font-size: 6.0rem;
   }
 }
+
+@media (min-width: 1920px) {
+  .portfolioSection {
+    position: absolute;
+    /*background-color: white;*/
+    height: 100vh;
+    width: 100%;
+    z-index: -1001;
+    overflow: scroll;
+  }
+
+  .cardsContainer {
+    position: absolute;
+    top: 8%;
+    width: 40%;
+    height: 100%;
+    margin-left: 30%;
+    overflow-y: auto;
+    z-index: 1100;
+
+    display: grid;
+    grid-template-columns: 50%;
+    grid-template-rows: 35%;
+    justify-content: space-evenly;
+    background-color: #1A1A1A;
+  }
+
+  .itemOne {
+    grid-column: 1;
+    grid-row: 1;
+    height: 40%;
+    margin-top: 10%;
+  }
+
+  .itemSecond {
+    grid-column: 1;
+    grid-row: 2;
+    height: 40%;
+    margin-top: 10%;
+  }
+
+  .cardsItemImg {
+    width: 100%;
+    height: auto;
+    border: 2px solid rgb(255, 255, 255);
+  }
+
+  .cardsItemInfo {
+    position: relative;
+    top: -70%;
+    left: 5%;
+    width: 90%;
+    opacity: 0;
+    text-align: justify;
+    background-color: #46cc99;
+    z-index: 101;
+  }
+
+  .cardsItemText {
+    color: #000000;
+    font-size: 16px;
+    font-weight: 600;
+    z-index: 101;
+  }
+
+  .cardLinks {
+    color: #f5000000;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+  .itemOne:hover .cardsItemImg {
+    animation: bluringImage 1s ease forwards;
+  }
+
+  .itemOne:hover .cardsItemInfo {
+    animation: visibility 1s ease forwards;
+  }
+
+  .itemSecond:hover .cardsItemImg {
+    animation: bluringImage 1s ease forwards;
+  }
+
+  .itemSecond:hover .cardsItemInfo {
+    animation: visibility 1s ease forwards;
+  }
+
+  .cardTitle {
+    position: absolute;
+    left: 3%;
+    top: 0%;
+    height: 10%;
+    z-index: 1001;
+  }
+
+  .cardDate {
+    position: absolute;
+    left: 40%;
+    top: 0%;
+    height: 10%;
+    z-index: 1001;
+  }
+
+  .cardDateText,
+  .cardTitleText {
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(0, 0, 0);
+    font-size: 6.0rem;
+  }
+}
+
 @keyframes bluringImage {
-  0% {filter: blur(0);}
-  100% {filter: blur(4px);}
+  0% {
+    filter: blur(0);
+  }
+
+  100% {
+    filter: blur(4px);
+  }
 }
+
 @keyframes visibility {
-  0% {opacity: 0;}
-  100% {opacity: 1;}
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
+
 @keyframes moveright {
-  0% { left: 30%;}
-  100% {left: 3%;}
-} 
+  0% {
+    left: 30%;
+  }
+
+  100% {
+    left: 3%;
+  }
+}
+
 @keyframes moveleft {
-  0% { left: 40%;}
-  100% {left: 71%;}
-} 
+  0% {
+    left: 40%;
+  }
+
+  100% {
+    left: 71%;
+  }
+}
