@@ -2349,7 +2349,7 @@ b {
   }
   .cardsItemImg {
     height: 100%;
-    border: 2px solid rgb(255, 255, 255);
+    border: 2px solid #ffffff00;
   }
   .cardLinks {
     color: #f5000000;
@@ -2363,7 +2363,7 @@ b {
     z-index: 101;
   }
   .itemSecond:hover .cardsItemImg {
-    animation: bluringImage 1s ease forwards;
+    border: 2px solid #46cc99;
   }
   .cardTitle {
     position: absolute;
@@ -2371,13 +2371,15 @@ b {
     top: 0%;
     height: 10%;
     z-index: 1001;
+    animation: moveright 1s ease forwards 0.5s;
   }
   .cardDate {
     position: absolute;
     left: 40%;
-    top: 0%;
+    top: 20%;
     height: 10%;
     z-index: 1001;
+    animation: moveright 1s ease forwards;
   }
   .cardDateText,
   .cardTitleText {
@@ -2387,17 +2389,15 @@ b {
   }
   .prevArea{
     position:absolute;
-    top: 8%;
-    left: 27%;
+    top: 13%;
+    left: 30%;
     z-index:2000;
-    border: 2px solid rgb(255, 255, 255);
   }
   .nextArea{
     position:absolute;
-    top: 73%;
-    left: 27%;
+    top: 80%;
+    left: 30%;
     z-index:2000;
-    border: 2px solid rgb(255, 255, 255);
   }
   .prevText,
   .nextText{
@@ -2405,14 +2405,11 @@ b {
     color: rgb(255, 255, 255);
     font-size: 4.0rem;
   }
-}
-@keyframes bluringImage {
-  0% {
-    filter: blur(0);
+  .prevText:hover{
+    color: #46cc99;
   }
-
-  100% {
-    filter: blur(4px);
+  .nextText:hover{
+    color: #46cc99;
   }
 }
 @keyframes visibility {

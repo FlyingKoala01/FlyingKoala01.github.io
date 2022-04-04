@@ -1,0 +1,48 @@
+[{
+    "0": {
+      "itemTitle": "itemZeroTitle",
+      "cardTitleText": "ZERO",
+      "cardDateText": "NEVER",
+      "cardhref": "https://github.com/FlyingKoala01/Website"
+    }
+},
+{
+    "1": {
+      "itemTitle": "itemOneTitle",
+      "cardTitleText": "REACT",
+      "cardDateText": "04.22",
+      "cardhref": "https://github.com/FlyingKoala01/Website"
+    }
+},
+{
+    "2": {
+      "itemTitle": "itemTwoTitle",
+      "cardTitleText": "FUTURE",
+      "cardDateText": ".22",
+      "cardhref": "https://github.com/FlyingKoala01/Website"
+    }
+},
+{
+    "3": {
+      "itemTitle": "itemZeroTitle",
+      "cardTitleText": "ZERO1",
+      "cardDateText": "NEVER1",
+      "cardhref": "https://github.com/FlyingKoala01/Website"
+    }
+},
+{
+    "4": {
+      "itemTitle": "itemOneTitle",
+      "cardTitleText": "REACT2",
+      "cardDateText": "04.222",
+      "cardhref": "https://github.com/FlyingKoala01/Website"
+    }
+},
+{
+    "5": {
+      "itemTitle": "itemTwoTitle",
+      "cardTitleText": "FUTURE3",
+      "cardDateText": ".223",
+      "cardhref": "https://github.com/FlyingKoala01/Website"
+    }
+}]

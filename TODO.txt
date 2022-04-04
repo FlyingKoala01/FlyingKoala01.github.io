@@ -3,4 +3,4 @@ App:
 	
 ** Make image of project show in card, on hover disappear and show tags ** 
 
-** Portfolio on scroll ** 
+** Portfolio on scroll fix showing when moving around** 
