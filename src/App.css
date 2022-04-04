@@ -16,11 +16,9 @@ html {
   font-family: 'Raleway', sans-serif;
   font-size: 100%;
 }
-
 b {
   color: #46cc99;
 }
-
 /* MOBILE */
 @media (min-width: 0px) and (max-width: 639px) {
   html {
@@ -38,7 +36,6 @@ b {
     font-size: 100%;
   }
 }
-
 @media (min-width: 640px) and (max-width: 959px) {
   html {
     height: 100vh;
@@ -55,7 +52,6 @@ b {
     font-size: 100%;
   }
 }
-
 /* ================================= OTHERS ==========================================*/
 /* MOBILE */
 @media (min-width: 0px) and (max-width: 639px) {
@@ -134,7 +130,6 @@ b {
   }
 
 }
-
 /* Larger Mobile */
 @media (min-width: 640px) and (max-width: 959px) {
   .Loader {
@@ -212,7 +207,6 @@ b {
   }
 
 }
-
 /* Large MOBILE */
 @media (min-width: 960px) and (max-width: 1099px) {
   .Loader {
@@ -290,7 +284,6 @@ b {
   }
 
 }
-
 /* Medium */
 @media (min-width: 1100px) and (max-width: 1399px) {
   .Loader {
@@ -368,7 +361,6 @@ b {
   }
 
 }
-
 /* LAPTOP */
 @media (min-width: 1400px) and (max-width: 1919px) {
   .Loader {
@@ -438,7 +430,6 @@ b {
   }
 
 }
-
 /* MONITOR */
 @media (min-width: 1920px) {
   .Loader {
@@ -507,18 +498,14 @@ b {
     animation: fading 1s forwards;
   }
 }
-
 @keyframes fading {
   0% {
     opacity: 1;
   }
-
   100% {
     opacity: 0;
   }
 }
-
-
 #tsparticles {
   position: absolute;
   width: 100%;
@@ -565,7 +552,6 @@ b {
     overflow: hidden;
   }
 }
-
 /*Larger Mobile*/
 @media (min-width: 640px) and (max-width: 959px) {
   .myName {
@@ -602,7 +588,6 @@ b {
     animation: bluring 4s forwards;
   }
 }
-
 /* Large MOBILE */
 @media (min-width: 960px) and (max-width: 1099px) {
   .myName {
@@ -639,7 +624,6 @@ b {
     animation: bluring 4s forwards;
   }
 }
-
 /* Medium */
 @media (min-width: 1100px) and (max-width: 1399px) {
   .myName {
@@ -676,7 +660,6 @@ b {
     animation: bluring 4s forwards;
   }
 }
-
 /* LAPTOP */
 @media (min-width: 1400px) and (max-width: 1919px) {
   .myName {
@@ -735,7 +718,6 @@ b {
     font-size: 25px;
   }
 }
-
 /* MONITOR */
 @media (min-width: 1920px) {
   .myName {
@@ -795,7 +777,6 @@ b {
     animation: bluring 4s forwards;
   }
 }
-
 @keyframes bluring {
   0% {
     filter: blur(4px);
@@ -929,7 +910,6 @@ b {
     grid-row: 2;
   }
 }
-
 @media (min-width: 640px) and (max-width: 959px) {
   .aboutMeBackground {
     height: 300vh;
@@ -1071,7 +1051,6 @@ b {
     grid-row: 2;
   }
 }
-
 @media (min-width: 960px) and (max-width: 1099px) {
   .aboutMeBackground {
     height: 100vh;
@@ -1213,7 +1192,6 @@ b {
     grid-row: 2;
   }
 }
-
 @media (min-width: 1100px) and (max-width: 1399px) {
   .aboutMeBackground {
     height: 100vh;
@@ -1354,7 +1332,6 @@ b {
     grid-row: 2;
   }
 }
-
 @media (min-width: 1400px) and (max-width: 1919px) {
   .aboutMeBackground {
     height: 100vh;
@@ -1512,7 +1489,6 @@ b {
     grid-row: 2;
   }
 }
-
 @media (min-width: 1920px) {
   .aboutMeBackground {
     height: 100vh;
@@ -1656,7 +1632,6 @@ b {
     grid-row: 2;
   }
 }
-
 /* ====================================== CONTACT ME ====================================== */
 
 @media (min-width: 0px) and (max-width: 639px) {
@@ -1741,7 +1716,6 @@ b {
   }
 
 }
-
 @media (min-width: 640px) and (max-width: 959px) {
   .europe {
     background-color: transparent;
@@ -1830,7 +1804,6 @@ b {
     animation: popUp 4s ease infinite;
   }
 }
-
 @media (min-width: 960px) and (max-width: 1099px) {
   .europe {
     background-color: transparent;
@@ -1916,7 +1889,6 @@ b {
     animation: popUp 4s ease infinite;
   }
 }
-
 @media (min-width: 1100px) and (max-width: 1399px) {
   .europe {
     background-color: transparent;
@@ -2002,7 +1974,6 @@ b {
     animation: popUp 4s ease infinite;
   }
 }
-
 @media (min-width: 1400px) and (max-width: 1919px) {
   .europe {
     background-color: transparent;
@@ -2099,7 +2070,6 @@ b {
     animation: popUp 4s ease infinite;
   }
 }
-
 @media (min-width: 1920px) {
   .europe {
     background-color: transparent;
@@ -2186,7 +2156,6 @@ b {
     animation: popUp 4s ease infinite;
   }
 }
-
 @keyframes popUp {
   0% {
     bottom: 0px;
@@ -2207,7 +2176,6 @@ b {
     opacity: 0;
   }
 }
-
 @keyframes fadingText {
   0% {
     opacity: 0;
@@ -2218,16 +2186,19 @@ b {
   }
 }
 
-
 /*================================ PORTFOLIO =======================================*/
-@media (min-width: 0px) and (max-width: 639px) {}
+@media (min-width: 0px) and (max-width: 639px) {
 
-@media (min-width: 640px) and (max-width: 959px) {}
+}
+@media (min-width: 640px) and (max-width: 959px) {
 
-@media (min-width: 960px) and (max-width: 1099px) {}
+}
+@media (min-width: 960px) and (max-width: 1099px) {
 
-@media (min-width: 1100px) and (max-width: 1399px) {}
+}
+@media (min-width: 1100px) and (max-width: 1399px) {
 
+}
 @media (min-width: 1400px) and (max-width: 1919px) {
   .portfolioSection {
     position: absolute;
@@ -2335,7 +2306,6 @@ b {
     font-size: 6.0rem;
   }
 }
-
 @media (min-width: 1920px) {
   .portfolioSection {
     position: absolute;
@@ -2343,10 +2313,8 @@ b {
     height: 100vh;
     width: 100%;
     z-index: -1001;
-    overflow: scroll;
     animation: bluring 4s forwards;
   }
-
   .cardsContainer {
     position: absolute;
     top: 8%;
@@ -2356,87 +2324,47 @@ b {
 
     display: grid;
     grid-template-columns: 50%;
-    grid-template-rows: 35%;
+    grid-template-rows: 25% 40% 30%;
     justify-content: space-evenly;
     background-color: #1A1A1A;
   }
-
   .itemOne {
     grid-column: 1;
     grid-row: 1;
-    height: 40%;
-    margin-top: 10%;
+    height: 70%;
+    margin-top: 5%;
+    margin-left: -10%;
   }
-
   .itemSecond {
     grid-column: 1;
     grid-row: 2;
-    height: 40%;
-    margin-top: 10%;
+    height: 80%;
+    margin-top: 3%;
   }
-
   .itemThird {
     grid-column: 1;
     grid-row: 3;
-    height: 40%;
-    margin-top: 10%;
+    height: 60%;
+    margin-left: -10%;
   }
-
   .cardsItemImg {
-    width: 100%;
-    height: auto;
+    height: 100%;
     border: 2px solid rgb(255, 255, 255);
   }
-
-  .cardsItemInfo {
-    position: relative;
-    left: 5%;
-    width: 40%;
-    height: 50%;
-    opacity: 0;
-    background-color: #ffffff;
-    border: 2px solid rgb(255, 255, 255);
-    border-radius: 100%;
-    z-index: 101;
+  .cardLinks {
+    color: #f5000000;
+    cursor: pointer;
+    text-decoration: underline;
   }
-
   .cardsItemText {
     color: #000000;
     font-size: 16px;
     font-weight: 600;
     z-index: 101;
   }
-
-  .cardLinks {
-    color: #f5000000;
-    cursor: pointer;
-    text-decoration: underline;
-  }
-
-  .itemOne:hover .cardsItemImg {
-    animation: bluringImage 1s ease forwards;
-  }
-
-  .itemOne:hover .cardsItemInfo {
-    animation: visibility 1s ease forwards;
-  }
-
   .itemSecond:hover .cardsItemImg {
     animation: bluringImage 1s ease forwards;
   }
-
-  .itemSecond:hover .cardsItemInfo {
-    animation: visibility 1s ease forwards;
-  }
-
-  .itemThird:hover .cardsItemImg {
-    animation: bluringImage 1s ease forwards;
-  }
-
-  .itemThird:hover .cardsItemInfo {
-    animation: visibility 1s ease forwards;
-  }
-
   .cardTitle {
     position: absolute;
     left: 3%;
@@ -2444,7 +2372,6 @@ b {
     height: 10%;
     z-index: 1001;
   }
-
   .cardDate {
     position: absolute;
     left: 40%;
@@ -2452,15 +2379,33 @@ b {
     height: 10%;
     z-index: 1001;
   }
-
   .cardDateText,
   .cardTitleText {
     font-family: 'Montserrat', sans-serif;
     color: rgb(0, 0, 0);
     font-size: 6.0rem;
   }
+  .prevArea{
+    position:absolute;
+    top: 8%;
+    left: 27%;
+    z-index:2000;
+    border: 2px solid rgb(255, 255, 255);
+  }
+  .nextArea{
+    position:absolute;
+    top: 73%;
+    left: 27%;
+    z-index:2000;
+    border: 2px solid rgb(255, 255, 255);
+  }
+  .prevText,
+  .nextText{
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 4.0rem;
+  }
 }
-
 @keyframes bluringImage {
   0% {
     filter: blur(0);
@@ -2470,7 +2415,6 @@ b {
     filter: blur(4px);
   }
 }
-
 @keyframes visibility {
   0% {
     opacity: 0;
@@ -2480,23 +2424,12 @@ b {
     opacity: 1;
   }
 }
-
 @keyframes moveright {
   0% {
-    left: 30%;
+    left: 0%;
   }
 
   100% {
-    left: 3%;
-  }
-}
-
-@keyframes moveleft {
-  0% {
-    left: 40%;
-  }
-
-  100% {
-    left: 71%;
+    left: 70%;
   }
 }
