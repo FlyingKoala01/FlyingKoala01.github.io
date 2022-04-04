@@ -374,7 +374,7 @@ b {
   .Loader {
     text-align: center;
     display: flex;
-    background-color: #000000;
+    background-color: black;
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -437,7 +437,6 @@ b {
     animation: fading 1s forwards;
   }
 
-
 }
 
 /* MONITOR */
@@ -486,7 +485,7 @@ b {
     top: 20vh;
     width: 230px;
     animation: fading 1s forwards;
-    animation-delay: 2s;
+    animation-delay: 1.5s;
   }
 
   .meLoader48 {
@@ -496,7 +495,7 @@ b {
     top: 20vh;
     width: 230px;
     animation: fading 1s forwards;
-    animation-delay: 1s;
+    animation-delay: 0.8s;
   }
 
   .meLoader32 {
@@ -507,8 +506,6 @@ b {
     width: 230px;
     animation: fading 1s forwards;
   }
-
-
 }
 
 @keyframes fading {
@@ -520,6 +517,7 @@ b {
     opacity: 0;
   }
 }
+
 
 #tsparticles {
   position: absolute;
@@ -729,7 +727,7 @@ b {
     z-index: 10000;
   }
 
-  º .settingsSound ion-icon {
+  .settingsSound ion-icon {
     position: absolute;
     display: block;
     left: 80px;
@@ -801,10 +799,12 @@ b {
 @keyframes bluring {
   0% {
     filter: blur(4px);
+    background-color: black;
   }
 
   40% {
     filter: blur(0);
+    background-color: transparent;
   }
 }
 
@@ -1360,6 +1360,19 @@ b {
     height: 100vh;
     width: 100%;
     background-color: #1A1A1A;
+    animation: bluringDarker 4s forwards;
+  }
+
+  @keyframes bluringDarker {
+    0% {
+      filter: blur(4px);
+      background-color: black;
+    }
+
+    40% {
+      filter: blur(0);
+      background-color: #1A1A1A;
+    }
   }
 
   .titlePage {
@@ -1505,6 +1518,7 @@ b {
     height: 100vh;
     width: 100%;
     background-color: #1A1A1A;
+    animation: bluring 4s forwards;
   }
 
   .titlePage {
@@ -2004,6 +2018,17 @@ b {
     background-color: #1A1A1A;
     height: 100vh;
     z-index: -999;
+    animation: bluringContactMe 4s ease forwards;
+  }
+
+  @keyframes bluringContactMe {
+    0% {
+      filter: blur(4px);
+    }
+
+    40% {
+      filter: blur(0);
+    }
   }
 
   .contactMeText {
@@ -2017,7 +2042,7 @@ b {
 
     font-family: 'Montserrat', sans-serif;
     user-select: none;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 100;
     line-height: 2;
   }
@@ -2033,7 +2058,7 @@ b {
 
     font-family: 'Montserrat', sans-serif;
     user-select: none;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 100;
     line-height: 2;
   }
@@ -2044,7 +2069,7 @@ b {
     left: 17.0%;
     z-index: 1000;
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     color: #46cc99;
     background-color: transparent;
     border: none;
@@ -2090,6 +2115,7 @@ b {
     background-color: #1A1A1A;
     height: 100vh;
     z-index: -999;
+    animation: bluring 4s forwards;
   }
 
   .contactMeText {
@@ -2209,7 +2235,6 @@ b {
     height: 100vh;
     width: 100%;
     z-index: -1001;
-    overflow: scroll;
   }
 
   .cardsContainer {
@@ -2217,8 +2242,7 @@ b {
     top: 8%;
     width: 40%;
     height: 100%;
-    margin-left: 30%;
-    overflow-y: auto;
+    overflow-y: scroll;
     z-index: 1100;
 
     display: grid;
@@ -2320,6 +2344,7 @@ b {
     width: 100%;
     z-index: -1001;
     overflow: scroll;
+    animation: bluring 4s forwards;
   }
 
   .cardsContainer {
@@ -2327,8 +2352,6 @@ b {
     top: 8%;
     width: 40%;
     height: 100%;
-    margin-left: 30%;
-    overflow-y: auto;
     z-index: 1100;
 
     display: grid;
@@ -2352,6 +2375,13 @@ b {
     margin-top: 10%;
   }
 
+  .itemThird {
+    grid-column: 1;
+    grid-row: 3;
+    height: 40%;
+    margin-top: 10%;
+  }
+
   .cardsItemImg {
     width: 100%;
     height: auto;
@@ -2360,12 +2390,13 @@ b {
 
   .cardsItemInfo {
     position: relative;
-    top: -70%;
     left: 5%;
-    width: 90%;
+    width: 40%;
+    height: 50%;
     opacity: 0;
-    text-align: justify;
-    background-color: #46cc99;
+    background-color: #ffffff;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 100%;
     z-index: 101;
   }
 
@@ -2395,6 +2426,14 @@ b {
   }
 
   .itemSecond:hover .cardsItemInfo {
+    animation: visibility 1s ease forwards;
+  }
+
+  .itemThird:hover .cardsItemImg {
+    animation: bluringImage 1s ease forwards;
+  }
+
+  .itemThird:hover .cardsItemInfo {
     animation: visibility 1s ease forwards;
   }
 

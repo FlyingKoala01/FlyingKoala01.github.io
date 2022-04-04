@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom';
 
 import Loader from '../Loader';
 
@@ -7,25 +6,48 @@ import '../../App.css';
 
 export default function Projects() {
 
+  const projectsInfo = {
+    0: {
+      itemTitle: 'itemZeroTitle',
+      cardTitleText: 'ZERO',
+      cardDateText: 'NEVER',
+      cardhref: 'https://github.com/FlyingKoala01/Website'
+    },
+    1: {
+      itemTitle: 'itemOneTitle',
+      cardTitleText: 'REACT',
+      cardDateText: '04.22',
+      cardhref: 'https://github.com/FlyingKoala01/Website'
+    },
+    2: {
+      itemTitle: 'itemTwoTitle',
+      cardTitleText: 'FUTURE',
+      cardDateText: '.22',
+      cardhref: 'https://github.com/FlyingKoala01/Website'
+    },
+  }
+
+  const [index, setIndex] = useState(0);
+  console.log(projectsInfo['projectEmpty']);
+
+
+
   const itemTitle = {
     itemOneTitle: false,
     itemTwoTitle: false,
+    itemThirdTitle: false,
   };
 
   const [visibleTitle, setVisibleTitle] = useState(itemTitle);
 
   const showTitle = (event, key) => {
     event.preventDefault();
-    console.log("IN");
     setVisibleTitle({ ...visibleTitle, ...{ [key]: true } });
-    console.log(itemTitle);
   };
 
   const hideTitle = (event, key) => {
     event.preventDefault();
-    console.log("OUT");
     setVisibleTitle({ ...visibleTitle, ...{ [key]: false } });
-    console.log(itemTitle);
   };
 
   const [loading, setLoading] = useState(true);
@@ -34,7 +56,7 @@ export default function Projects() {
 
     const loadData = async () => {
 
-      await new Promise((r) => setTimeout(r, 3000));
+      await new Promise((r) => setTimeout(r, 2500));
 
       setLoading((loading) => !loading);
     };
@@ -48,50 +70,50 @@ export default function Projects() {
   else {
     return (
       <div className='portfolioSection'>
+        <div className='prevArea' onClick={() => setIndex(index - 1)}>
+          <p className='prevText'>PREV</p>
+        </div>
         <div className='cardsContainer'>
-          <Link to='/' className="cardLinks">
-            <div className='itemOne' onMouseOver={(e) => { showTitle(e, 'itemOneTitle'); }} onMouseOut={(e) => { hideTitle(e, 'itemOneTitle'); }}>
+          <div className='itemOne'>
+            <a href={projectsInfo[index].cardhref} className="cardLinks">
               <img
                 className='cardsItemImg'
-                alt='React Portfolio'
-                src={require('../../Images/reactProject.PNG')}
-              />
-              <div className='cardsItemInfo'>
-                <p className='cardsItemText'>Learnt React.JS by developing my personal website. The objective is, in a future, develop another website and learn the MERN stack.</p>
-              </div>
-            </div>
-          </Link>
-          <Link to='/' className="cardLinks">
-            <div className='itemSecond' onMouseEnter={e => { showTitle(e, 'itemTwoTitle') }} onMouseLeave={e => { hideTitle(e, 'itemTwoTitle') }}>
-              <img
-                className='cardsItemImg'
-                alt='Future'
+                alt='itemOne'
                 src={require('../../Images/KaliLogo.png')}
               />
-              <div className='cardsItemInfo'>
-                <p className='cardsItemText'>Incoming</p>
-              </div>
-            </div>
-          </Link>
+            </a>
+          </div>
+          <div className='itemSecond' onMouseOver={(e) => { showTitle(e, projectsInfo[index + 1].itemTitle); }} onMouseOut={(e) => { hideTitle(e, projectsInfo[index + 1].itemTitle); }}>
+            <a href={projectsInfo[index + 1].cardhref} className="cardLinks">
+              <img
+                className='cardsItemImg'
+                alt='itemTwo'
+                src={require('../../Images/KaliLogo.png')}
+              />
+            </a>
+          </div>
+          <div className='itemThird'>
+            <a href={projectsInfo[index + 2].cardhref} className="cardLinks">
+              <img
+                className='cardsItemImg'
+                alt='itemThree'
+                src={require('../../Images/KaliLogo.png')}
+              />
+            </a>
+          </div>
         </div>
-        {visibleTitle['itemOneTitle'] &&
-          <div className='cardTitle' style={{ top: '0%', animation: 'moveright 1s ease forwards' }}>
-            <p className='cardTitleText'>REACT<br></br>WEBSITE</p>
+        {visibleTitle[projectsInfo[index + 1].itemTitle] &&
+          <div className='cardTitle' style={{ top: '40%', left: '40%', animation: 'moveleft 1.5s ease forwards 0.5s' }}>
+            <p className='cardTitleText'>{projectsInfo[index + 1].cardTitleText}</p>
           </div>}
-        {visibleTitle['itemOneTitle'] &&
-          <div className='cardDate' style={{ top: '0%', animation: 'moveleft 1.5s ease forwards 0.5s' }}>
-            <p className='cardDateText'>DEPLOYED<br></br>04.22</p>
+        {visibleTitle[projectsInfo[index + 1].itemTitle] &&
+          <div className='cardDate' style={{ top: '40%', left: '30%', animation: 'moveright 1s ease forwards' }}>
+            <p className='cardDateText'>{projectsInfo[index + 1].cardTitleDate}</p>
           </div>}
-        {visibleTitle['itemTwoTitle'] &&
-          <div className='cardTitle' style={{ top: '30%', left: '40%', animation: 'moveleft 1.5s ease forwards 0.5s' }}>
-            <p className='cardTitleText'>FUTURE</p>
-          </div>}
-        {visibleTitle['itemTwoTitle'] &&
-          <div className='cardDate' style={{ top: '30%', left: '30%', animation: 'moveright 1s ease forwards' }}>
-            <p className='cardDateText'>.22</p>
-          </div>}
+        <div className='nextArea' onClick={() => setIndex(index + 1)}>
+          <p className='nextText'>NEXT</p>
+        </div>
       </div>
     );
   }
 }
-

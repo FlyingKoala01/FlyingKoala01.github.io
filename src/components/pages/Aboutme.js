@@ -9,7 +9,7 @@ export default function Aboutme() {
 
         const loadData = async () => {
 
-            await new Promise((r) => setTimeout(r, 3000));
+            await new Promise((r) => setTimeout(r, 2500));
 
             setLoading((loading) => !loading);
         };
@@ -38,46 +38,46 @@ export default function Aboutme() {
                     <p className='textAboutMe'>Throughout the years, I have learnt the following programming languages:</p>
                     <div class="wrapper">
                         <div class="one">
-                            <i class="devicon-python-plain" style={{fontSize:'40px'}}/>
+                            <i class="devicon-python-plain" style={{ fontSize: '40px' }} />
                         </div>
                         <div class="two">
-                            <i class="devicon-go-original-wordmark colored" style={{fontSize:'40px'}} />
+                            <i class="devicon-go-original-wordmark colored" style={{ fontSize: '40px' }} />
                         </div>
                         <div class="three" >
-                            <i class="devicon-c-plain colored" style={{fontSize:'40px'}} />
+                            <i class="devicon-c-plain colored" style={{ fontSize: '40px' }} />
                         </div>
                         <div class="four">
-                            <i class="devicon-aarch64-plain" style={{fontSize:'40px'}} />
+                            <i class="devicon-aarch64-plain" style={{ fontSize: '40px' }} />
                         </div>
                         <div class="five" >
-                            <i class="devicon-javascript-plain colored" style={{fontSize:'40px'}} />
+                            <i class="devicon-javascript-plain colored" style={{ fontSize: '40px' }} />
                         </div>
                         <div class="six">
-                            <i class="devicon-html5-plain colored" style={{fontSize:'40px'}} />
+                            <i class="devicon-html5-plain colored" style={{ fontSize: '40px' }} />
                         </div>
                         <div class="seven">
-                            <i class="devicon-css3-plain colored" style={{fontSize:'40px'}} />
+                            <i class="devicon-css3-plain colored" style={{ fontSize: '40px' }} />
                         </div>
                         <div class="eight">
-                            <i class="devicon-react-original colored" style={{fontSize:'40px'}} />
+                            <i class="devicon-react-original colored" style={{ fontSize: '40px' }} />
                         </div>
                     </div>
                     <p className='textAboutMe'>Additionally, I have been introduced to different technologies, which I have been implementing in my everyday work:</p>
                     <div class="wrapper">
                         <div class="one">
-                            <i class="devicon-matlab-plain" style={{fontSize:'40px'}}/>
+                            <i class="devicon-matlab-plain" style={{ fontSize: '40px' }} />
                         </div>
                         <div class="two">
-                            <i class="devicon-latex-original" style={{fontSize:'40px'}}/>
+                            <i class="devicon-latex-original" style={{ fontSize: '40px' }} />
                         </div>
                         <div class="three">
-                            <i class="devicon-git-plain colored" style={{fontSize:'40px'}}/>
+                            <i class="devicon-git-plain colored" style={{ fontSize: '40px' }} />
                         </div>
                         <div class="four">
-                            <i class="devicon-linux-plain" style={{fontSize:'40px'}}/>
+                            <i class="devicon-linux-plain" style={{ fontSize: '40px' }} />
                         </div>
                         <div class="five">
-                            <i class="devicon-arduino-plain" style={{fontSize:'40px'}}/>
+                            <i class="devicon-arduino-plain" style={{ fontSize: '40px' }} />
                         </div>
                     </div>
                     <p className='textAboutMe'>Furthermore, throughout my University course I have been taught different software to an introductory level:</p>

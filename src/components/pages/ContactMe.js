@@ -22,7 +22,7 @@ export default function ContactMe() {
 
         const loadData = async () => {
 
-            await new Promise((r) => setTimeout(r, 3000));
+            await new Promise((r) => setTimeout(r, 2500));
 
             setLoading((loading) => !loading);
         };

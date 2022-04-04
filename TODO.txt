@@ -1,16 +1,6 @@
 App:
 	* Add music
-
-Page: Portfolio
-{Divide section in projects w/ blog page per project, future ideas and programming lang}
-	* Make three.JS shape to show proglang	
-	* cards to my Github repos
-	* Work In Progress
-		# Certifications in CS
-		# Master
-		# Future Ideas	
-	* Programming quiz app // trivia // player chooses language // maybe with MERN?
-
+	
 ** Make image of project show in card, on hover disappear and show tags ** 
 
-
+** Portfolio on scroll ** 
