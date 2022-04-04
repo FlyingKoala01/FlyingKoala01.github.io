@@ -2362,9 +2362,6 @@ b {
     font-weight: 600;
     z-index: 101;
   }
-  .itemSecond:hover .cardsItemImg {
-    border: 2px solid #46cc99;
-  }
   .cardTitle {
     position: absolute;
     left: 3%;

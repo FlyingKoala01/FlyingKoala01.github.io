@@ -44,7 +44,7 @@ export default function Projects() {
     },
   }
 
-  const [index, setIndex] = useState(1);
+  const [index, setIndex] = useState(0);
 
   const itemTitle = {
     itemOneTitle: false,
@@ -53,16 +53,22 @@ export default function Projects() {
   };
 
   const [visibleTitle, setVisibleTitle] = useState(itemTitle);
-
-  const showTitle = (key) => {
+  console.log(index);
+  const prevProject = (key) => {
+    console.log("BEFORE PREV " + index);
+    setIndex(index-1);
     setVisibleTitle({ ...visibleTitle, ...{ [key]: true } });
-    setIndex(index+1);
+    setVisibleTitle({ ...visibleTitle, ...{ [key]: false } });
+    setVisibleTitle({ ...visibleTitle, ...{ [key]: true } });
     console.log(index);
   };
 
-  const hideTitle = (key) => {
+  const nextProject = (key) => {
+    console.log("BEFORE NEXT " + index);
+    setIndex(index+1);
+    setVisibleTitle({ ...visibleTitle, ...{ [key]: true } });
     setVisibleTitle({ ...visibleTitle, ...{ [key]: false } });
-    setIndex(index-1);
+    setVisibleTitle({ ...visibleTitle, ...{ [key]: true } });
     console.log(index);
   };
 
@@ -85,7 +91,7 @@ export default function Projects() {
   else {
     return (
       <div className='portfolioSection'>
-        <div className='prevArea' onClick={() => {showTitle(projectsInfo[index].itemTitle); hideTitle(projectsInfo[index-1].itemTitle);}}>
+        <div className='prevArea' onClick={() => {prevProject(projectsInfo[index])}}>
           {(index !== 0) && <i className='prevText'><HiOutlineArrowCircleUp/></i>}
         </div>
         <div className='cardsContainer'>
@@ -121,7 +127,7 @@ export default function Projects() {
           <div className='cardDate'>
             <p className='cardDateText'>{projectsInfo[index + 1].cardDateText}</p>
           </div>}
-        <div className='nextArea' onClick={() => {showTitle(projectsInfo[index].itemTitle); hideTitle(projectsInfo[index-1].itemTitle);}}>
+        <div className='nextArea' onClick={() => {nextProject(projectsInfo[index + 1])}}>
           { (index !== (Object.keys(projectsInfo).length-3)) && <i className='nextText'><HiOutlineArrowCircleDown/></i>}
         </div>
       </div>
