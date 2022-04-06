@@ -774,7 +774,7 @@ b {
     position: absolute;
     width: 100%;
     height: 100vh;
-    animation: bluring 4s forwards;
+    animation: bluring 1s forwards;
   }
 }
 @keyframes bluring {
@@ -785,7 +785,7 @@ b {
 
   40% {
     filter: blur(0);
-    background-color: transparent;
+    background-color: #1A1A1A;
   }
 }
 
@@ -1494,7 +1494,7 @@ b {
     height: 100vh;
     width: 100%;
     background-color: #1A1A1A;
-    animation: bluring 4s forwards;
+    animation: bluring 1s forwards;
   }
 
   .titlePage {
@@ -2085,7 +2085,7 @@ b {
     background-color: #1A1A1A;
     height: 100vh;
     z-index: -999;
-    animation: bluring 4s forwards;
+    animation: bluring 1s forwards;
   }
 
   .contactMeText {
@@ -2309,11 +2309,11 @@ b {
 @media (min-width: 1920px) {
   .portfolioSection {
     position: absolute;
-    /*background-color: white;*/
+    background-color: #1A1A1A;
     height: 100vh;
     width: 100%;
     z-index: -1001;
-    animation: bluring 4s forwards;
+    animation: bluring 1s forwards;
   }
   .cardsContainer {
     position: absolute;
@@ -2357,18 +2357,18 @@ b {
     text-decoration: underline;
   }
   .cardsItemText {
-    color: #000000;
+    color: #ffffff;
     font-size: 16px;
     font-weight: 600;
     z-index: 101;
   }
   .cardTitle {
     position: absolute;
-    left: 3%;
+    left: 50%;
     top: 0%;
     height: 10%;
     z-index: 1001;
-    animation: moveright 1s ease forwards 0.5s;
+    /*animation: moveright 1s ease forwards 0.5s;*/
   }
   .cardDate {
     position: absolute;
@@ -2376,13 +2376,25 @@ b {
     top: 20%;
     height: 10%;
     z-index: 1001;
-    animation: moveright 1s ease forwards;
+    /*animation: moveright 1s ease forwards;*/
+  }
+  .cardInfo{
+    position: absolute;
+    left: 40%;
+    top: 20%;
+    width: 30%;
+    z-index: 1001;
   }
   .cardDateText,
   .cardTitleText {
     font-family: 'Montserrat', sans-serif;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     font-size: 6.0rem;
+  }
+  .cardInfoText{
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 4.0rem;  
   }
   .prevArea{
     position:absolute;
@@ -2418,6 +2430,7 @@ b {
     opacity: 1;
   }
 }
+/*
 @keyframes moveright {
   0% {
     left: 0%;
@@ -2427,3 +2440,4 @@ b {
     left: 70%;
   }
 }
+*/

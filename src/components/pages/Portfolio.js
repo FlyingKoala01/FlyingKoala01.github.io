@@ -14,14 +14,16 @@ export default function Projects() {
       itemTitle: 'itemZeroTitle',
       cardTitleText: '',
       cardDateText: '',
+      cardInfoText: '',
       cardhref: '',
       cardSRC: emptyBackground,
       cardALT:"EMPTY"
     },
     1: {
       itemTitle: 'itemOneTitle',
-      cardTitleText: 'REACT',
+      cardTitleText: 'WEBSITE',
       cardDateText: '04.22',
+      cardInfoText: 'Developed my own website learning the basics of CSS, HTML, JS and React',
       cardhref: 'https://github.com/FlyingKoala01/Website',
       cardSRC: reactProject,
       cardALT:"REACT"
@@ -30,6 +32,7 @@ export default function Projects() {
       itemTitle: 'itemTwoTitle',
       cardTitleText: 'FUTURE',
       cardDateText: '.22',
+      cardInfoText: 'We will see...',
       cardhref: 'https://github.com/FlyingKoala01/',
       cardSRC: kaliImage,
       cardALT:"KALI"
@@ -46,32 +49,6 @@ export default function Projects() {
 
   const [index, setIndex] = useState(0);
 
-  const itemTitle = {
-    itemOneTitle: false,
-    itemTwoTitle: false,
-    itemThirdTitle: false,
-  };
-
-  const [visibleTitle, setVisibleTitle] = useState(itemTitle);
-  console.log(index);
-  const prevProject = (key) => {
-    console.log("BEFORE PREV " + index);
-    setIndex(index-1);
-    setVisibleTitle({ ...visibleTitle, ...{ [key]: true } });
-    setVisibleTitle({ ...visibleTitle, ...{ [key]: false } });
-    setVisibleTitle({ ...visibleTitle, ...{ [key]: true } });
-    console.log(index);
-  };
-
-  const nextProject = (key) => {
-    console.log("BEFORE NEXT " + index);
-    setIndex(index+1);
-    setVisibleTitle({ ...visibleTitle, ...{ [key]: true } });
-    setVisibleTitle({ ...visibleTitle, ...{ [key]: false } });
-    setVisibleTitle({ ...visibleTitle, ...{ [key]: true } });
-    console.log(index);
-  };
-
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -85,13 +62,14 @@ export default function Projects() {
 
     loadData();
   }, [])
+
   if (loading) {
     return <Loader value={"Take a look at what I've been working on!"} />
   }
   else {
     return (
       <div className='portfolioSection'>
-        <div className='prevArea' onClick={() => {prevProject(projectsInfo[index])}}>
+        <div className='prevArea' onClick={() => {setIndex(index-1)}}>
           {(index !== 0) && <i className='prevText'><HiOutlineArrowCircleUp/></i>}
         </div>
         <div className='cardsContainer'>
@@ -119,15 +97,16 @@ export default function Projects() {
             />
           </div>
         </div>
-        {visibleTitle[projectsInfo[index + 1].itemTitle] &&
           <div className='cardTitle'>
             <p className='cardTitleText'>{projectsInfo[index + 1].cardTitleText}</p>
-          </div>}
-        {visibleTitle[projectsInfo[index + 1].itemTitle] &&
+          </div>
           <div className='cardDate'>
             <p className='cardDateText'>{projectsInfo[index + 1].cardDateText}</p>
-          </div>}
-        <div className='nextArea' onClick={() => {nextProject(projectsInfo[index + 1])}}>
+          </div>
+          <div className='cardInfo'>
+            <p className='cardInfoText'>{projectsInfo[index + 1].cardInfoText}</p>
+          </div>
+        <div className='nextArea' onClick={() => {setIndex(index+1)}}>
           { (index !== (Object.keys(projectsInfo).length-3)) && <i className='nextText'><HiOutlineArrowCircleDown/></i>}
         </div>
       </div>
