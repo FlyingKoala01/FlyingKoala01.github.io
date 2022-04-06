@@ -1,6 +1,6 @@
 App:
 	* Add music
-	
-** Make image of project show in card, on hover disappear and show tags ** 
 
-** Portfolio on scroll fix showing when moving around** 
+
+** Maybe add animation to images?** 
+** Finish text for projects and make it reponsive and deploy **
