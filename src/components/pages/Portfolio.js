@@ -13,7 +13,6 @@ export default function Projects() {
     0: {
       itemTitle: 'itemZeroTitle',
       cardTitleText: '',
-      cardDateText: '',
       cardInfoText: '',
       cardhref: '',
       cardSRC: emptyBackground,
@@ -22,25 +21,24 @@ export default function Projects() {
     1: {
       itemTitle: 'itemOneTitle',
       cardTitleText: 'WEBSITE',
-      cardDateText: '04.22',
-      cardInfoText: 'Developed my own website learning the basics of CSS, HTML, JS and React',
+      cardInfoText: 'Developed my portfolio website with self-taught web development',
       cardhref: 'https://github.com/FlyingKoala01/Website',
+      cardLangs: ['devicon-javascript-plain colored', 'devicon-html5-plain colored', 'devicon-css3-plain colored', 'devicon-react-original colored'],
       cardSRC: reactProject,
       cardALT:"REACT"
     },
     2: {
       itemTitle: 'itemTwoTitle',
-      cardTitleText: 'FUTURE',
-      cardDateText: '.22',
-      cardInfoText: 'We will see...',
+      cardTitleText: 'CYBERSECURITY',
+      cardInfoText: 'Independent studies on malware scripting',
       cardhref: 'https://github.com/FlyingKoala01/',
+      cardLangs: ['devicon-go-original-wordmark colored', '', '', ''],
       cardSRC: kaliImage,
       cardALT:"KALI"
     },
     3: {
       itemTitle: 'itemZeroTitle',
       cardTitleText: '',
-      cardDateText: '',
       cardhref: '',
       cardSRC:emptyBackground,
       cardALT:"EMPTY"
@@ -100,12 +98,23 @@ export default function Projects() {
           <div className='cardTitle'>
             <p className='cardTitleText'>{projectsInfo[index + 1].cardTitleText}</p>
           </div>
-          <div className='cardDate'>
-            <p className='cardDateText'>{projectsInfo[index + 1].cardDateText}</p>
-          </div>
           <div className='cardInfo'>
             <p className='cardInfoText'>{projectsInfo[index + 1].cardInfoText}</p>
           </div>
+          <div class="wrapperPortfolio">
+            <div class="one">
+                <i class={(projectsInfo[index+1].cardLangs[0])} style={{ fontSize: '80px' }} />
+            </div>
+            <div class="two">
+                <i class={(projectsInfo[index+1].cardLangs[1])} style={{ fontSize: '80px' }} />
+            </div>
+            <div class="three" >
+                <i class={(projectsInfo[index+1].cardLangs[2])} style={{ fontSize: '80px' }} />
+            </div>
+            <div class="four">
+                <i class={(projectsInfo[index+1].cardLangs[3])} style={{ fontSize: '80px' }} />
+            </div>
+        </div>
         <div className='nextArea' onClick={() => {setIndex(index+1)}}>
           { (index !== (Object.keys(projectsInfo).length-3)) && <i className='nextText'><HiOutlineArrowCircleDown/></i>}
         </div>

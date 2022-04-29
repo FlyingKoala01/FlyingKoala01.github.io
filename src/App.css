@@ -2381,11 +2381,10 @@ b {
   .cardInfo{
     position: absolute;
     left: 40%;
-    top: 45%;
-    width: 50%;
+    top: 25%;
+    width: 55%;
     z-index: 1001;
   }
-  .cardDateText,
   .cardTitleText {
     font-family: 'Montserrat', sans-serif;
     color: rgb(255, 255, 255);
@@ -2419,6 +2418,23 @@ b {
   }
   .nextText:hover{
     color: #46cc99;
+  }
+  .wrapperPortfolio {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-auto-rows: minmax(80px, auto);
+    column-gap: 80px;
+
+    color: rgb(255, 255, 255);
+    font-family: 'Montserrat', sans-serif;
+    user-select: none;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+
   }
 }
 @keyframes visibility {
