@@ -2381,8 +2381,8 @@ b {
   .cardInfo{
     position: absolute;
     left: 40%;
-    top: 20%;
-    width: 30%;
+    top: 45%;
+    width: 50%;
     z-index: 1001;
   }
   .cardDateText,
