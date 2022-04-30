@@ -2079,13 +2079,13 @@ b {
     right: -20%;
     top: 7%;
     user-select: none;
+    animation: bluring 1s forwards;
   }
 
   .backgroundContactMe {
     background-color: #1A1A1A;
     height: 100vh;
     z-index: -999;
-    animation: bluring 1s forwards;
   }
 
   .contactMeText {
@@ -2327,6 +2327,8 @@ b {
     grid-template-rows: 25% 40% 30%;
     justify-content: space-evenly;
     background-color: #1A1A1A;
+    
+    animation: bluring 1s forwards;
   }
   .itemOne {
     grid-column: 1;
@@ -2393,7 +2395,7 @@ b {
   .cardInfoText{
     font-family: 'Montserrat', sans-serif;
     color: rgb(255, 255, 255);
-    font-size: 4.0rem;  
+    font-size: 3.5rem;  
   }
   .prevArea{
     position:absolute;

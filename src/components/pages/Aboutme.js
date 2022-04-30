@@ -28,7 +28,7 @@ export default function Aboutme() {
                 <div className='personDiv'>
                     <h2 className='subtitlePage'>as a person</h2>
                     <p className='textAboutMe'>Raised in a <b>bilingual</b> family, spending most of my childhood travelling in between countries, before the age of 20 I had lived in Italy, Spain, Russia and Mexico. As a result, I've learnt to speak <b>4</b> languages at a <b>proficient</b> level (English, Italian, Spanish and Catalan).</p>
-                    <p className='textAboutMe'> Nevertheless, my expatriate experience taught me more than just languages. I sincerely believe it has taught me the ability to <b>adapt</b> to change and to work in any given workspace and culture.</p>
+                    <p className='textAboutMe'> Nevertheless, my expatriate <b>experience</b> taught me more than just languages. I sincerely believe it has taught me the ability to <b>adapt</b> to change and to work in any given workspace and culture.</p>
                     <p className='textAboutMe'>I'm a focused and independent individual, interested in partaking in stimulating projects for the greater good. </p>
                     <p className='textAboutMe'></p>
                 </div>

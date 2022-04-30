@@ -21,7 +21,7 @@ export default function Projects() {
     1: {
       itemTitle: 'itemOneTitle',
       cardTitleText: 'WEBSITE',
-      cardInfoText: 'Developed my portfolio website with self-taught web development',
+      cardInfoText: 'Developed my portfolio website with self-taught web development through freeCodeCamp and other online courses',
       cardhref: 'https://github.com/FlyingKoala01/Website',
       cardLangs: ['devicon-javascript-plain colored', 'devicon-html5-plain colored', 'devicon-css3-plain colored', 'devicon-react-original colored'],
       cardSRC: reactProject,
@@ -30,9 +30,9 @@ export default function Projects() {
     2: {
       itemTitle: 'itemTwoTitle',
       cardTitleText: 'CYBERSECURITY',
-      cardInfoText: 'Independent studies on malware scripting',
-      cardhref: 'https://github.com/FlyingKoala01/',
-      cardLangs: ['devicon-go-original-wordmark colored', '', '', ''],
+      cardInfoText: 'Independent studies on malware scripting and studying for the Security+ by CompTIA',
+      cardhref: 'https://github.com/FlyingKoala01/Scripts',
+      cardLangs: ['devicon-python-plain colored','devicon-aarch64-plain','devicon-go-original-wordmark colored', 'devicon-bash-plain'],
       cardSRC: kaliImage,
       cardALT:"KALI"
     },
