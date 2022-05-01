@@ -445,8 +445,6 @@ b {
   .loaderLayout {
     position: absolute;
     background-color: transparent;
-    color: #ffffff;
-    font-size: 20px;
     top: 0;
     right: 55%;
   }
@@ -2335,23 +2333,26 @@ b {
     grid-row: 1;
     height: 70%;
     margin-top: 5%;
-    margin-left: -10%;
+    margin-left: -35%;
+    font-size: 4.0rem;
   }
   .itemSecond {
     grid-column: 1;
     grid-row: 2;
     height: 80%;
-    margin-top: 3%;
+    margin-left: -5%;
+    font-size: 5.0rem;
   }
   .itemThird {
     grid-column: 1;
     grid-row: 3;
-    height: 60%;
-    margin-left: -10%;
+    height: 50%;
+    margin-left: -35%;
+    margin-top: -15%;
+    font-size: 3.5rem;
   }
   .cardsItemImg {
     height: 100%;
-    border: 2px solid #ffffff00;
   }
   .cardLinks {
     color: #f5000000;
@@ -2365,48 +2366,45 @@ b {
     z-index: 101;
   }
   .cardTitle {
-    position: absolute;
     left: 50%;
     top: 0%;
     height: 10%;
     z-index: 1001;
     /*animation: moveright 1s ease forwards 0.5s;*/
   }
-  .cardDate {
-    position: absolute;
-    left: 40%;
-    top: 20%;
-    height: 10%;
-    z-index: 1001;
-    /*animation: moveright 1s ease forwards;*/
+  .cardTitleTextCenter {
+    font-family: 'Poppins', sans-serif;
+    -webkit-text-stroke: #000000 1px;
+    color: #ffffff
+  }
+  .cardTitleText {
+    font-family: 'Poppins', sans-serif;
+    -webkit-text-stroke: #a1a1a1 1px;
+    color: rgba(255, 255, 255, 0);
   }
   .cardInfo{
     position: absolute;
-    left: 40%;
+    left: 45%;
     top: 25%;
-    width: 55%;
+    width: 45%;
     z-index: 1001;
-  }
-  .cardTitleText {
-    font-family: 'Montserrat', sans-serif;
-    color: rgb(255, 255, 255);
-    font-size: 6.0rem;
   }
   .cardInfoText{
     font-family: 'Montserrat', sans-serif;
     color: rgb(255, 255, 255);
-    font-size: 3.5rem;  
+    font-size: 3.0rem;
+    line-height: 1.5;
   }
   .prevArea{
     position:absolute;
-    top: 13%;
-    left: 30%;
+    top: 17%;
+    left: 35%;
     z-index:2000;
   }
   .nextArea{
     position:absolute;
-    top: 80%;
-    left: 30%;
+    top: 75%;
+    left: 35%;
     z-index:2000;
   }
   .prevText,
@@ -2415,16 +2413,14 @@ b {
     color: rgb(255, 255, 255);
     font-size: 4.0rem;
   }
-  .prevText:hover{
-    color: #46cc99;
-  }
+  .prevText:hover,
   .nextText:hover{
     color: #46cc99;
   }
   .wrapperPortfolio {
     position: absolute;
-    top: 75%;
-    left: 50%;
+    top: 70%;
+    left: 53%;
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
     grid-auto-rows: minmax(80px, auto);
@@ -2437,6 +2433,18 @@ b {
     justify-content: center;
     align-content: center;
 
+  }
+  .indexBox {
+    position: absolute;
+    top: 44%;
+    left: 3%;
+    width: 15%;
+    z-index: 10000;
+  }
+  .indexNumber {
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 3.5rem; 
   }
 }
 @keyframes visibility {

@@ -20,11 +20,12 @@ export default function Projects() {
     },
     1: {
       itemTitle: 'itemOneTitle',
-      cardTitleText: 'WEBSITE',
-      cardInfoText: 'Developed my portfolio website with self-taught web development through freeCodeCamp and other online courses',
+      cardTitleText: 'PORTFOLIO',
+      cardInfoText: 'Developed my personal website with self-taught web development through freeCodeCamp and other online courses',
       cardhref: 'https://github.com/FlyingKoala01/Website',
       cardLangs: ['devicon-javascript-plain colored', 'devicon-html5-plain colored', 'devicon-css3-plain colored', 'devicon-react-original colored'],
       cardSRC: reactProject,
+      cardIndex: '00',
       cardALT:"REACT"
     },
     2: {
@@ -34,6 +35,7 @@ export default function Projects() {
       cardhref: 'https://github.com/FlyingKoala01/Scripts',
       cardLangs: ['devicon-python-plain colored','devicon-aarch64-plain','devicon-go-original-wordmark colored', 'devicon-bash-plain'],
       cardSRC: kaliImage,
+      cardIndex: '01',
       cardALT:"KALI"
     },
     3: {
@@ -72,32 +74,48 @@ export default function Projects() {
         </div>
         <div className='cardsContainer'>
           <div className='itemOne'>
-            <img
-              className='cardsItemImg'
-              alt='itemOne'
-              src={projectsInfo[index].cardSRC}
-            />
-          </div>
-          <div className='itemSecond'>
-            <a href={projectsInfo[index + 1].cardhref} className="cardLinks">
+          <div className='cardTitle'>
+              <p className='cardTitleText'>{projectsInfo[index].cardTitleText}</p>
+            </div>
+            {/*<a href={projectsInfo[index + 1].cardhref} className="cardLinks">
               <img
                 className='cardsItemImg'
                 alt='itemTwo'
                 src={(projectsInfo[index+1].cardSRC)}
               />
             </a>
+    */}
+          </div>
+          <div className='itemSecond'>
+            <div className='cardTitle'>
+              <p className='cardTitleTextCenter'>{projectsInfo[index + 1].cardTitleText}</p>
+            </div>
+            {/*<a href={projectsInfo[index + 1].cardhref} className="cardLinks">
+              <img
+                className='cardsItemImg'
+                alt='itemTwo'
+                src={(projectsInfo[index+1].cardSRC)}
+              />
+            </a>
+    */}
           </div>
           <div className='itemThird'>
-            <img
-              className='cardsItemImg'
-              alt='itemThree'
-              src={(projectsInfo[index+2].cardSRC)}
-            />
+          <div className='cardTitle'>
+              <p className='cardTitleText'>{projectsInfo[index + 2].cardTitleText}</p>
+            </div>
+            {/*<a href={projectsInfo[index + 1].cardhref} className="cardLinks">
+              <img
+                className='cardsItemImg'
+                alt='itemTwo'
+                src={(projectsInfo[index+1].cardSRC)}
+              />
+            </a>
+    */}
           </div>
         </div>
-          <div className='cardTitle'>
+          {/*<div className='cardTitle'>
             <p className='cardTitleText'>{projectsInfo[index + 1].cardTitleText}</p>
-          </div>
+  </div>*/}
           <div className='cardInfo'>
             <p className='cardInfoText'>{projectsInfo[index + 1].cardInfoText}</p>
           </div>
@@ -114,6 +132,9 @@ export default function Projects() {
             <div class="four">
                 <i class={(projectsInfo[index+1].cardLangs[3])} style={{ fontSize: '80px' }} />
             </div>
+        </div>
+        <div className='indexBox'>
+          <div className='indexNumber'>{(projectsInfo[index+1].cardIndex)}</div>      
         </div>
         <div className='nextArea' onClick={() => {setIndex(index+1)}}>
           { (index !== (Object.keys(projectsInfo).length-3)) && <i className='nextText'><HiOutlineArrowCircleDown/></i>}

@@ -35,7 +35,7 @@ export default function Aboutme() {
                 <div className='engineerDiv'>
                     <h2 className='subtitlePage'>as an engineer</h2>
                     <p className='textAboutMe'>I am currently studying for an <a className="degref" href='https://www.upc.edu/en/bachelors/ict-systems-engineering-manresa-epsem' alt="UPC EPSEM">ICT Engineering degree</a> in Spain. Although I am deeply interested in the whole technology spectrum, I intend to persue a carreer in either <b>web development</b> or <b>cybersecurity</b>.</p>
-                    <p className='textAboutMe'>Throughout the years, I have learnt the following programming languages:</p>
+                    <p className='textAboutMe'>Throughout the years, I have studied the following programming languages:</p>
                     <div class="wrapper">
                         <div class="one">
                             <i class="devicon-python-plain" style={{ fontSize: '40px' }} />
@@ -78,6 +78,9 @@ export default function Aboutme() {
                         </div>
                         <div class="five">
                             <i class="devicon-arduino-plain" style={{ fontSize: '40px' }} />
+                        </div>
+                        <div class="six">
+                            <i class="devicon-raspberrypi-line colored" style={{ fontSize: '40px' }} />
                         </div>
                     </div>
                     <p className='textAboutMe'>Furthermore, throughout my University course I have been taught different software to an introductory level:</p>
