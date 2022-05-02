@@ -1563,18 +1563,29 @@ b {
 
   ::-webkit-scrollbar {
     width: 12px;
-    background-color: #f5f5f500;
+   background-color: rgba(255,255,255,0);
   }
-
-  ::-webkit-scrollbar-thumb {
-    background: linear-gradient(transparent, #06e299);
-    border-radius: 6px;
-  }
+ ::-webkit-scrollbar-track,
+ ::-webkit-scrollbar-thumb {
+   border: 16px solid rgba(255,255,255,0);
+   background-clip: padding-box;
+ }
+ 
+ ::-webkit-scrollbar-track {
+   background-color: #46cc99;
+ }
+ 
+ ::-webkit-scrollbar-thumb {
+   background-color: #212121;
+ }
+ ::-webkit-scrollbar-thumb:hover {
+     border: 15px solid rgba(255,255,255,0);
+   }
 
   .textAboutMe {
     color: rgb(255, 255, 255);
     text-align: justify !important;
-    font-size: 20px;
+    font-size: 1.1rem;
     font-weight: 0;
     margin-top: 0.5cm;
     line-height: 2;
@@ -2126,7 +2137,7 @@ b {
 
     font-family: 'Montserrat', sans-serif;
     user-select: none;
-    font-size: 1.7rem;
+    font-size: 1.4rem;
     font-weight: 100;
     line-height: 2;
   }
@@ -2142,45 +2153,23 @@ b {
 
     font-family: 'Montserrat', sans-serif;
     user-select: none;
-    font-size: 1.7rem;
+    font-size: 1.4rem;
     font-weight: 100;
     line-height: 2;
   }
 
   .btn-clipboard {
     position: absolute;
-    bottom: 23.7%;
-    left: 17.2%;
+    bottom: 22.8%;
+    left: 14.9%;
     z-index: 1000;
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.7rem;
+    font-size: 1.4rem;
     color: #46cc99;
     background-color: transparent;
     border: none;
     cursor: pointer;
     text-decoration: underline;
-  }
-
-  .textPopup {
-    position: absolute;
-    left: 20%;
-    top: 25%;
-    font-size: larger;
-  }
-
-  .popUpNotification {
-    position: absolute;
-    height: 50px;
-    width: 300px;
-    background-color: #46cc99;
-    border-radius: 20%;
-    border-color: #000000;
-    font-family: 'Ropa Sans', sans-serif;
-    border-style: solid;
-    bottom: 188px;
-    left: 40%;
-    z-index: 999;
-    animation: popUp 4s ease infinite;
   }
 }
 
@@ -2371,6 +2360,9 @@ b {
     align-content: center;
 
   }
+  .wrapperPortfolio > .one,.wrapperPortfolio > .two,.wrapperPortfolio > .three,.wrapperPortfolio > .four {
+    font-size: 65px;
+  }
 
   .indexBox {
     position: absolute;
@@ -2533,6 +2525,9 @@ b {
     justify-content: center;
     align-content: center;
 
+  }
+  .wrapperPortfolio > .one,.wrapperPortfolio > .two,.wrapperPortfolio > .three,.wrapperPortfolio > .four {
+    font-size: 80px;
   }
 
   .indexBox {

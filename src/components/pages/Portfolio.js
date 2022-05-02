@@ -77,60 +77,33 @@ export default function Projects() {
           <div className='cardTitle'>
               <p className='cardTitleText'>{projectsInfo[index].cardTitleText}</p>
             </div>
-            {/*<a href={projectsInfo[index + 1].cardhref} className="cardLinks">
-              <img
-                className='cardsItemImg'
-                alt='itemTwo'
-                src={(projectsInfo[index+1].cardSRC)}
-              />
-            </a>
-    */}
           </div>
           <div className='itemSecond'>
             <div className='cardTitle'>
               <p className='cardTitleTextCenter'>{projectsInfo[index + 1].cardTitleText}</p>
             </div>
-            {/*<a href={projectsInfo[index + 1].cardhref} className="cardLinks">
-              <img
-                className='cardsItemImg'
-                alt='itemTwo'
-                src={(projectsInfo[index+1].cardSRC)}
-              />
-            </a>
-    */}
           </div>
           <div className='itemThird'>
           <div className='cardTitle'>
               <p className='cardTitleText'>{projectsInfo[index + 2].cardTitleText}</p>
             </div>
-            {/*<a href={projectsInfo[index + 1].cardhref} className="cardLinks">
-              <img
-                className='cardsItemImg'
-                alt='itemTwo'
-                src={(projectsInfo[index+1].cardSRC)}
-              />
-            </a>
-    */}
           </div>
         </div>
-          {/*<div className='cardTitle'>
-            <p className='cardTitleText'>{projectsInfo[index + 1].cardTitleText}</p>
-  </div>*/}
           <div className='cardInfo'>
             <p className='cardInfoText'>{projectsInfo[index + 1].cardInfoText}</p>
           </div>
           <div class="wrapperPortfolio">
             <div class="one">
-                <i class={(projectsInfo[index+1].cardLangs[0])} style={{ fontSize: '80px' }} />
+                <i class={(projectsInfo[index+1].cardLangs[0])}/>
             </div>
             <div class="two">
-                <i class={(projectsInfo[index+1].cardLangs[1])} style={{ fontSize: '80px' }} />
+                <i class={(projectsInfo[index+1].cardLangs[1])}/>
             </div>
             <div class="three" >
-                <i class={(projectsInfo[index+1].cardLangs[2])} style={{ fontSize: '80px' }} />
+                <i class={(projectsInfo[index+1].cardLangs[2])}/>
             </div>
             <div class="four">
-                <i class={(projectsInfo[index+1].cardLangs[3])} style={{ fontSize: '80px' }} />
+                <i class={(projectsInfo[index+1].cardLangs[3])}/>
             </div>
         </div>
         <div className='indexBox'>

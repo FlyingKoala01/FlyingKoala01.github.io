@@ -8,14 +8,6 @@ import europe from '../../Images/europe.png';
 
 export default function ContactMe() {
 
-    let [showHideNotification, setShowHideNotification] = useState(false);
-
-    const animate = () => {
-        setShowHideNotification(true);
-
-        setTimeout(() => setShowHideNotification(false), 4000);
-    }
-
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
@@ -39,13 +31,9 @@ export default function ContactMe() {
                 <h1 className="titlePage">do you have any questions?</h1>
                 <h2 className='contactMeText' >At the current time I am commuting between <b>Milan</b> and <b>Barcelona</b>!<br></br>Follow me on my social media! I'm available 24/7!</h2>
                 <h2 className='contactMeEmail'>Are you interested in building something together?<br></br>Send me an email to:</h2>
-                <div className={showHideNotification ? `popUpNotification` : null}>
-                    {showHideNotification && <div className='textPopup'>Email copied to clipboard!</div>}
-                </div>
 
                 <button className="btn-clipboard" onClick={() => {
                     navigator.clipboard.writeText('isaac.iglesias.vila19@gmail.com');
-                    animate()
                 }}> isaac.iglesias.vila19@gmail.com
                 </button>
 

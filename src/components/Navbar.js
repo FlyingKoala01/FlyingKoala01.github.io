@@ -21,12 +21,6 @@ export default function Navbar() {
     const location = useLocation();
     return location.pathname;
   }
-
-  const [sound, setSound] = useState(false);
-
-  const turnOnOff = () => {
-    setSound(!sound);
-  }
   
   return (
     <>
@@ -41,8 +35,7 @@ export default function Navbar() {
             </li>
           ))}
         </ul>
-        <button className='settingsSound' onClick={turnOnOff}>{sound ? <ion-icon name="play-outline"></ion-icon> : <ion-icon name="pause-outline"></ion-icon>}Sound</button>
-      </nav>
+        </nav>
     </>
   )
 }
