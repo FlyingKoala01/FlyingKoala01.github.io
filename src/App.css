@@ -16,9 +16,11 @@ html {
   font-family: 'Raleway', sans-serif;
   font-size: 100%;
 }
+
 b {
   color: #46cc99;
 }
+
 /* MOBILE */
 @media (min-width: 0px) and (max-width: 639px) {
   html {
@@ -36,6 +38,7 @@ b {
     font-size: 100%;
   }
 }
+
 @media (min-width: 640px) and (max-width: 959px) {
   html {
     height: 100vh;
@@ -52,6 +55,7 @@ b {
     font-size: 100%;
   }
 }
+
 /* ================================= OTHERS ==========================================*/
 /* MOBILE */
 @media (min-width: 0px) and (max-width: 639px) {
@@ -130,6 +134,7 @@ b {
   }
 
 }
+
 /* Larger Mobile */
 @media (min-width: 640px) and (max-width: 959px) {
   .Loader {
@@ -207,6 +212,7 @@ b {
   }
 
 }
+
 /* Large MOBILE */
 @media (min-width: 960px) and (max-width: 1099px) {
   .Loader {
@@ -284,6 +290,7 @@ b {
   }
 
 }
+
 /* Medium */
 @media (min-width: 1100px) and (max-width: 1399px) {
   .Loader {
@@ -361,6 +368,7 @@ b {
   }
 
 }
+
 /* LAPTOP */
 @media (min-width: 1400px) and (max-width: 1919px) {
   .Loader {
@@ -430,6 +438,7 @@ b {
   }
 
 }
+
 /* MONITOR */
 @media (min-width: 1920px) {
   .Loader {
@@ -496,14 +505,17 @@ b {
     animation: fading 1s forwards;
   }
 }
+
 @keyframes fading {
   0% {
     opacity: 1;
   }
+
   100% {
     opacity: 0;
   }
 }
+
 #tsparticles {
   position: absolute;
   width: 100%;
@@ -550,6 +562,7 @@ b {
     overflow: hidden;
   }
 }
+
 /*Larger Mobile*/
 @media (min-width: 640px) and (max-width: 959px) {
   .myName {
@@ -586,6 +599,7 @@ b {
     animation: bluring 4s forwards;
   }
 }
+
 /* Large MOBILE */
 @media (min-width: 960px) and (max-width: 1099px) {
   .myName {
@@ -622,6 +636,7 @@ b {
     animation: bluring 4s forwards;
   }
 }
+
 /* Medium */
 @media (min-width: 1100px) and (max-width: 1399px) {
   .myName {
@@ -658,6 +673,7 @@ b {
     animation: bluring 4s forwards;
   }
 }
+
 /* LAPTOP */
 @media (min-width: 1400px) and (max-width: 1919px) {
   .myName {
@@ -716,6 +732,7 @@ b {
     font-size: 25px;
   }
 }
+
 /* MONITOR */
 @media (min-width: 1920px) {
   .myName {
@@ -775,6 +792,7 @@ b {
     animation: bluring 1s forwards;
   }
 }
+
 @keyframes bluring {
   0% {
     filter: blur(4px);
@@ -908,6 +926,7 @@ b {
     grid-row: 2;
   }
 }
+
 @media (min-width: 640px) and (max-width: 959px) {
   .aboutMeBackground {
     height: 300vh;
@@ -1049,6 +1068,7 @@ b {
     grid-row: 2;
   }
 }
+
 @media (min-width: 960px) and (max-width: 1099px) {
   .aboutMeBackground {
     height: 100vh;
@@ -1190,6 +1210,7 @@ b {
     grid-row: 2;
   }
 }
+
 @media (min-width: 1100px) and (max-width: 1399px) {
   .aboutMeBackground {
     height: 100vh;
@@ -1330,6 +1351,7 @@ b {
     grid-row: 2;
   }
 }
+
 @media (min-width: 1400px) and (max-width: 1919px) {
   .aboutMeBackground {
     height: 100vh;
@@ -1487,6 +1509,7 @@ b {
     grid-row: 2;
   }
 }
+
 @media (min-width: 1920px) {
   .aboutMeBackground {
     height: 100vh;
@@ -1630,6 +1653,7 @@ b {
     grid-row: 2;
   }
 }
+
 /* ====================================== CONTACT ME ====================================== */
 
 @media (min-width: 0px) and (max-width: 639px) {
@@ -1714,6 +1738,7 @@ b {
   }
 
 }
+
 @media (min-width: 640px) and (max-width: 959px) {
   .europe {
     background-color: transparent;
@@ -1802,6 +1827,7 @@ b {
     animation: popUp 4s ease infinite;
   }
 }
+
 @media (min-width: 960px) and (max-width: 1099px) {
   .europe {
     background-color: transparent;
@@ -1887,6 +1913,7 @@ b {
     animation: popUp 4s ease infinite;
   }
 }
+
 @media (min-width: 1100px) and (max-width: 1399px) {
   .europe {
     background-color: transparent;
@@ -1972,6 +1999,7 @@ b {
     animation: popUp 4s ease infinite;
   }
 }
+
 @media (min-width: 1400px) and (max-width: 1919px) {
   .europe {
     background-color: transparent;
@@ -2068,6 +2096,7 @@ b {
     animation: popUp 4s ease infinite;
   }
 }
+
 @media (min-width: 1920px) {
   .europe {
     background-color: transparent;
@@ -2154,6 +2183,7 @@ b {
     animation: popUp 4s ease infinite;
   }
 }
+
 @keyframes popUp {
   0% {
     bottom: 0px;
@@ -2174,6 +2204,7 @@ b {
     opacity: 0;
   }
 }
+
 @keyframes fadingText {
   0% {
     opacity: 0;
@@ -2185,126 +2216,15 @@ b {
 }
 
 /*================================ PORTFOLIO =======================================*/
-@media (min-width: 0px) and (max-width: 639px) {
+@media (min-width: 0px) and (max-width: 639px) {}
 
-}
-@media (min-width: 640px) and (max-width: 959px) {
+@media (min-width: 640px) and (max-width: 959px) {}
 
-}
-@media (min-width: 960px) and (max-width: 1099px) {
+@media (min-width: 960px) and (max-width: 1099px) {}
 
-}
-@media (min-width: 1100px) and (max-width: 1399px) {
+@media (min-width: 1100px) and (max-width: 1399px) {}
 
-}
 @media (min-width: 1400px) and (max-width: 1919px) {
-  .portfolioSection {
-    position: absolute;
-    /*background-color: white;*/
-    height: 100vh;
-    width: 100%;
-    z-index: -1001;
-  }
-
-  .cardsContainer {
-    position: absolute;
-    top: 8%;
-    width: 40%;
-    height: 100%;
-    overflow-y: scroll;
-    z-index: 1100;
-
-    display: grid;
-    grid-template-columns: 50%;
-    grid-template-rows: 35%;
-    justify-content: space-evenly;
-    background-color: #1A1A1A;
-  }
-
-  .itemOne {
-    grid-column: 1;
-    grid-row: 1;
-    height: 40%;
-    margin-top: 10%;
-  }
-
-  .itemSecond {
-    grid-column: 1;
-    grid-row: 2;
-    height: 40%;
-    margin-top: 10%;
-  }
-
-  .cardsItemImg {
-    width: 100%;
-    height: auto;
-    border: 2px solid rgb(255, 255, 255);
-  }
-
-  .cardsItemInfo {
-    position: relative;
-    top: -70%;
-    left: 5%;
-    width: 90%;
-    opacity: 0;
-    text-align: justify;
-    background-color: #46cc99;
-    z-index: 101;
-  }
-
-  .cardsItemText {
-    color: #000000;
-    font-size: 16px;
-    font-weight: 600;
-    z-index: 101;
-  }
-
-  .cardLinks {
-    color: #f5000000;
-    cursor: pointer;
-    text-decoration: underline;
-  }
-
-  .itemOne:hover .cardsItemImg {
-    animation: bluringImage 1s ease forwards;
-  }
-
-  .itemOne:hover .cardsItemInfo {
-    animation: visibility 1s ease forwards;
-  }
-
-  .itemSecond:hover .cardsItemImg {
-    animation: bluringImage 1s ease forwards;
-  }
-
-  .itemSecond:hover .cardsItemInfo {
-    animation: visibility 1s ease forwards;
-  }
-
-  .cardTitle {
-    position: absolute;
-    left: 3%;
-    top: 0%;
-    height: 10%;
-    z-index: 1001;
-  }
-
-  .cardDate {
-    position: absolute;
-    left: 40%;
-    top: 0%;
-    height: 10%;
-    z-index: 1001;
-  }
-
-  .cardDateText,
-  .cardTitleText {
-    font-family: 'Montserrat', sans-serif;
-    color: rgb(0, 0, 0);
-    font-size: 6.0rem;
-  }
-}
-@media (min-width: 1920px) {
   .portfolioSection {
     position: absolute;
     background-color: #1A1A1A;
@@ -2313,6 +2233,7 @@ b {
     z-index: -1001;
     animation: bluring 1s forwards;
   }
+
   .cardsContainer {
     position: absolute;
     top: 8%;
@@ -2325,9 +2246,10 @@ b {
     grid-template-rows: 25% 40% 30%;
     justify-content: space-evenly;
     background-color: #1A1A1A;
-    
+
     animation: bluring 1s forwards;
   }
+
   .itemOne {
     grid-column: 1;
     grid-row: 1;
@@ -2336,35 +2258,41 @@ b {
     margin-left: -35%;
     font-size: 4.0rem;
   }
+
   .itemSecond {
     grid-column: 1;
     grid-row: 2;
     height: 80%;
     margin-left: -5%;
-    font-size: 5.0rem;
+    font-size: 4.0rem;
   }
+
   .itemThird {
     grid-column: 1;
     grid-row: 3;
     height: 50%;
     margin-left: -35%;
     margin-top: -15%;
-    font-size: 3.5rem;
+    font-size: 3.0rem;
   }
+
   .cardsItemImg {
     height: 100%;
   }
+
   .cardLinks {
     color: #f5000000;
     cursor: pointer;
     text-decoration: underline;
   }
+
   .cardsItemText {
     color: #ffffff;
     font-size: 16px;
     font-weight: 600;
     z-index: 101;
   }
+
   .cardTitle {
     left: 50%;
     top: 0%;
@@ -2372,51 +2300,60 @@ b {
     z-index: 1001;
     /*animation: moveright 1s ease forwards 0.5s;*/
   }
+
   .cardTitleTextCenter {
     font-family: 'Poppins', sans-serif;
     -webkit-text-stroke: #000000 1px;
     color: #ffffff
   }
+
   .cardTitleText {
     font-family: 'Poppins', sans-serif;
     -webkit-text-stroke: #a1a1a1 1px;
     color: rgba(255, 255, 255, 0);
   }
-  .cardInfo{
+
+  .cardInfo {
     position: absolute;
     left: 45%;
     top: 25%;
     width: 45%;
     z-index: 1001;
   }
-  .cardInfoText{
+
+  .cardInfoText {
     font-family: 'Montserrat', sans-serif;
     color: rgb(255, 255, 255);
-    font-size: 3.0rem;
-    line-height: 1.5;
+    font-size: 2.5rem;
+    line-height: 1.2;
   }
-  .prevArea{
-    position:absolute;
+
+  .prevArea {
+    position: absolute;
     top: 17%;
     left: 35%;
-    z-index:2000;
+    z-index: 2000;
   }
-  .nextArea{
-    position:absolute;
+
+  .nextArea {
+    position: absolute;
     top: 75%;
     left: 35%;
-    z-index:2000;
+    z-index: 2000;
   }
+
   .prevText,
-  .nextText{
+  .nextText {
     font-family: 'Montserrat', sans-serif;
     color: rgb(255, 255, 255);
     font-size: 4.0rem;
   }
+
   .prevText:hover,
-  .nextText:hover{
+  .nextText:hover {
     color: #46cc99;
   }
+
   .wrapperPortfolio {
     position: absolute;
     top: 70%;
@@ -2434,6 +2371,7 @@ b {
     align-content: center;
 
   }
+
   .indexBox {
     position: absolute;
     top: 44%;
@@ -2441,12 +2379,177 @@ b {
     width: 15%;
     z-index: 10000;
   }
+
   .indexNumber {
     font-family: 'Montserrat', sans-serif;
     color: rgb(255, 255, 255);
-    font-size: 3.5rem; 
+    font-size: 3.5rem;
   }
 }
+
+@media (min-width: 1920px) {
+  .portfolioSection {
+    position: absolute;
+    background-color: #1A1A1A;
+    height: 100vh;
+    width: 100%;
+    z-index: -1001;
+    animation: bluring 1s forwards;
+  }
+
+  .cardsContainer {
+    position: absolute;
+    top: 8%;
+    width: 40%;
+    height: 100%;
+    z-index: 1100;
+
+    display: grid;
+    grid-template-columns: 50%;
+    grid-template-rows: 25% 40% 30%;
+    justify-content: space-evenly;
+    background-color: #1A1A1A;
+
+    animation: bluring 1s forwards;
+  }
+
+  .itemOne {
+    grid-column: 1;
+    grid-row: 1;
+    height: 70%;
+    margin-top: 5%;
+    margin-left: -35%;
+    font-size: 4.0rem;
+  }
+
+  .itemSecond {
+    grid-column: 1;
+    grid-row: 2;
+    height: 80%;
+    margin-left: -5%;
+    font-size: 5.0rem;
+  }
+
+  .itemThird {
+    grid-column: 1;
+    grid-row: 3;
+    height: 50%;
+    margin-left: -35%;
+    margin-top: -15%;
+    font-size: 3.5rem;
+  }
+
+  .cardsItemImg {
+    height: 100%;
+  }
+
+  .cardLinks {
+    color: #f5000000;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+  .cardsItemText {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    z-index: 101;
+  }
+
+  .cardTitle {
+    left: 50%;
+    top: 0%;
+    height: 10%;
+    z-index: 1001;
+    /*animation: moveright 1s ease forwards 0.5s;*/
+  }
+
+  .cardTitleTextCenter {
+    font-family: 'Poppins', sans-serif;
+    -webkit-text-stroke: #000000 1px;
+    color: #ffffff
+  }
+
+  .cardTitleText {
+    font-family: 'Poppins', sans-serif;
+    -webkit-text-stroke: #a1a1a1 1px;
+    color: rgba(255, 255, 255, 0);
+  }
+
+  .cardInfo {
+    position: absolute;
+    left: 45%;
+    top: 25%;
+    width: 45%;
+    z-index: 1001;
+  }
+
+  .cardInfoText {
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 3.0rem;
+    line-height: 1.5;
+  }
+
+  .prevArea {
+    position: absolute;
+    top: 17%;
+    left: 35%;
+    z-index: 2000;
+  }
+
+  .nextArea {
+    position: absolute;
+    top: 75%;
+    left: 35%;
+    z-index: 2000;
+  }
+
+  .prevText,
+  .nextText {
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 4.0rem;
+  }
+
+  .prevText:hover,
+  .nextText:hover {
+    color: #46cc99;
+  }
+
+  .wrapperPortfolio {
+    position: absolute;
+    top: 70%;
+    left: 53%;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-auto-rows: minmax(80px, auto);
+    column-gap: 80px;
+
+    color: rgb(255, 255, 255);
+    font-family: 'Montserrat', sans-serif;
+    user-select: none;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+
+  }
+
+  .indexBox {
+    position: absolute;
+    top: 44%;
+    left: 3%;
+    width: 15%;
+    z-index: 10000;
+  }
+
+  .indexNumber {
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 3.5rem;
+  }
+}
+
 @keyframes visibility {
   0% {
     opacity: 0;
@@ -2456,6 +2559,7 @@ b {
     opacity: 1;
   }
 }
+
 /*
 @keyframes moveright {
   0% {
