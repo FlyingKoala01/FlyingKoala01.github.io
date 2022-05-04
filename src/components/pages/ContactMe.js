@@ -28,7 +28,6 @@ export default function ContactMe() {
     else {
         return (
             <div className='backgroundContactMe'>
-                <h1 className="titlePage">do you have any questions?</h1>
                 <h2 className='contactMeText' >At the current time I am commuting between <b>Milan</b> and <b>Barcelona</b>!<br></br>Follow me on my social media! I'm available 24/7!</h2>
                 <h2 className='contactMeEmail'>Are you interested in building something together?<br></br>Send me an email to:</h2>
 
@@ -40,7 +39,6 @@ export default function ContactMe() {
                 <img src={europe} className='europe' alt="" />
 
                 <div className="wrap">
-                    <div className='wrapText'>Follow me!</div>
                     <a href="https://twitter.com/FlyingKoala01" className='wrapLog'><ion-icon name="logo-twitter"></ion-icon></a>
                     <a href="https://github.com/FlyingKoala01" className='wrapLog'><ion-icon name="logo-github"></ion-icon></a>
                     <a href="https://www.linkedin.com/in/isaac-iglesias-vila-0b6074234/" className='wrapLog'><ion-icon name="logo-linkedin"></ion-icon></a>

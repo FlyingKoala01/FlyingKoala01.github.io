@@ -1521,7 +1521,7 @@ b {
   .titlePage {
     position: absolute;
     top: 5.0rem;
-    left: 2.6%;
+    left: 6.9%;
     z-index: 1000;
     font-weight: 200;
     font-variant: small-caps;
@@ -1548,39 +1548,26 @@ b {
   .personDiv {
     position: absolute;
     top: 25%;
-    width: 43%;
-    margin-left: 3%;
+    width: 40%;
+    margin-left: 7%;
   }
 
   .engineerDiv {
     position: absolute;
     top: 25%;
-    width: 45%;
+    width: 40%;
     height: 65%;
     margin-left: 53%;
-    overflow: auto;
+    overflow: auto;  
   }
 
   ::-webkit-scrollbar {
-    width: 12px;
-   background-color: rgba(255,255,255,0);
+    width: 10px;
   }
- ::-webkit-scrollbar-track,
- ::-webkit-scrollbar-thumb {
-   border: 16px solid rgba(255,255,255,0);
-   background-clip: padding-box;
- }
- 
- ::-webkit-scrollbar-track {
-   background-color: #46cc99;
- }
- 
- ::-webkit-scrollbar-thumb {
-   background-color: #212121;
- }
- ::-webkit-scrollbar-thumb:hover {
-     border: 15px solid rgba(255,255,255,0);
-   }
+
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(to right, #ffffff00 0%, #ffffff00 60%, #46cc99 60%, #46cc99 100%);
+  }
 
   .textAboutMe {
     color: rgb(255, 255, 255);
@@ -1588,7 +1575,7 @@ b {
     font-size: 1.1rem;
     font-weight: 0;
     margin-top: 0.5cm;
-    line-height: 2;
+    line-height: 2.5;
     font-family: 'Montserrat', sans-serif;
     user-select: none;
   }
@@ -1664,6 +1651,369 @@ b {
     grid-row: 2;
   }
 }
+
+/*================================ PORTFOLIO =======================================*/
+@media (min-width: 0px) and (max-width: 639px) {}
+
+@media (min-width: 640px) and (max-width: 959px) {}
+
+@media (min-width: 960px) and (max-width: 1099px) {}
+
+@media (min-width: 1100px) and (max-width: 1399px) {}
+
+@media (min-width: 1400px) and (max-width: 1919px) {
+  .portfolioSection {
+    position: absolute;
+    background-color: #1A1A1A;
+    height: 100vh;
+    width: 100%;
+    z-index: -1001;
+    animation: bluring 1s forwards;
+  }
+
+  .cardsContainer {
+    position: absolute;
+    top: 8%;
+    width: 40%;
+    height: 100%;
+    z-index: 1100;
+
+    display: grid;
+    grid-template-columns: 50%;
+    grid-template-rows: 25% 40% 30%;
+    justify-content: space-evenly;
+    background-color: #1A1A1A;
+
+    animation: bluring 1s forwards;
+  }
+
+  .itemOne {
+    grid-column: 1;
+    grid-row: 1;
+    height: 70%;
+    margin-top: 5%;
+    margin-left: -35%;
+    font-size: 4.0rem;
+  }
+
+  .itemSecond {
+    grid-column: 1;
+    grid-row: 2;
+    height: 80%;
+    margin-left: -5%;
+    font-size: 4.0rem;
+  }
+
+  .itemThird {
+    grid-column: 1;
+    grid-row: 3;
+    height: 50%;
+    margin-left: -35%;
+    margin-top: -15%;
+    font-size: 3.0rem;
+  }
+
+  .cardsItemImg {
+    height: 100%;
+  }
+
+  .cardLinks {
+    color: #f5000000;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+  .cardsItemText {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    z-index: 101;
+  }
+
+  .cardTitle {
+    left: 50%;
+    top: 0%;
+    height: 10%;
+    z-index: 1001;
+    /*animation: moveright 1s ease forwards 0.5s;*/
+  }
+
+  .cardTitleTextCenter {
+    font-family: 'Poppins', sans-serif;
+    -webkit-text-stroke: #000000 1px;
+    color: #ffffff
+  }
+
+  .cardTitleText {
+    font-family: 'Poppins', sans-serif;
+    -webkit-text-stroke: #a1a1a1 1px;
+    color: rgba(255, 255, 255, 0);
+  }
+
+  .cardInfo {
+    position: absolute;
+    left: 45%;
+    top: 25%;
+    width: 45%;
+    z-index: 1001;
+  }
+
+  .cardInfoText {
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 2.5rem;
+    line-height: 1.2;
+  }
+
+  .prevArea {
+    position: absolute;
+    top: 17%;
+    left: 35%;
+    z-index: 2000;
+  }
+
+  .nextArea {
+    position: absolute;
+    top: 75%;
+    left: 35%;
+    z-index: 2000;
+  }
+
+  .prevText,
+  .nextText {
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 4.0rem;
+  }
+
+  .prevText:hover,
+  .nextText:hover {
+    color: #46cc99;
+  }
+
+  .wrapperPortfolio {
+    position: absolute;
+    top: 70%;
+    left: 53%;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-auto-rows: minmax(80px, auto);
+    column-gap: 80px;
+
+    color: rgb(255, 255, 255);
+    font-family: 'Montserrat', sans-serif;
+    user-select: none;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+
+  }
+  .wrapperPortfolio > .one,.wrapperPortfolio > .two,.wrapperPortfolio > .three,.wrapperPortfolio > .four {
+    font-size: 65px;
+  }
+
+  .indexBox {
+    position: absolute;
+    top: 44%;
+    left: 3%;
+    width: 15%;
+    z-index: 10000;
+  }
+
+  .indexNumber {
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 3.5rem;
+  }
+}
+
+@media (min-width: 1920px) {
+  .portfolioSection {
+    position: absolute;
+    background-color: #1A1A1A;
+    height: 100vh;
+    width: 100%;
+    z-index: -1001;
+    animation: bluring 1s forwards;
+  }
+
+  .cardsContainer {
+    position: absolute;
+    top: 8%;
+    width: 40%;
+    height: 100%;
+    z-index: 1100;
+
+    display: grid;
+    grid-template-columns: 50%;
+    grid-template-rows: 25% 40% 30%;
+    justify-content: space-evenly;
+    background-color: #1A1A1A;
+
+    animation: bluring 1s forwards;
+  }
+
+  .itemOne {
+    grid-column: 1;
+    grid-row: 1;
+    height: 70%;
+    margin-top: 5%;
+    margin-left: -35%;
+    font-size: 4.0rem;
+  }
+
+  .itemSecond {
+    grid-column: 1;
+    grid-row: 2;
+    height: 80%;
+    margin-left: -5%;
+    font-size: 5.0rem;
+  }
+
+  .itemThird {
+    grid-column: 1;
+    grid-row: 3;
+    height: 50%;
+    margin-left: -35%;
+    margin-top: -15%;
+    font-size: 3.5rem;
+  }
+
+  .cardsItemImg {
+    height: 100%;
+  }
+
+  .cardLinks {
+    color: #f5000000;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+  .cardsItemText {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    z-index: 101;
+  }
+
+  .cardTitle {
+    left: 50%;
+    top: 0%;
+    height: 10%;
+    z-index: 1001;
+    /*animation: moveright 1s ease forwards 0.5s;*/
+  }
+
+  .cardTitleTextCenter {
+    font-family: 'Poppins', sans-serif;
+    -webkit-text-stroke: #000000 1px;
+    color: #ffffff
+  }
+
+  .cardTitleText {
+    font-family: 'Poppins', sans-serif;
+    -webkit-text-stroke: #a1a1a1 1px;
+    color: rgba(255, 255, 255, 0);
+  }
+
+  .cardInfo {
+    position: absolute;
+    left: 45%;
+    top: 25%;
+    width: 45%;
+    z-index: 1001;
+  }
+
+  .cardInfoText {
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 3.0rem;
+    line-height: 1.5;
+  }
+
+  .prevArea {
+    position: absolute;
+    top: 17%;
+    left: 35%;
+    z-index: 2000;
+  }
+
+  .nextArea {
+    position: absolute;
+    top: 75%;
+    left: 35%;
+    z-index: 2000;
+  }
+
+  .prevText,
+  .nextText {
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 4.0rem;
+  }
+
+  .prevText:hover,
+  .nextText:hover {
+    color: #46cc99;
+  }
+
+  .wrapperPortfolio {
+    position: absolute;
+    top: 70%;
+    left: 53%;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-auto-rows: minmax(80px, auto);
+    column-gap: 80px;
+
+    color: rgb(255, 255, 255);
+    font-family: 'Montserrat', sans-serif;
+    user-select: none;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+
+  }
+  .wrapperPortfolio > .one,.wrapperPortfolio > .two,.wrapperPortfolio > .three,.wrapperPortfolio > .four {
+    font-size: 80px;
+  }
+
+  .indexBox {
+    position: absolute;
+    top: 44%;
+    left: 3%;
+    width: 15%;
+    z-index: 10000;
+  }
+
+  .indexNumber {
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 3.5rem;
+  }
+}
+
+@keyframes visibility {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/*
+@keyframes moveright {
+  0% {
+    left: 0%;
+  }
+
+  100% {
+    left: 70%;
+  }
+}
+*/
 
 /* ====================================== CONTACT ME ====================================== */
 
@@ -2128,8 +2478,8 @@ b {
 
   .contactMeText {
     position: absolute;
-    top: 23%;
-    left: 2.6%;
+    top: 20%;
+    left: 7%;
     z-index: 1000;
 
     color: #ffffff;
@@ -2137,15 +2487,15 @@ b {
 
     font-family: 'Montserrat', sans-serif;
     user-select: none;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     font-weight: 100;
-    line-height: 2;
+    line-height: 3;
   }
 
   .contactMeEmail {
     position: absolute;
     bottom: 20%;
-    left: 2.6%;
+    left: 7%;
     z-index: 1000;
 
     color: #ffffff;
@@ -2153,9 +2503,9 @@ b {
 
     font-family: 'Montserrat', sans-serif;
     user-select: none;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     font-weight: 100;
-    line-height: 2;
+    line-height: 3;
   }
 
   .btn-clipboard {
@@ -2168,6 +2518,7 @@ b {
     color: #46cc99;
     background-color: transparent;
     border: none;
+    font-weight: 1000;
     cursor: pointer;
     text-decoration: underline;
   }
@@ -2203,366 +2554,3 @@ b {
     opacity: 1;
   }
 }
-
-/*================================ PORTFOLIO =======================================*/
-@media (min-width: 0px) and (max-width: 639px) {}
-
-@media (min-width: 640px) and (max-width: 959px) {}
-
-@media (min-width: 960px) and (max-width: 1099px) {}
-
-@media (min-width: 1100px) and (max-width: 1399px) {}
-
-@media (min-width: 1400px) and (max-width: 1919px) {
-  .portfolioSection {
-    position: absolute;
-    background-color: #1A1A1A;
-    height: 100vh;
-    width: 100%;
-    z-index: -1001;
-    animation: bluring 1s forwards;
-  }
-
-  .cardsContainer {
-    position: absolute;
-    top: 8%;
-    width: 40%;
-    height: 100%;
-    z-index: 1100;
-
-    display: grid;
-    grid-template-columns: 50%;
-    grid-template-rows: 25% 40% 30%;
-    justify-content: space-evenly;
-    background-color: #1A1A1A;
-
-    animation: bluring 1s forwards;
-  }
-
-  .itemOne {
-    grid-column: 1;
-    grid-row: 1;
-    height: 70%;
-    margin-top: 5%;
-    margin-left: -35%;
-    font-size: 4.0rem;
-  }
-
-  .itemSecond {
-    grid-column: 1;
-    grid-row: 2;
-    height: 80%;
-    margin-left: -5%;
-    font-size: 4.0rem;
-  }
-
-  .itemThird {
-    grid-column: 1;
-    grid-row: 3;
-    height: 50%;
-    margin-left: -35%;
-    margin-top: -15%;
-    font-size: 3.0rem;
-  }
-
-  .cardsItemImg {
-    height: 100%;
-  }
-
-  .cardLinks {
-    color: #f5000000;
-    cursor: pointer;
-    text-decoration: underline;
-  }
-
-  .cardsItemText {
-    color: #ffffff;
-    font-size: 16px;
-    font-weight: 600;
-    z-index: 101;
-  }
-
-  .cardTitle {
-    left: 50%;
-    top: 0%;
-    height: 10%;
-    z-index: 1001;
-    /*animation: moveright 1s ease forwards 0.5s;*/
-  }
-
-  .cardTitleTextCenter {
-    font-family: 'Poppins', sans-serif;
-    -webkit-text-stroke: #000000 1px;
-    color: #ffffff
-  }
-
-  .cardTitleText {
-    font-family: 'Poppins', sans-serif;
-    -webkit-text-stroke: #a1a1a1 1px;
-    color: rgba(255, 255, 255, 0);
-  }
-
-  .cardInfo {
-    position: absolute;
-    left: 45%;
-    top: 25%;
-    width: 45%;
-    z-index: 1001;
-  }
-
-  .cardInfoText {
-    font-family: 'Montserrat', sans-serif;
-    color: rgb(255, 255, 255);
-    font-size: 2.5rem;
-    line-height: 1.2;
-  }
-
-  .prevArea {
-    position: absolute;
-    top: 17%;
-    left: 35%;
-    z-index: 2000;
-  }
-
-  .nextArea {
-    position: absolute;
-    top: 75%;
-    left: 35%;
-    z-index: 2000;
-  }
-
-  .prevText,
-  .nextText {
-    font-family: 'Montserrat', sans-serif;
-    color: rgb(255, 255, 255);
-    font-size: 4.0rem;
-  }
-
-  .prevText:hover,
-  .nextText:hover {
-    color: #46cc99;
-  }
-
-  .wrapperPortfolio {
-    position: absolute;
-    top: 70%;
-    left: 53%;
-    display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
-    grid-auto-rows: minmax(80px, auto);
-    column-gap: 80px;
-
-    color: rgb(255, 255, 255);
-    font-family: 'Montserrat', sans-serif;
-    user-select: none;
-    text-align: center;
-    justify-content: center;
-    align-content: center;
-
-  }
-  .wrapperPortfolio > .one,.wrapperPortfolio > .two,.wrapperPortfolio > .three,.wrapperPortfolio > .four {
-    font-size: 65px;
-  }
-
-  .indexBox {
-    position: absolute;
-    top: 44%;
-    left: 3%;
-    width: 15%;
-    z-index: 10000;
-  }
-
-  .indexNumber {
-    font-family: 'Montserrat', sans-serif;
-    color: rgb(255, 255, 255);
-    font-size: 3.5rem;
-  }
-}
-
-@media (min-width: 1920px) {
-  .portfolioSection {
-    position: absolute;
-    background-color: #1A1A1A;
-    height: 100vh;
-    width: 100%;
-    z-index: -1001;
-    animation: bluring 1s forwards;
-  }
-
-  .cardsContainer {
-    position: absolute;
-    top: 8%;
-    width: 40%;
-    height: 100%;
-    z-index: 1100;
-
-    display: grid;
-    grid-template-columns: 50%;
-    grid-template-rows: 25% 40% 30%;
-    justify-content: space-evenly;
-    background-color: #1A1A1A;
-
-    animation: bluring 1s forwards;
-  }
-
-  .itemOne {
-    grid-column: 1;
-    grid-row: 1;
-    height: 70%;
-    margin-top: 5%;
-    margin-left: -35%;
-    font-size: 4.0rem;
-  }
-
-  .itemSecond {
-    grid-column: 1;
-    grid-row: 2;
-    height: 80%;
-    margin-left: -5%;
-    font-size: 5.0rem;
-  }
-
-  .itemThird {
-    grid-column: 1;
-    grid-row: 3;
-    height: 50%;
-    margin-left: -35%;
-    margin-top: -15%;
-    font-size: 3.5rem;
-  }
-
-  .cardsItemImg {
-    height: 100%;
-  }
-
-  .cardLinks {
-    color: #f5000000;
-    cursor: pointer;
-    text-decoration: underline;
-  }
-
-  .cardsItemText {
-    color: #ffffff;
-    font-size: 16px;
-    font-weight: 600;
-    z-index: 101;
-  }
-
-  .cardTitle {
-    left: 50%;
-    top: 0%;
-    height: 10%;
-    z-index: 1001;
-    /*animation: moveright 1s ease forwards 0.5s;*/
-  }
-
-  .cardTitleTextCenter {
-    font-family: 'Poppins', sans-serif;
-    -webkit-text-stroke: #000000 1px;
-    color: #ffffff
-  }
-
-  .cardTitleText {
-    font-family: 'Poppins', sans-serif;
-    -webkit-text-stroke: #a1a1a1 1px;
-    color: rgba(255, 255, 255, 0);
-  }
-
-  .cardInfo {
-    position: absolute;
-    left: 45%;
-    top: 25%;
-    width: 45%;
-    z-index: 1001;
-  }
-
-  .cardInfoText {
-    font-family: 'Montserrat', sans-serif;
-    color: rgb(255, 255, 255);
-    font-size: 3.0rem;
-    line-height: 1.5;
-  }
-
-  .prevArea {
-    position: absolute;
-    top: 17%;
-    left: 35%;
-    z-index: 2000;
-  }
-
-  .nextArea {
-    position: absolute;
-    top: 75%;
-    left: 35%;
-    z-index: 2000;
-  }
-
-  .prevText,
-  .nextText {
-    font-family: 'Montserrat', sans-serif;
-    color: rgb(255, 255, 255);
-    font-size: 4.0rem;
-  }
-
-  .prevText:hover,
-  .nextText:hover {
-    color: #46cc99;
-  }
-
-  .wrapperPortfolio {
-    position: absolute;
-    top: 70%;
-    left: 53%;
-    display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
-    grid-auto-rows: minmax(80px, auto);
-    column-gap: 80px;
-
-    color: rgb(255, 255, 255);
-    font-family: 'Montserrat', sans-serif;
-    user-select: none;
-    text-align: center;
-    justify-content: center;
-    align-content: center;
-
-  }
-  .wrapperPortfolio > .one,.wrapperPortfolio > .two,.wrapperPortfolio > .three,.wrapperPortfolio > .four {
-    font-size: 80px;
-  }
-
-  .indexBox {
-    position: absolute;
-    top: 44%;
-    left: 3%;
-    width: 15%;
-    z-index: 10000;
-  }
-
-  .indexNumber {
-    font-family: 'Montserrat', sans-serif;
-    color: rgb(255, 255, 255);
-    font-size: 3.5rem;
-  }
-}
-
-@keyframes visibility {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-/*
-@keyframes moveright {
-  0% {
-    left: 0%;
-  }
-
-  100% {
-    left: 70%;
-  }
-}
-*/
