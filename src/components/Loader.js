@@ -10,7 +10,7 @@ import mepx32 from '../Images/mepx/mepx32.png';
 export default function Loader(props) {
     return (
         <div className='Loader'>
-            <BarLoader width={220} color={"#46cc99"} />
+            <BarLoader width={180} color={"#46cc99"} />
             <div className='loaderText'>
                 {props.value}
             </div>
