@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react'
 import Loader from '../Loader'
 
 import '../../App.css';
-import '../wrapIcon.css';
 
 import europe from '../../Images/europe.png';
 

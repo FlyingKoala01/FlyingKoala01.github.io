@@ -47,12 +47,7 @@ export default function Projects() {
     },
   }
 
-  const [content, setContent] = useState(projectsInfo[0]);
-
-  console.log(content);
-
   const [index, setIndex] = useState(0);
-  console.log("RERENDER");
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {

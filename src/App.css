@@ -58,7 +58,7 @@ b {
 
 /* ================================= OTHERS ==========================================*/
 /* MOBILE */
-@media (min-width: 0px) and (max-width: 639px) {
+
   .Loader {
     text-align: center;
     display: flex;
@@ -133,20 +133,8 @@ b {
     animation: fading 1s forwards;
   }
 
-}
-
 /* Larger Mobile */
 @media (min-width: 640px) and (max-width: 959px) {
-  .Loader {
-    text-align: center;
-    display: flex;
-    background-color: #000000;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100vh;
-  }
-
   .loaderLayout {
     position: absolute;
     background-color: transparent;
@@ -157,31 +145,22 @@ b {
   }
 
   .loaderText {
-    background-color: transparent;
-    color: #ffffff;
     font-size: 20px;
     text-align: center;
     width: 200px;
-    position: absolute;
     top: 54vh;
   }
 
   .meLoader128 {
-    background-color: transparent;
     text-align: center;
-    position: absolute;
     left: 0;
-    right: 0;
     height: auto;
     width: 12.0rem;
   }
 
   .meLoader64 {
-    background-color: transparent;
     text-align: center;
-    position: absolute;
     left: 0;
-    right: 0;
     animation: fading 1s forwards;
     animation-delay: 2s;
     height: auto;
@@ -189,25 +168,19 @@ b {
   }
 
   .meLoader48 {
-    background-color: transparent;
     text-align: center;
-    position: absolute;
     height: auto;
     width: 12.0rem;
     left: 0;
-    right: 0;
     animation: fading 1s forwards;
     animation-delay: 1s;
   }
 
   .meLoader32 {
-    background-color: transparent;
     text-align: center;
-    position: absolute;
     height: auto;
     width: 12.0rem;
     left: 0;
-    right: 0;
     animation: fading 1s forwards;
   }
 
@@ -215,16 +188,6 @@ b {
 
 /* Large MOBILE */
 @media (min-width: 960px) and (max-width: 1099px) {
-  .Loader {
-    text-align: center;
-    display: flex;
-    background-color: #000000;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100vh;
-  }
-
   .loaderLayout {
     position: absolute;
     background-color: transparent;
@@ -235,19 +198,14 @@ b {
   }
 
   .loaderText {
-    background-color: transparent;
-    color: #ffffff;
     font-size: 20px;
     text-align: center;
     width: 200px;
-    position: absolute;
     top: 54vh;
   }
 
   .meLoader128 {
-    background-color: transparent;
     text-align: center;
-    position: absolute;
     left: 0;
     right: 0;
     height: auto;
@@ -255,9 +213,7 @@ b {
   }
 
   .meLoader64 {
-    background-color: transparent;
     text-align: center;
-    position: absolute;
     left: 0;
     right: 0;
     animation: fading 1s forwards;
@@ -267,25 +223,19 @@ b {
   }
 
   .meLoader48 {
-    background-color: transparent;
     text-align: center;
-    position: absolute;
     height: auto;
     width: 12.0rem;
     left: 0;
-    right: 0;
     animation: fading 1s forwards;
     animation-delay: 1s;
   }
 
   .meLoader32 {
-    background-color: transparent;
     text-align: center;
-    position: absolute;
     height: auto;
     width: 12.0rem;
     left: 0;
-    right: 0;
     animation: fading 1s forwards;
   }
 
@@ -293,16 +243,6 @@ b {
 
 /* Medium */
 @media (min-width: 1100px) and (max-width: 1399px) {
-  .Loader {
-    text-align: center;
-    display: flex;
-    background-color: #000000;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100vh;
-  }
-
   .loaderLayout {
     position: absolute;
     background-color: transparent;
@@ -313,19 +253,14 @@ b {
   }
 
   .loaderText {
-    background-color: transparent;
-    color: #ffffff;
     font-size: 20px;
     text-align: center;
     width: 200px;
-    position: absolute;
     top: 54vh;
   }
 
   .meLoader128 {
-    background-color: transparent;
     text-align: center;
-    position: absolute;
     left: 0;
     right: 0;
     height: auto;
@@ -333,9 +268,7 @@ b {
   }
 
   .meLoader64 {
-    background-color: transparent;
     text-align: center;
-    position: absolute;
     left: 0;
     right: 0;
     animation: fading 1s forwards;
@@ -345,9 +278,7 @@ b {
   }
 
   .meLoader48 {
-    background-color: transparent;
     text-align: center;
-    position: absolute;
     height: auto;
     width: 12.0rem;
     left: 0;
@@ -357,13 +288,10 @@ b {
   }
 
   .meLoader32 {
-    background-color: transparent;
     text-align: center;
-    position: absolute;
     height: auto;
     width: 12.0rem;
     left: 0;
-    right: 0;
     animation: fading 1s forwards;
   }
 
@@ -371,16 +299,6 @@ b {
 
 /* LAPTOP */
 @media (min-width: 1400px) and (max-width: 1919px) {
-  .Loader {
-    text-align: center;
-    display: flex;
-    background-color: black;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100vh;
-  }
-
   .loaderLayout {
     position: absolute;
     background-color: transparent;
@@ -391,27 +309,20 @@ b {
   }
 
   .loaderText {
-    background-color: transparent;
-    color: #ffffff;
     font-size: 20px;
     text-align: center;
     width: 180px;
-    position: absolute;
     top: 54vh;
   }
 
   .meLoader128 {
-    background-color: transparent;
     text-align: center;
-    position: absolute;
     top: 20vh;
     width: 185px;
   }
 
   .meLoader64 {
-    background-color: transparent;
     text-align: center;
-    position: absolute;
     top: 20vh;
     width: 185px;
     animation: fading 1s forwards;
@@ -419,9 +330,7 @@ b {
   }
 
   .meLoader48 {
-    background-color: transparent;
     text-align: center;
-    position: absolute;
     top: 20vh;
     width: 185px;
     animation: fading 1s forwards;
@@ -429,9 +338,7 @@ b {
   }
 
   .meLoader32 {
-    background-color: transparent;
     text-align: center;
-    position: absolute;
     top: 20vh;
     width: 185px;
     animation: fading 1s forwards;
@@ -441,16 +348,6 @@ b {
 
 /* MONITOR */
 @media (min-width: 1920px) {
-  .Loader {
-    text-align: center;
-    display: flex;
-    background-color: #000000;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100vh;
-  }
-
   .loaderLayout {
     position: absolute;
     background-color: transparent;
@@ -459,37 +356,27 @@ b {
   }
 
   .loaderText {
-    background-color: transparent;
-    color: #ffffff;
     font-size: 20px;
     text-align: center;
     width: 200px;
-    position: absolute;
     top: 54vh;
   }
 
   .meLoader128 {
-    background-color: transparent;
     text-align: center;
-    position: absolute;
     top: 20vh;
     width: 230px;
   }
 
   .meLoader64 {
-    background-color: transparent;
     text-align: center;
-    position: absolute;
     top: 20vh;
     width: 230px;
-    animation: fading 1s forwards;
     animation-delay: 1.5s;
   }
 
   .meLoader48 {
-    background-color: transparent;
     text-align: center;
-    position: absolute;
     top: 20vh;
     width: 230px;
     animation: fading 1s forwards;
@@ -497,9 +384,7 @@ b {
   }
 
   .meLoader32 {
-    background-color: transparent;
     text-align: center;
-    position: absolute;
     top: 20vh;
     width: 230px;
     animation: fading 1s forwards;
@@ -525,271 +410,121 @@ b {
 
 /* ===================================== MAIN ======================================= */
 /*MOBILE */
-@media (min-width: 0px) and (max-width: 639px) {
-  .myName {
-    color: rgb(0, 0, 0);
-    background-color: transparent;
-    text-align: center;
-    font-size: 9vh;
-    font-weight: 650;
-    margin-top: 35%;
-    margin-left: 6%;
-    letter-spacing: 0.5cm;
-    font-variant: small-caps;
-    font-family: 'Montserrat', sans-serif;
-    user-select: none;
-    animation: fadingText 4.5s forwards;
-  }
+.myName {
+  color: rgb(0, 0, 0);
+  background-color: transparent;
+  text-align: center;
+  font-size: 9vh;
+  font-weight: 650;
+  margin-top: 35%;
+  margin-left: 6%;
+  letter-spacing: 0.5cm;
+  font-variant: small-caps;
+  font-family: 'Montserrat', sans-serif;
+  user-select: none;
+  animation: fadingText 4.5s forwards;
+}
 
-  .subtitle {
-    color: rgb(0, 0, 0);
-    background-color: transparent;
-    text-align: center;
-    font-size: 3.5vh;
-    font-weight: 100;
-    margin-top: 25%;
-    font-family: 'Montserrat', sans-serif;
-    user-select: none;
-    animation: fadingText 4.5s forwards;
-  }
+.subtitle {
+  color: rgb(0, 0, 0);
+  background-color: transparent;
+  text-align: center;
+  font-size: 3.5vh;
+  font-weight: 100;
+  margin-top: 25%;
+  font-family: 'Montserrat', sans-serif;
+  user-select: none;
+  animation: fadingText 4.5s forwards;
+}
 
-  .main {
-    background-color: transparent;
-    position: absolute;
-    width: 100%;
-    height: 100vh;
-    animation: bluring 4s forwards;
-    overflow: hidden;
-  }
+.main {
+  background-color: transparent;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  animation: bluring 1s forwards;
+  overflow: hidden;
 }
 
 /*Larger Mobile*/
 @media (min-width: 640px) and (max-width: 959px) {
   .myName {
-    color: rgb(0, 0, 0);
-    background-color: transparent;
-    text-align: center;
     font-size: 5.6rem;
     font-weight: 550;
     margin-top: 4.5cm;
     letter-spacing: 0.5cm;
-    font-variant: small-caps;
-    font-family: 'Montserrat', sans-serif;
-    user-select: none;
-    animation: fadingText 4.5s forwards;
   }
 
   .subtitle {
-    color: rgb(0, 0, 0);
-    background-color: transparent;
-    text-align: center;
     font-size: 2.2rem;
     font-weight: 100;
     margin-top: 3cm;
-    font-family: 'Montserrat', sans-serif;
-    user-select: none;
-    animation: fadingText 4.5s forwards;
   }
 
-  .main {
-    background-color: transparent;
-    position: absolute;
-    width: 100%;
-    height: 100vh;
-    animation: bluring 4s forwards;
-  }
 }
 
 /* Large MOBILE */
 @media (min-width: 960px) and (max-width: 1099px) {
   .myName {
-    color: rgb(0, 0, 0);
-    background-color: transparent;
-    text-align: center;
     font-size: 4.5rem;
     font-weight: 550;
     margin-top: 3.0cm;
     letter-spacing: 0.5cm;
-    font-variant: small-caps;
-    font-family: 'Montserrat', sans-serif;
-    user-select: none;
-    animation: fadingText 4.5s forwards;
   }
 
   .subtitle {
-    color: rgb(0, 0, 0);
-    background-color: transparent;
-    text-align: center;
     font-size: 1.5rem;
     font-weight: 100;
     margin-top: 2cm;
-    font-family: 'Montserrat', sans-serif;
-    user-select: none;
-    animation: fadingText 4.5s forwards;
   }
 
-  .main {
-    background-color: transparent;
-    position: absolute;
-    width: 100%;
-    height: 100vh;
-    animation: bluring 4s forwards;
-  }
 }
 
 /* Medium */
 @media (min-width: 1100px) and (max-width: 1399px) {
   .myName {
-    color: rgb(0, 0, 0);
-    background-color: transparent;
-    text-align: center;
     font-size: 5.0rem;
     font-weight: 550;
     margin-top: 3.5cm;
     letter-spacing: 0.5cm;
-    font-variant: small-caps;
-    font-family: 'Montserrat', sans-serif;
-    user-select: none;
-    animation: fadingText 4.5s forwards;
   }
 
   .subtitle {
-    color: rgb(0, 0, 0);
-    background-color: transparent;
-    text-align: center;
     font-size: 1.8rem;
     font-weight: 100;
     margin-top: 3.5cm;
-    font-family: 'Montserrat', sans-serif;
-    user-select: none;
-    animation: fadingText 4.5s forwards;
-  }
-
-  .main {
-    background-color: transparent;
-    position: absolute;
-    width: 100%;
-    height: 100vh;
-    animation: bluring 4s forwards;
   }
 }
 
 /* LAPTOP */
 @media (min-width: 1400px) and (max-width: 1919px) {
   .myName {
-    color: rgb(0, 0, 0);
-    background-color: transparent;
-    text-align: center;
     font-size: 7.0rem;
     font-weight: 550;
     margin-top: 4.5cm;
     letter-spacing: 0.5cm;
-    font-variant: small-caps;
-    font-family: 'Montserrat', sans-serif;
-    user-select: none;
-    animation: fadingText 4.5s forwards;
   }
 
   .subtitle {
-    color: rgb(0, 0, 0);
-    background-color: transparent;
-    text-align: center;
     font-size: 2.2rem;
     font-weight: 100;
     margin-top: 3.5cm;
-    font-family: 'Montserrat', sans-serif;
-    user-select: none;
-    animation: fadingText 4.5s forwards;
   }
 
-  .main {
-    background-color: transparent;
-    position: absolute;
-    width: 100%;
-    height: 100vh;
-    animation: bluring 4s forwards;
-  }
-
-  .settingsSound {
-    position: absolute;
-    background-color: transparent;
-    background: transparent;
-    border-style: none;
-    bottom: 35px;
-    height: 10px;
-    width: 100px;
-    color: #ffffff;
-    font-size: 20px;
-    font-family: 'Montserrat', sans-serif;
-    z-index: 10000;
-  }
-
-  .settingsSound ion-icon {
-    position: absolute;
-    display: block;
-    left: 80px;
-    color: white;
-    font-size: 25px;
-  }
 }
 
 /* MONITOR */
 @media (min-width: 1920px) {
   .myName {
-    color: rgb(0, 0, 0);
-    background-color: transparent;
-    text-align: center;
     font-size: 8.5rem;
     font-weight: 550;
     margin-top: 4.5cm;
-    letter-spacing: 0.5cm;
-    font-variant: small-caps;
-    font-family: 'Montserrat', sans-serif;
-
-
-    user-select: none;
   }
 
   .subtitle {
-    color: rgb(0, 0, 0);
-    background-color: transparent;
-    text-align: center;
     font-size: 2.8rem;
     font-weight: 100;
     margin-top: 4.5cm;
-    font-family: 'Montserrat', sans-serif;
-
-    user-select: none;
-  }
-
-  .settingsSound {
-    position: absolute;
-    background-color: transparent;
-    background: transparent;
-    border-style: none;
-    bottom: 35px;
-    height: 10px;
-    width: 100px;
-    color: #ffffff;
-    font-size: 20px;
-    font-family: 'Montserrat', sans-serif;
-    z-index: 10000;
-  }
-
-  .settingsSound ion-icon {
-    position: absolute;
-    display: block;
-    left: 80px;
-    color: white;
-    font-size: 25px;
-  }
-
-  .main {
-    background-color: transparent;
-    position: absolute;
-    width: 100%;
-    height: 100vh;
-    animation: bluring 1s forwards;
   }
 }
 
@@ -799,723 +534,19 @@ b {
     background-color: black;
   }
 
-  40% {
+  25% {
     filter: blur(0);
     background-color: #1A1A1A;
   }
 }
 
 /* =============================== ABOUT ME ====================================*/
-/*MOBILE */
-@media (min-width: 0px) and (max-width: 639px) {
-  .aboutMeBackground {
-    height: 100%;
-    width: auto;
-    background-color: #1A1A1A;
-  }
-
-  .titlePage {
-    position: absolute;
-    margin-top: 15%;
-    left: 10%;
-    z-index: 1000;
-    font-weight: 200;
-    font-variant: small-caps;
-    color: #ffffff;
-    background-color: transparent;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 5.5vh;
-    user-select: none;
-  }
-
-  .subtitlePage {
-    color: rgb(255, 255, 255);
-    background-color: transparent;
-    text-align: center;
-    font-size: 4.5vh;
-    font-weight: 550;
-    letter-spacing: 0.3cm;
-    font-variant: small-caps;
-    font-family: 'Montserrat', sans-serif;
-    user-select: none;
-  }
-
-  .personDiv {
-    float: left;
-    margin-top: 50%;
-    height: auto;
-    margin-left: 10%;
-    margin-right: 10%;
-
-  }
-
-  .engineerDiv {
-    height: auto;
-    margin-left: 10%;
-    margin-right: 10%;
-  }
-
-  .textAboutMe {
-    color: rgb(255, 255, 255);
-    text-align: justify !important;
-    font-size: 2vh;
-    font-weight: 0;
-    margin-top: 0.5cm;
-    line-height: 2;
-    font-family: 'Montserrat', sans-serif;
-    user-select: none;
-  }
-
-  .textAboutMe a:-webkit-any-link {
-    color: rgb(255, 255, 255);
-    cursor: pointer;
-    text-decoration: underline;
-  }
-
-  .wrapper {
-    display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
-    grid-auto-rows: minmax(80px, auto);
-
-    color: rgb(255, 255, 255);
-    font-family: 'Montserrat', sans-serif;
-    user-select: none;
-    text-align: center;
-    justify-content: center;
-    align-content: center;
-
-  }
-
-  .one {
-    grid-column: 1;
-    grid-row: 1;
-  }
-
-  .two {
-    grid-column: 2;
-    grid-row: 1;
-  }
-
-  .three {
-    grid-column: 3;
-    grid-row: 1;
-  }
-
-  .four {
-    grid-column: 4;
-    grid-row: 1;
-  }
-
-  .five {
-    grid-column: 1;
-    grid-row: 2;
-  }
-
-  .six {
-    grid-column: 2;
-    grid-row: 2;
-  }
-
-  .seven {
-    grid-column: 3;
-    grid-row: 2;
-  }
-
-  .eight {
-    grid-column: 4;
-    grid-row: 2;
-  }
-}
-
-@media (min-width: 640px) and (max-width: 959px) {
-  .aboutMeBackground {
-    height: 300vh;
-    width: 100%;
-    background-color: #1A1A1A;
-  }
-
-  .titlePage {
-    position: absolute;
-    top: 2.5rem;
-    left: 3%;
-    z-index: 1000;
-    font-weight: 200;
-    font-variant: small-caps;
-    color: #ffffff;
-    background-color: transparent;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 2.1rem;
-    user-select: none;
-    letter-spacing: 0.2cm;
-  }
-
-  .subtitlePage {
-    color: rgb(255, 255, 255);
-    background-color: transparent;
-    text-align: left;
-    font-size: 1.4rem;
-    font-weight: 550;
-    letter-spacing: 0.2cm;
-    font-variant: small-caps;
-    font-family: 'Montserrat', sans-serif;
-    user-select: none;
-  }
-
-  .personDiv {
-    position: absolute;
-    top: 20%;
-    width: 80%;
-    height: 65%;
-    margin-left: 10%;
-  }
-
-  .engineerDiv {
-    position: absolute;
-    top: 65%;
-    width: 80%;
-    height: 65%;
-    margin-left: 10%;
-  }
-
-  ::-webkit-scrollbar {
-    width: 6px;
-    background-color: #f5f5f500;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    background: linear-gradient(transparent, #06e299);
-    border-radius: 6px;
-  }
-
-  .textAboutMe {
-    color: rgb(255, 255, 255);
-    text-align: justify !important;
-    font-size: 0.9rem;
-    line-height: 2;
-    font-family: 'Montserrat', sans-serif;
-    user-select: none;
-  }
-
-  .textAboutMe a:-webkit-any-link {
-    color: rgb(255, 255, 255);
-    cursor: pointer;
-    text-decoration: underline;
-  }
-
-  .textGrid {
-    color: rgb(255, 255, 255);
-    text-align: center !important;
-    font-size: 1.0rem;
-    font-weight: 0;
-    margin-top: 0.5cm;
-    line-height: 2;
-    font-family: 'Montserrat', sans-serif;
-    user-select: none;
-  }
-
-  .wrapper {
-    display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
-    grid-auto-rows: minmax(50px, auto);
-
-
-    color: rgb(255, 255, 255);
-    font-family: 'Montserrat', sans-serif;
-    user-select: none;
-    text-align: center;
-    justify-content: center;
-    align-content: center;
-
-  }
-
-  .one {
-    grid-column: 1;
-    grid-row: 1;
-  }
-
-  .two {
-    grid-column: 2;
-    grid-row: 1;
-  }
-
-  .three {
-    grid-column: 3;
-    grid-row: 1;
-  }
-
-  .four {
-    grid-column: 4;
-    grid-row: 1;
-  }
-
-  .five {
-    grid-column: 1;
-    grid-row: 2;
-  }
-
-  .six {
-    grid-column: 2;
-    grid-row: 2;
-  }
-
-  .seven {
-    grid-column: 3;
-    grid-row: 2;
-  }
-
-  .eight {
-    grid-column: 4;
-    grid-row: 2;
-  }
-}
-
-@media (min-width: 960px) and (max-width: 1099px) {
+/* MONITOR */
   .aboutMeBackground {
     height: 100vh;
     width: 100%;
     background-color: #1A1A1A;
-  }
-
-  .titlePage {
-    position: absolute;
-    top: 2.5rem;
-    left: 5%;
-    z-index: 1000;
-    font-weight: 200;
-    font-variant: small-caps;
-    color: #ffffff;
-    background-color: transparent;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 2.0rem;
-    user-select: none;
-    letter-spacing: 0.2cm;
-  }
-
-  .subtitlePage {
-    color: rgb(255, 255, 255);
-    background-color: transparent;
-    text-align: left;
-    font-size: 1.3rem;
-    font-weight: 550;
-    letter-spacing: 0.2cm;
-    font-variant: small-caps;
-    font-family: 'Montserrat', sans-serif;
-    user-select: none;
-  }
-
-  .personDiv {
-    position: absolute;
-    top: 23%;
-    width: 45%;
-    margin-left: 5%;
-  }
-
-  .engineerDiv {
-    position: absolute;
-    top: 23%;
-    width: 45%;
-    height: 65%;
-    margin-left: 53%;
-    overflow: auto;
-  }
-
-  ::-webkit-scrollbar {
-    width: 6px;
-    background-color: #f5f5f500;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    background: linear-gradient(transparent, #06e299);
-    border-radius: 6px;
-  }
-
-  .textAboutMe {
-    color: rgb(255, 255, 255);
-    text-align: justify !important;
-    font-size: 0.7rem;
-    line-height: 2;
-    font-family: 'Montserrat', sans-serif;
-    user-select: none;
-  }
-
-  .textAboutMe a:-webkit-any-link {
-    color: rgb(255, 255, 255);
-    cursor: pointer;
-    text-decoration: underline;
-  }
-
-  .textGrid {
-    color: rgb(255, 255, 255);
-    text-align: center !important;
-    font-size: 1.0rem;
-    font-weight: 0;
-    margin-top: 0.5cm;
-    line-height: 2;
-    font-family: 'Montserrat', sans-serif;
-    user-select: none;
-  }
-
-  .wrapper {
-    display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
-    grid-auto-rows: minmax(50px, auto);
-
-
-    color: rgb(255, 255, 255);
-    font-family: 'Montserrat', sans-serif;
-    user-select: none;
-    text-align: center;
-    justify-content: center;
-    align-content: center;
-
-  }
-
-  .one {
-    grid-column: 1;
-    grid-row: 1;
-  }
-
-  .two {
-    grid-column: 2;
-    grid-row: 1;
-  }
-
-  .three {
-    grid-column: 3;
-    grid-row: 1;
-  }
-
-  .four {
-    grid-column: 4;
-    grid-row: 1;
-  }
-
-  .five {
-    grid-column: 1;
-    grid-row: 2;
-  }
-
-  .six {
-    grid-column: 2;
-    grid-row: 2;
-  }
-
-  .seven {
-    grid-column: 3;
-    grid-row: 2;
-  }
-
-  .eight {
-    grid-column: 4;
-    grid-row: 2;
-  }
-}
-
-@media (min-width: 1100px) and (max-width: 1399px) {
-  .aboutMeBackground {
-    height: 100vh;
-    width: 100%;
-    background-color: #1A1A1A;
-  }
-
-  .titlePage {
-    position: absolute;
-    top: 3.0rem;
-    left: 5%;
-    z-index: 1000;
-    font-weight: 200;
-    font-variant: small-caps;
-    color: #ffffff;
-    background-color: transparent;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 2.4rem;
-    user-select: none;
-  }
-
-  .subtitlePage {
-    color: rgb(255, 255, 255);
-    background-color: transparent;
-    text-align: left;
-    font-size: 1.7rem;
-    font-weight: 550;
-    letter-spacing: 0.2cm;
-    font-variant: small-caps;
-    font-family: 'Montserrat', sans-serif;
-    user-select: none;
-  }
-
-  .personDiv {
-    position: absolute;
-    top: 23%;
-    width: 45%;
-    margin-left: 5%;
-  }
-
-  .engineerDiv {
-    position: absolute;
-    top: 23%;
-    width: 45%;
-    height: 65%;
-    margin-left: 53%;
-    overflow: auto;
-  }
-
-  ::-webkit-scrollbar {
-    width: 8px;
-    background-color: #f5f5f500;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    background: linear-gradient(transparent, #06e299);
-    border-radius: 6px;
-  }
-
-  .textAboutMe {
-    color: rgb(255, 255, 255);
-    text-align: justify !important;
-    font-size: 0.82rem;
-    line-height: 2;
-    font-family: 'Montserrat', sans-serif;
-    user-select: none;
-  }
-
-  .textAboutMe a:-webkit-any-link {
-    color: rgb(255, 255, 255);
-    cursor: pointer;
-    text-decoration: underline;
-  }
-
-  .textGrid {
-    color: rgb(255, 255, 255);
-    text-align: center !important;
-    font-size: 1.0rem;
-    font-weight: 0;
-    margin-top: 0.5cm;
-    line-height: 2;
-    font-family: 'Montserrat', sans-serif;
-    user-select: none;
-  }
-
-  .wrapper {
-    display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
-    grid-auto-rows: minmax(50px, auto);
-
-
-    color: rgb(255, 255, 255);
-    font-family: 'Montserrat', sans-serif;
-    user-select: none;
-    text-align: center;
-    justify-content: center;
-    align-content: center;
-
-  }
-
-  .one {
-    grid-column: 1;
-    grid-row: 1;
-  }
-
-  .two {
-    grid-column: 2;
-    grid-row: 1;
-  }
-
-  .three {
-    grid-column: 3;
-    grid-row: 1;
-  }
-
-  .four {
-    grid-column: 4;
-    grid-row: 1;
-  }
-
-  .five {
-    grid-column: 1;
-    grid-row: 2;
-  }
-
-  .six {
-    grid-column: 2;
-    grid-row: 2;
-  }
-
-  .seven {
-    grid-column: 3;
-    grid-row: 2;
-  }
-
-  .eight {
-    grid-column: 4;
-    grid-row: 2;
-  }
-}
-
-@media (min-width: 1400px) and (max-width: 1919px) {
-  .aboutMeBackground {
-    height: 100vh;
-    width: 100%;
-    background-color: #1A1A1A;
-    animation: bluringDarker 4s forwards;
-  }
-
-  @keyframes bluringDarker {
-    0% {
-      filter: blur(4px);
-      background-color: black;
-    }
-
-    40% {
-      filter: blur(0);
-      background-color: #1A1A1A;
-    }
-  }
-
-  .titlePage {
-    position: absolute;
-    top: 4.5rem;
-    left: 2.6%;
-    z-index: 1000;
-    font-weight: 200;
-    font-variant: small-caps;
-    color: #ffffff;
-    background-color: transparent;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 3.0rem;
-    user-select: none;
-    letter-spacing: 0.2cm;
-  }
-
-  .subtitlePage {
-    color: rgb(255, 255, 255);
-    background-color: transparent;
-    text-align: left;
-    font-size: 2.2rem;
-    font-weight: 550;
-    letter-spacing: 0.2cm;
-    font-variant: small-caps;
-    font-family: 'Montserrat', sans-serif;
-    user-select: none;
-  }
-
-  .personDiv {
-    position: absolute;
-    top: 23%;
-    width: 45%;
-    height: 65%;
-    margin-left: 5%;
-  }
-
-  .engineerDiv {
-    position: absolute;
-    top: 23%;
-    width: 45%;
-    height: 65%;
-    margin-left: 53%;
-    overflow: auto;
-  }
-
-  ::-webkit-scrollbar {
-    width: 12px;
-    background-color: #f5f5f500;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    background: linear-gradient(transparent, #06e299);
-    border-radius: 6px;
-  }
-
-  .textAboutMe {
-    color: rgb(255, 255, 255);
-    text-align: left !important;
-    font-size: 1.1rem;
-    font-weight: 0;
-    margin-top: 0.5cm;
-    line-height: 2;
-    font-family: 'Montserrat', sans-serif;
-    user-select: none;
-  }
-
-  .textAboutMe a:-webkit-any-link {
-    color: rgb(255, 255, 255);
-    cursor: pointer;
-    text-decoration: underline;
-  }
-
-  .textGrid {
-    color: rgb(255, 255, 255);
-    text-align: center !important;
-    font-size: 1.0rem;
-    font-weight: 0;
-    margin-top: 0.5cm;
-    line-height: 2;
-    font-family: 'Montserrat', sans-serif;
-    user-select: none;
-  }
-
-  .wrapper {
-    display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
-    grid-auto-rows: minmax(50px, auto);
-
-
-    color: rgb(255, 255, 255);
-    font-family: 'Montserrat', sans-serif;
-    user-select: none;
-    text-align: center;
-    justify-content: center;
-    align-content: center;
-
-  }
-
-  .one {
-    grid-column: 1;
-    grid-row: 1;
-  }
-
-  .two {
-    grid-column: 2;
-    grid-row: 1;
-  }
-
-  .three {
-    grid-column: 3;
-    grid-row: 1;
-  }
-
-  .four {
-    grid-column: 4;
-    grid-row: 1;
-  }
-
-  .five {
-    grid-column: 1;
-    grid-row: 2;
-  }
-
-  .six {
-    grid-column: 2;
-    grid-row: 2;
-  }
-
-  .seven {
-    grid-column: 3;
-    grid-row: 2;
-  }
-
-  .eight {
-    grid-column: 4;
-    grid-row: 2;
-  }
-}
-
-@media (min-width: 1920px) {
-  .aboutMeBackground {
-    height: 100vh;
-    width: 100%;
-    background-color: #1A1A1A;
-    animation: bluring 1s forwards;
+    animation: bluring 4s forwards;
   }
 
   .titlePage {
@@ -1650,9 +681,337 @@ b {
     grid-column: 4;
     grid-row: 2;
   }
+
+@media (min-width: 0px) and (max-width: 639px) {
+  .aboutMeBackground {
+    height: 100%;
+    width: auto;
+  }
+
+  .titlePage {
+    margin-top: 15%;
+    left: 10%;
+    font-size: 5.5vh;
+  }
+
+  .subtitlePage {
+    text-align: center;
+    font-size: 4.5vh;
+  }
+
+  .personDiv {
+    position: relative;
+    float: left;
+    margin-top: 50%;
+    height: auto;
+    margin-left: 10%;
+    margin-right: 10%;
+
+  }
+
+  .engineerDiv {
+    height: auto;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  .textAboutMe {
+    font-size: 2vh;
+  }
+}
+@media (min-width: 640px) and (max-width: 959px) {
+  .aboutMeBackground {
+    height: 300vh;
+  }
+
+  .titlePage {
+    top: 2.5rem;
+    left: 3%;
+    font-size: 2.1rem;
+  }
+
+  .subtitlePage {
+    font-size: 1.4rem;
+  }
+
+  .personDiv {
+    top: 20%;
+    width: 80%;
+    height: 65%;
+    margin-left: 10%;
+  }
+
+  .engineerDiv {
+    top: 65%;
+    width: 80%;
+    height: 65%;
+    margin-left: 10%;
+  }
+
+  .textAboutMe {
+    font-size: 0.9rem;
+    line-height: 2;
+  }
+
+  .wrapper {
+    grid-auto-rows: minmax(50px, auto);
+  }
 }
 
+@media (min-width: 960px) and (max-width: 1099px) {
+  .titlePage {
+    top: 2.5rem;
+    left: 5%;
+    font-size: 2.0rem;
+  }
+  .subtitlePage {
+    font-size: 1.3rem;
+  }
+  .personDiv {
+    top: 23%;
+    width: 45%;
+    margin-left: 5%;
+  }
+  .engineerDiv {
+    top: 23%;
+    width: 45%;
+  }
+  .textAboutMe {
+    font-size: 0.7rem;
+  }
+  .wrapper {
+    grid-auto-rows: minmax(50px, auto);
+  }
+}
+
+@media (min-width: 1100px) and (max-width: 1399px) {
+  .titlePage {
+    top: 3.0rem;
+    left: 5%;
+    font-size: 2.4rem;
+  }
+
+  .subtitlePage {
+    font-size: 1.7rem;
+    letter-spacing: 0.2cm;
+  }
+
+  .personDiv {
+    top: 23%;
+    width: 45%;
+    margin-left: 5%;
+  }
+
+  .engineerDiv {
+    top: 23%;
+    width: 45%;
+  }
+
+  .textAboutMe {
+    font-size: 0.82rem;
+  }
+
+  .wrapper {
+    grid-auto-rows: minmax(50px, auto);
+  }
+}
+
+@media (min-width: 1400px) and (max-width: 1919px) {
+
+  .titlePage {
+    font-size: 3.0rem;
+  }
+
+  .subtitlePage {
+    font-size: 2.2rem;
+  }
+
+  .textAboutMe{
+    font-size: 0.9rem;
+  }
+
+  .wrapper {
+    grid-auto-rows: minmax(50px, auto);
+    column-gap: 0cm;
+  }
+}
+@keyframes bluringDarker {
+  0% {
+    filter: blur(4px);
+    background-color: black;
+  }
+
+  40% {
+    filter: blur(0);
+    background-color: #1A1A1A;
+  }
+}
 /*================================ PORTFOLIO =======================================*/
+
+  .portfolioSection {
+    position: absolute;
+    background-color: #1A1A1A;
+    height: 100vh;
+    width: 100%;
+    z-index: -1001;
+    animation: bluring 1s forwards;
+  }
+
+  .cardsContainer {
+    position: absolute;
+    top: 8%;
+    width: 40%;
+    height: 100%;
+    z-index: 1100;
+
+    display: grid;
+    grid-template-columns: 50%;
+    grid-template-rows: 25% 40% 30%;
+    justify-content: space-evenly;
+    background-color: #1A1A1A;
+
+    animation: bluring 1s forwards;
+  }
+
+  .itemOne {
+    grid-column: 1;
+    grid-row: 1;
+    height: 70%;
+    margin-top: 5%;
+    margin-left: -35%;
+    font-size: 4.0rem;
+  }
+
+  .itemSecond {
+    grid-column: 1;
+    grid-row: 2;
+    height: 80%;
+    margin-left: -5%;
+    font-size: 5.0rem;
+  }
+
+  .itemThird {
+    grid-column: 1;
+    grid-row: 3;
+    height: 50%;
+    margin-left: -35%;
+    margin-top: -15%;
+    font-size: 3.5rem;
+  }
+
+  .cardsItemImg {
+    height: 100%;
+  }
+
+  .cardLinks {
+    color: #f5000000;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+  .cardsItemText {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    z-index: 101;
+  }
+
+  .cardTitle {
+    left: 50%;
+    top: 0%;
+    height: 10%;
+    z-index: 1001;
+    /*animation: moveright 1s ease forwards 0.5s;*/
+  }
+
+  .cardTitleTextCenter {
+    font-family: 'Poppins', sans-serif;
+    -webkit-text-stroke: #000000 1px;
+    color: #ffffff
+  }
+
+  .cardTitleText {
+    font-family: 'Poppins', sans-serif;
+    -webkit-text-stroke: #a1a1a1 1px;
+    color: rgba(255, 255, 255, 0);
+  }
+
+  .cardInfo {
+    position: absolute;
+    left: 45%;
+    top: 25%;
+    width: 45%;
+    z-index: 1001;
+  }
+
+  .cardInfoText {
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 3.0rem;
+    line-height: 1.5;
+  }
+
+  .prevArea {
+    position: absolute;
+    top: 17%;
+    left: 35%;
+    z-index: 2000;
+  }
+
+  .nextArea {
+    position: absolute;
+    top: 75%;
+    left: 35%;
+    z-index: 2000;
+  }
+
+  .prevText,
+  .nextText {
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 4.0rem;
+  }
+
+  .prevText:hover,
+  .nextText:hover {
+    color: #46cc99;
+  }
+
+  .wrapperPortfolio {
+    position: absolute;
+    top: 70%;
+    left: 53%;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-auto-rows: minmax(80px, auto);
+    column-gap: 80px;
+
+    color: rgb(255, 255, 255);
+    font-family: 'Montserrat', sans-serif;
+    user-select: none;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+
+  }
+  .wrapperPortfolio > .one,.wrapperPortfolio > .two,.wrapperPortfolio > .three,.wrapperPortfolio > .four {
+    font-size: 80px;
+  }
+
+  .indexBox {
+    position: absolute;
+    top: 44%;
+    left: 3%;
+    width: 15%;
+    z-index: 10000;
+  }
+
+  .indexNumber {
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 3.5rem;
+  }
+
 @media (min-width: 0px) and (max-width: 639px) {}
 
 @media (min-width: 640px) and (max-width: 959px) {}
@@ -1827,172 +1186,6 @@ b {
   }
 }
 
-@media (min-width: 1920px) {
-  .portfolioSection {
-    position: absolute;
-    background-color: #1A1A1A;
-    height: 100vh;
-    width: 100%;
-    z-index: -1001;
-    animation: bluring 1s forwards;
-  }
-
-  .cardsContainer {
-    position: absolute;
-    top: 8%;
-    width: 40%;
-    height: 100%;
-    z-index: 1100;
-
-    display: grid;
-    grid-template-columns: 50%;
-    grid-template-rows: 25% 40% 30%;
-    justify-content: space-evenly;
-    background-color: #1A1A1A;
-
-    animation: bluring 1s forwards;
-  }
-
-  .itemOne {
-    grid-column: 1;
-    grid-row: 1;
-    height: 70%;
-    margin-top: 5%;
-    margin-left: -35%;
-    font-size: 4.0rem;
-  }
-
-  .itemSecond {
-    grid-column: 1;
-    grid-row: 2;
-    height: 80%;
-    margin-left: -5%;
-    font-size: 5.0rem;
-  }
-
-  .itemThird {
-    grid-column: 1;
-    grid-row: 3;
-    height: 50%;
-    margin-left: -35%;
-    margin-top: -15%;
-    font-size: 3.5rem;
-  }
-
-  .cardsItemImg {
-    height: 100%;
-  }
-
-  .cardLinks {
-    color: #f5000000;
-    cursor: pointer;
-    text-decoration: underline;
-  }
-
-  .cardsItemText {
-    color: #ffffff;
-    font-size: 16px;
-    font-weight: 600;
-    z-index: 101;
-  }
-
-  .cardTitle {
-    left: 50%;
-    top: 0%;
-    height: 10%;
-    z-index: 1001;
-    /*animation: moveright 1s ease forwards 0.5s;*/
-  }
-
-  .cardTitleTextCenter {
-    font-family: 'Poppins', sans-serif;
-    -webkit-text-stroke: #000000 1px;
-    color: #ffffff
-  }
-
-  .cardTitleText {
-    font-family: 'Poppins', sans-serif;
-    -webkit-text-stroke: #a1a1a1 1px;
-    color: rgba(255, 255, 255, 0);
-  }
-
-  .cardInfo {
-    position: absolute;
-    left: 45%;
-    top: 25%;
-    width: 45%;
-    z-index: 1001;
-  }
-
-  .cardInfoText {
-    font-family: 'Montserrat', sans-serif;
-    color: rgb(255, 255, 255);
-    font-size: 3.0rem;
-    line-height: 1.5;
-  }
-
-  .prevArea {
-    position: absolute;
-    top: 17%;
-    left: 35%;
-    z-index: 2000;
-  }
-
-  .nextArea {
-    position: absolute;
-    top: 75%;
-    left: 35%;
-    z-index: 2000;
-  }
-
-  .prevText,
-  .nextText {
-    font-family: 'Montserrat', sans-serif;
-    color: rgb(255, 255, 255);
-    font-size: 4.0rem;
-  }
-
-  .prevText:hover,
-  .nextText:hover {
-    color: #46cc99;
-  }
-
-  .wrapperPortfolio {
-    position: absolute;
-    top: 70%;
-    left: 53%;
-    display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
-    grid-auto-rows: minmax(80px, auto);
-    column-gap: 80px;
-
-    color: rgb(255, 255, 255);
-    font-family: 'Montserrat', sans-serif;
-    user-select: none;
-    text-align: center;
-    justify-content: center;
-    align-content: center;
-
-  }
-  .wrapperPortfolio > .one,.wrapperPortfolio > .two,.wrapperPortfolio > .three,.wrapperPortfolio > .four {
-    font-size: 80px;
-  }
-
-  .indexBox {
-    position: absolute;
-    top: 44%;
-    left: 3%;
-    width: 15%;
-    z-index: 10000;
-  }
-
-  .indexNumber {
-    font-family: 'Montserrat', sans-serif;
-    color: rgb(255, 255, 255);
-    font-size: 3.5rem;
-  }
-}
-
 @keyframes visibility {
   0% {
     opacity: 0;
@@ -2003,26 +1196,111 @@ b {
   }
 }
 
-/*
-@keyframes moveright {
-  0% {
-    left: 0%;
-  }
-
-  100% {
-    left: 70%;
-  }
-}
-*/
-
 /* ====================================== CONTACT ME ====================================== */
+.europe {
+  background-color: transparent;
+  position: relative;
+  width: 100%;
+  height: fit-content;
+  right: -20%;
+  top: 7%;
+  user-select: none;
+  animation: bluring 1s forwards;
+}
+
+.backgroundContactMe {
+  background-color: #1A1A1A;
+  height: 100vh;
+  z-index: -999;
+}
+
+.contactMeText {
+  position: absolute;
+  top: 20%;
+  left: 7%;
+  z-index: 1000;
+
+  color: #ffffff;
+  background-color: transparent;
+
+  font-family: 'Montserrat', sans-serif;
+  user-select: none;
+  font-size: 1.6rem;
+  font-weight: 100;
+  line-height: 3;
+}
+
+.contactMeEmail {
+  position: absolute;
+  bottom: 20%;
+  left: 7%;
+  z-index: 1000;
+
+  color: #ffffff;
+  background-color: transparent;
+
+  font-family: 'Montserrat', sans-serif;
+  user-select: none;
+  font-size: 1.6rem;
+  font-weight: 100;
+  line-height: 3;
+}
+
+.btn-clipboard {
+  position: absolute;
+  bottom: 22.8%;
+  left: 14.9%;
+  z-index: 1000;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.4rem;
+  color: #46cc99;
+  background-color: transparent;
+  border: none;
+  font-weight: 1000;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.wrap {
+  position: relative;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  height: 8%;
+  width: 20%;
+  top: -40%;
+  left: 15%;
+
+  background-color: rgba(0, 0, 0, 0);
+  user-select: none;
+  text-align: center;
+  justify-content: center;
+  align-content: center;
+  z-index: 1000;
+
+  border: 2px solid rgba(255, 255, 255, 0);
+  border-radius: 5px;
+
+}
+
+.wrapLog {
+  display: inline;
+  width: 55%;
+  margin-left: 25%;
+  height: 100%;
+}
+
+ion-icon{
+  display: inline;
+  color: rgb(255, 255, 255);
+}
+
+.wrapLog:hover ion-icon {
+  color: #46cc99;
+  font-size:large;
+}
 
 @media (min-width: 0px) and (max-width: 639px) {
-  .backgroundContactMe {
-    height: 100%;
-    width: auto;
-    background-color: #1A1A1A;
-  }
+
 
   .europe {
     visibility: hidden;
@@ -2033,524 +1311,44 @@ b {
     top: 22%;
     margin-left: 10%;
     margin-right: 10%;
-    z-index: 1000;
-
-    color: #ffffff;
-    background-color: transparent;
-
-    font-family: 'Montserrat', sans-serif;
-    user-select: none;
-    font-size: 1.1rem;
-    font-weight: 100;
-    line-height: 2;
   }
 
   .contactMeEmail {
-    position: absolute;
     top: 57%;
     margin-left: 10%;
     margin-right: 10%;
-    z-index: 1000;
-
-    color: #ffffff;
-    background-color: transparent;
-
-    font-family: 'Montserrat', sans-serif;
-    user-select: none;
-    font-size: 1.1rem;
-    font-weight: 100;
-    line-height: 2;
-  }
-
-  .btn-clipboard {
-    position: absolute;
-    bottom: 22%;
-    margin-left: 8.5%;
-    z-index: 1000;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.2rem;
-    color: #46cc99;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    text-decoration: underline;
-  }
-
-  .popUpNotification {
-    position: absolute;
-    height: 50px;
-    width: 300px;
-    background-color: #46cc99;
-    border-radius: 20%;
-    border-color: #000000;
-    font-family: 'Ropa Sans', sans-serif;
-    border-style: solid;
-    bottom: 188px;
-    left: 40%;
-    z-index: 999;
-    animation: popUp 4s ease infinite;
-  }
-
-  .textPopup {
-    position: absolute;
-    left: 20%;
-    top: 25%;
-    font-size: larger;
   }
 
 }
 
 @media (min-width: 640px) and (max-width: 959px) {
-  .europe {
-    background-color: transparent;
-    position: relative;
-    width: 100%;
-    height: fit-content;
-    right: -20%;
-    top: 5%;
-    user-select: none;
-  }
-
-  .backgroundContactMe {
-    background-color: #1A1A1A;
-    height: 100vh;
-    z-index: -999;
-  }
-
-  .contactMe {
-    position: absolute;
-    top: 350px;
-    left: 250px;
-  }
 
   .contactMeText {
-    position: absolute;
     top: 260px;
     left: 50px;
-    z-index: 1000;
-    color: #ffffff;
     font-size: 30px;
-    background-color: transparent;
-    font-family: 'Montserrat', sans-serif;
-    user-select: none;
     margin-top: 2cm;
-    font-weight: 100;
   }
 
   .contactMeEmail {
-    position: absolute;
     bottom: 190px;
     left: 50px;
-    z-index: 1000;
-    color: #ffffff;
-    background-color: transparent;
     margin: 0;
     font-size: 23px;
     display: inline-block;
-    font-family: 'Montserrat', sans-serif;
-    user-select: none;
-    font-weight: 100;
   }
 
-  .btn-clipboard {
-    position: absolute;
-    bottom: 188px;
-    left: 400px;
-    z-index: 1000;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 23px;
-    color: #46cc99;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    text-decoration: underline;
-  }
-
-  .textPopup {
-    position: absolute;
-    left: 20%;
-    top: 25%;
-    font-size: larger;
-  }
-
-  .popUpNotification {
-    position: absolute;
-    height: 50px;
-    width: 300px;
-    background-color: #46cc99;
-    border-radius: 20%;
-    border-color: #000000;
-    font-family: 'Ropa Sans', sans-serif;
-    border-style: solid;
-    bottom: 188px;
-    left: 40%;
-    z-index: 999;
-    animation: popUp 4s ease infinite;
-  }
 }
 
 @media (min-width: 960px) and (max-width: 1099px) {
-  .europe {
-    background-color: transparent;
-    position: relative;
-    width: 100%;
-    height: fit-content;
-    right: -20%;
-    top: 7%;
-    user-select: none;
-  }
-
-  .backgroundContactMe {
-    background-color: #1A1A1A;
-    height: 100vh;
-    z-index: -999;
-  }
-
   .contactMeText {
-    position: absolute;
     top: 27%;
-    left: 5%;
-    z-index: 1000;
-
-    color: #ffffff;
-    background-color: transparent;
-
-    font-family: 'Montserrat', sans-serif;
-    user-select: none;
-    font-size: 1.1rem;
-    font-weight: 100;
-    line-height: 2;
   }
 
   .contactMeEmail {
-    position: absolute;
-    bottom: 20%;
-    left: 5%;
-    z-index: 1000;
-
-    color: #ffffff;
-    background-color: transparent;
-
-    font-family: 'Montserrat', sans-serif;
-    user-select: none;
     font-size: 1.0rem;
-    font-weight: 100;
-    line-height: 2;
-  }
-
-  .btn-clipboard {
-    position: absolute;
-    bottom: 23.5%;
-    left: 18.5%;
-    z-index: 1000;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.0rem;
-    color: #46cc99;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    text-decoration: underline;
-  }
-
-  .textPopup {
-    position: absolute;
-    left: 20%;
-    top: 25%;
-    font-size: larger;
-  }
-
-  .popUpNotification {
-    position: absolute;
-    height: 50px;
-    width: 300px;
-    background-color: #46cc99;
-    border-radius: 20%;
-    border-color: #000000;
-    font-family: 'Ropa Sans', sans-serif;
-    border-style: solid;
-    bottom: 188px;
-    left: 40%;
-    z-index: 999;
-    animation: popUp 4s ease infinite;
   }
 }
 
 @media (min-width: 1100px) and (max-width: 1399px) {
-  .europe {
-    background-color: transparent;
-    position: relative;
-    width: 100%;
-    height: fit-content;
-    right: -20%;
-    top: 7%;
-    user-select: none;
-  }
-
-  .backgroundContactMe {
-    background-color: #1A1A1A;
-    height: 100vh;
-    z-index: -999;
-  }
-
-  .contactMeText {
-    position: absolute;
-    top: 27%;
-    left: 5%;
-    z-index: 1000;
-
-    color: #ffffff;
-    background-color: transparent;
-
-    font-family: 'Montserrat', sans-serif;
-    user-select: none;
-    font-size: 1.3rem;
-    font-weight: 100;
-    line-height: 2;
-  }
-
-  .contactMeEmail {
-    position: absolute;
-    bottom: 20%;
-    left: 5%;
-    z-index: 1000;
-
-    color: #ffffff;
-    background-color: transparent;
-
-    font-family: 'Montserrat', sans-serif;
-    user-select: none;
-    font-size: 1.2rem;
-    font-weight: 100;
-    line-height: 2;
-  }
-
-  .btn-clipboard {
-    position: absolute;
-    bottom: 24%;
-    left: 19.5%;
-    z-index: 1000;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.2rem;
-    color: #46cc99;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    text-decoration: underline;
-  }
-
-  .textPopup {
-    position: absolute;
-    left: 20%;
-    top: 25%;
-    font-size: larger;
-  }
-
-  .popUpNotification {
-    position: absolute;
-    height: 50px;
-    width: 300px;
-    background-color: #46cc99;
-    border-radius: 20%;
-    border-color: #000000;
-    font-family: 'Ropa Sans', sans-serif;
-    border-style: solid;
-    bottom: 188px;
-    left: 40%;
-    z-index: 999;
-    animation: popUp 4s ease infinite;
-  }
-}
-
-@media (min-width: 1400px) and (max-width: 1919px) {
-  .europe {
-    background-color: transparent;
-    position: relative;
-    width: 100%;
-    height: fit-content;
-    right: -20%;
-    top: 7%;
-    user-select: none;
-  }
-
-  .backgroundContactMe {
-    background-color: #1A1A1A;
-    height: 100vh;
-    z-index: -999;
-    animation: bluringContactMe 4s ease forwards;
-  }
-
-  @keyframes bluringContactMe {
-    0% {
-      filter: blur(4px);
-    }
-
-    40% {
-      filter: blur(0);
-    }
-  }
-
-  .contactMeText {
-    position: absolute;
-    top: 27%;
-    left: 2.6%;
-    z-index: 1000;
-
-    color: #ffffff;
-    background-color: transparent;
-
-    font-family: 'Montserrat', sans-serif;
-    user-select: none;
-    font-size: 1.3rem;
-    font-weight: 100;
-    line-height: 2;
-  }
-
-  .contactMeEmail {
-    position: absolute;
-    bottom: 20%;
-    left: 2.6%;
-    z-index: 1000;
-
-    color: #ffffff;
-    background-color: transparent;
-
-    font-family: 'Montserrat', sans-serif;
-    user-select: none;
-    font-size: 1.3rem;
-    font-weight: 100;
-    line-height: 2;
-  }
-
-  .btn-clipboard {
-    position: absolute;
-    bottom: 24%;
-    left: 17.0%;
-    z-index: 1000;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.3rem;
-    color: #46cc99;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    text-decoration: underline;
-  }
-
-  .textPopup {
-    position: absolute;
-    left: 20%;
-    top: 25%;
-    font-size: larger;
-  }
-
-  .popUpNotification {
-    position: absolute;
-    height: 50px;
-    width: 300px;
-    background-color: #46cc99;
-    border-radius: 20%;
-    border-color: #000000;
-    font-family: 'Ropa Sans', sans-serif;
-    border-style: solid;
-    bottom: 188px;
-    left: 40%;
-    z-index: 999;
-    animation: popUp 4s ease infinite;
-  }
-}
-
-@media (min-width: 1920px) {
-  .europe {
-    background-color: transparent;
-    position: relative;
-    width: 100%;
-    height: fit-content;
-    right: -20%;
-    top: 7%;
-    user-select: none;
-    animation: bluring 1s forwards;
-  }
-
-  .backgroundContactMe {
-    background-color: #1A1A1A;
-    height: 100vh;
-    z-index: -999;
-  }
-
-  .contactMeText {
-    position: absolute;
-    top: 20%;
-    left: 7%;
-    z-index: 1000;
-
-    color: #ffffff;
-    background-color: transparent;
-
-    font-family: 'Montserrat', sans-serif;
-    user-select: none;
-    font-size: 1.6rem;
-    font-weight: 100;
-    line-height: 3;
-  }
-
-  .contactMeEmail {
-    position: absolute;
-    bottom: 20%;
-    left: 7%;
-    z-index: 1000;
-
-    color: #ffffff;
-    background-color: transparent;
-
-    font-family: 'Montserrat', sans-serif;
-    user-select: none;
-    font-size: 1.6rem;
-    font-weight: 100;
-    line-height: 3;
-  }
-
-  .btn-clipboard {
-    position: absolute;
-    bottom: 22.8%;
-    left: 14.9%;
-    z-index: 1000;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.4rem;
-    color: #46cc99;
-    background-color: transparent;
-    border: none;
-    font-weight: 1000;
-    cursor: pointer;
-    text-decoration: underline;
-  }
-}
-
-@keyframes popUp {
-  0% {
-    bottom: 0px;
-    opacity: 0;
-  }
-
-  25% {
-    bottom: 180px;
-    opacity: 1;
-  }
-
-  75% {
-    bottom: 180px;
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 0;
-  }
-}
-
-@keyframes fadingText {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
 }
