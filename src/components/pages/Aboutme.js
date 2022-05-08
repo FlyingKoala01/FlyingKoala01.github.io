@@ -34,53 +34,53 @@ export default function Aboutme() {
                 </div>
                 <div className='engineerDiv'>
                     <h2 className='subtitlePage'>as an engineer</h2>
-                    <p className='textAboutMe'>I am currently studying for an <a className="degref" href='https://www.upc.edu/en/bachelors/ict-systems-engineering-manresa-epsem' alt="UPC EPSEM">ICT Engineering degree</a> in Spain. Although I am deeply interested in the whole technology spectrum, I intend to persue a carreer in either <b>web development</b> or <b>cybersecurity</b>.</p>
+                    <p className='textAboutMe'>I am currently studying for an <a className="degref" href='https://www.upc.edu/en/bachelors/ict-systems-engineering-manresa-epsem' alt="UPC EPSEM">ICT Engineering degree</a> in Spain. Although I am deeply interested in the whole technology spectrum, I intend to persue a carreer in <b>cybersecurity</b>.</p>
                     <p className='textAboutMe'>Throughout the years, I have studied the following programming languages:</p>
-                    <div class="wrapper">
-                        <div class="one">
-                            <i class="devicon-python-plain" style={{ fontSize: '40px' }} />
+                    <div className="wrapper">
+                        <div className="one">
+                            <i className="devicon-python-plain" style={{ fontSize: '40px' }} />
                         </div>
-                        <div class="two">
-                            <i class="devicon-go-original-wordmark colored" style={{ fontSize: '40px' }} />
+                        <div className="two">
+                            <i className="devicon-go-original-wordmark colored" style={{ fontSize: '40px' }} />
                         </div>
-                        <div class="three" >
-                            <i class="devicon-c-plain colored" style={{ fontSize: '40px' }} />
+                        <div className="three" >
+                            <i className="devicon-c-plain colored" style={{ fontSize: '40px' }} />
                         </div>
-                        <div class="four">
-                            <i class="devicon-aarch64-plain" style={{ fontSize: '40px' }} />
+                        <div className="four">
+                            <i className="devicon-aarch64-plain" style={{ fontSize: '40px' }} />
                         </div>
-                        <div class="five" >
-                            <i class="devicon-javascript-plain colored" style={{ fontSize: '40px' }} />
+                        <div className="five" >
+                            <i className="devicon-javascript-plain colored" style={{ fontSize: '40px' }} />
                         </div>
-                        <div class="six">
-                            <i class="devicon-html5-plain colored" style={{ fontSize: '40px' }} />
+                        <div className="six">
+                            <i className="devicon-html5-plain colored" style={{ fontSize: '40px' }} />
                         </div>
-                        <div class="seven">
-                            <i class="devicon-css3-plain colored" style={{ fontSize: '40px' }} />
+                        <div className="seven">
+                            <i className="devicon-css3-plain colored" style={{ fontSize: '40px' }} />
                         </div>
-                        <div class="eight">
-                            <i class="devicon-react-original colored" style={{ fontSize: '40px' }} />
+                        <div className="eight">
+                            <i className="devicon-react-original colored" style={{ fontSize: '40px' }} />
                         </div>
                     </div>
                     <p className='textAboutMe'>Additionally, I have been introduced to different technologies, which I have been implementing in my everyday work:</p>
-                    <div class="wrapper">
-                        <div class="one">
-                            <i class="devicon-matlab-plain" style={{ fontSize: '40px' }} />
+                    <div className="wrapper">
+                        <div className="one">
+                            <i className="devicon-matlab-plain" style={{ fontSize: '40px' }} />
                         </div>
-                        <div class="two">
-                            <i class="devicon-latex-original" style={{ fontSize: '40px' }} />
+                        <div className="two">
+                            <i className="devicon-latex-original" style={{ fontSize: '40px' }} />
                         </div>
-                        <div class="three">
-                            <i class="devicon-git-plain colored" style={{ fontSize: '40px' }} />
+                        <div className="three">
+                            <i className="devicon-git-plain colored" style={{ fontSize: '40px' }} />
                         </div>
-                        <div class="four">
-                            <i class="devicon-linux-plain" style={{ fontSize: '40px' }} />
+                        <div className="four">
+                            <i className="devicon-linux-plain" style={{ fontSize: '40px' }} />
                         </div>
-                        <div class="five">
-                            <i class="devicon-arduino-plain" style={{ fontSize: '40px' }} />
+                        <div className="five">
+                            <i className="devicon-arduino-plain" style={{ fontSize: '40px' }} />
                         </div>
-                        <div class="six">
-                            <i class="devicon-raspberrypi-line colored" style={{ fontSize: '40px' }} />
+                        <div className="six">
+                            <i className="devicon-raspberrypi-line colored" style={{ fontSize: '40px' }} />
                         </div>
                     </div>
                     <p className='textAboutMe'>Furthermore, throughout my University course I have been taught different software to an introductory level:</p>

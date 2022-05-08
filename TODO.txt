@@ -1,7 +1,2 @@
-App:
-	* Add music
-
-
-** Maybe add animation to images?** 
-** Finish text for projects and make it reponsive and deploy **
-** Responsiveness for Portfolio ** 
+Fix Responsiveness for phones and smaller screens 
+Add images maybe to portfolio?

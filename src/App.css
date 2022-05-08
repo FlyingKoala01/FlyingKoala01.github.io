@@ -484,7 +484,7 @@ b {
   }
 }
 
-@media (min-width: 1100px) and (max-width: 1399px) {
+@media (min-width: 1100px) and (max-width: 1399px) { 
   .titlePage {
     font-size: 2.4rem;
   }
@@ -632,7 +632,7 @@ b {
   .cardInfoText {
     font-family: 'Montserrat', sans-serif;
     color: rgb(255, 255, 255);
-    font-size: 3.0rem;
+    font-size: 2.5rem;
     line-height: 1.5;
   }
 
@@ -915,63 +915,19 @@ b {
   line-height: 3;
 }
 
-.contactMeEmail {
+.wrapSocial {
   position: absolute;
-  bottom: 20%;
-  left: 7%;
-  z-index: 1000;
-
-  color: #ffffff;
-  background-color: transparent;
-
-  font-family: 'Montserrat', sans-serif;
-  user-select: none;
-  font-size: 1.6rem;
-  font-weight: 100;
-  line-height: 3;
-}
-
-.btn-clipboard {
-  position: absolute;
-  bottom: 22.8%;
-  left: 14.9%;
-  z-index: 1000;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.4rem;
-  color: #46cc99;
-  background-color: transparent;
-  border: none;
-  font-weight: 1000;
-  cursor: pointer;
-  text-decoration: underline;
-}
-
-.wrap {
-  position: relative;
+  top: 45%;
+  left: 5%;
   display: grid;
-  grid-template-columns: 25% 25% 25% 25%;
-  height: 8%;
-  width: 20%;
-  top: -40%;
-  left: 15%;
+  grid-template-columns: 10% 60% ;
+  grid-auto-rows: minmax(80px, auto);
 
-  background-color: rgba(0, 0, 0, 0);
-  user-select: none;
+  color: rgb(255, 255, 255);
+  user-select: none;    
   text-align: center;
   justify-content: center;
-  align-content: center;
-  z-index: 1000;
-
-  border: 2px solid rgba(255, 255, 255, 0);
-  border-radius: 5px;
-
-}
-
-.wrapLog {
-  display: inline;
-  width: 55%;
-  margin-left: 25%;
-  height: 100%;
+  align-items: center;
 }
 
 ion-icon{
@@ -981,7 +937,81 @@ ion-icon{
 
 .wrapLog:hover ion-icon {
   color: #46cc99;
-  font-size:large;
+}
+
+.wrapSocial > .one {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.wrapSocial >.two {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.wrapSocial >.three {
+  grid-column: 1;
+  grid-row: 3;
+}
+
+.wrapSocial >.four {
+  grid-column: 1;
+  grid-row: 4;
+}
+
+.wrapSocial >.five {
+  grid-column: 2;
+  grid-row: 1; 
+  overflow: hidden; 
+  animation: slidingText 1s ease forwards 0.3s;
+  color: #ffffff00;
+}
+
+.wrapSocial >.six {
+  grid-column: 2;
+  grid-row: 2;
+  overflow: hidden; 
+  animation: slidingText 1s ease forwards 0.6s;
+  color: #ffffff00;
+}
+
+.wrapSocial >.seven {
+  grid-column: 2;
+  grid-row: 3;
+  overflow: hidden; 
+  animation: slidingText 1s ease forwards 0.9s;
+  color: #ffffff00;
+}
+
+.wrapSocial >.eight {
+  grid-column: 2;
+  grid-row: 4;
+  overflow: hidden; 
+  animation: slidingText 1s ease forwards 1.2s;
+  color: #ffffff00;
+}
+
+.contactInfo{
+  background-color: transparent;
+  text-align: left;
+  font-family: 'Poppins', sans-serif;
+  user-select: none;
+  font-size: 1.0rem;
+  font-weight: 100;
+}
+
+@keyframes slidingText {
+  0% {
+    color: rgba(255, 255, 255, 0);
+    margin-left: -75%;
+  }
+  50%{
+    color: rgba(255, 255, 255, 0);
+  }
+  100% {
+    color: white;
+    margin-left: 15%;
+  }
 }
 
 @media (min-width: 0px) and (max-width: 639px) {
@@ -1036,4 +1066,12 @@ ion-icon{
 }
 
 @media (min-width: 1100px) and (max-width: 1399px) {
+}
+@media (min-width: 1400px) and (max-width: 1919px){
+  .contactMeText {
+    top: 15%;
+  }
+  .wrapSocial {
+    top: 42%;
+  }
 }

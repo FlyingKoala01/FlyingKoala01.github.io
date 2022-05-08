@@ -27,23 +27,37 @@ export default function ContactMe() {
     else {
         return (
             <div className='backgroundContactMe'>
-                <h2 className='contactMeText' >At the current time I am commuting between <b>Milan</b> and <b>Barcelona</b>!<br></br>Follow me on my social media! I'm available 24/7!</h2>
-                <h2 className='contactMeEmail'>Are you interested in building something together?<br></br>Send me an email to:</h2>
-
-                <button className="btn-clipboard" onClick={() => {
-                    navigator.clipboard.writeText('isaac.iglesias.vila19@gmail.com');
-                }}> isaac.iglesias.vila19@gmail.com
-                </button>
-
                 <img src={europe} className='europe' alt="" />
 
-                <div className="wrap">
-                    <a href="https://twitter.com/FlyingKoala01" className='wrapLog'><ion-icon name="logo-twitter"></ion-icon></a>
-                    <a href="https://github.com/FlyingKoala01" className='wrapLog'><ion-icon name="logo-github"></ion-icon></a>
-                    <a href="https://www.linkedin.com/in/isaac-iglesias-vila-0b6074234/" className='wrapLog'><ion-icon name="logo-linkedin"></ion-icon></a>
-                    <a href="https://discordapp.com/users/FlyingKoala#1509/" className='wrapLog'><ion-icon name="logo-discord"></ion-icon></a>
-                </div>
+                <h2 className='contactMeText' >At the current time I am commuting between <b>Milan</b> and <b>Barcelona</b>!<br/>If you are interested in building something together <b>contact me</b>!</h2>
+
+                <div class="wrapSocial">
+                        <div class="one">
+                            <a href="https://github.com/FlyingKoala01" className='wrapLog'><ion-icon name="logo-github"></ion-icon></a>
+                        </div>
+                        <div class="two" >
+                            <a href="https://www.linkedin.com/in/isaac-iglesias-vila-0b6074234/" className='wrapLog'><ion-icon name="logo-linkedin"></ion-icon></a>
+                        </div>
+                        <div class="three">
+                            <a href="https://discordapp.com/users/FlyingKoala#1509/" className='wrapLog'><ion-icon name="logo-discord"></ion-icon></a>
+                        </div>
+                        <div class='four'>
+                            <a href="" className='wrapLog'><ion-icon name="at-outline"></ion-icon></a>
+                        </div>
+                        <div class="five" >
+                            <div className='contactInfo'> FlyingKoala01 </div>
+                        </div>
+                        <div class="six">
+                            <div className='contactInfo'> Isaac Iglesias Vila </div>
+                        </div>
+                        <div class="seven">
+                            <div className='contactInfo'> FlyingKoala#1509 </div>
+                        </div>
+                        <div className='eight'>
+                            <div className='contactInfo'> isaac.iglesias.vila@gmail.com </div>
+                        </div>
+                    </div>
             </div>
         )
     }
-}
+} 
