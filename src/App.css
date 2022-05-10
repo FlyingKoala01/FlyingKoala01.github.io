@@ -127,6 +127,28 @@ b {
   }
 }
 
+@media (min-width: 0px) and (max-width: 639px){
+  .meLoader128 {
+    width: 50%;
+    top: 23%;
+  }
+
+  .meLoader64 {
+    width: 50%;
+    top: 23%;
+  }
+
+  .meLoader48 {
+    width: 50%;
+    top: 23%;
+  }
+
+  .meLoader32 {
+    width: 50%;
+    top: 23%;
+  }
+}
+
 #tsparticles {
   position: absolute;
   width: 100%;
@@ -141,9 +163,9 @@ b {
   background-color: transparent;
   text-align: center;
   font-size: 9vh;
-  font-weight: 650;
+  font-weight: 550;
   margin-top: 35%;
-  margin-left: 6%;
+  margin-left: 3%;
   letter-spacing: 0.5cm;
   font-variant: small-caps;
   font-family: 'Montserrat', sans-serif;
@@ -155,7 +177,7 @@ b {
   color: rgb(0, 0, 0);
   background-color: transparent;
   text-align: center;
-  font-size: 3.5vh;
+  font-size: 3.0vh;
   font-weight: 100;
   margin-top: 25%;
   font-family: 'Montserrat', sans-serif;
@@ -410,33 +432,41 @@ b {
 
 @media (min-width: 0px) and (max-width: 639px) {
   .aboutMeBackground {
-    height: 100%;
+    position: absolute;
+    height: 300vh;
     width: auto;
   }
 
   .titlePage {
-    margin-top: 15%;
-    left: 10%;
-    font-size: 5.5vh;
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size: 4.5vh;
+    width: 80%;
+    text-align: center;
   }
 
   .subtitlePage {
     text-align: center;
-    font-size: 4.5vh;
+    font-size: 3.0vh;
+    width: 100%;
   }
 
   .personDiv {
     position: relative;
     float: left;
-    margin-top: 50%;
+    top: 65%;
     height: auto;
+    width: 80%;
     margin-left: 10%;
     margin-right: 10%;
-
+    margin-bottom: 10%;
   }
 
   .engineerDiv {
+    top: 10%;
     height: auto;
+    width: 80%;
     margin-left: 10%;
     margin-right: 10%;
   }
@@ -1014,6 +1044,7 @@ ion-icon{
   }
 }
 
+
 @media (min-width: 0px) and (max-width: 639px) {
 
 
@@ -1023,17 +1054,48 @@ ion-icon{
 
   .contactMeText {
     position: absolute;
-    top: 22%;
-    margin-left: 10%;
+    top: 10%;
+    margin-left: 5%;
     margin-right: 10%;
+    font-size: 1.2rem;
+    text-align: justify;
+    text-justify: inter-word;
   }
-
-  .contactMeEmail {
-    top: 57%;
-    margin-left: 10%;
-    margin-right: 10%;
+  .wrapSocial {
+    left: 0%;
+    column-gap: -7%;
   }
-
+  .contactInfo{
+    font-size: 0.9rem;
+  }
+  .wrapSocial >.five {
+    animation: slidingText_app 1s ease forwards 0.3s;
+  }
+  
+  .wrapSocial >.six {
+    animation: slidingText_app 1s ease forwards 0.6s;
+  }
+  
+  .wrapSocial >.seven {
+    animation: slidingText_app 1s ease forwards 0.9s;
+  }
+  
+  .wrapSocial >.eight {
+    animation: slidingText_app 1s ease forwards 1.2s;
+  }
+  @keyframes slidingText_app {
+    0% {
+      color: rgba(255, 255, 255, 0);
+      margin-left: -75%;
+    }
+    50%{
+      color: rgba(255, 255, 255, 0);
+    }
+    100% {
+      color: white;
+      margin-left: 9%;
+    }
+}
 }
 
 @media (min-width: 640px) and (max-width: 959px) {
@@ -1067,6 +1129,7 @@ ion-icon{
 
 @media (min-width: 1100px) and (max-width: 1399px) {
 }
+
 @media (min-width: 1400px) and (max-width: 1919px){
   .contactMeText {
     top: 15%;

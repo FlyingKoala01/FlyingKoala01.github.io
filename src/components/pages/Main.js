@@ -12,7 +12,7 @@ export default function Main() {
 
         const loadData = async () => {
 
-            await new Promise((r) => setTimeout(r, 2500));
+            await new Promise((r) => setTimeout(r, 3000));
 
             setLoading((loading) => !loading);
         };
