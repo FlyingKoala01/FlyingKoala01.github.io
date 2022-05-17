@@ -87,7 +87,7 @@ export default function Aboutme() {
                     <ul>
                         <li className='textAboutMe'>NI Multisim</li>
                         <li className='textAboutMe'>Intel Quartus (ModelSim)</li>
-                        <li className='textAboutMe'>Others</li>
+                        <li className='textAboutMe'>OthersS</li>
                     </ul>
                 </div>
             </main>
