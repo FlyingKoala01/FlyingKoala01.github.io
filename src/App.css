@@ -127,7 +127,33 @@ b {
   }
 }
 
-@media (min-width: 0px) and (max-width: 639px) {
+@media (min-width: 0px) and (max-width: 376px) {
+  .loaderText {
+    font-size: 0.9rem;
+  }
+  
+  .meLoader128 {
+    width: 45%;
+    top: 20%;
+  }
+
+  .meLoader64 {
+    width: 45%;
+    top: 20%;
+  }
+
+  .meLoader48 {
+    width: 45%;
+    top: 20%;
+  }
+
+  .meLoader32 {
+    width: 45%;
+    top: 20%;
+  }
+}
+
+@media (min-width: 377px) and (max-width: 639px) {
   .meLoader128 {
     width: 50%;
     top: 23%;
@@ -737,7 +763,175 @@ b {
   font-size: 3.5rem;
 }
 
-@media (min-width: 0px) and (max-width: 639px) {}
+@media (min-width: 0px) and (max-width: 639px) {
+  .portfolioSection {
+    position: absolute;
+    background-color: #1A1A1A;
+    height: 100vh;
+    width: 100%;
+    z-index: -1001;
+    animation: bluring 1s forwards;
+  }
+  
+  .cardsContainer {
+    position: absolute;
+    top: 8%;
+    width: 40%;
+    height: 100%;
+    z-index: 1100;
+  
+    display: grid;
+    grid-template-columns: 50%;
+    grid-template-rows: 25% 40% 30%;
+    justify-content: space-evenly;
+    background-color: #1A1A1A;
+  
+    animation: bluring 1s forwards;
+  }
+  
+  .itemOne {
+    grid-column: 1;
+    grid-row: 1;
+    height: 70%;
+    margin-top: 5%;
+    margin-left: -35%;
+    font-size: 4.0rem;
+  }
+  
+  .itemSecond {
+    grid-column: 1;
+    grid-row: 2;
+    height: 80%;
+    margin-left: -5%;
+    font-size: 5.0rem;
+  }
+  
+  .itemThird {
+    grid-column: 1;
+    grid-row: 3;
+    height: 50%;
+    margin-left: -35%;
+    margin-top: -15%;
+    font-size: 3.5rem;
+  }
+  
+  .cardsItemImg {
+    height: 100%;
+  }
+  
+  .cardLinks {
+    color: #f5000000;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  
+  .cardsItemText {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    z-index: 101;
+  }
+  
+  .cardTitle {
+    left: 50%;
+    top: 0%;
+    height: 10%;
+    z-index: 1001;
+    /*animation: moveright 1s ease forwards 0.5s;*/
+  }
+  
+  .cardTitleTextCenter {
+    font-family: 'Poppins', sans-serif;
+    -webkit-text-stroke: #000000 1px;
+    color: #ffffff
+  }
+  
+  .cardTitleText {
+    font-family: 'Poppins', sans-serif;
+    -webkit-text-stroke: #a1a1a1 1px;
+    color: rgba(255, 255, 255, 0);
+  }
+  
+  .cardInfo {
+    position: absolute;
+    left: 45%;
+    top: 25%;
+    width: 45%;
+    z-index: 1001;
+  }
+  
+  .cardInfoText {
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 2.5rem;
+    line-height: 1.5;
+  }
+  
+  .prevArea {
+    position: absolute;
+    top: 17%;
+    left: 35%;
+    z-index: 2000;
+  }
+  
+  .nextArea {
+    position: absolute;
+    top: 75%;
+    left: 35%;
+    z-index: 2000;
+  }
+  
+  .prevText,
+  .nextText {
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 4.0rem;
+  }
+  
+  .prevText:hover,
+  .nextText:hover {
+    color: #46cc99;
+  }
+  
+  .wrapperPortfolio {
+    position: absolute;
+    top: 70%;
+    left: 53%;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-auto-rows: minmax(80px, auto);
+    column-gap: 80px;
+  
+    color: rgb(255, 255, 255);
+    font-family: 'Montserrat', sans-serif;
+    user-select: none;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+  
+  }
+  
+  .wrapperPortfolio>.one,
+  .wrapperPortfolio>.two,
+  .wrapperPortfolio>.three,
+  .wrapperPortfolio>.four {
+    font-size: 80px;
+  }
+  
+  .indexBox {
+    position: absolute;
+    top: 44%;
+    left: 3%;
+    width: 15%;
+    z-index: 10000;
+  }
+  
+  .indexNumber {
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 3.5rem;
+  }
+}
 
 @media (min-width: 640px) and (max-width: 959px) {}
 
@@ -1060,7 +1254,65 @@ ion-icon {
   }
 }
 
-@media (min-width: 0px) and (max-width: 639px) {
+@media (min-width: 0px) and (max-width: 376px) {
+  .europe {
+    visibility: hidden;
+  }
+
+  .contactMeText {
+    position: absolute;
+    top: 10%;
+    margin-left: 5%;
+    margin-right: 10%;
+    font-size: 0.9rem;
+    text-align: justify;
+    text-justify: inter-word;
+  }
+
+  .wrapSocial {
+    top: 40%;
+    left: 0%;
+    column-gap: -8%;
+  }
+
+  .contactInfo {
+    font-size: 0.75rem;
+  }
+
+  .wrapSocial>.five {
+    animation: slidingText_app 1s ease forwards 0.3s;
+  }
+
+  .wrapSocial>.six {
+    animation: slidingText_app 1s ease forwards 0.6s;
+  }
+
+  .wrapSocial>.seven {
+    animation: slidingText_app 1s ease forwards 0.9s;
+  }
+
+  .wrapSocial>.eight {
+    animation: slidingText_app 1s ease forwards 1.2s;
+  }
+
+  @keyframes slidingText_app {
+    0% {
+      color: rgba(255, 255, 255, 0);
+      margin-left: -75%;
+    }
+
+    50% {
+      color: rgba(255, 255, 255, 0);
+    }
+
+    100% {
+      color: white;
+      margin-left: 9%;
+    }
+  }
+}
+
+@media (min-width: 377px) and (max-width: 639px) {
 
 
   .europe {
@@ -1072,18 +1324,17 @@ ion-icon {
     top: 10%;
     margin-left: 5%;
     margin-right: 10%;
-    font-size: 1.2rem;
-    text-align: justify;
-    text-justify: inter-word;
+    font-size: 1.1rem;
   }
 
   .wrapSocial {
+    top: 47%;
     left: 0%;
     column-gap: -7%;
   }
 
   .contactInfo {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
 
   .wrapSocial>.five {

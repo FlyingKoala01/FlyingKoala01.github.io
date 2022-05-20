@@ -1,2 +1,5 @@
-Fix Responsiveness for phones and smaller screens 
-Add images maybe to portfolio?
+- Responsiveness
+- Linkedin
+- CV
+- Finish web
+- Send email

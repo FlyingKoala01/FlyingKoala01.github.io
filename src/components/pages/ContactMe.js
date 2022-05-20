@@ -54,7 +54,7 @@ export default function ContactMe() {
                             <div className='contactInfo'> FlyingKoala#1509 </div>
                         </div>
                         <div className='eight'>
-                            <div className='contactInfo'> isaac.iglesias.vila@gmail.com </div>
+                            <div className='contactInfo'> isaac.iglesias.vila19@gmail.com </div>
                         </div>
                     </div>
             </div>
