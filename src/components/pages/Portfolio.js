@@ -39,6 +39,16 @@ export default function Projects() {
       cardALT:"KALI"
     },
     3: {
+      itemTitle: 'itemThreeTitle',
+      cardTitleText: 'CYBERSECURITY',
+      cardInfoText: 'Independent studies on malware scripting and studying for the Security+ by CompTIA',
+      cardhref: 'https://github.com/FlyingKoala01/Scripts',
+      cardLangs: ['devicon-python-plain colored','devicon-aarch64-plain','devicon-go-original-wordmark colored', 'devicon-bash-plain'],
+      cardSRC: kaliImage,
+      cardIndex: '02',
+      cardALT:"KALI"
+    },
+    4: {
       itemTitle: 'itemZeroTitle',
       cardTitleText: '',
       cardhref: '',
@@ -88,22 +98,22 @@ export default function Projects() {
             </div>
           </div>
         </div>
-          <div className='cardInfo'>
-            <p className='cardInfoText'>{projectsInfo[index + 1].cardInfoText}</p>
+        <div className='cardInfo'>
+          <p className='cardInfoText'>{projectsInfo[index + 1].cardInfoText}</p>
+        </div>
+        <div class="wrapperPortfolio">
+          <div class="one">
+              <i class={(projectsInfo[index+1].cardLangs[0])}/>
           </div>
-          <div class="wrapperPortfolio">
-            <div class="one">
-                <i class={(projectsInfo[index+1].cardLangs[0])}/>
-            </div>
-            <div class="two">
-                <i class={(projectsInfo[index+1].cardLangs[1])}/>
-            </div>
-            <div class="three" >
-                <i class={(projectsInfo[index+1].cardLangs[2])}/>
-            </div>
-            <div class="four">
-                <i class={(projectsInfo[index+1].cardLangs[3])}/>
-            </div>
+          <div class="two">
+              <i class={(projectsInfo[index+1].cardLangs[1])}/>
+          </div>
+          <div class="three" >
+              <i class={(projectsInfo[index+1].cardLangs[2])}/>
+          </div>
+          <div class="four">
+              <i class={(projectsInfo[index+1].cardLangs[3])}/>
+          </div>
         </div>
         <div className='indexBox'>
           <div className='indexNumber'>{(projectsInfo[index+1].cardIndex)}</div>      

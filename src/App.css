@@ -646,21 +646,10 @@ b {
   font-size: 3.5rem;
 }
 
-.cardsItemImg {
-  height: 100%;
-}
-
 .cardLinks {
   color: #f5000000;
   cursor: pointer;
   text-decoration: underline;
-}
-
-.cardsItemText {
-  color: #ffffff;
-  font-size: 16px;
-  font-weight: 600;
-  z-index: 101;
 }
 
 .cardTitle {
@@ -686,7 +675,7 @@ b {
 .cardInfo {
   position: absolute;
   left: 45%;
-  top: 25%;
+  top: 30%;
   width: 45%;
   z-index: 1001;
 }
@@ -762,8 +751,7 @@ b {
   color: rgb(255, 255, 255);
   font-size: 3.5rem;
 }
-
-@media (min-width: 0px) and (max-width: 639px) {
+@media (min-width: 0px) and (max-width: 376px){
   .portfolioSection {
     position: absolute;
     background-color: #1A1A1A;
@@ -775,7 +763,8 @@ b {
   
   .cardsContainer {
     position: absolute;
-    top: 8%;
+    top: -15%;
+    margin-left: 10%;
     width: 40%;
     height: 100%;
     z-index: 1100;
@@ -795,15 +784,15 @@ b {
     height: 70%;
     margin-top: 5%;
     margin-left: -35%;
-    font-size: 4.0rem;
+    font-size: 2.0rem;
+    visibility: hidden;
   }
   
   .itemSecond {
     grid-column: 1;
     grid-row: 2;
     height: 80%;
-    margin-left: -5%;
-    font-size: 5.0rem;
+    font-size: 2.2rem;
   }
   
   .itemThird {
@@ -812,11 +801,8 @@ b {
     height: 50%;
     margin-left: -35%;
     margin-top: -15%;
-    font-size: 3.5rem;
-  }
-  
-  .cardsItemImg {
-    height: 100%;
+    font-size: 2.5rem;
+    visibility: hidden;
   }
   
   .cardLinks {
@@ -825,17 +811,7 @@ b {
     text-decoration: underline;
   }
   
-  .cardsItemText {
-    color: #ffffff;
-    font-size: 16px;
-    font-weight: 600;
-    z-index: 101;
-  }
-  
   .cardTitle {
-    left: 50%;
-    top: 0%;
-    height: 10%;
     z-index: 1001;
     /*animation: moveright 1s ease forwards 0.5s;*/
   }
@@ -854,38 +830,41 @@ b {
   
   .cardInfo {
     position: absolute;
-    left: 45%;
+    left: 15%;
     top: 25%;
-    width: 45%;
-    z-index: 1001;
+    width: 70%;
+    z-index: 2001;
+    text-align: justify;
   }
   
   .cardInfoText {
     font-family: 'Montserrat', sans-serif;
     color: rgb(255, 255, 255);
-    font-size: 2.5rem;
+    font-size: 1.3rem;
     line-height: 1.5;
   }
   
   .prevArea {
     position: absolute;
-    top: 17%;
-    left: 35%;
+    top: 80%;
+    left: 75%;
     z-index: 2000;
+    transform: rotate(90deg);
   }
   
   .nextArea {
     position: absolute;
-    top: 75%;
-    left: 35%;
+    top: 80%;
+    left: 10%;
     z-index: 2000;
+    transform: rotate(90deg);
   }
   
   .prevText,
   .nextText {
     font-family: 'Montserrat', sans-serif;
     color: rgb(255, 255, 255);
-    font-size: 4.0rem;
+    font-size: 3.0rem;
   }
   
   .prevText:hover,
@@ -895,12 +874,13 @@ b {
   
   .wrapperPortfolio {
     position: absolute;
-    top: 70%;
-    left: 53%;
+    top: 60%;
+    left: 20%;
     display: grid;
+    z-index: 2000;
     grid-template-columns: 25% 25% 25% 25%;
     grid-auto-rows: minmax(80px, auto);
-    column-gap: 80px;
+    column-gap: 20px;
   
     color: rgb(255, 255, 255);
     font-family: 'Montserrat', sans-serif;
@@ -915,13 +895,13 @@ b {
   .wrapperPortfolio>.two,
   .wrapperPortfolio>.three,
   .wrapperPortfolio>.four {
-    font-size: 80px;
+    font-size: 40px;
   }
   
   .indexBox {
     position: absolute;
-    top: 44%;
-    left: 3%;
+    top: 80%;
+    left: 45%;
     width: 15%;
     z-index: 10000;
   }
@@ -929,11 +909,326 @@ b {
   .indexNumber {
     font-family: 'Montserrat', sans-serif;
     color: rgb(255, 255, 255);
-    font-size: 3.5rem;
+    font-size: 2.5rem;
+  }
+}
+@media (min-width: 377px) and (max-width: 639px) {
+  .portfolioSection {
+    position: absolute;
+    background-color: #1A1A1A;
+    height: 100vh;
+    width: 100%;
+    z-index: -1001;
+    animation: bluring 1s forwards;
+  }
+  
+  .cardsContainer {
+    position: absolute;
+    top: -15%;
+    left: 8%;
+    width: 40%;
+    height: 100%;
+    z-index: 1100;
+  
+    display: grid;
+    grid-template-columns: 50%;
+    grid-template-rows: 25% 40% 30%;
+    justify-content: space-evenly;
+    background-color: #1A1A1A;
+  
+    animation: bluring 1s forwards;
+  }
+  
+  .itemOne {
+    grid-column: 1;
+    grid-row: 1;
+    height: 70%;
+    margin-top: 5%;
+    margin-left: -35%;
+    font-size: 2.0rem;
+    visibility: hidden;
+  }
+  
+  .itemSecond {
+    grid-column: 1;
+    grid-row: 2;
+    height: 80%;
+    margin-left: -5%;
+    font-size: 3.0rem;
+  }
+  
+  .itemThird {
+    grid-column: 1;
+    grid-row: 3;
+    height: 50%;
+    margin-left: -35%;
+    margin-top: -15%;
+    font-size: 2.5rem;
+    visibility: hidden;
+  }
+  
+  .cardLinks {
+    color: #f5000000;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  
+  .cardTitle {
+    z-index: 1001;
+    /*animation: moveright 1s ease forwards 0.5s;*/
+  }
+  
+  .cardTitleTextCenter {
+    font-family: 'Poppins', sans-serif;
+    -webkit-text-stroke: #000000 1px;
+    color: #ffffff
+  }
+  
+  .cardTitleText {
+    font-family: 'Poppins', sans-serif;
+    -webkit-text-stroke: #a1a1a1 1px;
+    color: rgba(255, 255, 255, 0);
+  }
+  
+  .cardInfo {
+    position: absolute;
+    left: 15%;
+    top: 25%;
+    width: 100%;
+    z-index: 2001;
+  }
+  
+  .cardInfoText {
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem;
+    line-height: 1.5;
+  }
+  
+  .prevArea {
+    position: absolute;
+    top: 80%;
+    left: 70%;
+    z-index: 2000;
+  }
+  
+  .nextArea {
+    position: absolute;
+    top: 80%;
+    left: 15%;
+    z-index: 2000;
+  }
+  
+  .prevText,
+  .nextText {
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 3.0rem;
+  }
+  
+  .prevText:hover,
+  .nextText:hover {
+    color: #46cc99;
+  }
+  
+  .wrapperPortfolio {
+    position: absolute;
+    top: 70%;
+    left: 53%;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-auto-rows: minmax(80px, auto);
+    column-gap: 20px;
+  
+    color: rgb(255, 255, 255);
+    font-family: 'Montserrat', sans-serif;
+    user-select: none;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+  
+  }
+  
+  .wrapperPortfolio>.one,
+  .wrapperPortfolio>.two,
+  .wrapperPortfolio>.three,
+  .wrapperPortfolio>.four {
+    font-size: 40px;
+  }
+  
+  .indexBox {
+    position: absolute;
+    top: 80%;
+    left: 42%;
+    width: 15%;
+    z-index: 10000;
+  }
+  
+  .indexNumber {
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 2.5rem;
   }
 }
 
-@media (min-width: 640px) and (max-width: 959px) {}
+@media (min-width: 640px) and (max-width: 959px) {
+  .portfolioSection {
+    position: absolute;
+    background-color: #1A1A1A;
+    height: 100vh;
+    width: 100%;
+    z-index: -1001;
+    animation: bluring 1s forwards;
+  }
+  
+  .cardsContainer {
+    position: absolute;
+    top: -15%;
+    left: 8%;
+    width: 40%;
+    height: 100%;
+    z-index: 1100;
+  
+    display: grid;
+    grid-template-columns: 50%;
+    grid-template-rows: 25% 40% 30%;
+    justify-content: space-evenly;
+    background-color: #1A1A1A;
+  
+    animation: bluring 1s forwards;
+  }
+  
+  .itemOne {
+    grid-column: 1;
+    grid-row: 1;
+    height: 70%;
+    margin-top: 5%;
+    margin-left: -35%;
+    font-size: 2.0rem;
+    visibility: hidden;
+  }
+  
+  .itemSecond {
+    grid-column: 1;
+    grid-row: 2;
+    height: 80%;
+    margin-left: -5%;
+    font-size: 3.0rem;
+  }
+  
+  .itemThird {
+    grid-column: 1;
+    grid-row: 3;
+    height: 50%;
+    margin-left: -35%;
+    margin-top: -15%;
+    font-size: 2.5rem;
+    visibility: hidden;
+  }
+  
+  .cardLinks {
+    color: #f5000000;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  
+  .cardTitle {
+    z-index: 1001;
+    /*animation: moveright 1s ease forwards 0.5s;*/
+  }
+  
+  .cardTitleTextCenter {
+    font-family: 'Poppins', sans-serif;
+    -webkit-text-stroke: #000000 1px;
+    color: #ffffff
+  }
+  
+  .cardTitleText {
+    font-family: 'Poppins', sans-serif;
+    -webkit-text-stroke: #a1a1a1 1px;
+    color: rgba(255, 255, 255, 0);
+  }
+  
+  .cardInfo {
+    position: absolute;
+    left: 15%;
+    top: 25%;
+    width: 100%;
+    z-index: 2001;
+  }
+  
+  .cardInfoText {
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem;
+    line-height: 1.5;
+  }
+  
+  .prevArea {
+    position: absolute;
+    top: 80%;
+    left: 70%;
+    z-index: 2000;
+  }
+  
+  .nextArea {
+    position: absolute;
+    top: 80%;
+    left: 15%;
+    z-index: 2000;
+  }
+  
+  .prevText,
+  .nextText {
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 3.0rem;
+  }
+  
+  .prevText:hover,
+  .nextText:hover {
+    color: #46cc99;
+  }
+  
+  .wrapperPortfolio {
+    position: absolute;
+    top: 70%;
+    left: 53%;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-auto-rows: minmax(80px, auto);
+    column-gap: 20px;
+  
+    color: rgb(255, 255, 255);
+    font-family: 'Montserrat', sans-serif;
+    user-select: none;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+  
+  }
+  
+  .wrapperPortfolio>.one,
+  .wrapperPortfolio>.two,
+  .wrapperPortfolio>.three,
+  .wrapperPortfolio>.four {
+    font-size: 40px;
+  }
+  
+  .indexBox {
+    position: absolute;
+    top: 80%;
+    left: 42%;
+    width: 15%;
+    z-index: 10000;
+  }
+  
+  .indexNumber {
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 2.5rem;
+  }
+}
 
 @media (min-width: 960px) and (max-width: 1099px) {}
 

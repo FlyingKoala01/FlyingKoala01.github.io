@@ -42,7 +42,7 @@ export default function ContactMe() {
                             <a href="https://discordapp.com/users/FlyingKoala#1509/" className='wrapLog'><ion-icon name="logo-discord"></ion-icon></a>
                         </div>
                         <div class='four'>
-                            <a href="" className='wrapLog'><ion-icon name="at-outline"></ion-icon></a>
+                            <a href="isaac.iglesias.vila19@gmail.com" className='wrapLog'><ion-icon name="at-outline"></ion-icon></a>
                         </div>
                         <div class="five" >
                             <div className='contactInfo'> FlyingKoala01 </div>
