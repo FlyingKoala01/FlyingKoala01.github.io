@@ -1,5 +1,4 @@
 - Responsiveness
 - Linkedin
-- CV
 - Finish web
 - Send email
