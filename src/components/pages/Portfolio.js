@@ -39,16 +39,6 @@ export default function Projects() {
       cardALT:"KALI"
     },
     3: {
-      itemTitle: 'itemThreeTitle',
-      cardTitleText: 'CYBERSECURITY',
-      cardInfoText: 'Independent studies on malware scripting and studying for the Security+ by CompTIA',
-      cardhref: 'https://github.com/FlyingKoala01/Scripts',
-      cardLangs: ['devicon-python-plain colored','devicon-aarch64-plain','devicon-go-original-wordmark colored', 'devicon-bash-plain'],
-      cardSRC: kaliImage,
-      cardIndex: '02',
-      cardALT:"KALI"
-    },
-    4: {
       itemTitle: 'itemZeroTitle',
       cardTitleText: '',
       cardhref: '',
