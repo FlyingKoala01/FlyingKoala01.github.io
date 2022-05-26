@@ -33,7 +33,7 @@ export default function Layout()  {
             },
             modes: {
                 push: {
-                quantity: 4,
+                quantity: 0,
                 },
                 repulse: {
                 distance: 200,

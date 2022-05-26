@@ -30,7 +30,7 @@ export default function Projects() {
     },
     2: {
       itemTitle: 'itemTwoTitle',
-      cardTitleText: 'CYBERSECURITY',
+      cardTitleText: 'MALWARE',
       cardInfoText: 'Independent studies on malware scripting and studying for the Security+ by CompTIA',
       cardhref: 'https://github.com/FlyingKoala01/Scripts',
       cardLangs: ['devicon-python-plain colored','devicon-aarch64-plain','devicon-go-original-wordmark colored', 'devicon-bash-plain'],
