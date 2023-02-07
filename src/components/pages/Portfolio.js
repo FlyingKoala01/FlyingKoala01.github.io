@@ -47,7 +47,7 @@ export default function Projects() {
       cardInfoText: 'Developing my homelab to learn about services, systems administration, networking and much more!',
       cardhref: 'https://github.com/FlyingKoala01/Scripts',
       cardLangs: '',
-      cardIndex: '02',
+      cardIndex: '03',
     },
     5: {
       itemTitle: 'itemZeroTitle',
