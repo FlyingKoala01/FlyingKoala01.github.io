@@ -36,13 +36,13 @@ export default function ContactMe() {
                             <a href="https://github.com/FlyingKoala01" className='wrapLog'><ion-icon name="logo-github"></ion-icon></a>
                         </div>
                         <div class="two" >
-                            <a href="https://www.linkedin.com/in/isaac-iglesias-vila-0b6074234/" className='wrapLog'><ion-icon name="logo-linkedin"></ion-icon></a>
+                            <a href="https://www.linkedin.com/in/isaac-iglesias-vila/" className='wrapLog'><ion-icon name="logo-linkedin"></ion-icon></a>
                         </div>
                         <div class="three">
                             <a href="https://discordapp.com/users/FlyingKoala#1509/" className='wrapLog'><ion-icon name="logo-discord"></ion-icon></a>
                         </div>
                         <div class='four'>
-                            <a href="isaac.iglesias.vila19@gmail.com" className='wrapLog'><ion-icon name="at-outline"></ion-icon></a>
+                            <a href="mailto:isaac@isaaciglesias.net?body=Hey there Isaac!" className='wrapLog'><ion-icon name="at-outline"></ion-icon></a>
                         </div>
                         <div class="five" >
                             <div className='contactInfo'> FlyingKoala01 </div>
@@ -54,7 +54,7 @@ export default function ContactMe() {
                             <div className='contactInfo'> FlyingKoala#1509 </div>
                         </div>
                         <div className='eight'>
-                            <div className='contactInfo'> isaac.iglesias.vila19@gmail.com </div>
+                            <div className='contactInfo'> isaac@isaaciglesias.net </div>
                         </div>
                     </div>
             </div>

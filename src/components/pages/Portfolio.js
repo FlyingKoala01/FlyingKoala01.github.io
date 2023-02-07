@@ -2,8 +2,6 @@ import React, { useState, useEffect } from 'react'
 
 import Loader from '../Loader';
 import emptyBackground from '../../Images/emptybackground.png';
-import kaliImage from '../../Images/KaliLogo.png';
-import reactProject from '../../Images/reactProject.png';
 
 import '../../App.css';
 import {HiOutlineArrowCircleUp, HiOutlineArrowCircleDown} from "react-icons/hi";
@@ -20,25 +18,38 @@ export default function Projects() {
     },
     1: {
       itemTitle: 'itemOneTitle',
-      cardTitleText: 'PORTFOLIO',
-      cardInfoText: 'Developed my personal website with self-taught web development through freeCodeCamp and other online courses',
+      cardTitleText: 'WebDev.',
+      cardInfoText: 'Developed my first personal website. My first self-taught front-end project. Learning HTML, CSS, JS using React',
       cardhref: 'https://github.com/FlyingKoala01/Website',
       cardLangs: ['devicon-javascript-plain colored', 'devicon-html5-plain colored', 'devicon-css3-plain colored', 'devicon-react-original colored'],
-      cardSRC: reactProject,
       cardIndex: '00',
       cardALT:"REACT"
     },
     2: {
       itemTitle: 'itemTwoTitle',
-      cardTitleText: 'MALWARE',
-      cardInfoText: 'Independent studies on malware scripting and studying for the Security+ by CompTIA',
+      cardTitleText: 'PenTest',
+      cardInfoText: 'Learning the basics of Offensive Security by pwning machines on HackTheBox! ',
       cardhref: 'https://github.com/FlyingKoala01/Scripts',
-      cardLangs: ['devicon-python-plain colored','devicon-aarch64-plain','devicon-go-original-wordmark colored', 'devicon-bash-plain'],
-      cardSRC: kaliImage,
+      cardLangs: '',
       cardIndex: '01',
-      cardALT:"KALI"
     },
     3: {
+      itemTitle: 'itemThreeTitle',
+      cardTitleText: 'WebSec',
+      cardInfoText: 'Learning the basics of Web Application Security by following BurpSuite course! Learning about SQLi, XXS, Web Sockets and more! ',
+      cardhref: 'https://github.com/FlyingKoala01/Scripts',
+      cardLangs: '',
+      cardIndex: '02',
+    },
+    4: {
+      itemTitle: 'itemFourTitle',
+      cardTitleText: 'HomeLab',
+      cardInfoText: 'Developing my homelab to learn about services, systems administration, networking and much more!',
+      cardhref: 'https://github.com/FlyingKoala01/Scripts',
+      cardLangs: '',
+      cardIndex: '02',
+    },
+    5: {
       itemTitle: 'itemZeroTitle',
       cardTitleText: '',
       cardhref: '',
