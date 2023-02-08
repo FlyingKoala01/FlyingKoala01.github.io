@@ -2,6 +2,12 @@ import React, { useState, useEffect } from 'react'
 
 import Loader from '../Loader';
 import emptyBackground from '../../Images/emptybackground.png';
+import proxmox_logo from '../../Images/proxmox_logo.png';
+import HTB from '../../Images/HTB.png';
+import pfSense from '../../Images/pf_sense.png'
+import burpsuite from '../../Images/burpsuite.png'
+import kali from '../../Images/kali.png'
+import offsec from '../../Images/offsec.png'
 
 import '../../App.css';
 import {HiOutlineArrowCircleUp, HiOutlineArrowCircleDown} from "react-icons/hi";
@@ -21,16 +27,16 @@ export default function Projects() {
       cardTitleText: 'WebDev.',
       cardInfoText: 'Developed my first personal website. My first self-taught front-end project. Learning HTML, CSS, JS using React',
       cardhref: 'https://github.com/FlyingKoala01/Website',
-      cardLangs: ['devicon-javascript-plain colored', 'devicon-html5-plain colored', 'devicon-css3-plain colored', 'devicon-react-original colored'],
+      cardLangs: ['https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg', 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original-wordmark.svg', 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original-wordmark.svg', 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg'],
       cardIndex: '00',
       cardALT:"REACT"
     },
     2: {
       itemTitle: 'itemTwoTitle',
       cardTitleText: 'PenTest',
-      cardInfoText: 'Learning the basics of Offensive Security by pwning machines on HackTheBox! ',
+      cardInfoText: 'Learning the basics of Offensive Security by pwning machines on HackTheBox! Looking for the OSCP and other certs',
       cardhref: 'https://github.com/FlyingKoala01/Scripts',
-      cardLangs: '',
+      cardLangs: [kali,HTB, offsec, ''],
       cardIndex: '01',
     },
     3: {
@@ -38,7 +44,7 @@ export default function Projects() {
       cardTitleText: 'WebSec',
       cardInfoText: 'Learning the basics of Web Application Security by following BurpSuite course! Learning about SQLi, XXS, Web Sockets and more! ',
       cardhref: 'https://github.com/FlyingKoala01/Scripts',
-      cardLangs: '',
+      cardLangs: ['',burpsuite,'',''],
       cardIndex: '02',
     },
     4: {
@@ -46,7 +52,7 @@ export default function Projects() {
       cardTitleText: 'HomeLab',
       cardInfoText: 'Developing my homelab to learn about services, systems administration, networking and much more!',
       cardhref: 'https://github.com/FlyingKoala01/Scripts',
-      cardLangs: '',
+      cardLangs: [proxmox_logo, 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/grafana/grafana-original-wordmark.svg', pfSense,''],
       cardIndex: '03',
     },
     5: {
@@ -104,16 +110,16 @@ export default function Projects() {
         </div>
         <div class="wrapperPortfolio">
           <div class="one">
-              <i class={(projectsInfo[index+1].cardLangs[0])}/>
+              <img src={(projectsInfo[index+1].cardLangs[0])} alt=""/>
           </div>
           <div class="two">
-              <i class={(projectsInfo[index+1].cardLangs[1])}/>
+              <img src={(projectsInfo[index+1].cardLangs[1])} alt=""/>
           </div>
           <div class="three" >
-              <i class={(projectsInfo[index+1].cardLangs[2])}/>
+              <img src={(projectsInfo[index+1].cardLangs[2])} alt=""/>
           </div>
           <div class="four">
-              <i class={(projectsInfo[index+1].cardLangs[3])}/>
+              <img src={(projectsInfo[index+1].cardLangs[3])} alt=""/>
           </div>
         </div>
         <div className='indexBox'>

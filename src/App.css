@@ -21,6 +21,9 @@ b {
   color: #46cc99;
 }
 
+img[src=""] {
+  display: none;
+}
 /* MOBILE */
 @media (min-width: 0px) and (max-width: 639px) {
   html {
@@ -740,11 +743,12 @@ b {
 
 }
 
-.wrapperPortfolio>.one,
-.wrapperPortfolio>.two,
-.wrapperPortfolio>.three,
-.wrapperPortfolio>.four {
-  font-size: 80px;
+.wrapperPortfolio>.one>img,
+.wrapperPortfolio>.two>img,
+.wrapperPortfolio>.three>img,
+.wrapperPortfolio>.four>img {
+  height: 70px;
+  width: 70px;
 }
 
 .indexBox {
