@@ -32,25 +32,57 @@ const WALLS = [
   { p: [13, 0, 12], r: 6, h: 14, seed: 66 },
 ]
 
+// depth-to-crest water palette, sampled by wave height
+const WATER_STOPS = ['#082e42', '#0d4a63', '#136d88', '#2494ac', '#49bcCA', '#c9eef4']
+const WATER_PALETTE = (() => {
+  const stops = WATER_STOPS.map((c) => new THREE.Color(c))
+  const out = []
+  for (let i = 0; i < 40; i++) {
+    const f = (i / 39) * (stops.length - 1)
+    const a = Math.floor(f)
+    const b = Math.min(a + 1, stops.length - 1)
+    out.push(stops[a].clone().lerp(stops[b], f - a))
+  }
+  return out
+})()
+
+const WAVE_MAX = 0.5
+
 export default function FjordWorld({ active, ...props }) {
   const streaks = useRef([])
-  const waterGeo = useMemo(() => new THREE.PlaneGeometry(70, 70, 42, 42), [])
+  const waterGeo = useMemo(() => {
+    const geo = new THREE.PlaneGeometry(70, 70, 46, 46)
+    geo.setAttribute(
+      'color',
+      new THREE.BufferAttribute(new Float32Array(geo.attributes.position.count * 3), 3),
+    )
+    return geo
+  }, [])
 
   useFrame((state, dt) => {
     const t = state.clock.elapsedTime
-    // low-poly swell: three crossing wave trains, flat-shaded facets
+    // low-poly swell: crossing wave trains, flat-shaded facets,
+    // vertex colors keyed to height (dark troughs, foam-bright crests)
     const pos = waterGeo.attributes.position
+    const col = waterGeo.attributes.color
     for (let i = 0; i < pos.count; i++) {
       const x = pos.getX(i)
       const y = pos.getY(i)
-      pos.setZ(
-        i,
-        0.1 * Math.sin(x * 0.38 + t * 1.05) +
-          0.08 * Math.sin(y * 0.31 + t * 0.75) +
-          0.05 * Math.sin((x + y) * 0.55 + t * 1.5),
+      const h =
+        0.22 * Math.sin(x * 0.21 + t * 0.85) +
+        0.15 * Math.sin(y * 0.17 + t * 0.6) +
+        0.09 * Math.sin((x + y) * 0.34 + t * 1.3) +
+        0.05 * Math.sin(x * 0.6 - t * 1.1)
+      pos.setZ(i, h)
+      const idx = Math.max(
+        0,
+        Math.min(39, Math.round(((h + WAVE_MAX) / (WAVE_MAX * 2)) * 39)),
       )
+      const c = WATER_PALETTE[idx]
+      col.setXYZ(i, c.r, c.g, c.b)
     }
     pos.needsUpdate = true
+    col.needsUpdate = true
     // foam lines ride the current toward the mouth
     for (let i = 0; i < STREAKS.length; i++) {
       const m = streaks.current[i]
@@ -70,11 +102,12 @@ export default function FjordWorld({ active, ...props }) {
         position={[0, -0.4, 0]}
       >
         <meshStandardMaterial
-          color="#11627e"
-          emissive="#0a4258"
-          emissiveIntensity={0.55}
-          roughness={0.18}
-          metalness={0.2}
+          color="#ffffff"
+          vertexColors
+          emissive="#0b3648"
+          emissiveIntensity={0.4}
+          roughness={0.22}
+          metalness={0.1}
           flatShading
         />
       </mesh>

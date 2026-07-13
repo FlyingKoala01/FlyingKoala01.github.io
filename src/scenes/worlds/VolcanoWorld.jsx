@@ -1,7 +1,7 @@
 import { useMemo, useRef } from 'react'
 import { useFrame } from '@react-three/fiber'
 import { jitter, jitteredCone, jitteredCylinder } from '../../utils/geometry.js'
-import { makeLavaTexture } from '../../utils/textures.js'
+import { makeLavaFlowTexture, makeLavaPoolTexture } from '../../utils/textures.js'
 import * as THREE from 'three'
 import Embers from '../atlas/Embers.jsx'
 import Smoke from '../fx/Smoke.jsx'
@@ -58,18 +58,20 @@ export default function VolcanoWorld({ active, ...props }) {
     return g
   }, [])
 
-  // flowing lava: one generated texture, per-surface clones with own offsets
+  // flowing lava: molten base with drifting crust, per-surface offsets
   const lava = useMemo(() => {
-    const base = makeLavaTexture()
-    const crater = base.clone()
+    const flow = makeLavaFlowTexture()
+    const poolBase = makeLavaPoolTexture()
+    const river = flow.clone()
+    river.repeat.set(1, 2.4)
+    const runout = flow.clone()
+    runout.repeat.set(1, 1.5)
+    const crater = poolBase.clone()
     crater.center.set(0.5, 0.5)
-    const river = base.clone()
-    river.repeat.set(1, 3.2)
-    const runout = base.clone()
-    runout.repeat.set(1, 2.2)
-    const pool = base.clone()
+    crater.repeat.set(1.4, 1.4)
+    const pool = poolBase.clone()
     pool.center.set(0.5, 0.5)
-    pool.repeat.set(1.6, 1.6)
+    pool.repeat.set(1.2, 1.2)
     return { crater, river, runout, pool }
   }, [])
 
@@ -78,14 +80,15 @@ export default function VolcanoWorld({ active, ...props }) {
     const t = state.clock.elapsedTime
     glow.current.intensity = 55 + Math.sin(t * 2.7) * 12 + Math.sin(t * 6.3) * 7
     if (poolMat.current) {
-      poolMat.current.emissiveIntensity = 2.3 + Math.sin(t * 1.9) * 0.5
+      poolMat.current.emissiveIntensity = 1.7 + Math.sin(t * 1.9) * 0.3
     }
     // molten convection + downhill flow
-    lava.crater.rotation += dt * 0.045
-    lava.crater.offset.x += dt * 0.01
-    lava.river.offset.y += dt * 0.14
-    lava.runout.offset.y += dt * 0.08
-    lava.pool.rotation -= dt * 0.03
+    lava.crater.rotation += dt * 0.05
+    lava.crater.offset.x += dt * 0.012
+    lava.river.offset.y -= dt * 0.16
+    lava.runout.offset.y -= dt * 0.1
+    lava.pool.rotation -= dt * 0.035
+    lava.pool.offset.x += dt * 0.008
   })
 
   return (
@@ -103,7 +106,7 @@ export default function VolcanoWorld({ active, ...props }) {
         <meshStandardMaterial
           color="#000000"
           emissive="#ffffff"
-          emissiveIntensity={2.6}
+          emissiveIntensity={1.7}
           emissiveMap={lava.crater}
         />
       </mesh>
@@ -146,7 +149,7 @@ export default function VolcanoWorld({ active, ...props }) {
           <meshStandardMaterial
             color="#000000"
             emissive="#ffffff"
-            emissiveIntensity={2.4}
+            emissiveIntensity={1.8}
             emissiveMap={lava.river}
           />
         </mesh>
@@ -155,7 +158,7 @@ export default function VolcanoWorld({ active, ...props }) {
           <meshStandardMaterial
             color="#000000"
             emissive="#ffffff"
-            emissiveIntensity={2.2}
+            emissiveIntensity={1.7}
             emissiveMap={lava.runout}
           />
         </mesh>
@@ -165,7 +168,7 @@ export default function VolcanoWorld({ active, ...props }) {
             ref={poolMat}
             color="#000000"
             emissive="#ffffff"
-            emissiveIntensity={2.3}
+            emissiveIntensity={1.7}
             emissiveMap={lava.pool}
           />
         </mesh>

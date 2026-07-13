@@ -1,41 +1,130 @@
 import * as THREE from 'three'
 
-// Tileable molten-rock texture: dark crust with hot cells from deep red
-// through orange to near-white cores. Scrolled via texture.offset for flow.
-export function makeLavaTexture(size = 256) {
+function blob(g, x, y, rx, ry, color, w, h) {
+  // soft-edged ellipse, drawn wrapped so the texture tiles
+  for (const ox of [-w, 0, w]) {
+    for (const oy of [-h, 0, h]) {
+      g.save()
+      g.translate(x + ox, y + oy)
+      g.scale(rx, ry)
+      const grad = g.createRadialGradient(0, 0, 0.55, 0, 0, 1)
+      grad.addColorStop(0, color)
+      grad.addColorStop(0.82, color)
+      grad.addColorStop(1, 'rgba(0,0,0,0)')
+      g.fillStyle = grad
+      g.beginPath()
+      g.arc(0, 0, 1, 0, Math.PI * 2)
+      g.fill()
+      g.restore()
+    }
+  }
+}
+
+// Lava river: bright molten base, hottest along the center line, with dark
+// cooled-crust slabs drifting on top. Flow direction = V (scroll offset.y).
+export function makeLavaFlowTexture(w = 128, h = 256) {
+  const c = document.createElement('canvas')
+  c.width = w
+  c.height = h
+  const g = c.getContext('2d')
+
+  // cross-stream heat gradient: cool edges, white-hot core
+  const grad = g.createLinearGradient(0, 0, w, 0)
+  grad.addColorStop(0, '#961e03')
+  grad.addColorStop(0.18, '#e05205')
+  grad.addColorStop(0.42, '#ff9412')
+  grad.addColorStop(0.5, '#ffd23e')
+  grad.addColorStop(0.58, '#ff9412')
+  grad.addColorStop(0.82, '#e05205')
+  grad.addColorStop(1, '#961e03')
+  g.fillStyle = grad
+  g.fillRect(0, 0, w, h)
+
+  // drifting crust slabs, elongated along the flow
+  for (let i = 0; i < 22; i++) {
+    const x = Math.random() * w
+    const y = Math.random() * h
+    const edge = Math.abs(x / w - 0.5) * 2 // more crust near the banks
+    const dark = Math.random() < 0.35 + edge * 0.4
+    blob(
+      g,
+      x,
+      y,
+      5 + Math.random() * 11,
+      14 + Math.random() * 30,
+      dark ? '#2a1006' : '#8a2204',
+      w,
+      h,
+    )
+  }
+  // white-hot filaments between the slabs
+  for (let i = 0; i < 7; i++) {
+    blob(
+      g,
+      w * (0.3 + Math.random() * 0.4),
+      Math.random() * h,
+      2 + Math.random() * 3,
+      18 + Math.random() * 40,
+      '#fff0a8',
+      w,
+      h,
+    )
+  }
+
+  const tex = new THREE.CanvasTexture(c)
+  tex.wrapS = tex.wrapT = THREE.RepeatWrapping
+  tex.colorSpace = THREE.SRGBColorSpace
+  return tex
+}
+
+// Lava pool / crater: molten base with crust islands, denser toward the rim.
+// Tileable both ways; drift offset slowly for churn.
+export function makeLavaPoolTexture(size = 192) {
   const c = document.createElement('canvas')
   c.width = c.height = size
   const g = c.getContext('2d')
-  g.fillStyle = '#1c0502'
-  g.fillRect(0, 0, size, size)
 
-  const colors = [
-    '#420b02',
-    '#7a1602',
-    '#b52802',
-    '#e84605',
-    '#ff7a12',
-    '#ffb42e',
-    '#ffe98a',
-  ]
-  for (let i = 0; i < 110; i++) {
-    const x = Math.random() * size
-    const y = Math.random() * size
-    const r = 7 + Math.random() * 34
-    // bias toward the darker end so bright cores stay rare
-    const ci = Math.floor(Math.pow(Math.random(), 1.7) * colors.length)
-    const col = colors[Math.min(ci, colors.length - 1)]
-    for (const ox of [-size, 0, size]) {
-      for (const oy of [-size, 0, size]) {
-        const grad = g.createRadialGradient(x + ox, y + oy, 1, x + ox, y + oy, r)
-        grad.addColorStop(0, col)
-        grad.addColorStop(1, 'rgba(28,5,2,0)')
-        g.fillStyle = grad
-        g.beginPath()
-        g.arc(x + ox, y + oy, r, 0, Math.PI * 2)
-        g.fill()
-      }
-    }
+  g.fillStyle = '#ff9412'
+  g.fillRect(0, 0, size, size)
+  // large soft hot patches for variation
+  for (let i = 0; i < 8; i++) {
+    blob(
+      g,
+      Math.random() * size,
+      Math.random() * size,
+      20 + Math.random() * 34,
+      20 + Math.random() * 34,
+      i % 2 ? '#ffd23e' : '#e85a06',
+      size,
+      size,
+    )
+  }
+  // crust islands
+  for (let i = 0; i < 26; i++) {
+    const r = 6 + Math.random() * 15
+    blob(
+      g,
+      Math.random() * size,
+      Math.random() * size,
+      r,
+      r * (0.7 + Math.random() * 0.6),
+      Math.random() < 0.55 ? '#2a1006' : '#7a1c03',
+      size,
+      size,
+    )
+  }
+  // sparks of white heat
+  for (let i = 0; i < 10; i++) {
+    blob(
+      g,
+      Math.random() * size,
+      Math.random() * size,
+      2.5 + Math.random() * 4,
+      2.5 + Math.random() * 4,
+      '#fff0a8',
+      size,
+      size,
+    )
   }
 
   const tex = new THREE.CanvasTexture(c)
