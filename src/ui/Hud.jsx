@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react'
 import { useAtlas, WORLDS, WORLD_LIST } from '../store/useAtlas.js'
 import { useJourney, journeyMotion } from '../store/useJourney.js'
 import { PATHS } from '../journey/paths.js'
+import { updateSound } from '../sound/soundscape.js'
 
 function ProgressRail({ world }) {
   const fill = useRef()
@@ -40,11 +41,22 @@ export default function Hud() {
   const returnToAtlas = useAtlas((s) => s.returnToAtlas)
   const chapter = useJourney((s) => s.chapter)
 
+  const sound = useAtlas((s) => s.sound)
+  const toggleSound = useAtlas((s) => s.toggleSound)
+
   const world = activeWorld ? WORLDS[activeWorld] : null
   const hot = hovered ? WORLDS[hovered] : null
   const inAtlas = mode === 'atlas'
   const inWorld = mode === 'world'
   const veilOn = mode === 'to-world' || mode === 'to-atlas'
+
+  useEffect(() => {
+    const scape =
+      activeWorld && (mode === 'world' || mode === 'to-world')
+        ? activeWorld
+        : 'atlas'
+    updateSound(sound, scape)
+  }, [sound, mode, activeWorld])
   const next = world
     ? WORLD_LIST[(WORLD_LIST.findIndex((w) => w.id === world.id) + 1) % WORLD_LIST.length]
     : null
@@ -85,9 +97,13 @@ export default function Hud() {
         </div>
 
         <div className="hud-corner br hud-dim">
-          N63°26' E10°23'
-          <br />
-          SOUND: OFF
+          <span className="coords">
+            N63°26' E10°23'
+            <br />
+          </span>
+          <button className="hud-link" onClick={toggleSound}>
+            SOUND: {sound ? 'ON' : 'OFF'}
+          </button>
         </div>
 
         <div

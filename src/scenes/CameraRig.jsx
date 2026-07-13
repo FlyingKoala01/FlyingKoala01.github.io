@@ -5,6 +5,9 @@ import { easing } from 'maath'
 import { useAtlas, WORLDS } from '../store/useAtlas.js'
 import { useJourney, journeyMotion } from '../store/useJourney.js'
 import { PATHS, computeChapter } from '../journey/paths.js'
+import { REDUCED } from '../utils/motion.js'
+
+const PARALLAX = REDUCED ? 0 : 1
 
 const ATLAS_POS = new THREE.Vector3(0, 3.6, 10.5)
 const ATLAS_LOOK = new THREE.Vector3(0, 0.4, 0)
@@ -28,6 +31,14 @@ export default function CameraRig() {
     const p = pos.current
     const l = lk.current
 
+    // widen the view on narrow (portrait) screens so authored framings fit
+    const aspect = state.viewport.aspect
+    const targetFov = aspect < 0.8 ? 58 : aspect < 1.1 ? 50 : 42
+    if (cam.fov !== targetFov) {
+      cam.fov = targetFov
+      cam.updateProjectionMatrix()
+    }
+
     // Hard cuts happen while the veil is fully opaque.
     if (prevMode.current !== mode) {
       if (mode === 'world' && activeWorld) {
@@ -50,8 +61,9 @@ export default function CameraRig() {
 
     if (mode === 'atlas') {
       p.copy(ATLAS_POS)
-      p.x += state.pointer.x * 0.9
-      p.y += state.pointer.y * 0.45
+      if (aspect < 0.8) p.multiplyScalar(1.3)
+      p.x += state.pointer.x * 0.9 * PARALLAX
+      p.y += state.pointer.y * 0.45 * PARALLAX
       easing.damp3(cam.position, p, 0.6, dt)
       easing.damp3(look.current, ATLAS_LOOK, 0.6, dt)
     } else if (mode === 'to-world' && activeWorld) {
@@ -79,8 +91,8 @@ export default function CameraRig() {
       // getPoint (not getPointAt): keeps cam/look control points aligned at
       // the same t, so each chapter stop frames exactly its target
       path.cam.getPoint(t, p)
-      p.x += w.origin[0] + state.pointer.x * 0.7
-      p.y += w.origin[1] + state.pointer.y * 0.35
+      p.x += w.origin[0] + state.pointer.x * 0.7 * PARALLAX
+      p.y += w.origin[1] + state.pointer.y * 0.35 * PARALLAX
       p.z += w.origin[2]
       easing.damp3(cam.position, p, 0.28, dt)
 

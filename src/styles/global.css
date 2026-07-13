@@ -447,9 +447,89 @@ body,
   transition: width 0.2s ease;
 }
 
+/* ------------------------------ webgl fallback ---------------------------- */
+
+.fallback {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 48px 24px 64px;
+  overflow-y: auto;
+  height: 100%;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.fallback header {
+  margin-bottom: 40px;
+}
+
+.fallback section {
+  margin-bottom: 36px;
+  border-left: 2px solid rgba(223, 232, 239, 0.2);
+  padding-left: 18px;
+}
+
+.fallback h2 {
+  font-size: 18px;
+  letter-spacing: 0.12em;
+  margin: 6px 0 10px;
+}
+
+.fallback ul {
+  margin: 12px 0 0 18px;
+  color: var(--ink-dim);
+}
+
+.fallback li {
+  margin-bottom: 8px;
+}
+
+.fallback a {
+  color: var(--ink);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .title-card .scroll-hint {
+    animation: none;
+  }
+
+  .veil,
+  .callout-card,
+  .callout-marker,
+  .title-card,
+  .end-card {
+    transition-duration: 0.01s;
+  }
+}
+
 @media (max-width: 720px) {
-  .hud-corner.tr {
+  .hud-corner.tr,
+  .coords {
     display: none;
+  }
+
+  .hud-corner.bl {
+    bottom: 92px;
+    left: 16px;
+  }
+
+  .hud-corner.br {
+    bottom: 92px;
+    right: 16px;
+  }
+
+  .hud-corner.tl {
+    top: 18px;
+    left: 16px;
+  }
+
+  .hover-label {
+    bottom: 150px;
+  }
+
+  .title-card {
+    left: 16px;
+    bottom: 150px;
   }
 
   .title-card h2 {

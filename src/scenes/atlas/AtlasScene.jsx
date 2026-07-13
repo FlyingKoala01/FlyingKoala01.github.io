@@ -4,14 +4,15 @@ import Landmark from './Landmark.jsx'
 import VolcanoMini from './VolcanoMini.jsx'
 import FjordMini from './FjordMini.jsx'
 import HangarMini from './HangarMini.jsx'
+import { REDUCED } from '../../utils/motion.js'
 
 export default function AtlasScene(props) {
   return (
     <group {...props}>
       <Float
-        speed={1.1}
-        rotationIntensity={0.05}
-        floatIntensity={0.3}
+        speed={REDUCED ? 0 : 1.1}
+        rotationIntensity={REDUCED ? 0 : 0.05}
+        floatIntensity={REDUCED ? 0 : 0.3}
         floatingRange={[-0.12, 0.12]}
       >
         <AtlasIsland />

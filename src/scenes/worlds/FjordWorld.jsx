@@ -2,6 +2,9 @@ import { useMemo, useRef } from 'react'
 import { useFrame } from '@react-three/fiber'
 import { jitteredCone } from '../../utils/geometry.js'
 import Annotations from '../../journey/Annotations.jsx'
+import VikingShip from '../fx/VikingShip.jsx'
+import Snow from '../fx/Snow.jsx'
+import Aurora from '../fx/Aurora.jsx'
 import { WORLDS } from '../../store/useAtlas.js'
 
 const WALLS = [
@@ -57,6 +60,11 @@ export default function FjordWorld({ active, ...props }) {
           />
         </mesh>
       ))}
+      {/* viking longship sailing the channel, explorer at the bow */}
+      <VikingShip position={[-0.6, -0.25, 5]} rotation={[0, -Math.PI / 2.4, 0]} />
+      {/* weather + sky */}
+      <Snow position={[0, 0, -5]} />
+      <Aurora />
       {/* the home lab: a cabin on a dock at the water line (chapter 02) */}
       <group position={[5.2, -0.35, -5]} rotation={[0, -0.5, 0]}>
         {/* dock */}

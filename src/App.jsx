@@ -1,11 +1,26 @@
-import { Suspense } from 'react'
+import { Suspense, useState } from 'react'
 import { Canvas } from '@react-three/fiber'
 import Experience from './scenes/Experience.jsx'
 import Hud from './ui/Hud.jsx'
 import LoadingScreen from './ui/LoadingScreen.jsx'
+import Fallback from './ui/Fallback.jsx'
 import JourneyControls from './journey/JourneyControls.jsx'
 
+function hasWebGL() {
+  try {
+    const c = document.createElement('canvas')
+    return !!(
+      window.WebGLRenderingContext &&
+      (c.getContext('webgl2') || c.getContext('webgl'))
+    )
+  } catch {
+    return false
+  }
+}
+
 export default function App() {
+  const [webgl] = useState(hasWebGL)
+  if (!webgl) return <Fallback />
   return (
     <>
       <div className="stage">

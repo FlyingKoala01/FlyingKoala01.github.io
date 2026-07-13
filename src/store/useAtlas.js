@@ -61,8 +61,11 @@ export const useAtlas = create((set, get) => ({
   mode: 'atlas',
   activeWorld: null,
   hovered: null,
+  sound: false,
 
   setHovered: (id) => set({ hovered: id }),
+
+  toggleSound: () => set((s) => ({ sound: !s.sound })),
 
   enterWorld: (id) => {
     if (get().mode !== 'atlas') return
