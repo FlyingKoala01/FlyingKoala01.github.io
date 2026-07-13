@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import * as THREE from 'three';
 import './LandingAtlas.css';
 
@@ -37,26 +37,35 @@ function supportsWebGL() {
 
 function createLandscape(scene) {
   const material = (color) => new THREE.MeshStandardMaterial({ color, flatShading: true });
+  const landmarks = {};
   const ground = new THREE.Mesh(new THREE.CylinderGeometry(8, 9, 0.75, 7), material('#173f45'));
   ground.position.y = -0.75;
   scene.add(ground);
 
+  const volcanoGroup = new THREE.Group();
   const volcano = new THREE.Mesh(new THREE.ConeGeometry(1.55, 3.4, 6), material('#bb5a37'));
-  volcano.position.set(-3.2, 1, -0.4);
-  volcano.name = 'volcano';
-  scene.add(volcano);
+  volcano.position.y = 1;
   const crater = new THREE.Mesh(new THREE.CylinderGeometry(0.6, 0.75, 0.18, 6), material('#2c1d1b'));
-  crater.position.set(-3.2, 2.72, -0.4);
-  scene.add(crater);
+  crater.position.y = 2.72;
+  volcanoGroup.add(volcano, crater);
+  volcanoGroup.position.set(-3.2, 0, -0.4);
+  volcanoGroup.name = 'volcano';
+  landmarks.volcano = volcanoGroup;
+  scene.add(volcanoGroup);
 
+  const fjordGroup = new THREE.Group();
   const water = new THREE.Mesh(new THREE.BoxGeometry(3.6, 0.18, 2.3), material('#2d9caa'));
-  water.position.set(1, -0.25, 0.6);
-  scene.add(water);
+  water.position.y = -0.25;
+  fjordGroup.add(water);
   [-0.5, 2.4].forEach((x) => {
     const cliff = new THREE.Mesh(new THREE.ConeGeometry(1.25, 2.8, 5), material('#78908a'));
-    cliff.position.set(x, 0.7, 0.4);
-    scene.add(cliff);
+    cliff.position.set(x - 1, 0.7, -0.2);
+    fjordGroup.add(cliff);
   });
+  fjordGroup.position.set(1, 0, 0.6);
+  fjordGroup.name = 'fjord';
+  landmarks.fjord = fjordGroup;
+  scene.add(fjordGroup);
 
   const house = new THREE.Group();
   const houseBody = new THREE.Mesh(new THREE.BoxGeometry(2.1, 1.45, 1.65), material('#e6d7a4'));
@@ -69,94 +78,123 @@ function createLandscape(scene) {
   house.add(houseBody, roof, windowLight);
   house.position.set(3.65, 0, -0.65);
   house.name = 'homelab';
+  landmarks.homelab = house;
   scene.add(house);
+
+  return landmarks;
 }
 
-function AtlasCanvas() {
+function AtlasCanvas({ activeLandmark, onRendererError }) {
   const canvasRef = useRef(null);
 
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return undefined;
 
-    const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
-    renderer.setClearColor(0x000000, 0);
-    const scene = new THREE.Scene();
-    scene.fog = new THREE.Fog('#0e232a', 11, 25);
-    const camera = new THREE.PerspectiveCamera(43, 1, 0.1, 100);
-    camera.position.set(0, 6.7, 12.5);
-    const target = new THREE.Vector3(0, 0.15, 0);
-    const ambient = new THREE.HemisphereLight('#eaf5ef', '#142229', 1.6);
-    const key = new THREE.DirectionalLight('#fff1ce', 2.2);
-    key.position.set(4, 9, 6);
-    scene.add(ambient, key);
-    createLandscape(scene);
-
-    let yaw = 0;
-    let dragging = false;
-    let startX = 0;
+    let renderer;
+    let scene;
     let frame;
-    const resize = () => {
-      const { width, height } = canvas.getBoundingClientRect();
-      camera.aspect = width / Math.max(height, 1);
-      camera.updateProjectionMatrix();
-      renderer.setSize(width, height, false);
-    };
-    const render = () => {
-      camera.position.x = Math.sin(yaw) * 12.5;
-      camera.position.z = Math.cos(yaw) * 12.5;
-      camera.lookAt(target);
-      renderer.render(scene, camera);
-      frame = window.requestAnimationFrame(render);
-    };
-    const beginDrag = (event) => {
-      dragging = true;
-      startX = event.clientX;
-      canvas.setPointerCapture(event.pointerId);
-    };
-    const move = (event) => {
-      if (!dragging) return;
-      yaw += (event.clientX - startX) * 0.008;
-      startX = event.clientX;
-    };
-    const endDrag = () => { dragging = false; };
 
-    resize();
-    render();
-    window.addEventListener('resize', resize);
-    canvas.addEventListener('pointerdown', beginDrag);
-    canvas.addEventListener('pointermove', move);
-    canvas.addEventListener('pointerup', endDrag);
-    canvas.addEventListener('pointercancel', endDrag);
-
-    return () => {
-      window.cancelAnimationFrame(frame);
-      window.removeEventListener('resize', resize);
-      canvas.removeEventListener('pointerdown', beginDrag);
-      canvas.removeEventListener('pointermove', move);
-      canvas.removeEventListener('pointerup', endDrag);
-      canvas.removeEventListener('pointercancel', endDrag);
-      scene.traverse((object) => {
-        if (!object.isMesh) return;
-        object.geometry.dispose();
-        if (Array.isArray(object.material)) {
-          object.material.forEach((material) => material.dispose());
-        } else {
-          object.material.dispose();
-        }
+    try {
+      renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+      renderer.setClearColor(0x000000, 0);
+      scene = new THREE.Scene();
+      scene.fog = new THREE.Fog('#0e232a', 11, 25);
+      const camera = new THREE.PerspectiveCamera(43, 1, 0.1, 100);
+      const overviewTarget = new THREE.Vector3(0, 0.15, 0);
+      const ambient = new THREE.HemisphereLight('#eaf5ef', '#142229', 1.6);
+      const key = new THREE.DirectionalLight('#fff1ce', 2.2);
+      key.position.set(4, 9, 6);
+      scene.add(ambient, key);
+      const landmarks = createLandscape(scene);
+      const focusedLandmark = activeLandmark && landmarks[activeLandmark];
+      Object.keys(landmarks).forEach((id) => {
+        landmarks[id].visible = !focusedLandmark || id === activeLandmark;
       });
-      renderer.dispose();
-    };
-  }, []);
 
-  return <canvas ref={canvasRef} className="atlas-canvas" aria-label="Interactive 3D atlas overview. Drag to rotate the landscape." />;
+      let yaw = 0;
+      let dragging = false;
+      let startX = 0;
+      const target = focusedLandmark ? focusedLandmark.position.clone().add(new THREE.Vector3(0, 0.9, 0)) : overviewTarget;
+      const distance = focusedLandmark ? 6.5 : 12.5;
+      const resize = () => {
+        const { width, height } = canvas.getBoundingClientRect();
+        camera.aspect = width / Math.max(height, 1);
+        camera.updateProjectionMatrix();
+        renderer.setSize(width, height, false);
+      };
+      const render = () => {
+        camera.position.x = target.x + Math.sin(yaw) * distance;
+        camera.position.y = target.y + (focusedLandmark ? 3.2 : 6.7);
+        camera.position.z = target.z + Math.cos(yaw) * distance;
+        camera.lookAt(target);
+        renderer.render(scene, camera);
+        frame = window.requestAnimationFrame(render);
+      };
+      const beginDrag = (event) => {
+        dragging = true;
+        startX = event.clientX;
+        canvas.setPointerCapture(event.pointerId);
+      };
+      const move = (event) => {
+        if (!dragging) return;
+        yaw += (event.clientX - startX) * 0.008;
+        startX = event.clientX;
+      };
+      const endDrag = () => { dragging = false; };
+      const handleContextLost = (event) => {
+        event.preventDefault();
+        onRendererError();
+      };
+
+      resize();
+      render();
+      window.addEventListener('resize', resize);
+      canvas.addEventListener('pointerdown', beginDrag);
+      canvas.addEventListener('pointermove', move);
+      canvas.addEventListener('pointerup', endDrag);
+      canvas.addEventListener('pointercancel', endDrag);
+      canvas.addEventListener('webglcontextlost', handleContextLost);
+
+      return () => {
+        window.cancelAnimationFrame(frame);
+        window.removeEventListener('resize', resize);
+        canvas.removeEventListener('pointerdown', beginDrag);
+        canvas.removeEventListener('pointermove', move);
+        canvas.removeEventListener('pointerup', endDrag);
+        canvas.removeEventListener('pointercancel', endDrag);
+        canvas.removeEventListener('webglcontextlost', handleContextLost);
+        scene.traverse((object) => {
+          if (!object.isMesh) return;
+          object.geometry.dispose();
+          if (Array.isArray(object.material)) {
+            object.material.forEach((material) => material.dispose());
+          } else {
+            object.material.dispose();
+          }
+        });
+        renderer.dispose();
+      };
+    } catch (error) {
+      if (renderer) renderer.dispose();
+      onRendererError();
+      return undefined;
+    }
+  }, [activeLandmark, onRendererError]);
+
+  const label = activeLandmark
+    ? `Focused 3D scene: ${activeLandmark}. Drag to orbit the landmark.`
+    : 'Interactive 3D atlas overview. Drag to rotate the landscape.';
+
+  return <canvas ref={canvasRef} className="atlas-canvas" aria-label={label} />;
 }
 
 export default function LandingAtlas() {
   const [activeLandmark, setActiveLandmark] = useState(null);
   const [mode, setMode] = useState('checking');
   const active = LANDMARKS.find((landmark) => landmark.id === activeLandmark);
+  const showFallback = useCallback(() => setMode('fallback'), []);
 
   useEffect(() => {
     const reducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -169,7 +207,7 @@ export default function LandingAtlas() {
 
   return (
     <section className={`landing-atlas ${active ? 'is-focused' : ''}`} aria-labelledby="atlas-title">
-      {mode === '3d' && <AtlasCanvas />}
+      {mode === '3d' && <AtlasCanvas activeLandmark={activeLandmark} onRendererError={showFallback} />}
       <div className="atlas-grain" aria-hidden="true" />
       <div className="atlas-content">
         <header className="atlas-intro">
