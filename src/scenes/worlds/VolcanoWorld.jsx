@@ -1,6 +1,7 @@
 import { useMemo, useRef } from 'react'
 import { useFrame } from '@react-three/fiber'
 import { jitter, jitteredCone, jitteredCylinder } from '../../utils/geometry.js'
+import { makeLavaTexture } from '../../utils/textures.js'
 import * as THREE from 'three'
 import Embers from '../atlas/Embers.jsx'
 import Smoke from '../fx/Smoke.jsx'
@@ -57,13 +58,34 @@ export default function VolcanoWorld({ active, ...props }) {
     return g
   }, [])
 
-  useFrame((state) => {
+  // flowing lava: one generated texture, per-surface clones with own offsets
+  const lava = useMemo(() => {
+    const base = makeLavaTexture()
+    const crater = base.clone()
+    crater.center.set(0.5, 0.5)
+    const river = base.clone()
+    river.repeat.set(1, 3.2)
+    const runout = base.clone()
+    runout.repeat.set(1, 2.2)
+    const pool = base.clone()
+    pool.center.set(0.5, 0.5)
+    pool.repeat.set(1.6, 1.6)
+    return { crater, river, runout, pool }
+  }, [])
+
+  useFrame((state, dt) => {
     if (!glow.current) return
     const t = state.clock.elapsedTime
     glow.current.intensity = 55 + Math.sin(t * 2.7) * 12 + Math.sin(t * 6.3) * 7
     if (poolMat.current) {
-      poolMat.current.emissiveIntensity = 2.4 + Math.sin(t * 1.9) * 0.6
+      poolMat.current.emissiveIntensity = 2.3 + Math.sin(t * 1.9) * 0.5
     }
+    // molten convection + downhill flow
+    lava.crater.rotation += dt * 0.045
+    lava.crater.offset.x += dt * 0.01
+    lava.river.offset.y += dt * 0.14
+    lava.runout.offset.y += dt * 0.08
+    lava.pool.rotation -= dt * 0.03
   })
 
   return (
@@ -80,8 +102,9 @@ export default function VolcanoWorld({ active, ...props }) {
         <cylinderGeometry args={[3.1, 3.1, 0.3, 9]} />
         <meshStandardMaterial
           color="#000000"
-          emissive="#ff4d12"
-          emissiveIntensity={3.4}
+          emissive="#ffffff"
+          emissiveIntensity={2.6}
+          emissiveMap={lava.crater}
         />
       </mesh>
       {/* lava streaks over the crater lip */}
@@ -122,16 +145,18 @@ export default function VolcanoWorld({ active, ...props }) {
           <planeGeometry args={[0.95, 9.6]} />
           <meshStandardMaterial
             color="#000000"
-            emissive="#ff4308"
-            emissiveIntensity={2.2}
+            emissive="#ffffff"
+            emissiveIntensity={2.4}
+            emissiveMap={lava.river}
           />
         </mesh>
         <mesh position={[0, 0.09, 12.8]} rotation={[-Math.PI / 2, 0, 0]}>
           <planeGeometry args={[1.15, 7]} />
           <meshStandardMaterial
             color="#000000"
-            emissive="#e63a06"
-            emissiveIntensity={2}
+            emissive="#ffffff"
+            emissiveIntensity={2.2}
+            emissiveMap={lava.runout}
           />
         </mesh>
         <mesh position={[0, 0.1, 17.5]} rotation={[-Math.PI / 2, 0, 0]}>
@@ -139,8 +164,9 @@ export default function VolcanoWorld({ active, ...props }) {
           <meshStandardMaterial
             ref={poolMat}
             color="#000000"
-            emissive="#ff4d12"
-            emissiveIntensity={2.4}
+            emissive="#ffffff"
+            emissiveIntensity={2.3}
+            emissiveMap={lava.pool}
           />
         </mesh>
         {/* steam over the pool */}

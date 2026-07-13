@@ -26,6 +26,9 @@ export default function CameraRig() {
   const wasInGame = useRef(false)
   const pos = useRef(new THREE.Vector3())
   const lk = useRef(new THREE.Vector3())
+  // transition feel: FOV warp + slight roll while travelling
+  const fovKick = useRef(0)
+  const roll = useRef(0)
 
   useFrame((state, dt) => {
     const { mode, activeWorld } = useAtlas.getState()
@@ -47,8 +50,23 @@ export default function CameraRig() {
     // widen the view on narrow (portrait) screens so authored framings fit
     const aspect = state.viewport.aspect
     const targetFov = aspect < 0.8 ? 58 : aspect < 1.1 ? 50 : 42
-    if (cam.fov !== targetFov) {
-      cam.fov = targetFov
+    // dive warp: the FOV stretches while travelling and settles on arrival
+    const travelling = mode === 'to-world' || mode === 'to-atlas'
+    fovKick.current = THREE.MathUtils.damp(
+      fovKick.current,
+      mode === 'to-world' ? 26 : mode === 'to-atlas' ? 14 : 0,
+      travelling ? 2.4 : 3.2,
+      dt,
+    )
+    roll.current = THREE.MathUtils.damp(
+      roll.current,
+      mode === 'to-world' ? 0.12 : mode === 'to-atlas' ? -0.09 : 0,
+      2.4,
+      dt,
+    )
+    const fovWanted = targetFov + fovKick.current
+    if (Math.abs(cam.fov - fovWanted) > 0.01) {
+      cam.fov = fovWanted
       cam.updateProjectionMatrix()
     }
 
@@ -124,6 +142,7 @@ export default function CameraRig() {
     }
 
     cam.lookAt(look.current)
+    if (Math.abs(roll.current) > 0.002) cam.rotateZ(roll.current)
   })
 
   return null

@@ -1,13 +1,25 @@
 import { useMemo, useRef } from 'react'
 import { useFrame } from '@react-three/fiber'
+import * as THREE from 'three'
 import { jitteredCone } from '../../utils/geometry.js'
 import Annotations from '../../journey/Annotations.jsx'
 import VikingShip from '../fx/VikingShip.jsx'
 import Snow from '../fx/Snow.jsx'
 import Aurora from '../fx/Aurora.jsx'
 import Seabirds from '../fx/Seabirds.jsx'
+import Orcas from '../fx/Orcas.jsx'
 import KoalaEgg from '../fx/KoalaEgg.jsx'
 import { WORLDS } from '../../store/useAtlas.js'
+
+// slow foam lines drifting with the current
+const STREAKS = [
+  { x: -1.8, z: 6, len: 3.2, w: 0.09, speed: 0.5, o: 0.16 },
+  { x: 1.2, z: -2, len: 2.2, w: 0.06, speed: 0.7, o: 0.12 },
+  { x: -0.6, z: -12, len: 4, w: 0.11, speed: 0.4, o: 0.18 },
+  { x: 2.4, z: -18, len: 2.8, w: 0.07, speed: 0.6, o: 0.12 },
+  { x: -3.2, z: -22, len: 3.4, w: 0.09, speed: 0.45, o: 0.15 },
+  { x: 4, z: 10, len: 2.4, w: 0.06, speed: 0.65, o: 0.1 },
+]
 
 const WALLS = [
   // left ridge
@@ -21,25 +33,82 @@ const WALLS = [
 ]
 
 export default function FjordWorld({ active, ...props }) {
-  const water = useRef()
+  const streaks = useRef([])
+  const waterGeo = useMemo(() => new THREE.PlaneGeometry(70, 70, 42, 42), [])
 
-  useFrame((state) => {
-    if (!water.current) return
-    water.current.position.y = -0.4 + Math.sin(state.clock.elapsedTime * 0.7) * 0.05
+  useFrame((state, dt) => {
+    const t = state.clock.elapsedTime
+    // low-poly swell: three crossing wave trains, flat-shaded facets
+    const pos = waterGeo.attributes.position
+    for (let i = 0; i < pos.count; i++) {
+      const x = pos.getX(i)
+      const y = pos.getY(i)
+      pos.setZ(
+        i,
+        0.1 * Math.sin(x * 0.38 + t * 1.05) +
+          0.08 * Math.sin(y * 0.31 + t * 0.75) +
+          0.05 * Math.sin((x + y) * 0.55 + t * 1.5),
+      )
+    }
+    pos.needsUpdate = true
+    // foam lines ride the current toward the mouth
+    for (let i = 0; i < STREAKS.length; i++) {
+      const m = streaks.current[i]
+      if (!m) continue
+      const s = STREAKS[i]
+      const drift = (t * s.speed + i * 9) % 46
+      m.position.set(s.x + Math.sin(t * 0.3 + i) * 0.6, -0.18, s.z - drift + 20)
+      m.material.opacity = s.o * (0.5 + 0.5 * Math.sin(t * 0.6 + i * 1.9))
+    }
   })
 
   return (
     <group position={WORLDS.fjord.origin} {...props}>
-      <mesh ref={water} rotation={[-Math.PI / 2, 0, 0]} position={[0, -0.4, 0]}>
-        <planeGeometry args={[70, 70, 1, 1]} />
+      <mesh
+        geometry={waterGeo}
+        rotation={[-Math.PI / 2, 0, 0]}
+        position={[0, -0.4, 0]}
+      >
         <meshStandardMaterial
-          color="#0d5a72"
-          emissive="#08374a"
-          emissiveIntensity={0.5}
-          roughness={0.2}
-          metalness={0.15}
+          color="#11627e"
+          emissive="#0a4258"
+          emissiveIntensity={0.55}
+          roughness={0.18}
+          metalness={0.2}
+          flatShading
         />
       </mesh>
+      {/* current foam lines */}
+      {STREAKS.map((s, i) => (
+        <mesh
+          key={i}
+          rotation={[-Math.PI / 2, 0, 0.12]}
+          ref={(el) => {
+            if (el) streaks.current[i] = el
+          }}
+        >
+          <planeGeometry args={[s.w, s.len]} />
+          <meshBasicMaterial
+            color="#bfe8ef"
+            transparent
+            opacity={s.o}
+            depthWrite={false}
+            blending={THREE.AdditiveBlending}
+          />
+        </mesh>
+      ))}
+      {/* moon glint lane toward the mouth */}
+      <mesh rotation={[-Math.PI / 2, 0, 0.28]} position={[-7, -0.15, -26]}>
+        <planeGeometry args={[1.6, 26]} />
+        <meshBasicMaterial
+          color="#cfdce8"
+          transparent
+          opacity={0.07}
+          depthWrite={false}
+          blending={THREE.AdditiveBlending}
+        />
+      </mesh>
+      <Orcas />
       {WALLS.map((w, i) => (
         <Wall key={i} {...w} />
       ))}

@@ -3,6 +3,9 @@ import { useFrame } from '@react-three/fiber'
 import * as THREE from 'three'
 import Annotations from '../../journey/Annotations.jsx'
 import KoalaEgg from '../fx/KoalaEgg.jsx'
+import Sparks from '../fx/Sparks.jsx'
+import Smoke from '../fx/Smoke.jsx'
+import { makeWaterfall } from '../../utils/textures.js'
 import { WORLDS } from '../../store/useAtlas.js'
 
 const CRATES = [
@@ -18,12 +21,21 @@ export default function HangarWorld({ active, ...props }) {
   const ring = useRef()
   const sweep = useRef()
   const doorBeacon = useRef()
+  const wfAcc = useRef(0)
   // spotlight target inside this group so the cone aims at the drone
   const spotTarget = useMemo(() => new THREE.Object3D(), [])
+  // live spectrum-waterfall displays for the detector rack
+  const waterfalls = useMemo(() => [makeWaterfall(), makeWaterfall(48, 96)], [])
 
   useFrame((state, dt) => {
     if (!drone.current || !ring.current) return
     const t = state.clock.elapsedTime
+    // scroll the detector waterfalls a row at a time
+    wfAcc.current += dt
+    while (wfAcc.current > 0.09) {
+      wfAcc.current -= 0.09
+      for (const w of waterfalls) w.tick()
+    }
     drone.current.position.y = 3.4 + Math.sin(t * 1.4) * 0.2
     drone.current.rotation.y = Math.sin(t * 0.5) * 0.4
     for (const r of rotors.current) r.rotation.y += dt * 30
@@ -326,6 +338,121 @@ export default function HangarWorld({ active, ...props }) {
             emissiveIntensity={2.6}
           />
         </mesh>
+      </group>
+      {/* detector rack: two cabinets with live spectrum waterfalls */}
+      <group position={[-4.2, 0, 3.8]} rotation={[0, 0.85, 0]}>
+        {[-0.42, 0.42].map((x, i) => (
+          <group key={i} position={[x, 0, 0]}>
+            <mesh position={[0, 0.8, 0]}>
+              <boxGeometry args={[0.72, 1.6, 0.5]} />
+              <meshStandardMaterial color="#2a323d" flatShading roughness={0.8} />
+            </mesh>
+            <mesh position={[0, 1.05, 0.26]}>
+              <planeGeometry args={[0.56, 0.92]} />
+              <meshStandardMaterial
+                color="#000000"
+                emissive="#ffffff"
+                emissiveIntensity={1.4}
+                emissiveMap={waterfalls[i].tex}
+              />
+            </mesh>
+            {/* status LEDs */}
+            {[0, 1, 2].map((j) => (
+              <mesh key={j} position={[-0.2 + j * 0.2, 0.28, 0.26]}>
+                <circleGeometry args={[0.025, 6]} />
+                <meshStandardMaterial
+                  color="#000000"
+                  emissive={j === 2 ? '#ff4d4d' : '#48e07a'}
+                  emissiveIntensity={2}
+                />
+              </mesh>
+            ))}
+          </group>
+        ))}
+      </group>
+      {/* antenna farm behind the rack */}
+      <group position={[-7.2, 0, 5.6]} rotation={[0, 0.5, 0]}>
+        {/* whip antenna */}
+        <mesh position={[0, 1.3, 0]}>
+          <cylinderGeometry args={[0.02, 0.045, 2.6, 5]} />
+          <meshStandardMaterial color="#4a5560" flatShading />
+        </mesh>
+        <mesh position={[0, 2.65, 0]}>
+          <sphereGeometry args={[0.05, 6, 6]} />
+          <meshStandardMaterial color="#000000" emissive="#ff4d4d" emissiveIntensity={2.4} />
+        </mesh>
+        {/* yagi on a mast */}
+        <group position={[0.9, 0, -0.4]}>
+          <mesh position={[0, 0.9, 0]}>
+            <cylinderGeometry args={[0.035, 0.05, 1.8, 5]} />
+            <meshStandardMaterial color="#4a5560" flatShading />
+          </mesh>
+          <mesh position={[0, 1.8, 0]} rotation={[0, 0.4, 0]}>
+            <boxGeometry args={[1.3, 0.04, 0.04]} />
+            <meshStandardMaterial color="#5d6a76" flatShading />
+          </mesh>
+          {[-0.5, -0.2, 0.1, 0.4].map((x, i) => (
+            <mesh key={i} position={[x * 0.92, 1.8, x * 0.39]} rotation={[0, 0.4 + Math.PI / 2, 0]}>
+              <boxGeometry args={[0.36 - i * 0.05, 0.03, 0.03]} />
+              <meshStandardMaterial color="#5d6a76" flatShading />
+            </mesh>
+          ))}
+        </group>
+        {/* small dish on tripod */}
+        <group position={[-0.9, 0, 0.6]} rotation={[0, -0.6, 0]}>
+          {[0.5, 2.6, 4.7].map((a, i) => (
+            <mesh
+              key={i}
+              position={[Math.cos(a) * 0.2, 0.35, Math.sin(a) * 0.2]}
+              rotation={[Math.sin(a) * 0.35, 0, Math.cos(a) * -0.35]}
+            >
+              <cylinderGeometry args={[0.02, 0.02, 0.75, 4]} />
+              <meshStandardMaterial color="#4a5560" flatShading />
+            </mesh>
+          ))}
+          <mesh position={[0, 0.85, 0]} rotation={[0.6, 0, 0]} scale={[1, 1, 0.4]}>
+            <sphereGeometry args={[0.34, 10, 8, 0, Math.PI * 2, 0, Math.PI / 2]} />
+            <meshStandardMaterial color="#5d6a76" flatShading side={2} roughness={0.6} />
+          </mesh>
+        </group>
+      </group>
+      {/* the broken inhibitor: sparking, smoking, very much offline */}
+      <group position={[4.7, 0, -7.6]} rotation={[0, -0.4, 0]}>
+        <mesh position={[0, 0.55, 0]}>
+          <boxGeometry args={[0.65, 1.1, 0.5]} />
+          <meshStandardMaterial color="#333d29" flatShading roughness={0.85} />
+        </mesh>
+        {/* stub antennas, one bent */}
+        {[-0.18, 0, 0.18].map((x, i) => (
+          <mesh
+            key={i}
+            position={[x, 1.35, 0]}
+            rotation={[0, 0, i === 2 ? 0.9 : 0]}
+          >
+            <cylinderGeometry args={[0.018, 0.028, i === 2 ? 0.4 : 0.55, 5]} />
+            <meshStandardMaterial color="#4a5560" flatShading />
+          </mesh>
+        ))}
+        {/* fault label, blinking via doorBeacon-style pulse handled by sparks light */}
+        <mesh position={[0, 0.72, 0.26]}>
+          <planeGeometry args={[0.4, 0.14]} />
+          <meshStandardMaterial
+            color="#000000"
+            emissive="#ff3a3a"
+            emissiveIntensity={1.6}
+          />
+        </mesh>
+        <Sparks position={[0, 1.45, 0]} spread={0.6} />
+        <Smoke
+          position={[0.1, 1.2, 0]}
+          count={6}
+          height={2.6}
+          spread={0.5}
+          size={0.5}
+          grow={1.6}
+          color="#4a4e55"
+          opacity={0.25}
+        />
       </group>
       {/* easter egg: supervising the inspection from the crate stack */}
       <KoalaEgg

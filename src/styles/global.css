@@ -430,18 +430,19 @@ body,
 
 /* -------------------------------- veil/fade ------------------------------ */
 
+/* iris wipe: the veil closes as an expanding circle and opens in reverse */
 .veil {
   position: fixed;
   inset: 0;
   background: var(--bg);
   z-index: 20;
   pointer-events: none;
-  opacity: 0;
-  transition: opacity 0.55s ease;
+  clip-path: circle(0% at 50% 50%);
+  transition: clip-path 0.6s ease-in-out;
 }
 
 .veil.on {
-  opacity: 1;
+  clip-path: circle(75% at 50% 50%);
 }
 
 /* --------------------------------- loader -------------------------------- */
