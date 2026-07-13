@@ -4,6 +4,7 @@ import { Stars } from '@react-three/drei'
 import * as THREE from 'three'
 import { easing } from 'maath'
 import AtlasScene from './atlas/AtlasScene.jsx'
+import ShootingStars from './fx/ShootingStars.jsx'
 import VolcanoWorld from './worlds/VolcanoWorld.jsx'
 import FjordWorld from './worlds/FjordWorld.jsx'
 import HangarWorld from './worlds/HangarWorld.jsx'
@@ -65,6 +66,7 @@ export default function Experience() {
           fade
           speed={0.5}
         />
+        <ShootingStars />
         <AtlasScene />
       </group>
 

@@ -6,7 +6,8 @@ import { tilt } from '../../utils/tilt.js'
 
 const GRAVITY = 14
 const WALK_SPEED = 1.9
-const SLIP_ACCEL = 9
+// slipping is meant to be a challenge: strong pull, little grip while tilted
+const SLIP_ACCEL = 17
 const EDGE_R = 5.15
 const RESPAWN_Y = 13
 
@@ -23,9 +24,9 @@ export function setKoalaTarget(x, z) {
   clickTarget.v = { x, z }
 }
 
-const GRAY = '#8f9aa3'
-const GRAY_DARK = '#77828c'
-const BELLY = '#c6ccd4'
+const GRAY = '#a4abb4'
+const GRAY_DARK = '#8b939d'
+const BELLY = '#edf0f3'
 
 export default function Koala() {
   const root = useRef()
@@ -114,8 +115,10 @@ export default function Koala() {
           s.vel.z = THREE.MathUtils.damp(s.vel.z, (dz / d) * WALK_SPEED, 8, step)
         }
       } else {
-        s.vel.x = THREE.MathUtils.damp(s.vel.x, 0, 6, step)
-        s.vel.z = THREE.MathUtils.damp(s.vel.z, 0, 6, step)
+        // barely any grip while the island is tilted
+        const grip = Math.hypot(tilt.rx, tilt.rz) > 0.04 ? 1.1 : 6
+        s.vel.x = THREE.MathUtils.damp(s.vel.x, 0, grip, step)
+        s.vel.z = THREE.MathUtils.damp(s.vel.z, 0, grip, step)
       }
       // slipping downhill when the island is tilted
       s.vel.x += -Math.sin(tilt.rz) * SLIP_ACCEL * step
@@ -221,80 +224,84 @@ export default function Koala() {
         {/* rig carries animation (squash/lean); the inner group owns base size */}
         <group ref={rig}>
           <group scale={0.3}>
-          {/* squat round body */}
-          <mesh position={[0, 0.32, 0]} scale={[1, 0.82, 1]}>
-            <sphereGeometry args={[0.34, 12, 12]} />
-            <meshStandardMaterial color={GRAY} flatShading roughness={0.9} />
+          {/* pear body, smooth cartoon shading */}
+          <mesh position={[0, 0.34, 0]} scale={[1, 1.02, 0.92]}>
+            <sphereGeometry args={[0.38, 16, 16]} />
+            <meshStandardMaterial color={GRAY} roughness={0.85} />
           </mesh>
-          <mesh position={[0, 0.3, 0.16]} scale={[0.72, 0.58, 0.5]}>
-            <sphereGeometry args={[0.3, 10, 10]} />
-            <meshStandardMaterial color={BELLY} flatShading roughness={0.9} />
+          {/* white belly */}
+          <mesh position={[0, 0.32, 0.17]} scale={[0.72, 0.85, 0.45]}>
+            <sphereGeometry args={[0.32, 14, 14]} />
+            <meshStandardMaterial color={BELLY} roughness={0.9} />
           </mesh>
-          {/* oversized head */}
-          <mesh position={[0, 0.88, 0.02]}>
-            <sphereGeometry args={[0.44, 14, 14]} />
-            <meshStandardMaterial color={GRAY} flatShading roughness={0.9} />
+          {/* wide head, full cheeks */}
+          <mesh position={[0, 0.9, 0.02]} scale={[1.12, 0.98, 0.95]}>
+            <sphereGeometry args={[0.48, 18, 18]} />
+            <meshStandardMaterial color={GRAY} roughness={0.85} />
           </mesh>
-          {/* big fluffy ears */}
+          {/* huge scalloped ears with big pink inners */}
           {[-1, 1].map((side) => (
-            <group key={side} position={[side * 0.4, 1.22, 0]}>
-              <mesh>
-                <sphereGeometry args={[0.21, 10, 10]} />
-                <meshStandardMaterial color={GRAY_DARK} flatShading roughness={0.9} />
+            <group key={side} position={[side * 0.58, 1.14, -0.02]}>
+              <mesh scale={[1, 1.1, 0.55]}>
+                <sphereGeometry args={[0.27, 14, 14]} />
+                <meshStandardMaterial color={GRAY} roughness={0.85} />
               </mesh>
-              <mesh position={[side * 0.03, 0, 0.07]} scale={0.62}>
-                <sphereGeometry args={[0.21, 8, 8]} />
-                <meshStandardMaterial color="#e0aab2" flatShading roughness={0.9} />
+              {/* scallop lobes */}
+              <mesh position={[side * 0.1, 0.18, 0]} scale={[1, 1, 0.5]}>
+                <sphereGeometry args={[0.14, 10, 10]} />
+                <meshStandardMaterial color={GRAY} roughness={0.85} />
+              </mesh>
+              <mesh position={[side * 0.15, -0.14, 0]} scale={[1, 1, 0.5]}>
+                <sphereGeometry args={[0.12, 10, 10]} />
+                <meshStandardMaterial color={GRAY} roughness={0.85} />
+              </mesh>
+              <mesh position={[0, 0, 0.09]} scale={[0.72, 0.85, 0.3]}>
+                <sphereGeometry args={[0.25, 12, 12]} />
+                <meshStandardMaterial color="#f09cab" roughness={0.9} />
               </mesh>
             </group>
           ))}
-          {/* big sparkly eyes, set low on the face */}
+          {/* small black bead eyes */}
           {[-1, 1].map((side) => (
-            <group key={side} position={[side * 0.17, 0.9, 0.43]}>
+            <group key={side} position={[side * 0.19, 0.98, 0.44]}>
               <mesh>
-                <sphereGeometry args={[0.105, 10, 10]} />
-                <meshStandardMaterial color="#f2f5f8" roughness={0.6} />
+                <sphereGeometry args={[0.05, 8, 8]} />
+                <meshStandardMaterial color="#181c22" roughness={0.25} />
               </mesh>
-              <mesh position={[0, 0, 0.075]}>
-                <sphereGeometry args={[0.055, 8, 8]} />
-                <meshStandardMaterial color="#14181d" roughness={0.25} />
-              </mesh>
-              <mesh position={[0.025, 0.03, 0.115]}>
-                <sphereGeometry args={[0.02, 6, 6]} />
+              <mesh position={[0.014, 0.016, 0.036]}>
+                <sphereGeometry args={[0.013, 6, 6]} />
                 <meshStandardMaterial
                   color="#ffffff"
                   emissive="#ffffff"
-                  emissiveIntensity={0.6}
+                  emissiveIntensity={0.5}
                 />
               </mesh>
             </group>
           ))}
-          {/* blush cheeks */}
-          {[-1, 1].map((side) => (
-            <mesh
-              key={side}
-              position={[side * 0.29, 0.76, 0.38]}
-              scale={[1, 0.6, 0.4]}
-            >
-              <sphereGeometry args={[0.08, 8, 8]} />
-              <meshStandardMaterial color="#e8a1a8" flatShading roughness={1} />
-            </mesh>
-          ))}
-          {/* soft round nose */}
-          <mesh position={[0, 0.82, 0.47]} scale={[0.7, 0.95, 0.5]}>
-            <sphereGeometry args={[0.105, 8, 8]} />
-            <meshStandardMaterial color="#272c33" flatShading roughness={0.6} />
+          {/* the big koala nose */}
+          <mesh position={[0, 0.88, 0.49]} scale={[0.74, 1.15, 0.5]}>
+            <sphereGeometry args={[0.14, 12, 12]} />
+            <meshStandardMaterial color="#23272e" roughness={0.35} />
+          </mesh>
+          <mesh position={[-0.035, 0.94, 0.55]} scale={[0.5, 0.8, 0.4]}>
+            <sphereGeometry args={[0.035, 6, 6]} />
+            <meshStandardMaterial color="#454b54" roughness={0.4} />
+          </mesh>
+          {/* little smile */}
+          <mesh position={[0, 0.76, 0.45]} rotation={[0.15, 0, Math.PI * 1.05]}>
+            <torusGeometry args={[0.075, 0.009, 6, 12, Math.PI * 0.9]} />
+            <meshStandardMaterial color="#3a4048" roughness={0.6} />
           </mesh>
           {/* aviator cap + propeller */}
-          <mesh position={[0, 1.28, 0.02]}>
-            <cylinderGeometry args={[0.17, 0.23, 0.13, 8]} />
-            <meshStandardMaterial color="#b3402f" flatShading roughness={0.8} />
+          <mesh position={[0, 1.4, 0.02]}>
+            <cylinderGeometry args={[0.18, 0.26, 0.14, 10]} />
+            <meshStandardMaterial color="#b3402f" roughness={0.8} />
           </mesh>
-          <mesh position={[0, 1.38, 0.02]}>
+          <mesh position={[0, 1.5, 0.02]}>
             <cylinderGeometry args={[0.025, 0.025, 0.09, 5]} />
-            <meshStandardMaterial color="#3a3230" flatShading />
+            <meshStandardMaterial color="#3a3230" roughness={0.8} />
           </mesh>
-          <group ref={prop} position={[0, 1.44, 0.02]}>
+          <group ref={prop} position={[0, 1.56, 0.02]}>
             {[0, Math.PI / 2].map((a, i) => (
               <mesh key={i} rotation={[0, a, 0]}>
                 <boxGeometry args={[0.4, 0.02, 0.06]} />
@@ -303,29 +310,29 @@ export default function Koala() {
             ))}
           </group>
           {/* stubby arms */}
-          <group ref={armL} position={[0.32, 0.42, 0]}>
-            <mesh position={[0.06, -0.07, 0]} rotation={[0, 0, -0.5]}>
-              <capsuleGeometry args={[0.065, 0.12, 3, 6]} />
-              <meshStandardMaterial color={GRAY_DARK} flatShading roughness={0.9} />
+          <group ref={armL} position={[0.36, 0.44, 0]}>
+            <mesh position={[0.07, -0.08, 0]} rotation={[0, 0, -0.5]}>
+              <capsuleGeometry args={[0.075, 0.14, 4, 8]} />
+              <meshStandardMaterial color={GRAY} roughness={0.85} />
             </mesh>
           </group>
-          <group ref={armR} position={[-0.32, 0.42, 0]}>
-            <mesh position={[-0.06, -0.07, 0]} rotation={[0, 0, 0.5]}>
-              <capsuleGeometry args={[0.065, 0.12, 3, 6]} />
-              <meshStandardMaterial color={GRAY_DARK} flatShading roughness={0.9} />
+          <group ref={armR} position={[-0.36, 0.44, 0]}>
+            <mesh position={[-0.07, -0.08, 0]} rotation={[0, 0, 0.5]}>
+              <capsuleGeometry args={[0.075, 0.14, 4, 8]} />
+              <meshStandardMaterial color={GRAY} roughness={0.85} />
             </mesh>
           </group>
           {/* stubby legs */}
-          <group ref={legL} position={[0.13, 0.1, 0]}>
+          <group ref={legL} position={[0.15, 0.1, 0]}>
             <mesh position={[0, -0.04, 0]}>
-              <capsuleGeometry args={[0.07, 0.08, 3, 6]} />
-              <meshStandardMaterial color={GRAY_DARK} flatShading roughness={0.9} />
+              <capsuleGeometry args={[0.085, 0.09, 4, 8]} />
+              <meshStandardMaterial color={GRAY_DARK} roughness={0.85} />
             </mesh>
           </group>
-          <group ref={legR} position={[-0.13, 0.1, 0]}>
+          <group ref={legR} position={[-0.15, 0.1, 0]}>
             <mesh position={[0, -0.04, 0]}>
-              <capsuleGeometry args={[0.07, 0.08, 3, 6]} />
-              <meshStandardMaterial color={GRAY_DARK} flatShading roughness={0.9} />
+              <capsuleGeometry args={[0.085, 0.09, 4, 8]} />
+              <meshStandardMaterial color={GRAY_DARK} roughness={0.85} />
             </mesh>
           </group>
           </group>
