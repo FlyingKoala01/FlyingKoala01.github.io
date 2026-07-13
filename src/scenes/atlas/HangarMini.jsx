@@ -8,6 +8,7 @@ export default function HangarMini() {
   const beacon = useRef()
 
   useFrame((state, dt) => {
+    if (!radar.current || !beacon.current) return
     radar.current.rotation.y += dt * 1.1
     const blink = (Math.sin(state.clock.elapsedTime * 3.2) + 1) / 2
     beacon.current.material.emissiveIntensity = 0.4 + blink * 3.2

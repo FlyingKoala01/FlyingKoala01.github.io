@@ -195,6 +195,209 @@ body,
   border-color: var(--accent);
 }
 
+/* ---------------------------- journey elements --------------------------- */
+
+.hud-link {
+  font: inherit;
+  color: var(--ink-dim);
+  background: none;
+  border: none;
+  padding: 0;
+  margin-top: 4px;
+  cursor: pointer;
+  letter-spacing: 0.08em;
+}
+
+.hud-link:hover {
+  color: var(--ink);
+}
+
+.title-card {
+  position: absolute;
+  left: 32px;
+  bottom: 96px;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  pointer-events: none;
+}
+
+.title-card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.title-card h2 {
+  font-size: 44px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  margin: 8px 0 4px;
+}
+
+.title-card .title-field {
+  letter-spacing: 0.22em;
+  font-size: 13px;
+}
+
+.title-card .scroll-hint {
+  margin-top: 22px;
+  animation: hint-bob 2.2s ease-in-out infinite;
+}
+
+@keyframes hint-bob {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+}
+
+.end-card {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -46%);
+  text-align: center;
+  padding: 34px 42px;
+  background: rgba(8, 12, 20, 0.78);
+  border: 1px solid rgba(223, 232, 239, 0.18);
+  backdrop-filter: blur(6px);
+  opacity: 0;
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  pointer-events: none;
+}
+
+.end-card.show {
+  opacity: 1;
+  transform: translate(-50%, -50%);
+  pointer-events: auto;
+}
+
+.end-card h2 {
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  margin: 8px 0 20px;
+}
+
+.end-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.end-card .back,
+.world-panel .back {
+  font: inherit;
+  color: var(--ink);
+  background: none;
+  border: 1px solid rgba(223, 232, 239, 0.25);
+  padding: 10px 16px;
+  cursor: pointer;
+  letter-spacing: 0.08em;
+  transition: border-color 0.25s ease, background 0.25s ease;
+}
+
+.end-card .back:hover {
+  border-color: var(--accent);
+  background: rgba(14, 22, 34, 0.85);
+}
+
+/* progress rail */
+
+.rail {
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 42vh;
+}
+
+.rail-track {
+  position: relative;
+  width: 1px;
+  height: 100%;
+  background: rgba(223, 232, 239, 0.18);
+}
+
+.rail-fill {
+  position: absolute;
+  inset: 0;
+  background: var(--ink);
+  transform-origin: top;
+  transform: scaleY(0);
+}
+
+.rail-tick {
+  position: absolute;
+  left: -3px;
+  width: 7px;
+  height: 1px;
+  background: rgba(223, 232, 239, 0.55);
+}
+
+/* 3D-pinned callouts */
+
+.callout {
+  position: relative;
+  pointer-events: none;
+}
+
+.callout-marker {
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  width: 10px;
+  height: 10px;
+  border: 1px solid var(--ink);
+  transform: rotate(45deg);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.callout-card {
+  position: absolute;
+  left: 18px;
+  top: 12px;
+  width: 262px;
+  padding: 14px 16px;
+  background: rgba(8, 12, 20, 0.78);
+  border: 1px solid rgba(223, 232, 239, 0.2);
+  border-left: 2px solid var(--ink);
+  backdrop-filter: blur(5px);
+  font-size: 12px;
+  line-height: 1.55;
+  letter-spacing: 0.04em;
+  color: var(--ink);
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.45s ease, transform 0.45s ease;
+}
+
+.callout-title {
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  font-size: 14px;
+  margin: 4px 0 8px;
+}
+
+.callout-card p {
+  color: var(--ink-dim);
+}
+
+.callout.flip .callout-card {
+  left: auto;
+  right: 18px;
+}
+
+.callout.show .callout-marker,
+.callout.show .callout-card {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* -------------------------------- veil/fade ------------------------------ */
 
 .veil {
@@ -247,6 +450,23 @@ body,
 @media (max-width: 720px) {
   .hud-corner.tr {
     display: none;
+  }
+
+  .title-card h2 {
+    font-size: 30px;
+  }
+
+  .callout-card {
+    width: 200px;
+  }
+
+  .rail {
+    right: 14px;
+    height: 34vh;
+  }
+
+  .end-actions {
+    flex-direction: column;
   }
 
   .world-panel {

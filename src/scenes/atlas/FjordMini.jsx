@@ -35,6 +35,7 @@ export default function FjordMini() {
   const boat = useRef()
 
   useFrame((state) => {
+    if (!boat.current) return
     const t = state.clock.elapsedTime
     // slow passage through the channel, with a gentle bob
     boat.current.position.x = Math.sin(t * 0.22) * 1.25

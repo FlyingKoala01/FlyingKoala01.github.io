@@ -2,6 +2,7 @@ import { useMemo, useRef } from 'react'
 import { useFrame } from '@react-three/fiber'
 import { jitteredCone, jitteredCylinder } from '../../utils/geometry.js'
 import Embers from '../atlas/Embers.jsx'
+import Annotations from '../../journey/Annotations.jsx'
 import { WORLDS } from '../../store/useAtlas.js'
 
 const SPIRES = [
@@ -19,13 +20,13 @@ const CRACKS = [
   { angle: 5.1, len: 8, w: 0.4 },
 ]
 
-// Placeholder scene: the full scroll journey replaces this in a later phase.
-export default function VolcanoWorld(props) {
+export default function VolcanoWorld({ active, ...props }) {
   const glow = useRef()
   const ground = useMemo(() => jitteredCylinder(34, 36, 2, 24, 0.5, 45), [])
   const cone = useMemo(() => jitteredCylinder(3.4, 9.5, 10, 9, 0.55, 46), [])
 
   useFrame((state) => {
+    if (!glow.current) return
     const t = state.clock.elapsedTime
     glow.current.intensity = 55 + Math.sin(t * 2.7) * 12 + Math.sin(t * 6.3) * 7
   })
@@ -105,6 +106,44 @@ export default function VolcanoWorld(props) {
         distance={90}
         decay={1}
       />
+      {/* field observation post on the slope (chapter 02 anchor) */}
+      <group position={[6.7, 3.55, -2.5]} rotation={[0, 2.0, 0]}>
+        <mesh position={[0, 0.1, 0]}>
+          <boxGeometry args={[2.2, 0.25, 1.6]} />
+          <meshStandardMaterial color="#241814" flatShading roughness={1} />
+        </mesh>
+        <mesh position={[-0.5, 0.55, 0]}>
+          <boxGeometry args={[0.7, 0.7, 0.55]} />
+          <meshStandardMaterial color="#33302c" flatShading roughness={0.7} />
+        </mesh>
+        {/* console screen */}
+        <mesh position={[-0.48, 0.62, 0.29]} rotation={[-0.25, 0, 0]}>
+          <planeGeometry args={[0.5, 0.32]} />
+          <meshStandardMaterial
+            color="#000000"
+            emissive="#ff8c3a"
+            emissiveIntensity={2.2}
+          />
+        </mesh>
+        {/* antenna mast */}
+        <mesh position={[0.6, 0.9, -0.3]}>
+          <cylinderGeometry args={[0.03, 0.05, 1.6, 5]} />
+          <meshStandardMaterial color="#4a4440" flatShading />
+        </mesh>
+        <mesh position={[0.6, 1.75, -0.3]} rotation={[0, 0, -0.5]}>
+          <coneGeometry args={[0.22, 0.3, 4, 1, true]} />
+          <meshStandardMaterial color="#5d564f" flatShading side={2} />
+        </mesh>
+        <mesh position={[0.6, 1.95, -0.3]}>
+          <sphereGeometry args={[0.035, 6, 6]} />
+          <meshStandardMaterial
+            color="#000000"
+            emissive="#ff2d2d"
+            emissiveIntensity={3}
+          />
+        </mesh>
+      </group>
+      {active && <Annotations world="volcano" />}
     </group>
   )
 }

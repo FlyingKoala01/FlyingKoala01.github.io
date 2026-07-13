@@ -3,6 +3,8 @@ import { useFrame } from '@react-three/fiber'
 import * as THREE from 'three'
 import { easing } from 'maath'
 import { useAtlas, WORLDS } from '../store/useAtlas.js'
+import { useJourney, journeyMotion } from '../store/useJourney.js'
+import { PATHS, computeChapter } from '../journey/paths.js'
 
 const ATLAS_POS = new THREE.Vector3(0, 3.6, 10.5)
 const ATLAS_LOOK = new THREE.Vector3(0, 0.4, 0)
@@ -30,12 +32,15 @@ export default function CameraRig() {
     if (prevMode.current !== mode) {
       if (mode === 'world' && activeWorld) {
         const w = WORLDS[activeWorld]
-        cam.position.fromArray(w.origin)
-        p.fromArray(w.camPos)
-        cam.position.add(p)
-        look.current.fromArray(w.origin)
-        l.fromArray(w.camLook)
-        look.current.add(l)
+        const path = PATHS[activeWorld]
+        path.cam.getPoint(0, cam.position)
+        cam.position.x += w.origin[0]
+        cam.position.y += w.origin[1]
+        cam.position.z += w.origin[2]
+        path.look.getPoint(0, look.current)
+        look.current.x += w.origin[0]
+        look.current.y += w.origin[1]
+        look.current.z += w.origin[2]
       } else if (mode === 'atlas' && prevMode.current === 'to-atlas') {
         cam.position.copy(ATLAS_POS)
         look.current.copy(ATLAS_LOOK)
@@ -50,21 +55,44 @@ export default function CameraRig() {
       easing.damp3(cam.position, p, 0.6, dt)
       easing.damp3(look.current, ATLAS_LOOK, 0.6, dt)
     } else if (mode === 'to-world' && activeWorld) {
-      const d = DIVE[activeWorld]
-      easing.damp3(cam.position, d, 0.5, dt)
-      easing.damp3(look.current, d, 0.28, dt)
+      if (cam.position.y > -100) {
+        // leaving the atlas: dive into the miniature
+        const d = DIVE[activeWorld]
+        easing.damp3(cam.position, d, 0.5, dt)
+        easing.damp3(look.current, d, 0.28, dt)
+      }
+      // world-to-world travel: hold position, the veil covers the cut
     } else if (mode === 'world' && activeWorld) {
       const w = WORLDS[activeWorld]
-      p.fromArray(w.origin)
-      l.fromArray(w.camPos)
-      p.add(l)
-      p.x += state.pointer.x * 1.1
-      p.y += state.pointer.y * 0.5
-      easing.damp3(cam.position, p, 0.7, dt)
-      l.fromArray(w.origin)
-      look.current.x = l.x + w.camLook[0]
-      look.current.y = l.y + w.camLook[1]
-      look.current.z = l.z + w.camLook[2]
+      const path = PATHS[activeWorld]
+      const journey = useJourney.getState()
+
+      // ease the journey along the path toward the scroll target
+      journeyMotion.value = THREE.MathUtils.damp(
+        journeyMotion.value,
+        journey.target,
+        2.4,
+        dt,
+      )
+      const t = journeyMotion.value
+
+      // getPoint (not getPointAt): keeps cam/look control points aligned at
+      // the same t, so each chapter stop frames exactly its target
+      path.cam.getPoint(t, p)
+      p.x += w.origin[0] + state.pointer.x * 0.7
+      p.y += w.origin[1] + state.pointer.y * 0.35
+      p.z += w.origin[2]
+      easing.damp3(cam.position, p, 0.28, dt)
+
+      path.look.getPoint(t, l)
+      l.x += w.origin[0]
+      l.y += w.origin[1]
+      l.z += w.origin[2]
+      easing.damp3(look.current, l, 0.28, dt)
+
+      // discrete chapter changes only touch React state when they differ
+      const ch = computeChapter(activeWorld, t)
+      if (ch !== journey.chapter) useJourney.setState({ chapter: ch })
     } else if (mode === 'to-atlas') {
       // slow pull upward while the veil closes
       cam.position.y += dt * 4

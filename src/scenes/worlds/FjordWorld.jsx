@@ -1,6 +1,7 @@
 import { useMemo, useRef } from 'react'
 import { useFrame } from '@react-three/fiber'
 import { jitteredCone } from '../../utils/geometry.js'
+import Annotations from '../../journey/Annotations.jsx'
 import { WORLDS } from '../../store/useAtlas.js'
 
 const WALLS = [
@@ -14,11 +15,11 @@ const WALLS = [
   { p: [13, 0, 12], r: 6, h: 14, seed: 66 },
 ]
 
-// Placeholder scene: the full scroll journey replaces this in a later phase.
-export default function FjordWorld(props) {
+export default function FjordWorld({ active, ...props }) {
   const water = useRef()
 
   useFrame((state) => {
+    if (!water.current) return
     water.current.position.y = -0.4 + Math.sin(state.clock.elapsedTime * 0.7) * 0.05
   })
 
@@ -41,8 +42,8 @@ export default function FjordWorld(props) {
       <pointLight
         position={[8, 16, 30]}
         color="#86b8dd"
-        intensity={22}
-        distance={100}
+        intensity={48}
+        distance={110}
         decay={1}
       />
       {/* nav buoy lights marking the channel */}
@@ -56,6 +57,61 @@ export default function FjordWorld(props) {
           />
         </mesh>
       ))}
+      {/* the home lab: a cabin on a dock at the water line (chapter 02) */}
+      <group position={[5.2, -0.35, -5]} rotation={[0, -0.5, 0]}>
+        {/* dock */}
+        <mesh position={[-1.6, 0.12, 0]}>
+          <boxGeometry args={[2.4, 0.12, 1.1]} />
+          <meshStandardMaterial color="#4a3d2c" flatShading roughness={1} />
+        </mesh>
+        {[-2.5, -1.6, -0.7].map((x, i) => (
+          <mesh key={i} position={[x, -0.15, 0.4]}>
+            <cylinderGeometry args={[0.06, 0.06, 0.55, 5]} />
+            <meshStandardMaterial color="#3a2f22" flatShading />
+          </mesh>
+        ))}
+        {/* cabin */}
+        <mesh position={[0.4, 0.75, 0]}>
+          <boxGeometry args={[1.7, 1.3, 1.5]} />
+          <meshStandardMaterial color="#5b4a36" flatShading roughness={0.9} />
+        </mesh>
+        <mesh position={[0.4, 1.65, 0]} rotation={[0, Math.PI / 4, 0]}>
+          <coneGeometry args={[1.45, 0.9, 4]} />
+          <meshStandardMaterial color="#26333a" flatShading roughness={1} />
+        </mesh>
+        {/* warm window */}
+        <mesh position={[0.4, 0.8, 0.76]}>
+          <planeGeometry args={[0.5, 0.45]} />
+          <meshStandardMaterial
+            color="#000000"
+            emissive="#ffb45e"
+            emissiveIntensity={2.4}
+          />
+        </mesh>
+        {/* server rack glow through the side window */}
+        <mesh position={[1.26, 0.75, -0.2]} rotation={[0, Math.PI / 2, 0]}>
+          <planeGeometry args={[0.4, 0.5]} />
+          <meshStandardMaterial
+            color="#000000"
+            emissive="#5fd4ff"
+            emissiveIntensity={2}
+          />
+        </mesh>
+        {/* antenna */}
+        <mesh position={[-0.3, 2.4, -0.3]}>
+          <cylinderGeometry args={[0.02, 0.04, 1.4, 5]} />
+          <meshStandardMaterial color="#5d564f" flatShading />
+        </mesh>
+        <mesh position={[-0.3, 3.1, -0.3]}>
+          <sphereGeometry args={[0.035, 6, 6]} />
+          <meshStandardMaterial
+            color="#000000"
+            emissive="#5fd4ff"
+            emissiveIntensity={3}
+          />
+        </mesh>
+      </group>
+      {active && <Annotations world="fjord" />}
     </group>
   )
 }

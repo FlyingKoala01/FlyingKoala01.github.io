@@ -3,6 +3,7 @@ import { Canvas } from '@react-three/fiber'
 import Experience from './scenes/Experience.jsx'
 import Hud from './ui/Hud.jsx'
 import LoadingScreen from './ui/LoadingScreen.jsx'
+import JourneyControls from './journey/JourneyControls.jsx'
 
 export default function App() {
   return (
@@ -19,6 +20,7 @@ export default function App() {
         </Canvas>
       </div>
       <Hud />
+      <JourneyControls />
       <LoadingScreen />
     </>
   )

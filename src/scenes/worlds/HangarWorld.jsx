@@ -1,10 +1,10 @@
 import { useMemo, useRef } from 'react'
 import { useFrame } from '@react-three/fiber'
 import * as THREE from 'three'
+import Annotations from '../../journey/Annotations.jsx'
 import { WORLDS } from '../../store/useAtlas.js'
 
-// Placeholder scene: the full scroll journey replaces this in a later phase.
-export default function HangarWorld(props) {
+export default function HangarWorld({ active, ...props }) {
   const drone = useRef()
   const rotors = useRef([])
   const ring = useRef()
@@ -12,6 +12,7 @@ export default function HangarWorld(props) {
   const spotTarget = useMemo(() => new THREE.Object3D(), [])
 
   useFrame((state, dt) => {
+    if (!drone.current || !ring.current) return
     const t = state.clock.elapsedTime
     drone.current.position.y = 3.4 + Math.sin(t * 1.4) * 0.2
     drone.current.rotation.y = Math.sin(t * 0.5) * 0.4
@@ -132,6 +133,43 @@ export default function HangarWorld(props) {
         distance={60}
         decay={1}
       />
+      {/* tracking console station (chapter 02 anchor) */}
+      <group position={[-5.6, 0, -3]} rotation={[0, 0.9, 0]}>
+        <mesh position={[0, 0.5, 0]}>
+          <boxGeometry args={[1.8, 1.0, 0.7]} />
+          <meshStandardMaterial color="#2c353f" flatShading roughness={0.8} />
+        </mesh>
+        <mesh position={[0, 1.35, -0.1]} rotation={[-0.3, 0, 0]}>
+          <planeGeometry args={[1.5, 0.85]} />
+          <meshStandardMaterial
+            color="#000000"
+            emissive="#48e07a"
+            emissiveIntensity={1.9}
+          />
+        </mesh>
+        {/* sensor mast beside the console */}
+        <mesh position={[1.5, 1.1, 0]}>
+          <cylinderGeometry args={[0.05, 0.08, 2.2, 6]} />
+          <meshStandardMaterial color="#454f5a" flatShading />
+        </mesh>
+        <mesh position={[1.5, 2.35, 0]}>
+          <sphereGeometry args={[0.22, 8, 8]} />
+          <meshStandardMaterial
+            color="#39424e"
+            flatShading
+            roughness={0.5}
+          />
+        </mesh>
+        <mesh position={[1.5, 2.35, 0.23]}>
+          <sphereGeometry args={[0.045, 6, 6]} />
+          <meshStandardMaterial
+            color="#000000"
+            emissive="#48e07a"
+            emissiveIntensity={3}
+          />
+        </mesh>
+      </group>
+      {active && <Annotations world="hangar" />}
     </group>
   )
 }

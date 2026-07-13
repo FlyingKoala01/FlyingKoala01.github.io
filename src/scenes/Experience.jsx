@@ -68,9 +68,18 @@ export default function Experience() {
         <AtlasScene />
       </group>
 
-      <VolcanoWorld visible={activeWorld === 'volcano'} />
-      <FjordWorld visible={activeWorld === 'fjord'} />
-      <HangarWorld visible={activeWorld === 'hangar'} />
+      <VolcanoWorld
+        visible={activeWorld === 'volcano'}
+        active={activeWorld === 'volcano' && mode === 'world'}
+      />
+      <FjordWorld
+        visible={activeWorld === 'fjord'}
+        active={activeWorld === 'fjord' && mode === 'world'}
+      />
+      <HangarWorld
+        visible={activeWorld === 'hangar'}
+        active={activeWorld === 'hangar' && mode === 'world'}
+      />
 
       <Effects />
     </>

@@ -36,6 +36,7 @@ export default function Embers({
   }, [count, radius, height])
 
   useFrame((state, dt) => {
+    if (!points.current) return
     const arr = points.current.geometry.attributes.position
     const t = state.clock.elapsedTime
     for (let i = 0; i < count; i++) {

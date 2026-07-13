@@ -17,6 +17,7 @@ export default function VolcanoMini() {
   const body = useMemo(() => jitteredCylinder(0.62, 1.55, 2.2, 7, 0.1, 7), [])
 
   useFrame((state) => {
+    if (!glow.current) return
     const t = state.clock.elapsedTime
     glow.current.intensity = 2.6 + Math.sin(t * 3.1) * 0.5 + Math.sin(t * 7.7) * 0.3
   })

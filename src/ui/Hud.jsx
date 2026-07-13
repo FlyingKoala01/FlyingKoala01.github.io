@@ -1,4 +1,34 @@
+import { useEffect, useRef } from 'react'
 import { useAtlas, WORLDS, WORLD_LIST } from '../store/useAtlas.js'
+import { useJourney, journeyMotion } from '../store/useJourney.js'
+import { PATHS } from '../journey/paths.js'
+
+function ProgressRail({ world }) {
+  const fill = useRef()
+
+  useEffect(() => {
+    let raf
+    const loop = () => {
+      if (fill.current) {
+        fill.current.style.transform = `scaleY(${journeyMotion.value})`
+      }
+      raf = requestAnimationFrame(loop)
+    }
+    loop()
+    return () => cancelAnimationFrame(raf)
+  }, [])
+
+  return (
+    <div className="rail">
+      <div className="rail-track">
+        <div className="rail-fill" ref={fill} />
+        {PATHS[world].chapters.map((c, i) => (
+          <span key={i} className="rail-tick" style={{ top: `${c.at * 100}%` }} />
+        ))}
+      </div>
+    </div>
+  )
+}
 
 export default function Hud() {
   const mode = useAtlas((s) => s.mode)
@@ -6,12 +36,18 @@ export default function Hud() {
   const activeWorld = useAtlas((s) => s.activeWorld)
   const setHovered = useAtlas((s) => s.setHovered)
   const enterWorld = useAtlas((s) => s.enterWorld)
+  const travelTo = useAtlas((s) => s.travelTo)
   const returnToAtlas = useAtlas((s) => s.returnToAtlas)
+  const chapter = useJourney((s) => s.chapter)
 
   const world = activeWorld ? WORLDS[activeWorld] : null
   const hot = hovered ? WORLDS[hovered] : null
   const inAtlas = mode === 'atlas'
+  const inWorld = mode === 'world'
   const veilOn = mode === 'to-world' || mode === 'to-atlas'
+  const next = world
+    ? WORLD_LIST[(WORLD_LIST.findIndex((w) => w.id === world.id) + 1) % WORLD_LIST.length]
+    : null
 
   return (
     <>
@@ -40,6 +76,10 @@ export default function Hud() {
           ) : world ? (
             <>
               REGION {world.index} // {world.name}
+              <br />
+              <button className="hud-link" onClick={returnToAtlas}>
+                ← ATLAS
+              </button>
             </>
           ) : null}
         </div>
@@ -80,22 +120,39 @@ export default function Hud() {
           ))}
         </div>
 
-        {mode === 'world' && world && (
-          <div className="world-panel">
+        {/* journey title card */}
+        {inWorld && world && (
+          <div className={`title-card ${chapter === -1 ? 'show' : ''}`}>
             <div className="hud-eyebrow">{world.eyebrow}</div>
-            <h2 style={{ color: world.accent }}>
-              {world.name} // {world.field}
-            </h2>
-            <p>{world.blurb}</p>
-            <p className="hud-dim">
-              // SCROLL JOURNEY UNDER CONSTRUCTION — the full chapter with
-              missions, tooling and outcomes lands here next.
-            </p>
-            <button className="back" onClick={returnToAtlas}>
-              ← RETURN TO ATLAS
-            </button>
+            <h2 style={{ color: world.accent }}>{world.name}</h2>
+            <div className="title-field">{world.field}</div>
+            <div className="scroll-hint hud-dim">SCROLL TO EXPLORE ▾</div>
           </div>
         )}
+
+        {/* journey end card */}
+        {inWorld && world && (
+          <div className={`end-card ${chapter === 99 ? 'show' : ''}`}>
+            <div className="hud-eyebrow">REGION {world.index} CHARTED</div>
+            <h2>{world.name} // LOGGED</h2>
+            <div className="end-actions">
+              <button className="back" onClick={returnToAtlas}>
+                ← RETURN TO ATLAS
+              </button>
+              {next && (
+                <button
+                  className="back"
+                  style={{ borderColor: next.accent }}
+                  onClick={() => travelTo(next.id)}
+                >
+                  NEXT: {next.name} →
+                </button>
+              )}
+            </div>
+          </div>
+        )}
+
+        {inWorld && world && <ProgressRail world={world.id} />}
       </div>
       <div className={`veil ${veilOn ? 'on' : ''}`} />
     </>
