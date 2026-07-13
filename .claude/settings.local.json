@@ -1,0 +1,42 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx ctx7 *)",
+      "Bash(claude mcp *)",
+      "Bash(pnpm dlx *)",
+      "Bash(npm run *)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000/)",
+      "Bash(curl -s http://localhost:3000/)",
+      "Bash(node -e \"const s=require\\('sharp'\\); s\\('public/images/hero-bg.webp'\\).metadata\\(\\).then\\(m=>console.log\\('hero-bg:',m.width,'x',m.height\\)\\); s\\('public/images/cta-hero-bg.webp'\\).metadata\\(\\).then\\(m=>console.log\\('cta-hero-bg:',m.width,'x',m.height\\)\\);\")",
+      "Bash(npm i *)",
+      "Bash(node *)",
+      "Bash(curl -s -o /tmp/raw.webp \"http://localhost:3000/images/hero-bg.webp\")",
+      "Bash(curl -s -o /tmp/opt.webp \"http://localhost:3000/_next/image?url=%2Fimages%2Fhero-bg.webp&w=1920&q=75\")",
+      "Bash(curl -s -o __TRACKED_VAR__/raw.webp http://localhost:3000/images/hero-bg.webp)",
+      "Bash(curl -s -o __TRACKED_VAR__/opt.webp 'http://localhost:3000/_next/image?url=%2Fimages%2Fhero-bg.webp&w=1920&q=75')",
+      "Bash(netstat -ano)",
+      "Bash(curl -s -H 'Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8' -o C:/Users/isaac/AppData/Local/Temp/claude/C--Users-isaac-Desktop-System32-DGS/cc03f0b4-5ce4-400c-a995-dac13895f9b0/scratchpad/opt-browserlike.webp -D - 'http://localhost:3000/_next/image?url=%2Fimages%2Fhero-bg.webp&w=1920&q=75' -o C:/Users/isaac/AppData/Local/Temp/claude/C--Users-isaac-Desktop-System32-DGS/cc03f0b4-5ce4-400c-a995-dac13895f9b0/scratchpad/opt-browserlike.img)",
+      "Bash(curl -s -H 'Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8' -D __TRACKED_VAR__/hdrs.txt -o __TRACKED_VAR__/opt-fresh.img 'http://localhost:3000/_next/image?url=%2Fimages%2Fhero-bg.webp&w=1920&q=75')",
+      "Bash(grep -iE 'content-type|x-nextjs' __TRACKED_VAR__/hdrs.txt)",
+      "Bash(taskkill //PID 16684 //F)",
+      "Bash(rm -rf .next/cache/images)",
+      "Bash(curl -s -H 'Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8' -D __TRACKED_VAR__/hdrs.txt -o __TRACKED_VAR__/opt-fresh2.img 'http://localhost:3000/_next/image?url=%2Fimages%2Fhero-bg.webp&w=1920&q=75')",
+      "Bash(curl -s -H 'Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8' -D __TRACKED_VAR__/hdrs.txt -o __TRACKED_VAR__/opt-fresh3.img 'http://localhost:3000/_next/image?url=%2Fimages%2Fhero-bg.webp&w=1920&q=75')",
+      "Bash(grep -iE x-nextjs __TRACKED_VAR__/hdrs.txt)",
+      "Bash(curl -s -H 'Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8' -D __TRACKED_VAR__/hdrs.txt -o __TRACKED_VAR__/opt-final.img 'http://localhost:3000/_next/image?url=%2Fimages%2Fhero-bg.webp&w=1920&q=75')",
+      "Bash(ls node_modules/motion/package.json)",
+      "Bash(curl -s -o /dev/null -w \"HTTP %{http_code}\\\\n\" http://localhost:3000/)",
+      "Bash(tail -20 \"C:\\\\Users\\\\isaac\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-isaac-Desktop-System32-DGS\\\\cc03f0b4-5ce4-400c-a995-dac13895f9b0\\\\tasks\\\\bfq01ddwq.output\")",
+      "Bash(python -)",
+      "PowerShell(claude mcp *)",
+      "PowerShell(npx skills i emalorenzo/three-agent-skills/skills/r3f-best-practices)",
+      "PowerShell(try { \\(Get-Command uvx -ErrorAction Stop\\).Source } catch { \"uvx not found\" }; try { \\(Get-Command uv -ErrorAction Stop\\).Source } catch { \"uv not found\" })",
+      "PowerShell(winget install *)",
+      "PowerShell(powershell -ExecutionPolicy ByPass -NoProfile -c \"irm https://astral.sh/uv/install.ps1 | iex\")"
+    ]
+  },
+  "enableAllProjectMcpServers": true,
+  "enabledMcpjsonServers": [
+    "shadcn"
+  ]
+}
