@@ -4,6 +4,7 @@ import * as THREE from 'three'
 import { easing } from 'maath'
 import { useAtlas, WORLDS } from '../store/useAtlas.js'
 import { useJourney, journeyMotion } from '../store/useJourney.js'
+import { useGame } from '../store/useGame.js'
 import { PATHS, computeChapter } from '../journey/paths.js'
 import { REDUCED } from '../utils/motion.js'
 
@@ -22,6 +23,7 @@ const DIVE = {
 export default function CameraRig() {
   const look = useRef(ATLAS_LOOK.clone())
   const prevMode = useRef('atlas')
+  const wasInGame = useRef(false)
   const pos = useRef(new THREE.Vector3())
   const lk = useRef(new THREE.Vector3())
 
@@ -30,6 +32,17 @@ export default function CameraRig() {
     const cam = state.camera
     const p = pos.current
     const l = lk.current
+
+    // the dive minigame drives the camera itself
+    if (useGame.getState().state !== 'idle') {
+      wasInGame.current = true
+      return
+    }
+    if (wasInGame.current) {
+      wasInGame.current = false
+      cam.position.copy(ATLAS_POS)
+      look.current.copy(ATLAS_LOOK)
+    }
 
     // widen the view on narrow (portrait) screens so authored framings fit
     const aspect = state.viewport.aspect

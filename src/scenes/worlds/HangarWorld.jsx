@@ -2,6 +2,7 @@ import { useMemo, useRef } from 'react'
 import { useFrame } from '@react-three/fiber'
 import * as THREE from 'three'
 import Annotations from '../../journey/Annotations.jsx'
+import KoalaEgg from '../fx/KoalaEgg.jsx'
 import { WORLDS } from '../../store/useAtlas.js'
 
 const CRATES = [
@@ -326,6 +327,13 @@ export default function HangarWorld({ active, ...props }) {
           />
         </mesh>
       </group>
+      {/* easter egg: supervising the inspection from the crate stack */}
+      <KoalaEgg
+        position={[6.3, 1.63, -9.7]}
+        rotation={[0, -0.6, 0]}
+        scale={0.6}
+        wave
+      />
       {active && <Annotations world="hangar" />}
     </group>
   )

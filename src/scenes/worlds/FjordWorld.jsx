@@ -6,6 +6,7 @@ import VikingShip from '../fx/VikingShip.jsx'
 import Snow from '../fx/Snow.jsx'
 import Aurora from '../fx/Aurora.jsx'
 import Seabirds from '../fx/Seabirds.jsx'
+import KoalaEgg from '../fx/KoalaEgg.jsx'
 import { WORLDS } from '../../store/useAtlas.js'
 
 const WALLS = [
@@ -121,6 +122,14 @@ export default function FjordWorld({ active, ...props }) {
           />
         </mesh>
       </group>
+      {/* easter egg: feet over the water at the end of the dock */}
+      <KoalaEgg
+        position={[2.8, -0.02, -3.9]}
+        rotation={[0, -0.9, 0]}
+        scale={0.42}
+        sit
+        wave
+      />
       {active && <Annotations world="fjord" />}
     </group>
   )

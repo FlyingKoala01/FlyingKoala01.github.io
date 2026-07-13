@@ -1,5 +1,6 @@
 import { create } from 'zustand'
 import { useJourney } from './useJourney.js'
+import { useGame } from './useGame.js'
 
 // Camera flight time between the atlas and a world, in ms. The HUD veil and
 // the rig's teleport both key off this single value.
@@ -69,6 +70,7 @@ export const useAtlas = create((set, get) => ({
 
   enterWorld: (id) => {
     if (get().mode !== 'atlas') return
+    if (useGame.getState().state !== 'idle') return
     useJourney.getState().reset()
     set({ mode: 'to-world', activeWorld: id, hovered: null })
     setTimeout(() => set({ mode: 'world' }), TRAVEL_MS)

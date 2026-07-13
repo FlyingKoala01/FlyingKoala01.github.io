@@ -6,6 +6,7 @@ import Embers from '../atlas/Embers.jsx'
 import Smoke from '../fx/Smoke.jsx'
 import LavaBombs from '../fx/LavaBombs.jsx'
 import Snow from '../fx/Snow.jsx'
+import KoalaEgg from '../fx/KoalaEgg.jsx'
 import Annotations from '../../journey/Annotations.jsx'
 import { WORLDS } from '../../store/useAtlas.js'
 
@@ -254,6 +255,14 @@ export default function VolcanoWorld({ active, ...props }) {
           />
         </mesh>
       </group>
+      {/* easter egg: a little colleague sitting on the platform corner */}
+      <KoalaEgg
+        position={[8, 3.72, -3.5]}
+        rotation={[0, 2.05, 0]}
+        scale={0.5}
+        sit
+        wave
+      />
       {active && <Annotations world="volcano" />}
     </group>
   )

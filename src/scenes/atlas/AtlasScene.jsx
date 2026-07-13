@@ -8,6 +8,7 @@ import VolcanoMini from './VolcanoMini.jsx'
 import FjordMini from './FjordMini.jsx'
 import HangarMini from './HangarMini.jsx'
 import Koala, { setKoalaTarget } from './Koala.jsx'
+import DiveBoard from './DiveBoard.jsx'
 import { useAtlas } from '../../store/useAtlas.js'
 import { REDUCED } from '../../utils/motion.js'
 import { tilt, initTilt, needsTiltPermission } from '../../utils/tilt.js'
@@ -51,6 +52,7 @@ export default function AtlasScene(props) {
             <HangarMini />
           </Landmark>
           <Koala />
+          <DiveBoard />
           {/* invisible walk plane: right-click sends the koala there */}
           <mesh
             rotation={[-Math.PI / 2, 0, 0]}
@@ -62,7 +64,7 @@ export default function AtlasScene(props) {
               setKoalaTarget(p.x, -p.y)
             }}
           >
-            <circleGeometry args={[5.4, 24]} />
+            <circleGeometry args={[6.4, 24]} />
             <meshBasicMaterial transparent opacity={0} depthWrite={false} />
           </mesh>
         </TiltGroup>

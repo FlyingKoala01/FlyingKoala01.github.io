@@ -398,6 +398,36 @@ body,
   transform: translateY(0);
 }
 
+/* ------------------------------ dive minigame ---------------------------- */
+
+.game-score {
+  position: absolute;
+  top: 92px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-shadow: 0 0 18px rgba(125, 220, 255, 0.35);
+}
+
+.game-best {
+  position: absolute;
+  top: 134px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  letter-spacing: 0.14em;
+}
+
+.game-hint {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  letter-spacing: 0.12em;
+}
+
 /* -------------------------------- veil/fade ------------------------------ */
 
 .veil {

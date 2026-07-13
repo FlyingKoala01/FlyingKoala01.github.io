@@ -5,6 +5,8 @@ import * as THREE from 'three'
 import { easing } from 'maath'
 import AtlasScene from './atlas/AtlasScene.jsx'
 import ShootingStars from './fx/ShootingStars.jsx'
+import DiveGame from './game/DiveGame.jsx'
+import { useGame } from '../store/useGame.js'
 import VolcanoWorld from './worlds/VolcanoWorld.jsx'
 import FjordWorld from './worlds/FjordWorld.jsx'
 import HangarWorld from './worlds/HangarWorld.jsx'
@@ -46,6 +48,7 @@ function Atmosphere() {
 export default function Experience() {
   const mode = useAtlas((s) => s.mode)
   const activeWorld = useAtlas((s) => s.activeWorld)
+  const gameOn = useGame((s) => s.state !== 'idle')
 
   return (
     <>
@@ -56,7 +59,7 @@ export default function Experience() {
       <directionalLight position={[6, 12, 5]} intensity={1.15} color="#b7d2f5" />
       <ambientLight intensity={0.12} color="#96b4d8" />
 
-      <group visible={mode !== 'world'}>
+      <group visible={mode !== 'world' && !gameOn}>
         <Stars
           radius={110}
           depth={45}
@@ -69,6 +72,8 @@ export default function Experience() {
         <ShootingStars />
         <AtlasScene />
       </group>
+
+      <DiveGame />
 
       <VolcanoWorld
         visible={activeWorld === 'volcano'}

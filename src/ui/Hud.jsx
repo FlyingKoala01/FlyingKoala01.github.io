@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from 'react'
 import { useAtlas, WORLDS, WORLD_LIST } from '../store/useAtlas.js'
 import { useJourney, journeyMotion } from '../store/useJourney.js'
+import { useGame } from '../store/useGame.js'
+import { respawnKoala } from '../scenes/atlas/Koala.jsx'
 import { PATHS } from '../journey/paths.js'
 import { updateSound } from '../sound/soundscape.js'
 import { isTouchDevice, needsTiltPermission, requestTilt } from '../utils/tilt.js'
@@ -45,12 +47,22 @@ export default function Hud() {
   const sound = useAtlas((s) => s.sound)
   const toggleSound = useAtlas((s) => s.toggleSound)
   const [tiltOn, setTiltOn] = useState(false)
+  const game = useGame((s) => s.state)
+  const score = useGame((s) => s.score)
+  const best = useGame((s) => s.best)
+  const retryGame = useGame((s) => s.retry)
+  const exitGame = useGame((s) => s.exit)
 
   const world = activeWorld ? WORLDS[activeWorld] : null
   const hot = hovered ? WORLDS[hovered] : null
-  const inAtlas = mode === 'atlas'
+  const gameOn = game !== 'idle'
+  const inAtlas = mode === 'atlas' && !gameOn
   const inWorld = mode === 'world'
-  const veilOn = mode === 'to-world' || mode === 'to-atlas'
+  const veilOn =
+    mode === 'to-world' ||
+    mode === 'to-atlas' ||
+    game === 'starting' ||
+    game === 'exiting'
 
   useEffect(() => {
     const scape =
@@ -72,13 +84,15 @@ export default function Hud() {
           <div className="hud-dim">// PORTFOLIO ATLAS — V3</div>
         </div>
 
-        <div className="hud-corner tr">
-          <div className="hud-eyebrow">FIELD LOG</div>
-          <div>
-            Three territories chart my work: offensive security, ICT systems
-            and counter-UAS defense.
+        {!gameOn && (
+          <div className="hud-corner tr">
+            <div className="hud-eyebrow">FIELD LOG</div>
+            <div>
+              Three territories chart my work: offensive security, ICT systems
+              and counter-UAS defense.
+            </div>
           </div>
-        </div>
+        )}
 
         <div className="hud-corner bl hud-dim">
           {inAtlas ? (
@@ -88,7 +102,9 @@ export default function Hud() {
                 <br />
                 TILT THE PHONE — DON'T LET
                 <br />
-                THE KOALA SLIP OFF
+                THE KOALA SLIP OFF…
+                <br />
+                …EXCEPT ONTO THE BOARD ↘
                 {needsTiltPermission() && !tiltOn && (
                   <>
                     <br />
@@ -106,6 +122,8 @@ export default function Hud() {
                 HOVER A LANDMARK — CLICK TO TRAVEL
                 <br />
                 WASD / RIGHT-CLICK: WALK THE KOALA
+                <br />
+                DARE THE DIVING BOARD ↘
               </>
             )
           ) : world ? (
@@ -192,6 +210,48 @@ export default function Hud() {
         )}
 
         {inWorld && world && <ProgressRail world={world.id} />}
+
+        {/* dive minigame HUD */}
+        {(game === 'playing' || game === 'over') && (
+          <>
+            <div className="game-score">
+              {String(score).padStart(4, '0')} M
+            </div>
+            <div className="game-best hud-dim">
+              BEST {String(best).padStart(4, '0')} M
+            </div>
+            {game === 'playing' && (
+              <div className="game-hint hud-dim">
+                {isTouchDevice()
+                  ? 'TILT TO DODGE THE ROCKS'
+                  : 'WASD / ARROWS — DODGE THE ROCKS'}
+              </div>
+            )}
+          </>
+        )}
+        {game === 'over' && (
+          <div className="end-card show">
+            <div className="hud-eyebrow">KOALA DOWN // DIVE LOGGED</div>
+            <h2>
+              DEPTH {String(score).padStart(4, '0')} M
+              {score >= best && score > 0 ? ' — NEW RECORD!' : ''}
+            </h2>
+            <div className="end-actions">
+              <button className="back" onClick={retryGame}>
+                ↻ DIVE AGAIN
+              </button>
+              <button
+                className="back"
+                onClick={() => {
+                  exitGame()
+                  respawnKoala()
+                }}
+              >
+                ← BACK TO THE ISLAND
+              </button>
+            </div>
+          </div>
+        )}
       </div>
       <div className={`veil ${veilOn ? 'on' : ''}`} />
     </>
