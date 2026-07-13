@@ -1,8 +1,9 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { useAtlas, WORLDS, WORLD_LIST } from '../store/useAtlas.js'
 import { useJourney, journeyMotion } from '../store/useJourney.js'
 import { PATHS } from '../journey/paths.js'
 import { updateSound } from '../sound/soundscape.js'
+import { isTouchDevice, needsTiltPermission, requestTilt } from '../utils/tilt.js'
 
 function ProgressRail({ world }) {
   const fill = useRef()
@@ -43,6 +44,7 @@ export default function Hud() {
 
   const sound = useAtlas((s) => s.sound)
   const toggleSound = useAtlas((s) => s.toggleSound)
+  const [tiltOn, setTiltOn] = useState(false)
 
   const world = activeWorld ? WORLDS[activeWorld] : null
   const hot = hovered ? WORLDS[hovered] : null
@@ -80,11 +82,32 @@ export default function Hud() {
 
         <div className="hud-corner bl hud-dim">
           {inAtlas ? (
-            <>
-              HOVER A LANDMARK
-              <br />
-              CLICK TO TRAVEL
-            </>
+            isTouchDevice() ? (
+              <>
+                TAP A LANDMARK TO TRAVEL
+                <br />
+                TILT THE PHONE — DON'T LET
+                <br />
+                THE KOALA SLIP OFF
+                {needsTiltPermission() && !tiltOn && (
+                  <>
+                    <br />
+                    <button
+                      className="hud-link"
+                      onClick={async () => setTiltOn(await requestTilt())}
+                    >
+                      [ ENABLE TILT ]
+                    </button>
+                  </>
+                )}
+              </>
+            ) : (
+              <>
+                HOVER A LANDMARK — CLICK TO TRAVEL
+                <br />
+                WASD / RIGHT-CLICK: WALK THE KOALA
+              </>
+            )
           ) : world ? (
             <>
               REGION {world.index} // {world.name}

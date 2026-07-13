@@ -2,12 +2,15 @@ import { useMemo, useRef } from 'react'
 import { useFrame } from '@react-three/fiber'
 import * as THREE from 'three'
 
-// Falling snow over a box volume, positions mutated in place.
+// Falling particles over a box volume (snow, ash…), positions mutated in place.
 export default function Snow({
   count = 240,
   area = [46, 26, 50],
   fall = 0.9,
   size = 0.14,
+  color = '#dfe8ef',
+  opacity = 0.7,
+  additive = true,
   ...props
 }) {
   const points = useRef()
@@ -48,13 +51,13 @@ export default function Snow({
         <bufferAttribute attach="attributes-position" args={[positions, 3]} />
       </bufferGeometry>
       <pointsMaterial
-        color="#dfe8ef"
+        color={color}
         size={size}
         sizeAttenuation
         transparent
-        opacity={0.7}
+        opacity={opacity}
         depthWrite={false}
-        blending={THREE.AdditiveBlending}
+        blending={additive ? THREE.AdditiveBlending : THREE.NormalBlending}
       />
     </points>
   )

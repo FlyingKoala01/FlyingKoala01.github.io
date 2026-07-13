@@ -5,6 +5,7 @@ import * as THREE from 'three'
 import Embers from '../atlas/Embers.jsx'
 import Smoke from '../fx/Smoke.jsx'
 import LavaBombs from '../fx/LavaBombs.jsx'
+import Snow from '../fx/Snow.jsx'
 import Annotations from '../../journey/Annotations.jsx'
 import { WORLDS } from '../../store/useAtlas.js'
 
@@ -180,6 +181,17 @@ export default function VolcanoWorld({ active, ...props }) {
       {/* eruption column */}
       <Smoke position={[0, 10.5, 0]} count={24} height={16} spread={2.2} />
       <LavaBombs position={[0, 10.2, 0]} />
+      {/* drifting ash */}
+      <Snow
+        position={[0, 2, 8]}
+        count={160}
+        area={[55, 24, 55]}
+        fall={0.4}
+        size={0.09}
+        color="#71615a"
+        opacity={0.55}
+        additive={false}
+      />
       <Embers
         position={[0, 10.2, 0]}
         count={90}

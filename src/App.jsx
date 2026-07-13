@@ -23,7 +23,7 @@ export default function App() {
   if (!webgl) return <Fallback />
   return (
     <>
-      <div className="stage">
+      <div className="stage" onContextMenu={(e) => e.preventDefault()}>
         <Canvas
           dpr={[1, 2]}
           camera={{ position: [0, 3.6, 10.5], fov: 42, near: 0.1, far: 400 }}

@@ -5,6 +5,7 @@ import Annotations from '../../journey/Annotations.jsx'
 import VikingShip from '../fx/VikingShip.jsx'
 import Snow from '../fx/Snow.jsx'
 import Aurora from '../fx/Aurora.jsx'
+import Seabirds from '../fx/Seabirds.jsx'
 import { WORLDS } from '../../store/useAtlas.js'
 
 const WALLS = [
@@ -65,6 +66,7 @@ export default function FjordWorld({ active, ...props }) {
       {/* weather + sky */}
       <Snow position={[0, 0, -5]} />
       <Aurora />
+      <Seabirds position={[0, 8.5, -14]} />
       {/* the home lab: a cabin on a dock at the water line (chapter 02) */}
       <group position={[5.2, -0.35, -5]} rotation={[0, -0.5, 0]}>
         {/* dock */}

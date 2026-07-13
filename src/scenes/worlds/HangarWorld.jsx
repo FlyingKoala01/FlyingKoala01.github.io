@@ -16,6 +16,7 @@ export default function HangarWorld({ active, ...props }) {
   const rotors = useRef([])
   const ring = useRef()
   const sweep = useRef()
+  const doorBeacon = useRef()
   // spotlight target inside this group so the cone aims at the drone
   const spotTarget = useMemo(() => new THREE.Object3D(), [])
 
@@ -31,6 +32,11 @@ export default function HangarWorld({ active, ...props }) {
     ring.current.material.opacity = 0.85 * (1 - ((t * 0.9) % 1))
     // radar sweep on the console display
     if (sweep.current) sweep.current.rotation.z = -t * 1.6
+    // amber service-door beacon
+    if (doorBeacon.current) {
+      const b = (Math.sin(t * 2.4) + 1) / 2
+      doorBeacon.current.material.emissiveIntensity = 0.4 + b * 3
+    }
   })
 
   return (
@@ -278,6 +284,15 @@ export default function HangarWorld({ active, ...props }) {
             />
           </mesh>
         ))}
+        {/* amber beacon above the door */}
+        <mesh ref={doorBeacon} position={[0, 3.5, 0.1]}>
+          <sphereGeometry args={[0.12, 8, 8]} />
+          <meshStandardMaterial
+            color="#000000"
+            emissive="#ffa63a"
+            emissiveIntensity={2}
+          />
+        </mesh>
       </group>
       {/* workbench with a disassembled drone */}
       <group position={[4.8, 0, 0.5]} rotation={[0, -0.5, 0]}>
