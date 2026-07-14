@@ -10,6 +10,12 @@ const ORIGIN = new THREE.Vector3(0, -1000, 0)
 const AREA = 4.3 // half-width of the play field
 const ROCK_COUNT = 22
 const DOT_COUNT = 240
+const ROCK_MIN_SCALE = 0.38
+const ROCK_MAX_SCALE = 0.68
+const FALL_START_SPEED = 5.5
+const FALL_SPEED_STEP = 0.6
+const FALL_DEPTH_STEP = 10
+const FALL_MAX_SPEED = 13
 
 const rnd = () => Math.random()
 
@@ -25,9 +31,7 @@ export default function DiveGame() {
   const look = useRef(new THREE.Vector3())
   const sim = useRef({
     x: 0,
-    z: 0,
     vx: 0,
-    vz: 0,
     y: 0,
     t: 0,
     alive: true,
@@ -60,10 +64,8 @@ export default function DiveGame() {
   }, [])
 
   const placeRock = (rock, y) => {
-    const a = rnd() * Math.PI * 2
-    const r = Math.sqrt(rnd()) * AREA
-    const sc = 0.55 + rnd() * 0.95
-    rock.position.set(Math.cos(a) * r, y, Math.sin(a) * r)
+    const sc = THREE.MathUtils.lerp(ROCK_MIN_SCALE, ROCK_MAX_SCALE, rnd())
+    rock.position.set((rnd() - 0.5) * AREA * 2, y, 0)
     rock.scale.setScalar(sc)
     rock.rotation.set(rnd() * 3, rnd() * 3, rnd() * 3)
     rock.userData.r = sc * 1.05
@@ -73,9 +75,7 @@ export default function DiveGame() {
   const resetRun = () => {
     const s = sim.current
     s.x = 0
-    s.z = 0
     s.vx = 0
-    s.vz = 0
     s.y = 0
     s.t = 0
     s.alive = true
@@ -112,25 +112,25 @@ export default function DiveGame() {
 
     if (state === 'playing' && s.alive) {
       s.t += step
-      const fall = Math.min(8 + s.t * 0.45, 22)
+      const depth = Math.floor(-s.y)
+      const fall = Math.min(
+        FALL_START_SPEED + Math.floor(depth / FALL_DEPTH_STEP) * FALL_SPEED_STEP,
+        FALL_MAX_SPEED,
+      )
 
       const k = keys.current
       const ix =
         (k.d || k.arrowright ? 1 : 0) - (k.a || k.arrowleft ? 1 : 0)
-      const iz = (k.s || k.arrowdown ? 1 : 0) - (k.w || k.arrowup ? 1 : 0)
       const tx = ix * 7 + -Math.sin(tilt.rz) * 18
-      const tz = iz * 7 + Math.sin(tilt.rx) * 18
       s.vx = THREE.MathUtils.damp(s.vx, tx, 6, step)
-      s.vz = THREE.MathUtils.damp(s.vz, tz, 6, step)
       s.x = THREE.MathUtils.clamp(s.x + s.vx * step, -AREA, AREA)
-      s.z = THREE.MathUtils.clamp(s.z + s.vz * step, -AREA, AREA)
       s.y -= fall * step
 
       // score = meters fallen; only touch the store when the number changes
-      const depth = Math.floor(-s.y)
-      if (depth !== s.lastScore) {
-        s.lastScore = depth
-        useGame.getState().setScore(depth)
+      const nextDepth = Math.floor(-s.y)
+      if (nextDepth !== s.lastScore) {
+        s.lastScore = nextDepth
+        useGame.getState().setScore(nextDepth)
       }
 
       // rocks: recycle above, collide, spin
@@ -143,11 +143,7 @@ export default function DiveGame() {
         rock.rotation.y += step * rock.userData.spin * 0.6
         const dx = rock.position.x - s.x
         const dy = rock.position.y - s.y - 0.35
-        const dz = rock.position.z - s.z
-        if (
-          Math.sqrt(dx * dx + dy * dy + dz * dz) <
-          rock.userData.r + 0.3
-        ) {
+        if (Math.sqrt(dx * dx + dy * dy) < rock.userData.r + 0.3) {
           s.alive = false
           s.crashT = 0
           useGame.getState().crash()
@@ -166,7 +162,7 @@ export default function DiveGame() {
 
       // dive pose: head-first lean into travel direction, propeller screaming
       rig.current.rotation.z = THREE.MathUtils.clamp(-s.vx * 0.05, -0.5, 0.5)
-      rig.current.rotation.x = THREE.MathUtils.clamp(s.vz * 0.05, -0.5, 0.5)
+      rig.current.rotation.x = 0
       P.prop.rotation.y += step * 50
       P.armL.rotation.z = 2.3 + Math.sin(t * 18) * 0.4
       P.armR.rotation.z = -2.3 - Math.cos(t * 18) * 0.4
@@ -180,16 +176,16 @@ export default function DiveGame() {
       rig.current.rotation.z += step * 6
     }
 
-    koala.current.position.set(s.x, s.y, s.z)
+    koala.current.position.set(s.x, s.y, 0)
 
     // chase camera
     const cam = st.camera
     cam.position.set(
       ORIGIN.x + s.x * 0.55,
       ORIGIN.y + s.y + 1.6,
-      ORIGIN.z + s.z * 0.55 + 7.4,
+      ORIGIN.z + 7.4,
     )
-    look.current.set(ORIGIN.x + s.x, ORIGIN.y + s.y - 0.6, ORIGIN.z + s.z)
+    look.current.set(ORIGIN.x + s.x, ORIGIN.y + s.y - 0.6, ORIGIN.z)
     cam.lookAt(look.current)
   })
 
